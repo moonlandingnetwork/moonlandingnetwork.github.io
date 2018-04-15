@@ -210,7 +210,7 @@ collections:
          fields:
           - {label: "Currency", name: "currency", widget: "string" }
        - name: "countries-notallowed"
-         label: "Currencies Not Accepted"
+         label: "Countries Not Allowed"
          widget: list
          fields:
           - {label: "Country", name: "country", widget: "string" }
