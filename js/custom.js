@@ -1,0 +1,256 @@
+
+/* Random TopBanner */
+const topBannerElem = document.getElementById('topbanner');
+if(topBannerElem != null){
+    let bannerData = new XMLHttpRequest();
+    bannerData.open('GET', 'topbannerdata.json');
+    bannerData.onload = function(){
+    if(this.status == 200){
+        let bannerDataJSON = JSON.parse(bannerData.responseText);
+        bannerDataRandom = bannerDataJSON[Math.floor(Math.random()*bannerDataJSON.length)];
+        const topBannerLogo = document.getElementById('topbannerlogo');
+        const topBannerContent = document.getElementById('topbannercontent');
+        const topBannerLink = document.getElementById('topbannerlink'); 
+
+        topBannerLogo.src= bannerDataRandom.logo
+        topBannerContent.innerHTML =  "<span>" + bannerDataRandom.name + "</span>" + " " + bannerDataRandom.desc;
+        topBannerLink.href =  bannerDataRandom.website;
+    }
+    }
+bannerData.send();
+}
+/* Split & Wrap Logo Element inside span */
+const logo = document.querySelectorAll('.logo');
+for(let i=0; i<logo.length; i++){
+  let logoString = logo[i];
+  let logoStringText = logo[i].textContent.split(' ');
+  logoString.innerHTML = logoStringText[0] +"<span>" + logoStringText[1] + "<span>";
+}
+/* Modal Toggle */
+const body = document.querySelector('body');
+const modalClose = document.getElementsByClassName('modal-close');
+const modalSubscribe = document.getElementById('subscribe-modal');
+const modalDisclaimer = document.getElementById('disclaimer-modal');
+const modalDisclaimerToggle = document.getElementById('disclaimer-modal-toggle');
+const modalSubscribeToggle = document.getElementById('subscribe-modal-toggle');
+
+modalSubscribeToggle.addEventListener('click', () => {
+    body.classList.add('modal-open');
+    modalSubscribe.style.display = 'flex';
+});
+modalDisclaimerToggle.addEventListener('click', () => {
+    body.classList.add('modal-open');
+    modalDisclaimer.style.display = 'flex';
+});
+if(modalClose != null){
+    for(var i=0; i<modalClose.length; i++){
+        modalClose[i].addEventListener('click', () => {
+            body.classList.remove('modal-open');
+            modalSubscribe.style.display = 'none';
+            modalDisclaimer.style.display = 'none';
+        });
+    }
+}
+/* CoinmarketCap API Data For Live BTC / ETH */
+let cmcBtc = new XMLHttpRequest();
+cmcBtc.open('GET', 'https://api.coinmarketcap.com/v1/ticker/bitcoin/');
+cmcBtc.onload = function(){
+    if(this.status == 200){
+        let cmcBtcData = JSON.parse(cmcBtc.responseText);
+        let btcLive = document.querySelector('#btc-live-value');
+        let btcChange = document.querySelector('#btc-live-change');
+        btcLive.textContent = '$ ' + cmcBtcData[0].price_usd;
+        if(cmcBtcData[0].percent_change_24h>0){
+            btcChange.textContent = '+' + cmcBtcData[0].percent_change_24h;
+        } else {
+            btcChange.textContent = cmcBtcData[0].percent_change_24h;
+        }
+    
+    }
+}
+cmcBtc.send();
+
+let cmcEth = new XMLHttpRequest();
+cmcEth.open('GET', 'https://api.coinmarketcap.com/v1/ticker/ethereum/');
+cmcEth.onload = function(){
+    if(this.status == 200){
+        let cmcEthData = JSON.parse(cmcEth.responseText);
+        let ethLive = document.querySelector('#eth-live-value');
+        let ethChange = document.querySelector('#eth-live-change');
+        ethLive.textContent = '$ ' + cmcEthData[0].price_usd;
+        if(cmcEthData[0].percent_change_24h>0){
+            ethChange.textContent = '+' + cmcEthData[0].percent_change_24h;
+        } else {
+            ethChange.textContent = cmcEthData[0].percent_change_24h;
+        }
+    }
+}
+cmcEth.send();
+/* End  CoinmarketCap API Data For Live BTC / ETH */
+
+/*  Dynamically Set Rating Background based on Number */
+
+/*  Home Page */
+let ratingStarts = document.querySelectorAll('.ico-card-rating.number');
+
+if(ratingStarts != null){
+    ratingStarts.forEach( function (star){
+        if(star.textContent <= 3){
+            star.classList.add('low');
+        } else if(star.textContent <= 6){
+            star.classList.add('medium');
+        } else if(star.textContent <= 10){
+            star.classList.add('high');
+        }
+
+    });
+}
+/*  Full List */
+let ratingNumber = document.querySelectorAll('.ico-moonability .number');
+if(ratingNumber != null){
+    ratingNumber.forEach(function (number){
+        if(number.textContent <= 3){
+            number.classList.add('red');
+        } else if(number.textContent <= 6){
+            number.classList.add('yellow');
+        } else if(number.textContent <= 10){
+            number.classList.add('green');
+        }
+    });
+}
+/*  Dynamically Set Date Background based on Number */
+let dateButton = document.querySelectorAll('.ico-ends-in li button');
+let dateButtonValue = document.querySelectorAll('.ico-date-value');
+if(dateButton && dateButtonValue != null){
+    dateButton.forEach(function(date, i){
+        if(dateButtonValue[i].textContent <= 2){
+            date.classList.add('red');
+        } else if(dateButtonValue[i].textContent <= 5){
+            date.classList.add('yellow');
+        } else if(dateButtonValue[i].textContent >= 6){
+            date.classList.add('green');
+        }
+    });
+}
+/* Dynamically set Whitelist Status Button Color */
+const whitelistStatus = document.querySelectorAll('.whitelist-status');
+if(whitelistStatus != null){
+    whitelistStatus.forEach((button) => {
+        if(button.textContent == 'Soon'){
+            button.classList.add('yellow');
+        } else if(button.textContent == 'Open'){
+            button.classList.add('green');
+        } else if(button.textContent == 'Closed'){
+            button.classList.add('red');
+        }
+    });
+}
+/* ICO Inner Page Coin Progress Element Word Split */
+let text = document.getElementById("coin-page-card-status");
+if(text != null){
+let string = text.textContent;
+text.innerHTML = "";
+string.split("");
+let i = 0, length = string.length;
+for (i; i < length; i++) {
+    if(string[i] == " "){
+        text.innerHTML +=  "&nbsp;" ;
+    }
+    else{
+        text.innerHTML += "<span>" + string[i] + "</span>";
+    }
+    
+}
+}
+/* End ICO Inner Page Coin Progress Element Word Split */
+
+/* Javascript Countdown Timer */
+const Doom=function(b){function e(){var a,d=new Date,c=d.getTime()/1E3;a=parseInt(c/3600)%24;var b=parseInt(c/60)%60,c=Math.floor(c%60),d=[d.getMonth()+1,d.getDate(),d.getFullYear()].join("/");a=[a,b,c].join(":");a=[d,a].join(" ");a=k(a);c=a<f?f-a:a-f;a=isNaN(c)?NaN:{secsPart:g(Math.floor(c/1E3%60)),minsPart:g(Math.floor(c/6E4%60)),hoursPart:g(Math.floor(c/36E5%24)),daysPart:g(Math.floor(c/864E5))};b=[l,m,n,p];d=["days","hours","mins","secs"];1E3>c&&(q||clearInterval(r),h||(s(),h=!0));for(c=0;c<b.length;c++){var e= document.getElementById(b[c]);null!==e&&(e.innerHTML=a[d[c]+"Part"])}}function g(a){return t?1===a.toString().length?"0"+a:a:a}function k(a){return new Date(Date.parse(a))}function v(a){var b;a?(b=a.charAt(0),a=a.substring(1).split(":"),a=3600*+a[0]+60*+a[1],a=-Math.abs(60*date.getTimezoneOffset())+eval(b+a),b=a/3600,a=Math.abs(a/60%60),b=[b,a].join(":")):b=null;return b}var t,s,q,f,u,l,m,n,p,r,h;(function(){var a=b.targetDate||null,d=b.targetTime||"00:00:00";u=v(b.utcOffset||null);l=b.ids?b.ids.days|| "days":"days";m=b.ids?b.ids.hours||"hours":"hours";n=b.ids?b.ids.mins||"mins":"mins";p=b.ids?b.ids.secs||"secs":"secs";t=!1===b.addZero?!1:!0;s=b.callback||function(){};q=b.biDirectional||!1;f=k([a,d,u].join(" "));h=!1})();return{doom:function(){e();r=setInterval(e,1E3)}}};
+const today = new Date();
+const dd = today.getDate();
+const mm = today.getMonth()+1; //January is 0!
+const yyyy = today.getFullYear();
+const todayFormatted = mm+'/'+dd+'/'+yyyy;
+let counterDate = document.getElementById('counter-date');
+if(counterDate != null){
+    counterDate = counterDate.dateTime;
+    let d = new Date(0);
+    d.setUTCSeconds(counterDate);
+    let counterDateFormatted = (d.getMonth() + 1) + "/" +  d.getDate() + "/" +  d.getFullYear();
+    let counter = Doom({
+        targetDate: counterDateFormatted
+      })
+      counter.doom();
+
+}
+
+/* End Javascript Countdown Timer */
+
+/* CoinmarketCap API Data For Coin Detail */
+let coin = document.getElementById('coin-name');
+if(coin != null){
+coin = coin.textContent;
+coin = coin.replace(/\s+/g, '-').toLowerCase();
+let cmcRequest = new XMLHttpRequest();
+let cmcGetUrl = 'https://api.coinmarketcap.com/v1/ticker/'+coin+'/?convert=ETH';
+cmcRequest.open('GET', cmcGetUrl);
+cmcRequest.onload = function(){
+    if(this.status == 200){
+    let cmcData = JSON.parse(cmcRequest.responseText);
+    let icoUsdPrice = document.querySelector('#ico-usd-price');
+    let icoEthPrice = document.querySelector('#ico-eth-price');
+    let icoBtcPrice = document.querySelector('#ico-btc-price');
+    let returnsUsd = document.querySelector('#returns-usd');
+    let returnsEth = document.querySelector('#returns-eth');
+    let returnsBtc = document.querySelector('#returns-btc');
+    let usdLive = document.querySelector('#coin-usd-live');
+    let ethLive = document.querySelector('#coin-eth-live');
+    let btcLive = document.querySelector('#coin-btc-live'); 
+    let dailyVolume = document.querySelector('#daily-volume');
+    let marketCap = document.querySelector('#market-cap');
+    
+    let usdReturn = cmcData[0].price_usd/icoUsdPrice.textContent + '';
+    let ethReturn = cmcData[0].price_eth/icoEthPrice.textContent + '';
+    let btcReturn = cmcData[0].price_btc/icoBtcPrice.textContent + '';
+
+
+    returnsUsd.textContent = usdReturn.substring(0,4)+'x';
+    returnsEth.textContent = ethReturn.substring(0,4)+'x';
+    returnsBtc.textContent = btcReturn.substring(0,4)+'x';
+    usdLive.textContent = cmcData[0].price_usd + ' $';
+    ethLive.textContent = cmcData[0].price_eth + ' ETH';
+    btcLive.textContent = cmcData[0].price_btc + ' BTC';
+    dailyVolume.textContent =  cmcData[0]['24h_volume_usd'] + ' $';
+    marketCap.textContent = cmcData[0].market_cap_usd + ' $';
+
+    
+    }
+}
+cmcRequest.send();
+}
+/* Twitter Iframe Styling  */
+waitForElementToDisplay('#twitter-widget-0',5000);
+function waitForElementToDisplay(selector, time) {
+    if(document.querySelector(selector)!=null) {
+        let twitterFrame = document.getElementById('twitter-widget-0');
+        if(twitterFrame.parentElement.className != 'twitter-box'){
+        let twitterFrameContent = twitterFrame.contentDocument || twitterFrame.contentWindow.document;
+        let inner_tf = twitterFrameContent.getElementsByClassName('timeline-TweetList');
+        inner_tf[0].style.padding = '1.5rem';
+        let head_tf = twitterFrameContent.querySelector('head');
+        head_tf.querySelector('style').innerText += '::-webkit-scrollbar { width: 15px; } ::-webkit-scrollbar-track {  border-radius: 0; background: #4d6382;} ::-webkit-scrollbar-thumb { border-radius: 15px; -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); background: #1a2541; height: 5rem;}'; 
+        }
+        return;
+        
+    }
+    else {
+        setTimeout(function() {
+            waitForElementToDisplay(selector, time);
+        }, time);
+    }
+}
+
+
+
+
+

@@ -1,0 +1,48 @@
+ <!-- Footer Begin -->
+
+ <footer>
+    <!-- Footer Col 1 -->
+    {% for item in site.data.footer.about %}
+    <a class="footer-logo" href="{{site.eurl}}"><div class="footer-logo">
+        <img src="{{site.baseurl}}{{item.logo-image}}" alt="Moonlanding logo">
+        <h2 class="logo">{{item.logo-name}}</h2>
+        <h5>{{item.logo-subtitle}}</h5>
+    </div></a>
+    <!-- End Footer Col 1 -->
+    <!-- Footer Col 2 -->
+    <div class="footer-about">
+        <p>{{item.desc}}</p>
+    </div>
+    {% endfor %}
+    <!-- End Footer Col 2 -->
+    <!-- Footer Col 3 -->
+    <div class="footer-links">
+        <ul>
+            {% for item in site.data.footer.links-col-1 %}
+            <a href="{{item.href}}"><li>{{item.name}}</li></a>
+            {% endfor %}
+        </ul>
+    </div>
+    <!--End Footer Col 3 -->
+    <!-- Footer Col 4 -->
+    <div class="footer-links">
+        <ul>
+            {% for item in site.data.footer.links-col-2 %}
+            <a href="{{item.href}}"><li>{{item.name}}</li></a>
+            {% endfor %}
+        </ul>
+    </div>
+    <!--End Footer Col 4 -->
+    <!-- Footer Col 5 -->
+    <div class="footer-links more">
+        <ul>
+            {% for item in site.data.footer.links-social %}
+            <a href="{{item.href}}"><li><i class="{{item.itag}}"></i>{{item.name}}<span>Follow</span></li></a>
+            {% endfor %}
+        </ul>
+    </div>
+    <!--End Footer Col 5 -->
+</footer>
+<!-- Footer End -->
+
+

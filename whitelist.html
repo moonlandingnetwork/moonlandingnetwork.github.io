@@ -1,0 +1,86 @@
+---
+layout: default
+---
+{% assign timeframe =  86400 %}
+{% assign current_date = "now" | date: "%s" | minus: timeframe  %}
+{% assign whitelistCoins = site.coins | where: 'whitelist.status', 'true' %}
+{% assign whitelistCoins = whitelistCoins | sort: 'date-added' | reverse %}
+
+<div class="page-end-gradient top">
+
+</div>
+<!-- Main Body Content -->
+<div class="main-body-content">
+    <!-- Whitelist Title -->
+    <div class="whitelist-title">
+        <h1>Whitelist</h1>
+        <p>Current list of ICOs where Whitelist is active. Registration is required for participation.</p>
+    </div>
+    <hr class="pre-ico-hr">
+    <!-- End Whitelist Title -->
+    <!--- Whitelist Table -->
+    <div class="container">
+        <!-- ICO Table -->
+        <div class="ico-table minimal">
+            <ul class="ico-project-name minimal">
+                {% for coin in whitelistCoins %}
+                <a href="{{coin.url}}"><li>
+                    <div class="ico-table-title-image">
+                        <img src="{{site.baseurl}}{{coin.ico.logo}}" alt="">
+                    </div>
+                    <div class="ico-table-title-content">
+                        <h5>{{coin.ico.name}}</h5>
+
+                    </div>
+                </li></a>
+                {% endfor %}
+            </ul>
+            <ul class="ico-category minimal">
+                {% for coin in whitelistCoins %}    
+                <li>{{coin.ico.category}}</li>
+                {% endfor %}
+            </ul>
+            <ul class="ico-category minimal">
+                {% for coin in whitelistCoins %}    
+                <li>{{coin.whitelist.type}}</li>
+                {% endfor %}
+            </ul>
+
+            <ul >
+                {% for coin in whitelistCoins %}
+                {% assign  whitelistStart = coin.whitelist.start-date | date: "%s" | plus: 0 %}
+                {% assign  whitelistEnd = coin.whitelist.end-date | date: "%s" | plus: 0 %}  
+                {% if whitelistStart > current_date  %}
+                 {% assign status = 'Soon' %}
+                {% endif %}
+                {% if current_date > whitelistStart and whitelistEnd > current_date %}
+                 {% assign status = 'Active' %}
+                {% endif %}
+                {% if current_date > whitelistEnd %}
+                 {% assign status = 'Closed' %}
+                {% endif %}
+                <li>
+                    <button class="whitelist-status btn round green bulky">{{status}}</button>
+                </li>
+                {% endfor %}
+            </ul>
+            <ul class="ico-action">
+                {% for coin in whitelistCoins %}
+                <li>
+                    <a href="{{coin.social.website}}">Join Now</a>
+                </li>
+                {% endfor %}
+              </ul>
+
+        </div>
+    </div>
+    <!-- End Whitelist Table -->
+</div>
+</div>
+
+
+<div class="ico-promo-banner">
+    <h4>Get the week’s best ICO right in your Inbox</h4>
+    <input type="text">
+    <button class="btn std">Subscribe</button>
+</div>

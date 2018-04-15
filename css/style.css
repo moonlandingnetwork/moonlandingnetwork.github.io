@@ -1,0 +1,1951 @@
+@font-face {
+    font-family: 'spincycle';
+    src: url('../fonts/SpinCycle.eot');
+    src: url('../fonts/SpinCycle.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/SpinCycle.woff2') format('woff2'),
+        url('../fonts/SpinCycle.woff') format('woff'),
+        url('../fonts/SpinCycle.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    background: #072C59;
+    color: #fff;
+
+}
+body.modal-open{
+    overflow: hidden;
+}
+.container{
+    max-width: 1150px;
+    margin: auto;
+    width: 100%;
+}
+.container.max{
+    max-width: 1000px;
+}
+.hidden{
+    display: none;
+}
+/* Elements */
+/* Anchor Tag */
+a{
+    text-decoration: none;
+}
+a.center{
+    text-align: center;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+a.gray{
+    color: #C7C8CA;
+}
+/* Scroll Bar */
+
+
+/* End Scroll Bar */
+
+/* Lists */
+ul{
+    list-style: none;
+    padding-left: 0;
+}
+/* Linkedin Logo */
+.linkedin{
+    color: #fff;
+    text-transform: none;
+    border-radius: 50%;
+    margin: 0.5rem;
+    padding: 0.1rem 0.2rem;
+    background-color: #00A2CE;
+}
+span.golden{
+    color: #DC8C00;
+}
+/* Buttons */
+.button-group{
+    display: flex;
+}
+.btn.disabled{
+    cursor: not-allowed;
+}
+.btn{
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background-color: #072C59;
+    color: #fff;
+    padding: 0.6rem 0.7rem;
+    margin: 0.5rem;
+    display: flex;
+    align-self: center;
+}
+.btn.circle{
+    border-radius: 50%;
+    height: 14px;
+    width: 14px;
+    padding: 0;
+    margin: 0.25rem;
+}
+.btn i{
+    font-size: 1em;
+    margin-right: 0.35rem;
+}
+.btn.std{
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: 4px;
+    letter-spacing: 0.05rem;
+    font-size: 0.65em;
+
+}
+.btn.round{
+    border-radius: 25px;
+    padding: 0.5rem 1.75rem;
+    margin: 0;
+}
+.btn.round.bulky{
+    padding: 0.7rem 1.2rem;
+}
+.btn.round.big{
+    border-radius: 35px;
+    font-size: 1.3rem;
+    border-width: 4px;
+    width: 12rem !important;
+}
+.btn.green{
+    background:#0AA645;
+}
+.btn.yellow{
+    background: #E9BA00;
+}
+.btn.orange{
+    background: #E39300;
+    border: 1.5px solid #E39300;
+}
+.btn.orange i{
+    color: #E39300;
+}
+.btn.darkorange {
+    background-color: #D46213;
+}
+.btn.skyblue{
+    border: 1.5px solid #4DF6DA;
+}
+.btn.skyblue i{
+    color: #4DF6DA;
+}
+.btn.cyan{
+    background-color: #4DEFD3;
+}
+.btn.blue{
+    background-color: #0B4783;
+    border: 2px solid #0B4783;
+}
+.btn.red{
+    background: #D64117;
+   
+}
+.btn.gray{
+    background-color: #fff;
+    border: 2px solid #C9CACB;
+    color:#C9CACB;
+    
+}
+.btn.hollow{
+    background-color: #072C59;
+    color: #F7F2EB;
+    
+}
+.btn.white{
+    background-color: #fff;
+    color: #091F47;
+}
+
+/* Buttons End */
+/* Input Box*/
+input.skyblue{
+    background-color: #D6E5E8;
+    border: 1.5px solid #BAC8CB;
+    padding: 0.3rem;
+}
+/* Checkbox */
+input[type="checkbox"]{
+    cursor: pointer;
+    position: relative;
+    width: 23px !important;
+    height: 23px !important;
+    padding: 0;
+    -webkit-appearance: none;
+    background: #fff;
+    outline: none;
+    transition: 0.5s;
+}
+input.blue[type="checkbox"]{
+    background-color: #D6E5E8;
+    width: 16px !important;
+    height: 16px !important;
+    padding: 0;
+    border-radius: 3px;
+    border: 1px solid #BAC8CB;
+}
+input.blue:checked[type="checkbox"]{
+    background: #D6E5E8;
+}
+    
+input.blue:checked[type="checkbox"]:after{
+    position: absolute;
+    content: '';
+    height: 3px;
+    width: 7px;
+    margin: 3px;
+    border-left: 2px solid #555;
+    border-bottom: 2px solid #555;
+    transform: rotate(-45deg);
+}
+input.blue{
+    border: 1.2px solid #072C59;
+    padding: 0.8rem;
+}
+textarea.blue{
+    border: 1.2px solid #072C59;
+    padding: 0.8rem;
+}
+textarea.blue::-webkit-input-placeholder{
+    color: #072C59;
+    opacity: 1;
+    font-size: 1.25rem;
+}
+input.orange[type="checkbox"]{
+    border: 2px solid #E39504 !important;
+
+}
+input.sqaure[type="checkbox"]{
+    border-radius: 0 !important;
+}
+input.round[type="checkbox"]{
+    height: 24px !important;
+    width: 24px !important;
+}
+input:checked[type="checkbox"]{
+    background: #E39504;
+    
+}
+input:checked[type="checkbox"]:after{
+    position: absolute;
+    content: '';
+    height: 4px;
+    width: 9px;
+    border-left: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    transform: rotate(-45deg);
+}
+/* End Checkbox */
+/* Horizontal Line */
+hr.small{
+    background-color: #fff;
+    width: 5rem;
+    height: 0.2rem;
+    border: none;
+}
+/* Progress Bars */
+progress, progress[role] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  background-size: auto;
+  
+}
+/* End Progress Bar */
+/* Select Element */
+select {
+    -webkit-appearance: none; 
+    -moz-appearance: none;
+    appearance: none;       /* remove default arrow */
+    color: #072C59;
+    border: 1.2px solid #072C59;
+    padding: 0.8rem;
+    background:
+    linear-gradient(45deg, transparent 50%, #0B478A 50%),
+    linear-gradient(135deg, #0B478A 50%, transparent 50%),
+    linear-gradient(to right, white, white);
+  background-position:
+    calc(100% - 21px) calc(1em + 2px),
+    calc(100% - 16px) calc(1em + 2px),
+    100% 0;
+  background-size:
+    5px 5px,
+    5px 5px,
+    2.5em 2.5em;
+  background-repeat: no-repeat;
+ }
+ select option {
+    -webkit-appearance: none; 
+    -moz-appearance: none;
+    appearance: none;       /* remove default arrow */
+    color: #0B478A;
+    background-color: #fff;
+    padding: 0.8rem;
+    font-size: 1rem;
+ }
+
+ /* End Select Element */
+/* Persistent Icons */
+.persistent-icons{
+    position: fixed;
+    right: 5rem;
+    bottom: 2rem;
+}
+.per-icon-group{
+    display: flex;
+    justify-content: space-between;
+}
+.per-icon-group .per-icon{
+    margin: 0 0.5rem;
+}
+.per-icon{
+    cursor: pointer;
+    margin: 0 auto;
+    height: 3.8rem;
+    width: 3.8rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1em;
+    font-weight: 900;
+    text-align: center;
+    line-height: 1.25rem;
+    padding: 0.7rem;
+}
+.per-icon.big{
+    width: 4rem;
+    height: 4rem;
+}
+.per-icon i{
+    font-size: 3.8rem;
+    margin-right: 0.5rem;
+}
+.per-icon.skyblue{
+    background: linear-gradient(to top, #00AEBB, #4DF6DA );
+}
+.per-icon.orange{
+    background: #E39300;
+}
+
+/* Elements End */
+
+/* Common Elements */
+
+/*Modal*/
+.modal-container{
+    z-index: 99;
+    position: absolute;
+    top: 0;
+    background: rgba(0,0,0,0.5);
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.modal{
+    display: flex;
+    
+}
+.modal.alt{
+    width: 55%;
+    
+}
+.modal.reverse{
+    flex-direction: row-reverse;
+}
+.modal.column{
+    flex-direction: column;
+}
+.modal-head{
+    background: #E39300;
+    color: #fff;
+    border-radius: 15px 15px 0 0;
+    position: relative;
+}
+
+.modal-head h1{
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+.modal-head h1 span{
+    display: inline-block;
+    background: #fff;
+    color: #E39300;
+    margin-right: 1rem;
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    font-weight: 700;
+}
+.modal-head i{
+    cursor: pointer;
+    position: absolute;
+    right: -2.6rem;
+    top: -2.3rem;
+    font-size: 2.7rem;
+    border-radius: 50%;
+    background: #0B478A;
+    padding: 1.3rem 1.6rem;
+    color: #fff;
+}
+.modal-body{
+    background: #fff;
+    color: #0B478A;
+    border-radius: 0 0 15px 15px;
+    padding: 1rem 4rem;
+}
+.modal-body p{
+    color: #0B478A;
+    margin: 2rem 0;
+    font-weight: 500;
+}
+.modal-body  p span{
+    font-weight: 900;
+    font-size: 1.03rem;
+}
+.modal-image{
+    flex: 1 1 50%;
+    position: relative;
+}
+.modal-content{
+    background: #fff;
+    padding: 3rem 2.8rem 2.5rem;
+    color: #0B478A;
+    flex: 1 1 50%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+.modal-content.minimal{
+    padding: 5rem 2.8rem 2.5rem;
+}
+.modal-image i{
+    cursor: pointer;
+    position: absolute;
+    right: -3rem;
+    top: -2.3rem;
+    font-size: 3.5rem;
+    border-radius: 50%;
+    background: #E39300;
+    padding: 1.6rem 2.1rem;
+    color: #fff;
+}
+.modal-content i{
+    cursor: pointer;
+    position: absolute;
+    right: -3rem;
+    top: -2.3rem;
+    font-size: 3.5rem;
+    border-radius: 50%;
+    background: #E39300;
+    padding: 1.6rem 2.1rem;
+    color: #fff;
+}
+.modal-content h1{
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 1.5px;
+}
+.modal-image img{
+    width: 400px;
+    height: 100%;
+}
+.modal input{
+    display: block;
+    padding: 0.7rem 1.5rem;
+    width: 17rem;
+    margin-bottom: 0.8rem;
+    border-radius: 8px;
+    outline: none;
+    border: 1.7px solid #C7C8CA;
+}
+.modal input::placeholder {
+    color: #C7C8CA;
+}
+.input-group {
+    display: flex;
+    justify-content: space-between;
+
+}
+.input-group input{
+    width: 6.7rem;
+}
+.modal-content.minimal input{
+    margin-bottom: 1.5rem;
+}
+.input-checkbox{
+    display: flex;
+    align-items: center;
+    margin: 1.7rem 0;
+    font-size: 0.785rem;
+    font-weight: 900;
+    letter-spacing: 0.5px;
+}
+.input-checkbox label.gray{
+    color: #C7C8CA;
+}
+.input-checkbox.center{
+    justify-content: center;
+}
+.input-checkbox.low-margin{
+    margin: 1rem 0;
+}
+.input-checkbox input {
+    width: 32px;
+    padding: 0.3rem;
+    margin: auto 0.6rem auto 0.4rem !important;
+}
+.modal-link{
+    font-size: 0.85rem;
+}
+.modal-content button{
+    margin: 2rem auto;
+    padding: 0.7rem 2rem;
+}
+/*Modal End*/
+
+/* Topbar Element style */
+
+#topbanner{
+    background: #E39300;
+    display: flex;
+    justify-content: center;
+    
+}
+#topbanner img{
+    height: 32px;
+    width: 32px;
+    margin: 0.5rem 0.3rem;
+}
+#topbanner p{
+    color: #023C6C;
+    padding: 0.6rem;
+    margin: 0.5rem 0;
+    font-size: 0.8em;
+
+}
+#topbanner p span{
+    font-weight: 700;
+}
+/* Top Bar Style End */
+/* Navigation Bar */
+nav{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.5em;
+    
+}
+.logo{
+    font-family: spincycle;
+    font-size: 2.2em;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    margin: 0;
+    margin-top: 1rem;
+    color: #fff;
+    
+}
+.logo span{
+    color: #E09224;
+    margin-left: 0.3rem;
+}
+nav ul{
+    display: flex;
+    margin: 0;
+    margin-right: -40px;
+    
+}
+nav ul li{
+    margin: 0 0.6rem;
+    font-size: 1em;
+    color: #f5f1ece3;
+    letter-spacing: 0.5px;
+    display: flex;
+    align-self: center;
+
+}
+nav ul li a{
+    color: #f5f1ece3;
+}
+#disclaimer-modal-toggle{
+    cursor: pointer;
+}
+#search-container{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+#results-container{
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    position: absolute;
+    top: 2.3rem;
+    width: 100%;
+    
+}
+#results-container li{
+   align-self: flex-start;
+   margin: 0;
+   width: 100%;
+}
+#results-container li:hover{
+    background-color: #f0f8ff;
+}
+#results-container li a{
+    color: #333;
+    font-size: 0.9rem;
+    font-weight: 500;
+    width: 100%;
+    display: block;
+    padding: 0.6rem 1rem;
+}
+nav input{
+font-size: 1rem;
+text-align: center;
+color: #fff;
+outline: none;
+width: 8.5rem;
+height: 1.8rem;
+border: solid 1.5px transparent;
+border-radius: 80px;
+background-image: linear-gradient(#072C59, #072C59), radial-gradient(circle at top left, #E9BA00,#4DF6DA);
+background-origin: border-box;
+background-clip: content-box, border-box;
+
+}
+nav input::placeholder { 
+    text-align: left;
+    font-family: 'Font Awesome\ 5 Free';
+    font-weight: 600;
+    overflow: visible;
+    vertical-align: top;
+    display: inline-block !important;
+    padding-left: 10px;
+    padding-top: 2px;
+    font-size: 1.2rem;
+    background: linear-gradient(to bottom,#E9BA00, #4DF6DA);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+/* Navigation End */
+
+/* Crypto Price Box */
+.crypto-price{
+    display: flex;
+    margin-top: 1.3rem;
+    margin-left: -1rem;
+    
+}
+
+.crypto-item{
+    border: 2px solid #E39300;
+    margin: 0 0.3rem;
+}
+.crypto-item:first-of-type{
+    border-radius: 15px 0 0;
+}
+.crypto-item:last-of-type{
+    border-radius: 0 0 15px 0;
+}
+.crypto-item h2{
+    margin: 0.5em;
+    font-size: 0.9rem;
+}
+.crypto-item h2 span{
+    margin: 0  0.25em;
+}
+.crypto-name i{
+    color: #E39300;
+    margin-right: 0.2rem;
+    font-size: 1.15rem;
+}
+.crypto-price-change{
+    color: #E39300;
+}
+/* End Crypto Price Box */
+/* Main Body Content */
+.main-body-content{
+    background: #fff;
+    padding: 0 0 4rem;
+    
+}
+.main-body-content.bg{
+    margin-top: 5rem;
+    background: #072C59;
+    background-image: url('../images/publish-ico-banner.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.main-body-content.dot-bg{
+    background-image: url('../images/dotted-bg.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: 50%;
+    background-position-y: 7rem;
+}
+/* End Main Body Content */
+
+/* ICO Navbar */
+.ico-nav ul{
+    display: flex;
+}
+.ico-nav li{
+    flex: 1 1 25%;
+    color: #fff;
+    text-transform: uppercase;
+    background: #BAC8CB;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 700;
+    padding: 1rem 0;
+    border-radius: 0 0 15px 15px;
+}
+.ico-nav li a{
+    color: #fff;
+}
+.ico-nav li.active{
+    background: #E39300;
+}
+.ico-nav li span{
+    color: #BAC8CB;
+    background: #fff;
+    padding: 0.1rem 0.4rem;
+    border-radius: 5px;
+    margin-left: 0.7rem;
+    
+}
+.ico-nav li.active span{
+    color: #E39300;
+    background: #15223F;
+}
+/* End ICO Navbar */
+/* Pre ICO Title */
+.pre-ico-title{
+    color: #072C59;
+    text-transform: uppercase;
+    font-size: 2.75em;
+    font-weight: 700;
+    text-align: center;
+    margin: 4rem 0 1rem;
+
+}
+.pre-ico-hr{
+    background-color: #E39300;
+    width: 4.5rem;
+    height: 0.25rem;
+    border: none;
+    margin-bottom: -0.5rem;
+}
+
+/* ICO Table */
+.ico-table.minimal{
+    margin:  2.5rem 6rem 0;
+}
+.ico-table{
+    display: flex;
+    /* padding-bottom: 3rem; */
+}
+
+.ico-project-name{
+    flex: 2;
+}
+.ico-project-name.minimal{
+    flex: 1;
+}
+.ico-moonability{
+    flex:1;
+}
+.ico-category{
+    flex: 1.2;
+}
+.ico-category.minimal{
+    flex: 1;
+}
+.ico-fund-raised{
+    flex:2.7;
+}
+.ico-ends-in{
+    flex:1;
+}
+.ico-social-media{
+    flex:1.3;
+}
+.ico-table-title{
+    font-size: 1.1rem;
+    background: #15223F;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 1rem 0;
+    margin-bottom: 0;
+}
+.ico-table-title.first{
+    border-radius: 15px 0 0 0;
+}
+.ico-table-title.last{
+    border-radius:  0 15px 0 0;
+}
+.ico-table ul li{
+    background: #0B478A;
+    color: #fff;
+    font-size: 1.2rem;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 5px solid #072C59;
+}
+.ico-table ul li a i{
+    color: #fff;
+}
+.ico-table ul li.featured a i{
+    color: #072C59;
+}
+.ico-table ul li:last-of-type {
+    border-bottom: none;
+}
+.ico-table .ico-project-name li:last-of-type {
+    border-bottom: 5px solid #072C59;
+}
+.ico-table .ico-project-name a:last-of-type li{
+    border-bottom: none;
+}
+.ico-table ul li.featured{
+    background: #E39300;
+    border-bottom: 5px solid #DD7310;
+}
+.ico-table .ico-project-name li.featured {
+    border-bottom: 5px solid #DD7310;
+}
+
+.ico-project-name li{
+    display: flex;
+    justify-content: flex-start !important;
+    padding: 0 0 0 2rem;
+}
+.ico-project-name li h5 a, p{
+    color: #fff;
+}
+.ico-project-name li.featured h5 a, li.featured p{
+    color: #15223F;
+}
+
+.ico-table-title-image{
+    background: #fff;
+    padding: 0.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 48px;
+    width: 48px;
+    margin-right: 0.7rem;
+}
+.ico-project-name li img{
+    height: 32px;
+    width: 32px;
+}
+.ico-project-name li h5{
+    font-size: 1.3rem;
+}
+.ico-project-name li p{
+    font-size: 0.8rem;
+    
+    margin: 0.2rem 0;
+}
+.ico-project-name li.featured p{
+    font-weight: 600;
+}
+.ico-table-title-content h5,p{
+    margin: 0;
+}
+.ico-moonability li {
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+.ico-moonability li.featured {
+    color: #fff !important;
+}
+.ico-moonability li.number{
+    font-size: 2.5rem;
+}
+.ico-moonability li.green{
+    color: #0AA645;
+}
+.ico-moonability li.yellow {
+    color: #E9BA00;
+}
+.ico-moonability li.red{
+    color: #D64117;
+}
+.ico-category li{
+    
+    font-weight: 900;
+    font-size: 1rem !important;
+}
+.ico-category li.featured {
+    color: #15223F;
+}
+.ico-fund-raised li {
+    font-size: 1.3rem !important;
+    display: flex;
+    flex-direction: column;
+}
+.ico-fund-raised li h5{
+    margin: 0.5rem 0;
+    font-weight: 900;
+}
+.ico-fund-raised li.featured h5 {
+    color: #15223F;
+}
+.ico-fund-raised li h5 span{
+    font-weight: 400;
+    font-size: 1rem;
+    margin-left: 0.2rem;
+}
+.ico-fund-progress{
+    height: 10.5px;
+    width: 16rem;
+}
+.ico-fund-progress::-webkit-progress-value {
+    background-image: linear-gradient(to right, #4AB9C0,#4DF2D6);
+  }
+  .ico-fund-progress::-moz-progress-bar {
+    background: linear-gradient(0deg, rgba(74, 185, 192, 1) 0%, rgba(77, 242, 214, 1) 100%);
+  }
+  .ico-fund-progress::-webkit-progress-bar{
+      background-color: #fff;
+  }
+  .ico-fund-progress::-moz-progress-bar{
+    background-color: #fff;
+}
+  
+.ico-ends-in li button{
+    cursor: default;
+    font-size: 1.0rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.ico-date-value{
+    margin-right: 0.3rem;
+}
+.ico-social-media li {
+    
+    font-size: 1.5rem !important;
+}
+.ico-social-media li.featured {
+    color: #15223F;
+}
+.ico-social-media li span{
+    margin: 0 0.4rem;
+}
+.ico-action{
+    flex: 0.7;
+}
+.ico-action li a{
+    color: #E39300;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 700;
+}
+/* End ICO Table */
+
+/* ICO Promo Banner */
+.ico-promo-banner{
+    padding: 0.1rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #023C6C;
+    background: #E39300;
+}
+.ico-promo-banner h4 span{
+    text-transform: uppercase;
+    font-weight: 900;
+   
+}
+.ico-promo-banner h4 {
+    margin: 0 1rem 0 0;
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 0.8px;
+}
+.ico-promo-banner input{
+    margin: 0rem 0.5rem;
+    height: 1.5rem;
+    outline: none;
+    border: none;
+}
+
+/* Footer */
+footer{
+    display: flex;
+    margin: 0.5rem 2rem 2rem;
+    
+}
+.footer-logo{
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+}
+.footer-logo img{
+    width: 72px;
+}
+.footer-logo h2{
+    font-size: 2.1rem;
+}
+.footer-logo h5{
+    margin: -0.5rem 0 0 0;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    color: #F7F2EB;
+}
+.footer-about{
+    flex: 1.8;
+    margin: 5rem 0 0 0;
+    
+}
+.footer-about p{
+    margin: 1rem 6rem 1rem 0;
+    font-size: 0.75rem;
+    font-weight: 200;
+    line-height: 0.9rem;
+    color: rgb(190, 190, 190);
+}
+.footer-links{
+    flex:0.9;
+    margin: 5rem 0 0 0;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 2.2rem;
+}
+.footer-links a{
+    color: #fff;
+}
+.footer-links.more {
+    flex: 1.2;
+}
+.footer-links ul{
+    padding-left: 0;
+}
+.footer-links li i{
+    color: #E39300;
+    margin-right: 1rem;
+    font-size: 1.2rem;
+    width: 0.8rem;
+}
+.footer-links li span{
+    background: #E39300;
+    font-weight: 300;
+    font-size: 0.9rem;
+    padding: 0.2rem 0.9rem;
+    border-radius: 8px;
+    margin-left: 0.5rem;
+}
+/* Footer End */
+/* Disclaimer Section */
+.disclaimer{
+    width: 100%;
+    height: 10rem;
+    margin: auto;
+    text-align: center;
+    margin: 1rem 0 0 0;
+    background : -webkit-gradient(linear,50% 15.15% ,50% 91.45% ,color-stop(0,rgba(7, 44, 89, 1) ),color-stop(1,rgba(20, 31, 59, 1) ));
+    background : -o-linear-gradient(-90deg, rgba(7, 44, 89, 1) 0%, rgba(20, 31, 59, 1) 100%);   
+}
+.disclaimer-head{
+    color: #E39300;
+    margin-bottom: 0.3rem;
+    
+}
+.disclaimer-body{
+    font-size: 0.875em;
+    width: 50%;
+    margin: 0 auto;
+}
+/* Page End Gradient */
+.page-end-gradient{
+    height: 7rem;
+    background : -webkit-gradient(linear,50% 15.15% ,50% 91.45% ,color-stop(0,rgba(7, 44, 89, 1) ),color-stop(1,rgba(20, 31, 59, 1) ));
+    background : -o-linear-gradient(-90deg, rgba(7, 44, 89, 1) 0%, rgba(20, 31, 59, 1) 100%);
+}
+.page-end-gradient.top{
+    height: 3rem;
+    margin-bottom: -1rem;
+    background : -webkit-gradient(linear,50% 15.15% ,50% 91.45% ,color-stop(0,rgba(7, 44, 89, 1) ),color-stop(1,rgba(20, 31, 59, 0.55) ));
+    background : -o-linear-gradient(-90deg, rgba(7, 44, 89, 1) 0%, rgba(20, 31, 59, 0.55) 100%);
+}
+
+/* Common Elements End*/
+
+
+/* Home Page */
+
+/*Intro Section */
+.intro-section{
+    background: url('../images/banner.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/* Banner */
+.banner{
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+.banner img{
+    width: 128px;
+}
+.banner h1{
+    font-size: 3.8rem;
+    letter-spacing: 4px;
+
+}
+.banner h1 span{
+    background-image:  linear-gradient(to bottom,  #DB6213, #E9BA00); 
+    color:transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+.banner h5{
+    margin: -0.8rem 0 0 0;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    color: #F7F2EB;
+}
+.banner-buttons{
+    margin-top: 1.5rem;
+    display: flex;
+    font-size: 0.8em;
+}
+.banner-buttons button{
+    margin: 0 0.4em !important;
+}
+/* End Banner */
+/* Twitter Feed */
+.twitter-feed{
+    margin-top: 4rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.down-arrow {
+    background:  #00B2D8;
+    width: 18%;
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+    margin-top: 1rem;
+    padding: 0.6rem 0 0 0;
+    border-radius: 37px 37px 0 0;
+}
+.down-arrow img{
+    height: 22px;
+}
+.twitter-box{
+    width: 500px;
+    height: 350px;
+    background:  #00B2D8;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Twitter Feed End */
+
+/* Ico List Buttons */
+.ico-list-buttons{
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+.ico-list-buttons button{
+    text-align: center;
+    font-size: 1.6rem;
+    margin: 0 0.3rem !important;
+    padding: 0.5rem 1rem !important;
+    width: 15rem !important;
+    display: flex;
+    justify-content: center;
+}
+/* End ICO List Buttons */
+/* ICO Grid */
+.ico-grid{
+    display: flex;
+    justify-content: center;
+    margin: 5rem 0 2rem 0;
+    background: url('../images/banner.png');
+    background-size: contain;
+    background-repeat: repeat-y;
+    
+}
+.ico-col{
+    flex: 1 1 25%;
+
+}
+.ico-col-title{
+    text-transform: uppercase;
+    color: #E39300;;
+    font-size: 1.9rem;
+    font-weight: 700;
+    text-align: center;
+}
+.ico-card{
+    display: flex;
+    background-color: #fff;
+    margin: 1.2rem 3rem;
+    
+}
+.ico-card.featured{
+    background-color: #E39300;
+}
+.ico-card.featured .ico-card-title{
+    color: #fff;
+}
+.ico-card.featured .ico-card-title a{
+    color: #fff;
+}
+.card-title-action{
+    display: flex;
+}
+.ico-card-sec{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: -2.3rem;
+}
+.ico-card-image{
+    background-color: #fff;
+    border-radius: 50%;
+    margin: 0.3rem 0;
+}
+.ico-card-image img{
+    width: 42px;
+    padding: .8rem 1rem;
+}
+.ico-card-rating{
+    background: linear-gradient(to top, #00AEBB, #4DF6DA );
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    width: 3.4rem;
+    height: 3rem;
+    font-size: 2.2rem;
+    padding: 0.3rem 0 0 0;
+    margin: 0.3rem 0;
+}
+.ico-card-rating.number{
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding-top: 1rem;
+    height: 2.5rem;
+}
+.ico-card-rating.high{
+    background: #0AA645;
+}
+.ico-card-rating.medium{
+    background: #E39300;
+}
+.ico-card-rating.low{
+    background: #D74617;
+}
+.ico-card-main{
+    margin: 0.4rem 1rem 0.4rem 1.6rem;
+}
+.ico-card h6{
+ color: #072C59;
+ margin: 0;
+ font-size: 1rem;
+ font-weight: 400;
+}
+.ico-card-title{
+    color: #E39300;
+    font-size: 1.5rem;
+    margin: 1.3rem 0 1.1rem
+}
+.ico-card-title a{
+    color: #E39300;
+}
+.ico-card-statusbanner{
+    display: flex;
+    background: #E39300;
+    justify-content: space-between;
+    padding: 0.7rem 1rem;
+}
+.ico-card-statusbanner h6{
+    font-size: 0.7rem;
+    margin: 0;
+    text-transform: uppercase;
+}
+.ico-card-statusbanner h6 span{
+    font-weight: 400;
+}
+.ico-card-statusbanner h6:last-child{
+    color: #0B4783;
+}
+.ico-card-status{
+    font-weight: 900 !important;
+}
+
+.ico-card-meta{
+    display: flex;
+    justify-content: space-between;
+    margin: 1.4rem 0 1rem;
+}
+.ico-card-type{
+    color: #fff !important;
+    font-weight: 700 !important;
+}
+.ico-col-btn{
+    cursor: pointer;
+    outline: none;
+    text-transform: uppercase;
+    font-size: 1rem;
+    color: #fff;
+    border: none;
+    background: linear-gradient(-6.27% 146.84% 14.22deg,rgba(11, 71, 138, 1) 0%,rgba(10, 67, 131, 1) 13.34%,rgba(7, 44, 89, 1) 100%);
+    background : -webkit-gradient(linear,-6.27% 146.84% ,129.31% -86.5% ,color-stop(0,rgba(11, 71, 138, 1) ),color-stop(0.1334,rgba(10, 67, 131, 1) ),color-stop(1,rgba(7, 44, 89, 1) ));
+  background : -o-linear-gradient(14.22deg, rgba(11, 71, 138, 1) 0%, rgba(10, 67, 131, 1) 13.34%, rgba(7, 44, 89, 1) 100%);
+    width: 20rem;
+    padding: 1rem 0;
+    font-weight: 600;
+    margin: 0.5rem 2rem 1rem;
+}
+.ico-col-btn i{
+    margin-left: 1rem;
+}
+/* ICO Grid End */
+
+/* End Home Page*/
+
+/* Publish ICO Page */
+
+.publish-ico-title {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.publish-ico-title h1{
+    text-transform: uppercase;
+    font-size: 2.75em;
+}
+.publish-ico-title p{
+    font-size: 1.125em;
+}
+.publish-ico-body{
+    background: #fff;
+    margin-top: 3rem;
+    border-radius: 10px;
+    padding: 4rem 0;
+}
+.publish-question{
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    margin: 2rem auto;
+}
+.publish-question.fieldset{
+    margin: 4rem auto 2rem;
+}
+.publish-question.row {
+    flex-direction: row;
+    width: 72%;
+}
+.publish-question.row input{
+    flex-shrink: 0;
+    margin-right: 1rem;
+    margin-top: 0.2rem;
+}
+.publish-question.row label{
+    font-weight: 400;
+    font-size: 1.125em;
+    letter-spacing: 0.5px;
+    line-height: 1.2;
+}
+.publish-question label{
+    color: #072C59;
+    font-weight: 700;
+    font-size: 1.125em;
+    margin-bottom: .8rem;
+}
+.publish-question p{
+    margin: 1rem auto ;
+    font-size: 1em;
+    color: #072C59;
+}
+.publish-banner {
+    display: flex;
+    margin: 5rem 0 0 0;
+    border-bottom: 4px solid #D6E5E8;
+}
+.publish-banner img{
+    width: 450px;
+    margin: -0.3rem;
+    
+}
+.publish-banner h3{
+    color: #072C59;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+}
+.publish-banner ul{
+    color: #072C59;
+    font-weight: 700;
+    margin: 0;
+    padding: 0.5rem 5rem 0.3rem 3rem;
+    flex: 1;
+}
+.publish-featured ul{
+    margin-right: -0.15rem;
+    border-right: 4px solid #D6E5E8;
+}
+.publish-banner li{
+    margin: 0.9em 0;
+    display: flex;
+}
+.publish-banner li i{
+    display: inline-block;
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    padding: 0.05rem;
+    margin-right: 1rem;
+    color: #fff;
+    width: 24px;
+    height: 24px;
+    background-color: #E39300;
+    border-radius: 50%;
+}
+.publish-featured{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.publish-featured-head{
+    background-color: #D6E5E8;
+    padding: 0.5rem 1rem 0 2rem;
+    flex: 1;
+}
+.publish-topbanner{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.publish-topbanner-head{
+    background-color: #E39300;
+    padding: 0.5rem 1rem 0 2rem;
+    flex: 1;
+}
+.publish-question fieldset{
+    
+    border: 1.5px solid #072C59;
+    padding: 1rem;
+    position: relative;
+}
+.publish-question-grid{
+    display: flex;
+    flex-wrap: wrap;
+}
+.publish-question fieldset legend{
+    color: #072C59;
+    font-weight: 700;
+    font-size: 1.125em;
+    margin-bottom: .8rem;
+    position: absolute;
+    left: 0;
+    top: -5.5%;
+}
+.publish-category-item{
+    flex: 1 1 50%;
+    margin: 0.5rem 0;
+}
+.publish-category-item label{
+    color: #000;
+    font-weight: 400;
+    margin-left: 1rem;
+    margin-bottom: 0;
+    font-size: 1.05rem;
+
+}
+.publish-category-item.other input[type="text"]{
+    display: block;
+    width: 40rem;
+    margin: 1rem 2rem 0;
+}
+.publish-ico-body form button[type="submit"]{
+    margin: 3rem auto 0 !important;
+    padding: 1rem 1.5rem;
+    font-size: 1.125em;
+}
+/* End Publish ICO */
+
+/* Whitelist Page */
+.whitelist-title{
+    padding-top: 3rem;
+    margin-bottom: 1.5rem;
+  
+    
+}
+.whitelist-title h1{
+    color: #E39300;
+    font-size: 2.75em;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0;
+}
+.whitelist-title p{
+    color: #072C59;
+    font-size: 1.125em;
+    text-align: center;
+    width: 35%;
+    margin:  1rem auto;
+}
+/* End Whitelist Page */
+/* Ico Inner Page */
+.ico-page-header{
+    margin-top: 1.3rem;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 0.5rem;
+}
+.ico-page-title {
+    display: flex;
+    position: relative;
+}
+.ico-page-title-image{
+    border-radius: 50%;
+    background: #fff;
+    height: 92px;
+    width: 92px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0rem 1rem 0 0;
+    position: absolute;
+    top: 10%;
+}
+.ico-page-title-image img{
+    height: 56px;
+    width: 56px;
+}
+.ico-page-title-content{
+    margin: 0 0 0 7rem;
+}
+.ico-page-title-content h4{
+    margin: 0;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+}
+.ico-page-title-content h4 span.social{
+    margin-left: 1rem;
+}
+.ico-page-title-content h4 i{
+    color: #DC8C00;
+    margin: 0 0.5rem;
+}
+.ico-page-title-content p{
+    font-size: 0.9em;
+    margin: 0.35rem 0 0 0.1rem;
+}
+.ico-page-tags{
+    display: flex;
+    align-items: center;
+    margin-top: -2.7rem;
+}
+.ico-page-tags h4{
+    color: #DC8C00;
+}
+.ico-page-tags ul{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 0 0 1rem;
+}
+.ico-page-tags li{
+    padding: 0.3rem;
+    margin: 0.2rem 0.5rem;
+    width: 25%;
+    border: 2px solid #fff;
+    border-radius: 15px;
+    text-align: center;
+}
+.ico-page-main-desc{
+    width: 53%;
+    margin: auto;
+    padding: 1rem 0 2rem;
+}
+.ico-page-main-desc h6{
+    color:#DC8C00;
+    margin: 0;
+    font-size: 0.95em;
+    font-weight: 400;
+}
+.ico-page-main-desc p{
+    color: #091F47;
+    font-size: 1em;
+    margin: 0.5rem 0;
+}
+.ico-coin-cards{
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 0 0 0;
+}
+
+.coin-cards-left{
+    flex: 3;
+    margin: 0 1rem 0 0;
+}
+.coin-cards-right{
+    flex: 2;
+    margin: 0 0 0 2rem;
+}
+.coin-card{
+    margin: 1.5rem 0;
+}
+.coin-card.full .coin-card-body{
+    padding: 0;
+    
+}
+.coin-card.minimal .coin-card-body{
+    border-radius: 10px 10px 10px 10px;
+    overflow: visible;
+    position: relative;
+}
+.coin-card.minimal .coincard-inneritem{
+    border: none;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+}
+.coin-card-title{
+    background: #15223F;
+    display: flex;
+    border-radius: 10px 10px 0 0;
+    padding: 0.6rem 2rem;
+    justify-content: space-between;
+    align-items: center;
+}
+.coin-card-title.progress span:first-child{
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-right: 0.5rem;
+    letter-spacing: 0.1rem;
+}
+.coin-card-title.progress span:last-child{
+    font-weight: 700;
+    font-size: 1rem;
+    margin-left: 0.5rem;
+    color: #DC8C00;
+}
+.coin-card-title h6{
+    margin: 0;
+    font-weight: 500;
+    font-size: 0.8em;
+}
+.coin-card-body{
+    background-color: #0B4783;
+    padding: 1.3rem;
+    border-radius: 0 0 10px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    overflow: hidden;
+}
+.coin-card-body::-webkit-scrollbar {
+    width: 14px; 
+} 
+.coin-card-body::-webkit-scrollbar-track {
+    border-radius: 0 0 7px 0;
+    background: #4d6382;
+} 
+.coin-card-body::-webkit-scrollbar-thumb { 
+    border-radius: 15px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+    background: #1a2541;
+    height: 5rem;
+}
+
+.button-group.coin-page {
+    margin: 1.5rem 0 0;
+    justify-content: center;
+}
+.button-group.coin-page button{
+    padding: 0.55rem 1.2rem;
+    font-size: 0.7rem;
+    margin: 0 0.3rem;
+    display: flex;
+    align-items: center;
+}
+.button-group.coin-page button img{
+    height: 18px;
+    margin: 0 0.4rem;
+}
+.coincard-inneritem{
+    flex: 1 1 40%;
+    display: flex;
+    padding: 1.1rem 0.7rem;
+    align-items: center;
+    justify-content: flex-start;
+    border-bottom: 1.5px solid #506483;
+    border-right: 1.5px solid #506483;
+}
+.coin-card.minimal .coincard-inneritem{
+    padding: 0 0 0 1rem;
+}
+.coincard-inneritem.center{
+    justify-content: center;
+}
+.coincard-inneritem.full{
+    flex: 1 1 100%;
+    justify-content: start;
+    padding: 1.1rem 2.5rem;
+}
+.coincard-inneritem.third{
+    flex: 1 1 25%;
+    padding: 1.3rem 0.4rem 1.2rem 0.9rem;
+}
+
+.coincard-inneritem.third p{
+    font-size: 0.65rem;
+}
+.coincard-inneritem.similar{
+    padding: 1.1rem;
+}
+.coincard-inneritem h6{
+    margin: 0.2rem 0;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 0.65em;
+    color: #DC8C00;
+}
+.coincard-inneritem p{
+    font-size: 0.7em;
+    font-weight: 400;
+}
+.coinmeter-rating{
+    font-size: 4rem !important;
+    color: #DC8C00;
+    font-weight: 700 !important;
+}
+.coinmeter-rating.featured{
+    font-size: 2.3rem !important;
+    text-transform: uppercase;
+    padding: 0.8rem 0;
+}
+.coincard-inneritem img{
+    margin-right: 1rem;
+    height: 42px;
+    width: 32px;
+    object-fit: contain;
+    margin: 0 0.7rem 0 0.2rem;
+}
+.coincard-inneritem .avatar{
+    flex: none;
+    height:64px;
+    width: 64px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.avatar .ico-logo{
+    margin: 0;
+}
+.coinmeter .coin-card-body{
+    margin-left: 10%;
+    padding: 3.5% 6%;
+    width: 77%;
+}
+.coinmeter .coincard-inneritem{
+    margin-left: 25%;
+}
+.coinmeter img{
+    width: 112px;
+    height: 112px;
+    position: absolute;
+    top: -7%;
+    left: -11%;
+}
+.coinmeter h6{
+    text-transform: none;
+    font-size: 0.6rem;
+    margin: 0.1rem 0;
+}
+.coinmeter p{
+    font-size: .8rem;
+}
+.coin-status-card{
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-items: center;
+    background-image: url('../images/coin-progress-banner.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.coin-status-card h6{
+    margin: 0.3rem 0;
+    text-transform: none;
+    font-size: 1rem;
+}
+.coin-status-card h2{
+    display: flex;
+    font-size: 3rem;
+    margin: 1rem 0;
+    z-index: 2;
+}
+.coin-status-card h2 span{
+    padding: 1rem;
+    background: #E39504;
+    display: block;
+    margin: 0 0.5rem;
+    border-radius: 10px;
+    
+}
+.progress-countdown{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.progress-dt{
+    font-size: 0.8rem;
+    text-transform: none;
+    margin: 0.4rem 0;
+
+}
+#coin-progress-hr{
+    position: absolute;
+    height: 20px;
+    width: 85%;
+    background: linear-gradient(to right, #3EADB4, #45F4CE);
+    border-radius: 15px;
+    
+}
+.coin-status-card img{
+    position: absolute;
+    width: 42px;
+    height: 68px;
+    right: 6%;
+    bottom: 54%;
+}
+#coin-progress-para{
+    color: #0B4783;
+    text-align: center;
+    font-weight: 700;
+
+}
+.coin-return p{
+    flex: 1 1 20%;
+    font-size: 0.6rem;
+}
+.coin-return h3{
+    flex: 1 1 25%
+}
+.coin-return-group{
+    flex: 1 1 40%;
+    display: flex;
+    justify-content: center;
+    margin: 0 0.5rem;
+}
+.coin-return-item {
+    border-radius: 50%;
+    border: 1.5px solid #DC8C00;
+    color: #fff;
+    height: 56px;
+    width: 56px;
+    margin: 0 0.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.coin-return-item h6{
+    color: #fff;
+    font-weight: 400;
+    font-size: 0.8rem;
+    margin: 0;
+}
+.coin-return-item h6:first-child{
+    text-transform: none;
+}
+.coincard-inneritem.nogrow{
+    flex: none;
+    flex-basis: 45.7%;
+}
+.coincard-inneritem.nogrow.alt{
+    flex-basis: 43.7%;
+}
+.coincard-inneritem.community{
+    flex-direction: column;
+}
+.coincard-inneritem.community:hover{
+    background-color: #1066BC;
+}
+.coincard-inneritem.community i{
+    font-size: 3rem;
+    margin: 0.7rem 0;
+    color: #fff;
+}
+.coincard-inneritem.community img{
+    height: 48px;
+    width: 48px;
+    margin: 0.7rem 0;
+}
+.coincard-inneritem.community h6{
+    text-transform: none;
+}
+.participation-detail button.white{
+    font-size: 0.7rem;
+    font-weight: 700;
+    margin: 1.5rem 0.2rem 0 !important;
+}
+#coin-page-analytics{
+    width: 350px;
+    height: 150px;
+}
+.similar-projects{
+    height: 440px;
+    overflow-y: scroll;
+}
+.similar-projects a{
+    display: block;
+    width: 100%;
+}
+.similar-projects .coincard-inneritem{
+    border-right: none;
+}

@@ -1,0 +1,250 @@
+---
+layout: default
+topbanner: true
+persistenticons: full
+hero-banner:
+    image: 'images/logo-image.png'
+    title: Moon Landing
+    title-sub: Network
+    button:
+     - itag: fab fa-twitter
+       title: Follow Twitter
+       href: https://twitter.com
+     - itag: fab fa-telegram-plane
+       title: Join Chat
+       href: https://t.me
+     - itag: fab fa-telegram-plane
+       title: Join Broadcast
+       href: https://t.me
+twitter-id: EtheriumToken
+ico-list-buttons:
+    - title: Pre ICO List
+      href: /preico.html
+    - title: Fund Pool List
+      href: https://t.me
+---
+<!-- Intro Section -->
+<div class="container">
+    <div class="intro-section">
+        {% assign banner = page.hero-banner %}
+        <!-- Hero Banner -->
+        <div class="banner">
+            <img src="{{site.baseurl}}{{banner.image}}" alt="">
+            <h1 class="logo">{{banner.title}}</h1>
+            <h5>{{banner.title-sub}}</h5>
+            <div class="banner-buttons">
+                <a href="{{banner.button[0].href}}">
+                    <button class="btn round skyblue hollow">
+                        <i class="{{banner.button[0].itag}}"></i>{{banner.button[0].title}}</button>
+                </a>
+                <a href="{{banner.button[1].href}}">
+                    <button class="btn round orange hollow">
+                        <i class="{{banner.button[1].itag}}"></i>{{banner.button[1].title}}</button>
+                </a>
+                <a href="{{banner.button[2].href}}">
+                    <button class="btn round orange hollow">
+                        <i class="{{banner.button[2].itag}}"></i>{{banner.button[2].title}}</button>
+                </a>
+            </div>
+        </div>
+        <!-- End Hero Banner -->
+        <!-- Twitter Feed -->
+        <div class="twitter-feed">
+            <hr class="small">
+            <div class="down-arrow">
+                <img src="images/dpubledown-arrow.png" alt="double down arrow">
+            </div>
+            <div class="twitter-box">
+                <a class="twitter-timeline" data-width="465" data-height="315" data-chrome="nofooter" href="https://twitter.com/{{page.twitter-id}}?ref_src=twsrc%5Etfw">Tweets by {{page.twitter-id}}</a>
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+            </div>
+            <hr class="small">
+        </div>
+        <!-- End Twitter Feed -->
+
+        <!-- ICO List Buttons -->
+
+        <div class="ico-list-buttons">
+            <a href="{{page.ico-list-buttons[0].href}}">
+                <button class="btn round big skyblue">{{page.ico-list-buttons[0].title}}</button>
+            </a>
+            <a href="{{page.ico-list-buttons[1].href}}">
+                <button class="btn round big orange hollow disabled">{{page.ico-list-buttons[1].title}}</button>
+            </a>
+        </div>
+        <!-- End ICO List Buttons -->
+    </div>
+    <!-- End Intro Section -->
+    <!-- ICO Grid -->
+    <div class="ico-grid">
+        {% assign featuredcoins = site.coins | where: 'ico.featured', 'true' | sort: 'date-added' | reverse %} {% assign regularcoins
+        = site.coins | where: 'ico.featured', 'false' | sort: 'date-added' | reverse %} {% assign timeframe = 86400 %} {%
+        assign current_date = "now" | date: "%s" | minus: timeframe %}
+        <div class="ico-col">
+            <div class="ico-col-title">Upcoming ICO</div>
+            <!-- Featured Upcoming Coins Array -->
+            {% assign featuredUpcoming = "" | split: ',' %} {% assign featuredUpcomingExpired = "" | split: ',' %} {% for coin in featuredcoins
+            %} {% assign featuredTill = coin.ico.featured-till | date: "%s" | plus: 0 %} {% assign pre_ico_end_date = coin.pre-ico.end-date
+            | date: "%s" | plus: 0 %} {% assign ico_start_date = coin.ico-detail.start-date | date: "%s" | plus: 0 %} {%
+            if current_date > pre_ico_end_date and ico_start_date > current_date %} {% if featuredTill > current_date %}
+            {% assign featuredUpcoming = featuredUpcoming | push: coin %} {% else if current_date > featuredTill %} {% assign
+            featuredUpcomingExpired = featuredUpcomingExpired | push: coin %} {% endif %} {% endif %} {% endfor %}
+
+            <!-- Regular Upcoming coins array -->
+            {% assign regularUpcoming = "" | split: ',' %} {% for coin in regularcoins %} {% assign pre_ico_end_date = coin.pre-ico.end-date
+            | date: "%s" | plus: 0 %} {% assign ico_start_date = coin.ico-detail.start-date | date: "%s" | plus: 0 %} {%
+            if current_date > pre_ico_end_date and ico_start_date > current_date %} {% assign regularUpcoming = regularUpcoming
+            | push: coin %} {% endif %} {% endfor %}
+
+            <!-- Total Upcoming coins array -->
+            {% assign regularUpcoming = regularUpcoming | concat: featuredUpcomingExpired | sort: 'date-added' | reverse %} {% assign
+            totalUpcoming = featuredUpcoming | concat: regularUpcoming %} {% for coin in totalUpcoming limit: 15 %} {% assign
+            featuredTill = coin.ico.featured-till | date: "%s" | plus: 0 %} {% if current_date > featuredTill %} {% assign
+            featuredExpired = true %} {% endif %} {% assign ico_start_date = coin.ico-detail.start-date | date: "%s" | plus:
+            0 %} {% assign secondsTo = ico_start_date | minus: current_date %} {% assign hoursTo = secondsTo | divided_by:60
+            | divided_by: 60 %} {% assign daysTo = hoursTo | divided_by: 24 %}
+            <a href="{{coin.url}}">
+                <div class="ico-card {% unless featuredExpired %} {% if coin.ico.featured %} featured {% endif %} {% endunless %}">
+                    <div class="ico-card-sec">
+                        <div class="ico-card-image">
+                            <img src="{{site.baseurl}}{{coin.ico.logo}}" alt="">
+                        </div>
+                        <div class="ico-card-rating {% if coin.ico.featured == false or coin.ico.show-rating == true %}number{% endif %}">{% if coin.ico.featured == true and coin.ico.show-rating == false %}&#9733;{% endif %}{% if coin.ico.featured
+                            == false or coin.ico.show-rating == true %}{{coin.moonability}}{% endif %}</div>
+                    </div>
+                    <div class="ico-card-main">
+                        <h4 class="ico-card-title">{{coin.ico.name}}</h4>
+                        <h6 class="ico-card-desc">{{coin.ico.category}}</h6>
+                        {% assign collected = coin.progress.collected %} {% assign total = coin.progress.total %} {% assign percent = collected |
+                        times: 100 | divided_by: total %}
+                        <h6 class="ico-card-status">${{collected}} / ${{total}}</h6>
+                        <h6 class="ico-card-percentage">{{percent}}%</h6>
+                        <div class="ico-card-meta">
+                            <h6 class="ico-card-type">Featured</h6>
+                            <h6 class="ico-etr">in {{daysTo}}d</h6>
+                        </div>
+                    </div>
+
+                </div>
+            </a>
+            {% endfor %}
+
+            <a href="{{site.baseurl}}/upcomingico">
+                <button class="ico-col-btn">View All Upcoming ICO
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </a>
+        </div>
+        <div class="ico-col">
+            <div class="ico-col-title">Active ICO</div>
+            <!-- Featured Active Coins Array -->
+            {% assign featuredActive = "" | split: ',' %} {% assign featuredActiveExpired = "" | split: ',' %} {% for coin in featuredcoins
+            %} {% assign featuredTill = coin.ico.featured-till | date: "%s" | plus: 0 %} {% assign ico_start_date = coin.ico-detail.start-date
+            | date: "%s" | plus: 0 %} {% assign ico_end_date = coin.ico-detail.end-date | date: "%s" | plus: 0 %} {% if current_date
+            > ico_start_date and ico_end_date > current_date %} {% if featuredTill > current_date %} {% assign featuredActive
+            = featuredActive | push: coin %} {% else if current_date > featuredTill %} {% assign featuredActiveExpired =
+            featuredActiveExpired | push: coin %} {% endif %} {% endif %} {% endfor %}
+
+            <!-- Regular Active coins array -->
+            {% assign regularActive = "" | split: ',' %} {% for coin in regularcoins %} {% assign ico_start_date = coin.ico-detail.start-date
+            | date: "%s" | plus: 0 %} {% assign ico_end_date = coin.ico-detail.end-date | date: "%s" | plus: 0 %} {% if current_date
+            > ico_start_date and ico_end_date > current_date %} {% assign regularActive = regularActive | push: coin %} {%
+            endif %} {% endfor %}
+
+            <!-- Total Active coins array -->
+            {% assign regularActive = regularActive | concat: featuredActiveExpired | sort: 'date-added' | reverse %} {% assign totalActive
+            = featuredActive | concat: regularActive %} {% for coin in totalActive limit: 15 %} {% assign featuredTill =
+            coin.ico.featured-till | date: "%s" | plus: 0 %} {% if current_date > featuredTill %} {% assign featuredExpiredActive
+            = true %} {% endif %} {% assign ico_end_date = coin.ico-detail.end-date | date: "%s" | plus: 0 %} {% assign secondsTo
+            = ico_end_date | minus: current_date %} {% assign hoursTo = secondsTo | divided_by:60 | divided_by: 60 %} {%
+            assign daysTo = hoursTo | divided_by: 24 %}
+            <a href="{{coin.url}}">
+                <div class="ico-card {% unless featuredExpiredActive %}{% if coin.ico.featured %}featured{% endif %}{% endunless %} ">
+                    <div class="ico-card-sec">
+                        <div class="ico-card-image">
+                            <img src="{{site.baseurl}}{{coin.ico.logo}}" alt="">
+                        </div>
+                        <div class="ico-card-rating {% if coin.ico.featured == false or coin.ico.show-rating == true %}number{% endif %}">{% if coin.ico.featured == true and coin.ico.show-rating == false %}&#9733;{% endif %}{% if coin.ico.featured
+                            == false or coin.ico.show-rating == true %}{{coin.moonability}}{% endif %}</div>
+                    </div>
+                    <div class="ico-card-main">
+                        <h4 class="ico-card-title">{{coin.ico.name}}</h4>
+                        <h6 class="ico-card-desc">{{coin.ico.category}}</h6>
+                        {% assign collected = coin.progress.collected %} {% assign total = coin.progress.total %} {% assign percent = collected |
+                        times: 100 | divided_by: total %}
+                        <h6 class="ico-card-status">${{collected}} / ${{total}}</h6>
+                        <h6 class="ico-card-percentage">{{percent}}%</h6>
+                        <div class="ico-card-meta">
+                            <h6 class="ico-card-type">Featured</h6>
+                            <h6 class="ico-etr">in {{daysTo}}d</h6>
+                        </div>
+                    </div>
+
+                </div>
+            </a>
+            {% endfor %}
+
+
+            <a href="{{site.baseurl}}/activeico">
+                <button class="ico-col-btn">View All Active ICO
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </a>
+        </div>
+        <div class="ico-col">
+            <div class="ico-col-title">Ended ICO</div>
+            <!-- Featured Ended Coins Array -->
+            {% assign featuredEnded = "" | split: ',' %} {% assign featuredEndedExpired = "" | split: ',' %} {% for coin in featuredcoins
+            %} {% assign featuredTill = coin.ico.featured-till | date: "%s" | plus: 0 %} {% assign ico_end_date = coin.ico-detail.end-date
+            | date: "%s" | plus: 0 %} {% if current_date > ico_end_date %} {% if featuredTill > current_date %} {% assign
+            featuredEnded = featuredEnded | push: coin %} {% else if current_date > featuredTill %} {% assign featuredEndedExpired
+            = featuredEndedExpired | push: coin %} {% endif %} {% endif %} {% endfor %}
+
+            <!-- Regular Ended coins array -->
+            {% assign regularEnded = "" | split: ',' %} {% for coin in regularcoins %} {% assign ico_end_date = coin.ico-detail.end-date
+            | date: "%s" | plus: 0 %} {% if current_date > ico_end_date %} {% assign regularEnded = regularEnded | push:
+            coin %} {% endif %} {% endfor %}
+
+            <!-- Total Ended coins array -->
+            {% assign regularEnded = regularEnded | concat: featuredEndedExpired | sort: 'date-added' | reverse %} {% assign totalEnded
+            = featuredEnded | concat: regularEnded %} {% for coin in totalEnded limit: 15 %} {% assign featuredTill = coin.ico.featured-till
+            | date: "%s" | plus: 0 %} {% if current_date > featuredTill %} {% assign featuredExpiredEnded = true %} {% endif
+            %} {% assign ico_end_date = coin.ico-detail.end-date | date: "%s" | plus: 0 %} {% assign secondsTo = current_date
+            | minus: ico_end_date %} {% assign hoursTo = secondsTo | divided_by:60 | divided_by: 60 %} {% assign daysTo =
+            hoursTo | divided_by: 24 %}
+            <a href="{{coin.url}}">
+                <div class="ico-card {% unless featuredExpiredEnded %}{% if coin.ico.featured %}featured{% endif %}{% endunless %} ">
+                    <div class="ico-card-sec">
+                        <div class="ico-card-image">
+                            <img src="{{site.baseurl}}{{coin.ico.logo}}" alt="">
+                        </div>
+                        <div class="ico-card-rating {% if coin.ico.featured == false or coin.ico.show-rating == true %}number{% endif %}">{% if coin.ico.featured == true and coin.ico.show-rating == false %}&#9733;{% endif %}{% if coin.ico.featured
+                            == false or coin.ico.show-rating == true %}{{coin.moonability}}{% endif %}</div>
+                    </div>
+                    <div class="ico-card-main">
+                        <h4 class="ico-card-title">{{coin.ico.name}}</h4>
+                        <h6 class="ico-card-desc">{{coin.ico.category}}</h6>
+                        {% assign collected = coin.progress.collected %} {% assign total = coin.progress.total %} {% assign percent = collected |
+                        times: 100 | divided_by: total %}
+                        <h6 class="ico-card-status">${{collected}} / ${{total}}</h6>
+                        <h6 class="ico-card-percentage">{{percent}}%</h6>
+                        <div class="ico-card-meta">
+                            <h6 class="ico-card-type">Featured</h6>
+                            <h6 class="ico-etr">in {{daysTo}}d</h6>
+                        </div>
+                    </div>
+
+                </div>
+            </a>
+            {% endfor %}
+
+            <a href="{{site.baseurl}}/endedico">
+                <button class="ico-col-btn">View All Ended ICO
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </a>
+        </div>
+    </div>
+</div>
+<!-- ICO Grid End -->

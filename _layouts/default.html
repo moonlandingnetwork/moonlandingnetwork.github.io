@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{{page.title}}</title>
+    <meta name="description" content="{{page.metadesc}}">
+    <meta name="keywords" content="{{page.keywords}}">
+    <meta name="viewport" content="width=device-width, initial-scale=0.9">
+    {% include stylesheets.html %}
+</head>
+
+<body>
+ <!-- Modals -->
+{% include subscribe.html %}
+{% include disclaimer-modal.html %}
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+    <!-- Top Banner -->
+    {% if page.topbanner %}
+    {% include topbanner.html %}
+    {% endif %}
+    <!-- End Top Banner -->
+    
+    <!-- Navbar -->
+    {% include nav.html %}
+
+    <!-- Coin Value -->
+    {% include coinvalue.html %}
+
+    <!-- Page Content -->
+    {{ content }}
+
+    <!-- Bottom Banner -->
+    {% if page.bottombanner %}
+    {% include bottombanner.html %}
+    {% endif %}
+    <!-- Footer -->
+    {% include footer.html %}
+    {% include disclaimer.html %}
+
+    {% if page.persistenticons == 'full' %}
+    <!-- Persistent Buttons -->
+    {% include persistentbuttons.html %}
+    {% else %}
+    <!-- Persistent Telegram Icon -->
+    {% include persistenttelegram.html %}
+    {% endif %}
+    
+
+</body>
+<script src="{{site.baseurl}}/js/custom.js"></script>
+<script src="{{site.baseurl}}/js/search.js"></script>
+<script>
+        SimpleJekyllSearch({
+          searchInput: document.getElementById('search-input'),
+          resultsContainer: document.getElementById('results-container'),
+          json: '/search.json'
+        })
+</script>
+
+</html>

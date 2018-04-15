@@ -1,0 +1,666 @@
+---
+layout: default
+bottombanner: true 
+---
+{% assign timeframe =  86400 %}
+{% assign current_date = "now" | date: "%s" | minus: timeframe  %}
+{% assign pre_ico_start_date = page.pre-ico.start-date | date: "%s" | plus: 0 %}
+{% assign pre_ico_end_date = page.pre-ico.end-date | date: "%s" | plus: 0 %}
+{% assign ico_start_date = page.ico-detail.start-date | date: "%s" | plus: 0 %}
+{% assign ico_end_date = page.ico-detail.end-date | date: "%s" | plus: 0 %}
+{% if pre_ico_start_date > current_date %}
+{% assign preUpcoming = true %}
+{% endif %}
+{% if current_date > pre_ico_start_date and pre_ico_end_date > current_date %}
+{% assign preActive = true %}
+{% endif %}
+{% if current_date > pre_ico_end_date and ico_start_date > current_date %}
+{% assign upcoming = true %}
+{% endif %}
+{% if current_date > ico_start_date and ico_end_date > current_date %}
+{% assign active = true %}
+{% endif %}
+{% if current_date > ico_end_date %}
+{% assign ended = true %}
+{% endif %}
+{% if page.ico.cancelled %}
+{% assign cancelled = true %}
+{% endif %}
+{% if preUpcoming or upcoming %}
+{% assign comingUp = true %}
+{% endif %}
+{% if preActive or active %}
+{% assign activeNow = true %}
+{% endif %}
+<!-- ICO Page Title -->
+<div class="container">
+    <div class="ico-page-header">
+        <div class="ico-page-title">
+            <div class="ico-page-title-image">
+                <img src="{{site.baseurl}}{{page.ico.logo}}" alt="">
+            </div>
+            <div class="ico-page-title-content">
+                <h4> <span id="coin-name">{{page.ico.name}}</span> | {{page.ico.token-name}}
+                    <span class="social">
+                        <a href="{{page.social.twitter}}">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="{{page.social.telegram}}">
+                            <i class="fab fa-telegram-plane"></i>
+                        </a>
+                        <a href="{{page.social.facebook}}">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </span>
+                </h4>
+                <p>{{page.ico.category}}</p>
+            </div>
+        </div>
+        <div class="ico-page-tags">
+            <h4>Tags</h4>
+            <ul>
+                {% for item in page.ico.tags %}
+                <li>{{item.tag}}</li>
+                {% endfor %}
+
+            </ul>
+
+
+        </div>
+    </div>
+</div>
+<!-- ICO Page Title -->
+<!-- Main Body Content -->
+<div class="main-body-content dot-bg">
+    <div class="ico-page-main-desc">
+        <h6>What is it?</h6>
+        <p>{{page.ico.desc}}</p>
+
+    </div>
+    <div class="container max">
+        <!-- ICO Coin Info Cards -->
+        <div class="ico-coin-cards">
+            <div class="coin-cards-left">
+                <div class="coin-card">
+                    <div class="coin-card-title">
+                        <h6>Offical Explainer Video</h6>
+                        <div class="card-title-action">
+                            <button class="btn circle cyan"></button>
+                            <button class="btn circle darkorange"></button>
+                        </div>
+                    </div>
+                    <div class="coin-card-body">
+                        <iframe width="560" height="315" src="{{page.ico.video}}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="coin-cards-right">
+                <div class="button-group coin-page">
+                    <a href="{{page.ico.whitepaper}}">
+                        <button class="btn round orange">
+                            <img src="{{site.baseurl}}/images/whitepaper-icon.png" alt="">Read Whitepaper</button>
+                    </a>
+                    <a href="{{page.ico.crowdsale}}">
+                        <button class="btn round blue">
+                            <img src="{{site.baseurl}}/images/crowdsale-icon.png" alt="">Go to Crowdsale</button>
+                    </a>
+                </div>
+                <div class="coin-card full">
+                    <div class="coin-card-title">
+                        <h6>Token Details</h6>
+                        <div class="card-title-action">
+                            <button class="btn circle cyan"></button>
+                            <button class="btn circle darkorange"></button>
+                        </div>
+                    </div>
+                    <div class="coin-card-body">
+                        <div class="coincard-inneritem">
+                            <img src="{{site.baseurl}}/images/blockchain-icon.png" alt="">
+                            <div class="coincard-inner-content">
+                                <h6>Blockchain</h6>
+                                <p>{{page.token.type}}</p>
+                            </div>
+                        </div>
+                        <div class="coincard-inneritem">
+                            <img src="{{site.baseurl}}/images/location-icon.png" alt="">
+                            <div class="coincard-inner-content">
+                                <h6>Team Location</h6>
+                                <p>{{page.token.location}}</p>
+                            </div>
+                        </div>
+                        <div class="coincard-inneritem center">
+                            <img src="{{site.baseurl}}/images/announcement-icon.png" alt="">
+                            <div class="coincard-inner-content">
+                                <h6>First Announced</h6>
+                                <p>{{page.token.announced}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="coin-card minimal coinmeter">
+                    <div class="coin-card-body">
+                        
+                        <img src="{% if page.ico.featured == true %}{{site.baseurl}}/images/featured-icon.png{% endif %}{% if page.ico.featured == false %}
+                       {{site.baseurl}}/images/coinmeter.png{% endif %}" alt=""> 
+                       
+                        <div class="coincard-inneritem">
+                            
+                            <p class="coinmeter-rating {% if page.ico.featured == true and page.ico.show-rating == false %}featured
+                            {% endif %}">{% if page.ico.featured == true and page.ico.show-rating == false  %}Featured{% endif %}{% if page.ico.featured == false or page.ico.show-rating == true %}{{page.moonability}}</p>
+                            <div class="coincard-inner-content">
+                                <h6>Our Rating</h6>
+                                <p>Moonability</p>
+                            </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End ICO Coin Cards -->
+        <div class="coin-card">
+            <div class="coin-card-title">
+                <h6>ICO Details</h6>
+                <div class="coin-card-title progress">
+                    {% assign collected = page.progress.collected %} {% assign total = page.progress.total %} {% assign percent = collected |
+                    times: 100 | divided_by: total %}
+                    <span>${{collected}}</span> OF ${{total}}
+                    <span>{{percent}}%</span>
+                </div>
+                <div class="card-title-action">
+                    <button class="btn circle cyan"></button>
+                    <button class="btn circle darkorange"></button>
+                </div>
+            </div>
+            <div class="coin-card-body coin-status-card">
+                {% unless cancelled %}
+                {% if comingUp or activeNow %}
+                {% case true %}
+                    {% when preUpcoming %}
+                    <time id="counter-date" class="hidden" datetime="{{pre_ico_start_date}}"></time>
+                    {% when upcoming %}
+                    <time id="counter-date" class="hidden" datetime="{{ico_start_date}}"></time>
+                    {% when preActive %}
+                    <time id="counter-date" class="hidden" datetime="{{pre_ico_end_date}}"></time>
+                    {% when active %}
+                    <time id="counter-date" class="hidden" datetime="{{ico_end_date}}"></time>
+                {% endcase %}
+                <h6>Token Sale {% if comingUp %}Starts in{% endif %}{% if activeNow %} Ends in {% endif %}:</h6>
+                 <h2 id="coin-page-card-timer">
+                    <div class="progress-countdown">
+                        <span id="days"></span>
+                        <p class="progress-dt">Days</p>
+                    </div>
+                    <div class="progress-countdown">
+                        <span id="hours"></span>
+                        <p class="progress-dt">Hours</p>
+                    </div>
+                    <div class="progress-countdown">
+                        <span id="mins"></span>
+                        <p class="progress-dt">Minutes</p>
+                    </div>
+                    <div class="progress-countdown">
+                        <span id="secs"></span>
+                        <p class="progress-dt">Seconds</p>
+                    </div>
+                </h2>
+                {% endif %} 
+                {% endunless %}
+                {% if ended %}
+                <h2 id="coin-page-card-status">Ended</h2>
+                {% endif %}
+                {% if cancelled %}
+                <h2 id="coin-page-card-status">Cancelled</h2>
+                {% endif %}
+                <div id="coin-progress-hr"></div>
+                <img src="{{site.baseurl}}/images/coin-status-astro.png" alt="">
+            </div>
+        </div>
+
+    </div>
+    {% unless cancelled %}
+    <p id="coin-progress-para">
+        {% case true %}
+            {% when ended %}
+            Ended on {{page.ico-detail.end-date}}
+            {% when preActive %}
+            Ends on {{page.pre-ico.end-date}}
+            {% when active %}
+            Ends on {{page.ico-detail.end-date}}
+            {% when preUpcoming %}
+            Starts on {{page.pre-ico.start-date}}
+            {% when upcoming %}
+            Starts on {{page.ico-detail.start-date}}
+        {% endcase %}
+    </p>
+    {% endunless %} 
+
+   
+    <div class="container max">
+        <div class="ico-coin-cards">
+            <div class="coin-cards-left">
+                <div class="coin-card full">
+                    <div class="coin-card-title">
+                        <h6>Market & Returns</h6>
+                        <div class="card-title-action">
+                            <button class="btn circle cyan"></button>
+                            <button class="btn circle darkorange"></button>
+                        </div>
+                    </div>
+                    <div class="coin-card-body">
+                        <div class="coincard-inneritem coin-return full">
+                            <h6>Returns Since ICO</h6>
+                            <div class="coin-return-group">
+                                <div class="coin-return-item">
+                                    <h6 id="returns-usd">0.00</h6>
+                                    <h6>USD</h6>
+                                </div>
+                                <div class="coin-return-item">
+                                    <h6 id="returns-eth">0.00</h6>
+                                    <h6>ETH</h6>
+                                </div>
+                                <div class="coin-return-item">
+                                    <h6 id="returns-btc">0.00</h6>
+                                    <h6>BTC</h6>
+                                </div>
+                            </div>
+                            <p>These number show how much the token price has changed relative to the inicial ICO token price.</p>
+                        </div>
+                        <div class="coincard-inneritem third">
+                            <img src="{{site.baseurl}}/images/money-icon.png" alt="">
+                            <div class="coincard-inner-content">
+                                <h6>MTN Token Price</h6>
+                                <p><span id="coin-usd-live">Not Found</span><br><span id="coin-eth-live"></span><br><span id="coin-btc-live"></span></p>
+                            </div>
+                        </div>
+                        <div class="coincard-inneritem third">
+                            <img src="{{site.baseurl}}/images/money-icon.png" alt="">
+                            <div class="coincard-inner-content ">
+                                <h6>24H Volume</h6>
+                                <p id="daily-volume">Not Found</p>
+                            </div>
+                        </div>
+                        <div class="coincard-inneritem  third">
+                            <img src="{{site.baseurl}}/images/money-icon.png" alt="">
+                            <div class="coincard-inner-content">
+                                <h6>Market Cap</h6>
+                                <p id="market-cap">Not Found</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="coin-card full">
+                    <div class="coin-card-title">
+                        <h6>Pre-ICO Details</h6>
+                        <div class="card-title-action">
+                            <button class="btn circle cyan"></button>
+                            <button class="btn circle darkorange"></button>
+                        </div>
+                    </div>
+                    {% if preUpcoming %}
+                    {% if page.whitelist.status %}
+                    {% assign  whitelistStart = page.whitelist.start-date | date: "%s" | plus: 0 %}
+                    {% assign  whitelistEnd = page.whitelist.end-date | date: "%s" | plus: 0 %}  
+                    {% if current_date > whitelistStart and whitelistEnd > current_date %}
+                    <div class="ico-card-statusbanner">
+                        <h6>{{page.whitelist.type}}
+                            <span>(Required)</span>
+                        </h6>
+                        <a href="{{page.social.website}}"><h6>Join Now</h6></a>
+                    </div>
+                    {% endif %}
+                    {% endif %}
+                    {% endif %}
+                    <div class="coin-card-body">
+                        <div class="coincard-inneritem third">
+                            <img src="{{site.baseurl}}/images/calender-icon.png" alt="">
+                            <div class="coincard-inner-content">
+                                <h6>Pre-ICO Start Date</h6>
+                                <p>{{page.pre-ico.start-date}}</p>
+                            </div>
+                        </div>
+                        <div class="coincard-inneritem third">
+                            <img src="{{site.baseurl}}/images/finish-icon.png" alt="">
+                            <div class="coincard-inner-content">
+                                <h6>Pre-ICO End Date</h6>
+                                <p>{{page.pre-ico.end-date}}</p>
+                            </div>
+                        </div>
+                        <div class="coincard-inneritem third">
+                            <img src="{{site.baseurl}}/images/mvp-icon.png" alt="">
+                            <div class="coincard-inner-content">
+                                <h6>Minimum Viable Product (MVP)</h6>
+                                <p>{{page.pre-ico.mvp}}</p>
+                            </div>
+                        </div>
+                        <div class="coincard-inneritem third">
+                            <img src="{{site.baseurl}}/images/money-icon.png" alt="">
+                            <div class="coincard-inner-content">
+                                <h6>Pre-ICO Soft Cap</h6>
+                                <p>{{page.pre-ico.soft-cap}} {{page.ico.token-name}}
+                                    <span class="social"></p>
+                            </div>
+                        </div>
+                        <div class="coincard-inneritem third">
+                            <img src="{{site.baseurl}}/images/money-icon.png" alt="">
+                            <div class="coincard-inner-content">
+                                <h6>Pre-ICO Hard Cap</h6>
+                                <p>{{page.pre-ico.hard-cap}} {{page.ico.token-name}}
+                                    <span class="social"></p>
+                            </div>
+                        </div>
+                        <div class="coincard-inneritem third">
+                            <img src="{{site.baseurl}}/images/contribution-icon.png" alt="">
+                            <div class="coincard-inner-content">
+                                <h6>Contribution Size</h6>
+                                <p>Min : ${{page.pre-ico.contribution-size.usd}} | {{page.pre-ico.contribution-size.eth}} ETH</p>
+                            </div>
+                        </div>
+                        <div class="coincard-inneritem third">
+                            <img src="{{site.baseurl}}/images/conversion-icon.png" alt="">
+                            <div class="coincard-inner-content">
+                                <h6>Pre-ICO Conversion</h6>
+                                <p>1 {{page.ico.token-name}} = {{page.pre-ico.conversion.usd}} USD
+                                <br>1 {{page.ico.token-name}} = {{page.pre-ico.conversion.eth  | truncate:8, ""}} ETH
+                                <br>1 {{page.ico.token-name}} = {{page.pre-ico.conversion.btc  | truncate:8, ""}} BTC</p>
+                            </div>
+                        </div>
+                        <div class="coincard-inneritem third">
+                            <img src="{{site.baseurl}}/images/token-icon.png" alt="">
+                            <div class="coincard-inner-content">
+                                <h6>Token Issue</h6>
+                                <p>{{page.pre-ico.token-issue}}</p>
+                            </div>
+                        </div>
+                        <div class="coincard-inneritem third">
+                            <img src="{{site.baseurl}}/images/bonus-icon.png" alt="">
+                            <div class="coincard-inner-content">
+                                <h6>Pre-ICO Bonus</h6>
+                                <p>{{page.pre-ico.pre-ico-bonus}}</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="coin-card full">
+                    <div class="coin-card-title">
+                        <h6>ICO Details</h6>
+                        <div class="card-title-action">
+                            <button class="btn circle cyan"></button>
+                            <button class="btn circle darkorange"></button>
+                        </div>
+                    </div>
+                    {% if upcoming %}
+                    {% if page.whitelist.status %}
+                    {% assign  whitelistStart = page.whitelist.start-date | date: "%s" | plus: 0 %}
+                    {% assign  whitelistEnd = page.whitelist.end-date | date: "%s" | plus: 0 %}  
+                    {% if current_date > whitelistStart and whitelistEnd > current_date %}
+                    <div class="ico-card-statusbanner">
+                        <h6>{{page.whitelist.type}}
+                            <span>(Required)</span>
+                        </h6>
+                        <a href="{{page.social.website}}"><h6>Join Now</h6></a>
+                    </div>
+                    {% endif %}
+                    {% endif %}
+                    {% endif %}
+                    <div class="coin-card-body">
+                        <div class="coincard-inneritem third">
+                            <img src="{{site.baseurl}}/images/calender-icon.png" alt="">
+                            <div class="coincard-inner-content">
+                                <h6>ICO Start Date</h6>
+                                <p>{{page.ico-detail.start-date}}</p>
+                            </div>
+                        </div>
+                        <div class="coincard-inneritem third">
+                            <img src="{{site.baseurl}}/images/finish-icon.png" alt="">
+                            <div class="coincard-inner-content">
+                                <h6>ICO End Date</h6>
+                                <p>{{page.ico-detail.end-date}}</p>
+                            </div>
+                        </div>
+                        <div class="coincard-inneritem third">
+                            <img src="{{site.baseurl}}/images/mvp-icon.png" alt="">
+                            <div class="coincard-inner-content">
+                                <h6>Minimum Viable Product (MVP)</h6>
+                                <p>{{page.ico-detail.mvp}}</p>
+                            </div>
+                        </div>
+                        <div class="coincard-inneritem third">
+                            <img src="{{site.baseurl}}/images/softcap-icon.png" alt="">
+                            <div class="coincard-inner-content">
+                                <h6>Soft Cap</h6>
+                                <p>{{page.ico-detail.soft-cap}} $
+                                    <span class="social"></p>
+                            </div>
+                        </div>
+                        <div class="coincard-inneritem third">
+                            <img src="{{site.baseurl}}/images/money-icon.png" alt="">
+                            <div class="coincard-inner-content">
+                                <h6>Hard Cap</h6>
+                                <p>{{page.ico-detail.hard-cap}} $
+                                    <span class="social"></p>
+                            </div>
+                        </div>
+                        <div class="coincard-inneritem third">
+                            <img src="{{site.baseurl}}/images/contribution-icon.png" alt="">
+                            <div class="coincard-inner-content">
+                                <h6>Contribution Size</h6>
+                                <p>Min : ${{page.ico-detail.contribution-size.usd}} | {{page.ico-detail.contribution-size.eth}}
+                                    ETH</p>
+                            </div>
+                        </div>
+                        <div class="coincard-inneritem third">
+                            <img src="{{site.baseurl}}/images/pie-icon.png" alt="">
+                            <div class="coincard-inner-content">
+                                <h6>Total Supply</h6>
+                                <p>{{page.ico-detail.total-supply}} {{page.ico.token-name}}
+                                    <span class="social"></p>
+                            </div>
+                        </div>
+                        <div class="coincard-inneritem third">
+                            <img src="{{site.baseurl}}/images/pie-icon.png" alt="">
+                            <div class="coincard-inner-content">
+                                <h6>Investor Supply</h6>
+                                <p>{{page.ico-detail.investor-supply}} {{page.ico.token-name}}
+                                    <span class="social"></p>
+                            </div>
+                        </div>
+                        <div class="coincard-inneritem third">
+                            <img src="{{site.baseurl}}/images/pie-icon.png" alt="">
+                            <div class="coincard-inner-content">
+                                <h6>Supply Distribution</h6>
+                                <p>{{page.ico-detail.supply-distribution.public}}% Public
+                                    <br> {{page.ico-detail.supply-distribution.core-team}}% Core Team
+                                    <br> {{page.ico-detail.supply-distribution.partners}}% Partners
+                                    <br> {{page.ico-detail.supply-distribution.advisors}}% Advisors
+                                    <br> {{page.ico-detail.supply-distribution.marketing}}% Marketing</p>
+                            </div>
+                        </div>
+                        <div class="coincard-inneritem third">
+                            <img src="{{site.baseurl}}/images/conversion-icon.png" alt="">
+                            <div class="coincard-inner-content">
+                                <h6>ICO Conversion</h6>
+                                <p>1 {{page.ico.token-name}} = <span id="ico-usd-price">{{page.ico-detail.conversion.usd}}</span> USD
+                                 <br>1 {{page.ico.token-name}} = <span id="ico-eth-price">{{page.ico-detail.conversion.eth  | truncate:8, ""}}</span> ETH
+                                 <br>1 {{page.ico.token-name}} = <span id="ico-btc-price">{{page.ico-detail.conversion.btc | truncate:8, ""}}</span> BTC</p>
+                            </div>
+                        </div>
+                        <div class="coincard-inneritem third">
+                            <img src="{{site.baseurl}}/images/token-icon.png" alt="">
+                            <div class="coincard-inner-content">
+                                <h6>Token Issue</h6>
+                                <p>{{page.ico-detail. supply-distribution.public}}</p>
+                            </div>
+                        </div>
+                        <div class="coincard-inneritem third">
+                            <img src="{{site.baseurl}}/images/bonus-icon.png" alt="">
+                            <div class="coincard-inner-content">
+                                <h6>Bonus Structure</h6>
+                                <p>{{page.ico-detail.bonus}}</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="coin-card full">
+                    <div class="coin-card-title">
+                        <h6>Token Founding Team</h6>
+                        <div class="card-title-action">
+                            <button class="btn circle cyan"></button>
+                            <button class="btn circle darkorange"></button>
+                        </div>
+                    </div>
+                    <div class="coin-card-body">
+                        {% for team in page.team %}
+                        <div class="coincard-inneritem nogrow">
+                            <img class="avatar" src="{{team.image}}" alt="">
+                            <div class="coincard-inner-content">
+                                <h6>{{team.name}}
+                                    <a href="{{team.linkedin}}">
+                                        <span class="linkedin">in</span>
+                                    </a>
+                                </h6>
+                                <p>{{team.position}}</p>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="coin-card full">
+                    <div class="coin-card-title">
+                        <h6>Tweets by
+                            <span class="golden">@{{page.twitter-username}}</span>
+                        </h6>
+                        <div class="card-title-action">
+                            <button class="btn circle cyan"></button>
+                            <button class="btn circle darkorange"></button>
+                        </div>
+                    </div>
+                    <div class="coin-card-body">
+                        <a class="twitter-timeline" data-lang="en" data-height="400" data-chrome="noheader nofooter noborders transparent" link-color="#db8b00"
+                            data-theme="dark" href="https://twitter.com/{{page.twitter-username}}?ref_src=twsrc%5Etfw"></a>
+                        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                    </div>
+                </div>
+            </div>
+            <div class="coin-cards-right">
+                <div class="coin-card full">
+                    <div class="coin-card-title">
+                        <h6>Token Community</h6>
+                        <div class="card-title-action">
+                            <button class="btn circle cyan"></button>
+                            <button class="btn circle darkorange"></button>
+                        </div>
+                    </div>
+                    <div class="coin-card-body">
+                        <a class="coincard-inneritem community nogrow alt" href="{{page.social.website}}">
+                            <img src="{{site.baseurl}}/images/location-net-icon.png" alt="">
+                            <div class="coincard-inner-content">
+                                <h6>Website</h6>
+                            </div>
+                        </a>
+                        <a class="coincard-inneritem community nogrow alt" href="{{page.social.facebook}}">
+                            <i class="fab fa-facebook-f"></i>
+                            <div class="coincard-inner-content">
+                                <h6>Facebook</h6>
+                            </div>
+                        </a>
+                        <a class="coincard-inneritem community nogrow alt" href="{{page.social.twitter}}">
+                            <i class="fab fa-twitter"></i>
+                            <div class="coincard-inner-content">
+                                <h6>Twitter</h6>
+                            </div>
+                        </a>
+                        <a class="coincard-inneritem community nogrow alt" href="{{page.social.telegram}}">
+                            <i class="fab fa-telegram-plane"></i>
+                            <div class="coincard-inner-content">
+                                <h6>Telegram</h6>
+                            </div>
+                        </a>
+                        <a class="coincard-inneritem community nogrow alt" href="{{page.social.medium}}">
+                            <img src="{{site.baseurl}}/images/medium-logo.png" alt="">
+                            <div class="coincard-inner-content">
+                                <h6>Medium</h6>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="coin-card full participation-detail">
+                    <div class="coin-card-title">
+                        <h6>ICO Details</h6>
+                        <div class="card-title-action">
+                            <button class="btn circle cyan"></button>
+                            <button class="btn circle darkorange"></button>
+                        </div>
+                    </div>
+                    <div class="coin-card-body">
+                        <div class="coincard-inneritem full">
+                            <div class="coincard-inner-content">
+                                <h6>currencies Accepted</h6>
+                                <p>The following currencies will be accepted druing the crowdsale :</p>
+                                <div class="button-group">
+                                    {% for item in page.ico-participation-details.currencies-accepted %}
+                                    <button class="btn white round">{{item.currency}}</button>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="coincard-inneritem full">
+                            <div class="coincard-inner-content">
+                                <h6>Countries Not Allowed</h6>
+                                <p>The following countries are not allowed to participate in the crowdsale :</p>
+                                <div class="button-group">
+                                    {% for item in page.ico-participation-details.countries-notallowed %}
+                                    <button class="btn white round">{{item.country}}</button>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="coin-card">
+                    <div class="coin-card-title">
+                        <h6>Google Trends</h6>
+                        <div class="card-title-action">
+                            <button class="btn circle cyan"></button>
+                            <button class="btn circle darkorange"></button>
+                        </div>
+                    </div>
+                    <div class="coin-card-body">
+                        <script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/1328_RC04/embed_loader.js"></script>
+                        <script type="text/javascript"> trends.embed.renderExploreWidget("TIMESERIES", { "comparisonItem": [{ "keyword": "{{page.trends-keyword}}", "geo": "", "time": "today 12-m" }], "category": 0, "property": "" }, { "exploreQuery": "q={{page.trends-keyword | url_escape }}&date=today 12-m", "guestPath": "https://trends.google.com:443/trends/embed/" }); </script>
+
+                    </div>
+                </div>
+                <div class="coin-card full">
+                    <div class="coin-card-title">
+                        <h6>Similar Projects</h6>
+                        <div class="card-title-action">
+                            <button class="btn circle cyan"></button>
+                            <button class="btn circle darkorange"></button>
+                        </div>
+                    </div>
+                    <div class="coin-card-body similar-projects">
+                        {% assign sortedCoins = site.coins | sort: 'date-added' | reverse %}
+                        {% for coin in sortedCoins  %}
+                        <a href="{{coin.url}}"><div class="coincard-inneritem full similar">
+                            <div class="avatar"><img class="ico-logo" src="{{site.url}}{{coin.ico.logo}}" alt=""></div>
+                            <div class="coincard-inner-content">
+                                <h6>{{coin.ico.name}}</h6>
+                                <p>{{coin.ico.shortdesc}}</p>
+                            </div>
+                        </div></a>
+                        {% endfor %}
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- Bottom Banner -->
+{% include bottombanner.html %}

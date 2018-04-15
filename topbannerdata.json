@@ -1,0 +1,12 @@
+---
+---
+[
+    {% assign topBanner = site.coins | where: 'ico.topbanner', 'true' %} {% assign timeframe =  86400 %} {% assign current_date = "now" | date: "%s" | minus: timeframe  %} {% for coin in topBanner %} {% assign featuredTill = coin.ico.featured-till | date: "%s" | plus: 0 %}
+      {
+        "name": "{{ coin.ico.name }}",
+        "logo": "{{site.baseurl}}{{ coin.ico.logo }}",
+        "url": "{{ coin.url }}",
+        "desc": "{{ coin.ico.topbanner-content }}",
+        "website": "{{ coin.social.website }}"
+      } {% unless forloop.last %},{% endunless %} {% endfor %}
+  ]

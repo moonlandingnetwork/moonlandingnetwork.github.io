@@ -1,0 +1,13 @@
+---
+---
+[
+  {% for coin in site.coins %}
+    {
+    
+      "title"    : "{{ coin.ico.name | escape }}",
+      "url"      : "{{ site.baseurl }}{{ coin.url }}",
+      "token" : "{{  coin.ico.token-name }}"
+      
+    } {% unless forloop.last %},{% endunless %}
+  {% endfor %}
+]
