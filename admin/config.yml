@@ -1,0 +1,218 @@
+backend:
+  name: git-gateway
+  branch: master # Branch to update (optional; defaults to master)
+media_folder: "/images" # Media files will be stored in the repo under images
+collections:
+ - name: "coins"
+   label: "Coins"
+   editor:
+    preview: false
+   folder: _coins
+   create: true
+   extension: html
+   format: frontmatter
+   fields:
+    - {label: "Layout", name: "layout", widget: "hidden", default: "coindetail"}
+    - {label: "Title", name: "title", widget: "string"}
+    - {label: "Meta Description", name: "metadesc", widget: "string"}
+    - {label: "Meta Keywords", name: "metakeywords", widget: "string"}
+    - label: "Date Added"
+      name: "date-added"
+      widget: "date"
+      default: 
+      format: "YYYY-MM-DD"
+    - name: "ico"
+      label: "Basic ICO Listing Information"
+      widget: object
+      fields:
+       - {label: "Cancelled", name: "cancelled", widget: "boolean", default: "fasle"}
+       - {label: "ICO Name", name: "name", widget: "string" }
+       - {label: "Token Name", name: "token-name", widget: "string" }
+       - {label: "Logo", name: "logo", widget: "image"}
+       - {label: "Category", name: "category", widget: "string" }
+       - {label: "Two Word Description", name: "shortdesc", widget: "string" }
+       - {label: "Featured", name: "featured", widget: "boolean", default: "fasle"}
+       - label: "Featured Till"
+         name: "featured-till"
+         widget: "date"
+         default: 
+         format: "YYYY-MM-DD"
+       - {label: "Rating Visible", name: "show-rating", widget: "boolean", default: "fasle"}
+       - {label: "Top Banner Advert", name: "topbanner", widget: "boolean", default: "fasle"}
+       - {label: "Top Banner Advert Blurb", name: "topbanner-content", widget: "string" }
+       - {label: "Main Description", name: "desc", widget: "text" }
+       - {label: "Video Link", name: "video", widget: "string" }
+       - {label: "Whitepaper Link", name: "whitepaper", widget: "string" }
+       - {label: "Crowdsale Link", name: "crowdsale", widget: "string" }
+       - name: "tags"
+         label: "Tags"
+         widget: list
+         fields:
+           - {label: "Tag", name: "tag", widget: "string"}
+    - {label: "ICO Rating", name: "moonability", widget: "string" }
+    - name: "whitelist"
+      label: "Whitelist Informtaion"
+      widget: object
+      fields:
+       - {label: "Status", name: "status", widget: "boolean", default: "fasle"}
+       - name: "type"
+         label: "Whitelist Type"
+         widget: select
+         options:
+          - { label: "Whitelist", value: "Whitelist" }
+          - { label: "Whitelist + KYC", value: "Whitelist + KYC" }
+       - label: "Whitelist Start Date"
+         name: "start-date"
+         widget: "date"
+         default: ""
+         format: "YYYY-MM-DD"
+       - label: "Whitelist End Date"
+         name: "end-date"
+         widget: "date"
+         default: ""
+         format: "YYYY-MM-DD"
+    - name: "token"
+      label: "Token Meta Information"
+      widget: object
+      fields:
+       - {label: "Token Type", name: "type", widget: "string" }
+       - {label: "Project Location", name: "location", widget: "string" }
+       - label: "Announced Date"
+         name: "announced"
+         widget: "date"
+         default: ""
+         format: "MMMM-D-YYYY"
+    - name: "progress"
+      label: "ICO Progress"
+      widget: object
+      fields:
+       - label: "Total Tokens"
+         name: "total"
+         widget: "number"
+         default: 0
+         valueType: "int"
+       - label: "Collected"
+         name: "collected"
+         widget: "number"
+         default: 0
+         valueType: "int"
+    - name: "pre-ico"
+      label: "Pre ICO Information"
+      widget: object
+      fields:
+       - label: "Pre ICO Start Date"
+         name: "start-date"
+         widget: "date"
+         default: ""
+         format: "MMM-DD-YYYY"
+       - label: "Pre ICO End Date"
+         name: "end-date"
+         widget: "date"
+         default: ""
+         format: "MMM-DD-YYYY"
+       - name: "mvp"
+         label: "MVP"
+         widget: select
+         options:
+          - { label: "Yes", value: "Yes" }
+          - { label: "No", value: "No" }
+          - { label: "Alpha", value: "Alpha" }
+       - {label: "Soft Cap", name: "soft-cap", widget: "string" }
+       - {label: "Hard Cap", name: "hard-cap", widget: "string" }
+       - name: "contribution-size"
+         label: "Contribution Size"
+         widget: object
+         fields:
+          - {label: "Minimum Contribution Value in USD", name: "usd", widget: "string" }
+          - {label: "Minimum Contribution Value in ETH", name: "eth", widget: "string" }
+       - name: "conversion"
+         label: "Conversion"
+         widget: object
+         fields:
+          - {label: "Token Value in USD", name: "usd", widget: "string" }
+          - {label: "Token Value in ETH", name: "eth", widget: "string" }
+          - {label: "Token Value in BTC", name: "btc", widget: "string" }
+       - {label: "Token Transferability", name: "token-issue", widget: "string" }
+       - {label: "Pre ICO Bonus", name: "pre-ico-bonus", widget: "string" }
+    - name: "ico-detail"
+      label: "ICO Information"
+      widget: object
+      fields:
+       - label: "ICO Start Date"
+         name: "start-date"
+         widget: "date"
+         default: ""
+         format: "MMM-DD-YYYY"
+       - label: "ICO End Date"
+         name: "end-date"
+         widget: "date"
+         default: ""
+         format: "MMM-DD-YYYY"
+       - name: "mvp"
+         label: "MVP"
+         widget: select
+         options:
+          - { label: "Yes", value: "Yes" }
+          - { label: "No", value: "No" }
+          - { label: "Alpha", value: "Alpha" }
+       - {label: "Soft Cap", name: "soft-cap", widget: "string" }
+       - {label: "Hard Cap", name: "hard-cap", widget: "string" }
+       - name: "contribution-size"
+         label: "Contribution Size"
+         widget: object
+         fields:
+          - {label: "Minimum Contribution Value in USD", name: "usd", widget: "string" }
+          - {label: "Minimum Contribution Value in ETH", name: "eth", widget: "string" }
+       - {label: "Total Supply", name: "total-supply", widget: "string" }
+       - {label: "Investor Supply", name: "investor-supply", widget: "string" }
+       - name: "supply-distribution"
+         label: "Supply Distribution"
+         widget: object
+         fields:
+          - {label: "Public", name: "public", widget: "string" }
+          - {label: "Core Team", name: "core-team", widget: "string" }
+          - {label: "Partners", name: "partners", widget: "string" }
+          - {label: "Advisors", name: "advisors", widget: "string" }
+          - {label: "Marketing", name: "marketing", widget: "string" }
+       - name: "conversion"
+         label: "Conversion"
+         widget: object
+         fields:
+          - {label: "Token Value in USD", name: "usd", widget: "string" }
+          - {label: "Token Value in ETH", name: "eth", widget: "string" }
+          - {label: "Token Value in BTC", name: "btc", widget: "string" }
+       - {label: "Token Transferability", name: "token-issue", widget: "string" }
+       - {label: "Pre ICO Bonus", name: "bonus", widget: "string" }
+    - name: "team"
+      label: "Team Information"
+      widget: list
+      fields:
+       - {label: "Name", name: "name", widget: "string" }
+       - {label: "Display Picture", name: "image", widget: "image" }
+       - {label: "Position", name: "position", widget: "string" }
+       - {label: "Linkedin Profile", name: "linkedin", widget: "string" }
+    - name: "social"
+      label: "ICO Website & Social Links"
+      widget: object
+      fields:
+       - {label: "Website", name: "website", widget: "string" }
+       - {label: "Facebook", name: "facebook", widget: "string" }
+       - {label: "Twitter", name: "twitter", widget: "string" }
+       - {label: "Telegram", name: "telegram", widget: "string" }
+       - {label: "Medium", name: "medium", widget: "string" }
+    - name: "ico-participation-details"
+      label: "ICO Participation Terms"
+      widget: object
+      fields:
+       - name: "currencies-accepted"
+         label: "Currencies Accepted"
+         widget: list
+         fields:
+          - {label: "Currency", name: "currency", widget: "string" }
+       - name: "countries-notallowed"
+         label: "Currencies Not Accepted"
+         widget: list
+         fields:
+          - {label: "Country", name: "country", widget: "string" }
+    - {label: "Input Twitter Username to Display Feed", name: "twitter-username", widget: "string" }          
+        
