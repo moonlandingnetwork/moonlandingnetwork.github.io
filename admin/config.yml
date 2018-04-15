@@ -54,7 +54,7 @@ collections:
       label: "Whitelist Informtaion"
       widget: object
       fields:
-       - {label: "Status", name: "status", widget: "boolean", default: "fasle"}
+       - {label: "Whitelist Present", name: "status", widget: "boolean", default: "fasle"}
        - name: "type"
          label: "Whitelist Type"
          widget: select
