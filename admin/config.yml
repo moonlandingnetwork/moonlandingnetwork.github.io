@@ -222,7 +222,7 @@ collections:
    files:
     - name: "configuration"
       label: "Basic Site Information"
-      file: "configuration.yml"
+      file: "_data/configuration.yml"
       fields: 
        - name: "config"
          label: "Configuration"
@@ -254,7 +254,7 @@ collections:
              - {label: "Telegram Broadcast", name: "telegram-broadcast", widget: "string" }
     - name: "footer"
       label: "Footer Links"
-      file: "footer.yml"
+      file: "_data/footer.yml"
       fields: 
        - name: "footer"
          label: "Footer Links"
