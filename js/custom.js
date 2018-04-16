@@ -47,7 +47,7 @@ const modalSubscribeToggle = document.getElementById('subscribe-modal-toggle');
 document.addEventListener("DOMContentLoaded", function(event) {
     modalSubscribeToggle.addEventListener('click', () => {
         require(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us18.list-manage.com","uuid":"2ce60cfaa1d59af941dc65248","lid":"93c42b0c4d"}) })
-      document.cookie = 'MCEvilPopupClosed=;path=/;expires=Thu, 01 Jan 1970 00:00:00 UTC;';
+      document.cookie = 'MCPopupClosed=;path=/;expires=Thu, 01 Jan 1970 00:00:00 UTC;';
     });
 });
 modalDisclaimerToggle.addEventListener('click', () => {
