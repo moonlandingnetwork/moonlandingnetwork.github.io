@@ -26,17 +26,29 @@ for(let i=0; i<logo.length; i++){
   let logoStringText = logo[i].textContent.split(' ');
   logoString.innerHTML = logoStringText[0] +"<span>" + logoStringText[1] + "<span>";
 }
+/* Telegeram Chat */
+const telegramChatToggle = document.getElementById('telegram-chat-toggle');
+if(telegramChatToggle != null ){
+const telegramChat = document.getElementById('telegram-chat');
+const telegramBrodcast = document.getElementById('telegram-broadcast');
+
+telegramChatToggle.addEventListener('click', () =>{
+  telegramChat.classList.toggle('hidden');  
+  telegramBrodcast.classList.toggle('hidden');     
+});
+}
 /* Modal Toggle */
 const body = document.querySelector('body');
 const modalClose = document.getElementsByClassName('modal-close');
-const modalSubscribe = document.getElementById('subscribe-modal');
 const modalDisclaimer = document.getElementById('disclaimer-modal');
 const modalDisclaimerToggle = document.getElementById('disclaimer-modal-toggle');
 const modalSubscribeToggle = document.getElementById('subscribe-modal-toggle');
 
-modalSubscribeToggle.addEventListener('click', () => {
-    body.classList.add('modal-open');
-    modalSubscribe.style.display = 'flex';
+document.addEventListener("DOMContentLoaded", function(event) {
+    modalSubscribeToggle.addEventListener('click', () => {
+        require(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us18.list-manage.com","uuid":"2ce60cfaa1d59af941dc65248","lid":"93c42b0c4d"}) })
+      document.cookie = 'MCEvilPopupClosed=;path=/;expires=Thu, 01 Jan 1970 00:00:00 UTC;';
+    });
 });
 modalDisclaimerToggle.addEventListener('click', () => {
     body.classList.add('modal-open');
@@ -46,7 +58,6 @@ if(modalClose != null){
     for(var i=0; i<modalClose.length; i++){
         modalClose[i].addEventListener('click', () => {
             body.classList.remove('modal-open');
-            modalSubscribe.style.display = 'none';
             modalDisclaimer.style.display = 'none';
         });
     }

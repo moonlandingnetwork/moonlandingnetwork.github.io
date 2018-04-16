@@ -28,7 +28,7 @@ body.modal-open{
     max-width: 1000px;
 }
 .hidden{
-    display: none;
+    display: none !important;
 }
 /* Elements */
 /* Anchor Tag */
@@ -300,6 +300,8 @@ select {
     position: fixed;
     right: 5rem;
     bottom: 2rem;
+
+
 }
 .per-icon-group{
     display: flex;
