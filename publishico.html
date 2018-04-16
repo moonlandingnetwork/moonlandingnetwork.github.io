@@ -8,7 +8,8 @@ layout: default
     </div>
     <hr class="pre-ico-hr">
     <div class="publish-ico-body container max">
-        <form name="publish-ico-application" action="" netlify>
+        <form name="publish-ico-application" action="https://formspree.io/spaceship@moonlanding.network"
+        method="POST">
             <div class="publish-question">
                 <label for="application-type">Type of application</label>
                 <select id="application-type" name="application-type">
@@ -209,7 +210,8 @@ layout: default
                 <label for="application-kyc-req">Whitelist/KYC?</label>
                 <select name="kyc requirement" id="application-kyc-req">
                     <option class='short' data-limit='37' selected value="none">None</option>
-                    <option class='short' data-limit='37' value="ID Card & PAN">ID Card & PAN</option>
+                    <option class='short' data-limit='37' value="Whitelist">Whitelist</option>
+                    <option class='short' data-limit='37' value="Whitelist + KYC">Whitelist + KYC</option>
                 </select>
             </div>
             <div class="publish-question">
@@ -218,7 +220,7 @@ layout: default
             </div>
             <div class="publish-question">
                 <label for="application-email">Contact e-mail</label>
-                <input required name="application email" id="application-email" class="blue" type="text">
+                <input required id="application-email" class="blue" type="text" name="_replyto">
                 <p>We will notify you to your e-mail address if your application was accepted.</p>
             </div>
             <div class="publish-question row">
@@ -226,7 +228,7 @@ layout: default
                 <label for="application-ua">I am the official representative of this ICO and I give full permission to use all the needed data from all
                     of our resources (website, social networks, whitepaper, etc) for the listing on MoonLanding.network.</label>
             </div>
-            <button class="btn orange round" type="submit">Submit Application</button>
+            <input class="btn orange round" type="submit" value="Submit Application">
 
         </form>
 

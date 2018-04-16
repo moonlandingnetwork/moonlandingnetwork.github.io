@@ -994,7 +994,8 @@ nav input::placeholder {
 }
 .ico-promo-banner input{
     margin: 0rem 0.5rem;
-    height: 1.5rem;
+    height: 1.8rem;
+    width: 15rem;
     outline: none;
     border: none;
 }
@@ -1503,7 +1504,7 @@ footer{
     width: 40rem;
     margin: 1rem 2rem 0;
 }
-.publish-ico-body form button[type="submit"]{
+.publish-ico-body form input[type="submit"]{
     margin: 3rem auto 0 !important;
     padding: 1rem 1.5rem;
     font-size: 1.125em;
