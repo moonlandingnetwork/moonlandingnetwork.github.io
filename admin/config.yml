@@ -40,10 +40,10 @@ collections:
        - {label: "Rating Visible", name: "show-rating", widget: "boolean", default: "fasle"}
        - {label: "Top Banner Advert", name: "topbanner", widget: "boolean", default: "fasle"}
        - {label: "Top Banner Advert Blurb", name: "topbanner-content", widget: "string" }
-       - {label: "Main Description", name: "desc", widget: "text" }
        - {label: "Video Link", name: "video", widget: "string" }
        - {label: "Whitepaper Link", name: "whitepaper", widget: "string" }
        - {label: "Crowdsale Link", name: "crowdsale", widget: "string" }
+       - {label: "Main Description", name: "desc", widget: "text" }
        - name: "tags"
          label: "Tags"
          widget: list
