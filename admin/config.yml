@@ -14,8 +14,8 @@ collections:
    fields:
     - {label: "Layout", name: "layout", widget: "hidden", default: "coindetail"}
     - {label: "Title", name: "title", widget: "string"}
-    - {label: "Meta Description", name: "metadesc", widget: "string"}
-    - {label: "Meta Keywords", name: "metakeywords", widget: "string"}
+    - {label: "Meta Description", name: "metadesc", widget: "string", required: false }
+    - {label: "Meta Keywords", name: "metakeywords", widget: "string", required: false}
     - label: "Date Added"
       name: "date-added"
       widget: "date"
