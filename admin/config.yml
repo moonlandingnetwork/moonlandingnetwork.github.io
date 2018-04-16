@@ -258,7 +258,8 @@ collections:
       fields: 
        - name: "footer"
          label: "Footer Links"
-         widget: object
+         widget: list
+         disableAdd: true
          fields:
           - name: "links-col-1"
             label: "Footer Links Column 1"
