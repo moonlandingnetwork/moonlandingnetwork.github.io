@@ -1,17 +1,15 @@
----
 footer:
-- links-col-1:
-  - name: Active ICO
-    href: "/activeico.html"
-  - name: Upcoming ICO
-    href: "/upcomingico.html"
-  - name: Ended ICO
-    href: "/endedico.html"
-  links-col-2:
-  - name: Whitelist
-    href: "/whitelist.html"
-  - name: Pre ICO
-    href: "/preico.html"
-  - name: Advertising
-    href: "/publishico.html"
----
+  - links-col-1:
+      - link: /activeico.html
+        name: Active ICO
+      - link: /upcomingico.html
+        name: Upcoming ICO
+      - link: /endedico.html
+        name: Ended ICO
+    links-col-2:
+      - link: /whitelist.html
+        name: Whitelist
+      - link: /preico.html
+        name: Pre ICO
+      - link: /publishico.html
+        name: Advertising
