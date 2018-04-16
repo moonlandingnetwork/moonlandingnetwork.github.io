@@ -266,10 +266,10 @@ collections:
             widget: list
             fields:
              - {label: "Title", name: "name", widget: "string" }
-             - {label: "URL", name: "link", widget: "string" }  
+             - {label: "URL", name: "href", widget: "string" }  
           - name: "links-col-2"
             label: "Footer Links Column 2"
             widget: list
             fields:
              - {label: "Title", name: "name", widget: "string" }
-             - {label: "URL", name: "link", widget: "string" }          
+             - {label: "URL", name: "href", widget: "string" }          
