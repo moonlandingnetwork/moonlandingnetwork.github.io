@@ -1,24 +1,30 @@
  <!-- Footer Begin -->
-
+ {% for item in site.data.configuration.config %}
+ {% assign about = item.site-info %}
+ {% assign social = item.social %}
+ {% endfor %}
+ {% for item in site.data.footer.footer %}
+ {% assign footer = item %}
+ {% endfor %}
  <footer>
     <!-- Footer Col 1 -->
-    {% for item in site.data.footer.about %}
+    
     <a class="footer-logo" href="{{site.url}}"><div class="footer-logo">
-        <img src="{{site.baseurl}}{{item.logo-image}}" alt="Moonlanding logo">
-        <h2 class="logo">{{item.logo-name}}</h2>
-        <h5>{{item.logo-subtitle}}</h5>
+        <img src="{{site.baseurl}}{{about.logo-image}}" alt="Moonlanding logo">
+        <h2 class="logo">{{about.logo-name}}</h2>
+        <h5>{{about.logo-name-subtitle}}</h5>
     </div></a>
     <!-- End Footer Col 1 -->
     <!-- Footer Col 2 -->
     <div class="footer-about">
-        <p>{{item.desc}}</p>
+        <p>{{about.description}}</p>
     </div>
-    {% endfor %}
+    
     <!-- End Footer Col 2 -->
     <!-- Footer Col 3 -->
     <div class="footer-links">
         <ul>
-            {% for item in site.data.footer.links-col-1 %}
+            {% for item in footer.links-col-1 %}
             <a href="{{item.href}}"><li>{{item.name}}</li></a>
             {% endfor %}
         </ul>
@@ -27,7 +33,7 @@
     <!-- Footer Col 4 -->
     <div class="footer-links">
         <ul>
-            {% for item in site.data.footer.links-col-2 %}
+            {% for item in footer.links-col-2 %}
             <a href="{{item.href}}"><li>{{item.name}}</li></a>
             {% endfor %}
         </ul>
@@ -36,9 +42,9 @@
     <!-- Footer Col 5 -->
     <div class="footer-links more">
         <ul>
-            {% for item in site.data.footer.links-social %}
-            <a href="{{item.href}}"><li><i class="{{item.itag}}"></i>{{item.name}}<span>Follow</span></li></a>
-            {% endfor %}
+            <a href="{{social.twitter-link}}"><li><i class="fab fa-twitter"></i>Twitter<span>Follow</span></li></a>
+            <a href="{{social.facebook-link}}"><li><i class="fab fa-facebook-f"></i>Facebook<span>Follow</span></li></a>
+            <a href="{{social.telegram-broadcast}}"><li><i class="fab fa-telegram-plane"></i>Telegram</li></a>
         </ul>
     </div>
     <!--End Footer Col 5 -->

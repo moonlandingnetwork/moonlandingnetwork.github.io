@@ -1,0 +1,22 @@
+---
+config:
+- listing-price:
+    topbanner: 3 ETH
+    featured: 1 ETH
+  site-info:
+    logo-name: Moon Landing
+    logo-name-subtitle: Network
+    logo-image: "/images/logo-image.png"
+    description: Lorem ipsum dolor sit amet,<br><br>consectetur adipiscing elit. Mauris
+      hendrerit suscipit iaculis. Vestibulum luctus sem massa, eget facilisis erat
+      vehicula eget. Pellentesque sapien magna, semper vitae tincidunt ac, eleifend
+      sit amet nibh. Praesent eu accumsan mauris, in auctor lorem. Cras non iaculis
+      velit.<br><br>Nulla auctor pulvinar urna nec ullamcorper.
+  social:
+    twitter-username: ethereum
+    twitter-link: https://twitter.com/#
+    facebook-link: https://facebook.com/#
+    telegram-chat: https://t.me/MoonlandingNetworkChat
+    telegram-broadcast: https://t.me/moonlandingnetwork
+---
+

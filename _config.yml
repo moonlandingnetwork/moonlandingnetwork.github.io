@@ -14,8 +14,10 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 url: "https://moonlanding.netlify.com" # the base hostname & protocol for your site, e.g. http://example.com
-
-
+title: "Moonlanding Network"
+description: "ICO rating, listing, and calendar with details on top ICOs from various industries. Learn more about ICO funding, whitepaper, dates, teams, and roadmaps."
+keywords: "ico alert, ico analysis, ico list, list of icos, list of crypto icos, initial coin offering, active icos, upcoming initial coin offerings, upcoming icos, active icos, cryptocurrency icos, new crypto icos, crypto icos, new icos, crypto ico list, comprehensive ico list, future icos, discover icos, token sale calendar, ico calendar, crowdsale calendar, crowdsales, token sales"
+logo: "/images/logo-image.png"
 # Build settings
 markdown: kramdown
 
@@ -28,7 +30,8 @@ exclude:
   - _site
 
 #plugins:
-
+plugins:
+  - jekyll-seo-tag
 
 collections:
   coins:

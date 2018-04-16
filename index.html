@@ -1,49 +1,30 @@
 ---
 layout: default
 topbanner: true
-persistenticons: full
-hero-banner:
-    image: 'images/logo-image.png'
-    title: Moon Landing
-    title-sub: Network
-    button:
-     - itag: fab fa-twitter
-       title: Follow Twitter
-       href: https://twitter.com
-     - itag: fab fa-telegram-plane
-       title: Join Chat
-       href: https://t.me
-     - itag: fab fa-telegram-plane
-       title: Join Broadcast
-       href: https://t.me
-twitter-id: EtheriumToken
-ico-list-buttons:
-    - title: Pre ICO List
-      href: /preico.html
-    - title: Fund Pool List
-      href: https://t.me
+title: Moonlanding Network
 ---
 <!-- Intro Section -->
 <div class="container">
+    {% for item in site.data.configuration.config %}
     <div class="intro-section">
-        {% assign banner = page.hero-banner %}
+        
         <!-- Hero Banner -->
         <div class="banner">
-            <img src="{{site.baseurl}}{{banner.image}}" alt="">
-            <h1 class="logo">{{banner.title}}</h1>
-            <h5>{{banner.title-sub}}</h5>
+                <img src="{{site.baseurl}}{{item.site-info.logo-image}}" alt="">
+            <h1 class="logo">{{item.site-info.logo-name}}</h1>
+            <h5>{{item.site-info.logo-name-subtitle}}</h5>
             <div class="banner-buttons">
-                <a href="{{banner.button[0].href}}">
+                <a href="{{item.social.twitter-link}}">
                     <button class="btn round skyblue hollow">
-                        <i class="{{banner.button[0].itag}}"></i>{{banner.button[0].title}}</button>
+                        <i class="fab fa-twitter"></i>Follow Twitter</button>
                 </a>
-                <a href="{{banner.button[1].href}}">
+                <a href="{{item.social.telegram-chat}}">
                     <button class="btn round orange hollow">
-                        <i class="{{banner.button[1].itag}}"></i>{{banner.button[1].title}}</button>
+                        <i class="fab fa-telegram-plane"></i>Join Chat</button>
                 </a>
-                <a href="{{banner.button[2].href}}">
+                <a href="{{item.social.telegram-broadcast}}">
                     <button class="btn round orange hollow">
-                        <i class="{{banner.button[2].itag}}"></i>{{banner.button[2].title}}</button>
+                        <i class="fab fa-telegram-plane"></i>Join Broadcast</button>
                 </a>
             </div>
         </div>
@@ -55,7 +36,7 @@ ico-list-buttons:
                 <img src="images/dpubledown-arrow.png" alt="double down arrow">
             </div>
             <div class="twitter-box">
-                <a class="twitter-timeline" data-width="465" data-height="315" data-chrome="nofooter" href="https://twitter.com/{{page.twitter-id}}?ref_src=twsrc%5Etfw">Tweets by {{page.twitter-id}}</a>
+                <a class="twitter-timeline" data-width="468" data-height="320" data-chrome="nofooter" href="https://twitter.com/{{item.social.twitter-username}}?ref_src=twsrc%5Etfw">Tweets by {{item.social.twitter-username}}</a>
                 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
             </div>
@@ -66,15 +47,16 @@ ico-list-buttons:
         <!-- ICO List Buttons -->
 
         <div class="ico-list-buttons">
-            <a href="{{page.ico-list-buttons[0].href}}">
-                <button class="btn round big skyblue">{{page.ico-list-buttons[0].title}}</button>
+            <a href="{{site.baseurl}}/preico">
+                <button class="btn round big skyblue">Pre ICO List</button>
             </a>
-            <a href="{{page.ico-list-buttons[1].href}}">
-                <button class="btn round big orange hollow disabled">{{page.ico-list-buttons[1].title}}</button>
+            <a href="#">
+                <button class="btn round big orange hollow disabled">Fund Pool List</button>
             </a>
         </div>
         <!-- End ICO List Buttons -->
     </div>
+    {% endfor %}
     <!-- End Intro Section -->
     <!-- ICO Grid -->
     <div class="ico-grid">

@@ -1,8 +1,12 @@
-    <!-- Persistent Bottom Right Icons -->
+{% for item in site.data.configuration.config %}
+{% assign social = item.social %}
+{% endfor %}
+   
+   <!-- Persistent Bottom Right Icons -->
     <div class="persistent-icons">
-        <div id="telegram-broadcast" class="hidden per-icon orange">Broad<br>cast</div>
+        <a href="{{social.telegram-broadcast}}"><div id="telegram-broadcast" class="hidden per-icon orange">Broad<br>cast</div></a>
         <div class="per-icon-group">
-        <div id="telegram-chat" class="hidden per-icon orange">Chat</div>
+        <a href="{{social.telegram-chat}}"><div id="telegram-chat" class="hidden per-icon orange">Chat</div></a>
         <div id="telegram-chat-toggle" class="per-icon big skyblue"><i class="fab fa-telegram-plane"></i></div>
         </div>
     </div>

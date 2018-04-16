@@ -215,4 +215,62 @@ collections:
          fields:
           - {label: "Country", name: "country", widget: "string" }
     - {label: "Input Twitter Username to Display Feed", name: "twitter-username", widget: "string" }          
-        
+            - {label: "Input Twitter Username to Display Feed", name: "twitter-username", widget: "string" }      
+ - name: "configuration"
+   label: "Configuration"
+   editor:
+    preview: false
+   files:
+    - name: "configuration"
+      label: "Basic Site Information"
+      file: "configuration.yml"
+      fields: 
+       - name: "config"
+         label: "Configuration"
+         widget: list
+         disableAdd: true
+         fields:
+          - name: "listing-price"
+            label: "Banner Advertisement Listing Price"
+            widget: object
+            fields:
+             - {label: "For Top Banner", name: "topbanner", widget: "string" }
+             - {label: "For Featured", name: "featured", widget: "string" }
+          - name: "site-info"
+            label: "Basic Site Information"
+            widget: object
+            fields:
+             - {label: "Logo Name", name: "logo-name", widget: "string" }
+             - {label: "Logo Name Subtitle", name: "logo-name-subtitle", widget: "string" }
+             - {label: "Logo Image", name: "logo-image", widget: "image" }
+             - {label: "Description", name: "description", widget: "text" }
+          - name: "social"
+            label: "Social Links"
+            widget: object
+            fields:
+             - {label: "Twitter Feed Username", name: "twitter-username", widget: "string" }
+             - {label: "Twitter Link", name: "twitter-link", widget: "string" }
+             - {label: "Facebook Link", name: "facebook-link", widget: "string" }
+             - {label: "Telegram Chat", name: "telegram-chat", widget: "string" }
+             - {label: "Telegram Broadcast", name: "telegram-broadcast", widget: "string" }
+    - name: "footer"
+      label: "Footer Links"
+      file: "footer.yml"
+      fields: 
+       - name: "footer"
+         label: "Footer Links"
+         widget: list
+         disableAdd: true
+         fields:
+          - name: "links-col-1"
+            label: "Footer Links Column 1"
+            widget: list
+            fields:
+             - {label: "Title", name: "name", widget: "string" }
+             - {label: "URL", name: "link", widget: "string" }  
+          - name: "links-col-2"
+            label: "Footer Links Column 2"
+            widget: list
+            fields:
+             - {label: "Title", name: "name", widget: "string" }
+             - {label: "URL", name: "link", widget: "string" }          

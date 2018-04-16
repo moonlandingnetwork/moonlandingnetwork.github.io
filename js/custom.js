@@ -43,17 +43,20 @@ const modalClose = document.getElementsByClassName('modal-close');
 const modalDisclaimer = document.getElementById('disclaimer-modal');
 const modalDisclaimerToggle = document.getElementById('disclaimer-modal-toggle');
 const modalSubscribeToggle = document.getElementById('subscribe-modal-toggle');
-
+if(modalSubscribeToggle != null){
 document.addEventListener("DOMContentLoaded", function(event) {
     modalSubscribeToggle.addEventListener('click', () => {
         require(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us18.list-manage.com","uuid":"2ce60cfaa1d59af941dc65248","lid":"93c42b0c4d"}) })
       document.cookie = 'MCPopupClosed=;path=/;expires=Thu, 01 Jan 1970 00:00:00 UTC;';
     });
 });
+}
+if(modalDisclaimerToggle != null){
 modalDisclaimerToggle.addEventListener('click', () => {
     body.classList.add('modal-open');
     modalDisclaimer.style.display = 'flex';
 });
+}
 if(modalClose != null){
     for(var i=0; i<modalClose.length; i++){
         modalClose[i].addEventListener('click', () => {
