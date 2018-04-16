@@ -214,8 +214,7 @@ collections:
          widget: list
          fields:
           - {label: "Country", name: "country", widget: "string" }
-    - {label: "Input Twitter Username to Display Feed", name: "twitter-username", widget: "string" }          
-            - {label: "Input Twitter Username to Display Feed", name: "twitter-username", widget: "string" }      
+    - {label: "Input Twitter Username to Display Feed", name: "twitter-username", widget: "string" }      
  - name: "configuration"
    label: "Configuration"
    editor:
