@@ -228,19 +228,18 @@ collections:
       fields: 
        - name: "config"
          label: "Configuration"
-         widget: object
+         widget: list
+         disableAdd: true
          fields:
           - name: "listing-price"
             label: "Banner Advertisement Listing Price"
-            widget: list
-            disableAdd: true
+            widget: object
             fields:
              - {label: "For Top Banner", name: "topbanner", widget: "string" }
              - {label: "For Featured", name: "featured", widget: "string" }
           - name: "site-info"
             label: "Basic Site Information"
-            widget: list
-            disableAdd: true
+            widget: object
             fields:
              - {label: "Logo Name", name: "logo-name", widget: "string" }
              - {label: "Logo Name Subtitle", name: "logo-name-subtitle", widget: "string" }
@@ -248,8 +247,7 @@ collections:
              - {label: "Description", name: "description", widget: "text" }
           - name: "social"
             label: "Social Links"
-            widget: list
-            disableAdd: true
+            widget: object
             fields:
              - {label: "Twitter Feed Username", name: "twitter-username", widget: "string" }
              - {label: "Twitter Link", name: "twitter-link", widget: "string" }
@@ -262,19 +260,18 @@ collections:
       fields: 
        - name: "footer"
          label: "Footer Links"
-         widget: object
+         widget: list
+         disableAdd: true
          fields:
           - name: "links-col-1"
             label: "Footer Links Column 1"
-            widget: list
-            disableAdd: true
+            widget: object
             fields:
              - {label: "Title", name: "name", widget: "string" }
              - {label: "URL", name: "href", widget: "string" }  
           - name: "links-col-2"
             label: "Footer Links Column 2"
-            widget: list
-            disableAdd: true
+            widget: object
             fields:
              - {label: "Title", name: "name", widget: "string" }
              - {label: "URL", name: "href", widget: "string" }          
