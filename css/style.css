@@ -1598,8 +1598,8 @@ footer{
 }
 .ico-page-tags li{
     padding: 0.3rem;
-    margin: 0.2rem 0.5rem;
-    width: 25%;
+    margin: 0.25rem 0.4rem;
+    flex: 0 1 25%;
     border: 2px solid #fff;
     border-radius: 15px;
     text-align: center;
@@ -1799,9 +1799,36 @@ footer{
 .coinmeter img{
     width: 112px;
     height: 112px;
+}
+#moonability-rating-meter{
     position: absolute;
     top: -7%;
     left: -11%;
+}
+#coinmeter-dial{
+    position: relative;
+}
+#coinmeter-center{
+    position: absolute;
+    height: 14px;
+    width: 14px;
+    object-fit: contain;
+    left: 45%;
+    top: 46%;
+    z-index: 5;
+}
+#coinmeter-needle{
+    position: absolute;
+    top: 50.5%;
+    left: 49%;
+    height: 35px;
+    width: 4px;
+    background: #00b0d6;
+    border-radius: 0 0 50% 50%;
+    transform-origin: top center;
+    transform: rotate(0deg);
+    transition: all 2s;
+    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 .coinmeter h6{
     text-transform: none;

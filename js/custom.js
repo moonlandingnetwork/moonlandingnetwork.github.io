@@ -159,6 +159,19 @@ if(whitelistStatus != null){
         }
     });
 }
+/* ICO Inner Page Coinmeter Dynamic Value */
+const coinMeterNeedle = document.getElementById('coinmeter-needle');
+if(coinMeterNeedle != null){
+    const coinMeter = document.querySelector('.coinmeter-rating');
+    const coinMeterContent = coinMeter.textContent;
+    var coinMeterValue = parseFloat(coinMeterContent, 10);
+    console.log(coinMeterValue);
+    const coinMeterDegree = 30 + (coinMeterValue*30);
+    console.log(coinMeterDegree);
+    coinMeterNeedle.style.transform = `rotate(${coinMeterDegree}deg)`;
+}
+
+
 /* ICO Inner Page Coin Progress Element Word Split */
 let text = document.getElementById("coin-page-card-status");
 if(text != null){

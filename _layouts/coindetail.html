@@ -139,9 +139,11 @@ bottombanner: true
                 </div>
                 <div class="coin-card minimal coinmeter">
                     <div class="coin-card-body">
-                        
-                        <img src="{% if page.ico.featured == true %}{{site.baseurl}}/images/featured-icon.png{% endif %}{% if page.ico.featured == false %}
-                       {{site.baseurl}}/images/coinmeter.png{% endif %}" alt=""> 
+                        <div id="moonability-rating-meter">
+                        <img  id="coinmeter-dial" src="{% if page.ico.featured == true %}{{site.baseurl}}/images/featured-icon.png{% endif %}{% if page.ico.featured == false %}
+                       {{site.baseurl}}/images/coinmeter-dial.png{% endif %}" alt=""> 
+                       {% if page.ico.featured == false %}<img id="coinmeter-center" src="{{site.baseurl}}/images/coinmeter-center1.png" alt=""><div id="coinmeter-needle"></div>{% endif %}
+                        </div>
                        
                         <div class="coincard-inneritem">
                             
@@ -174,6 +176,7 @@ bottombanner: true
             </div>
             <div class="coin-card-body coin-status-card">
                 {% unless cancelled %}
+                {% unless page.ico-detail.no-date %}
                 {% if comingUp or activeNow %}
                 {% case true %}
                     {% when preUpcoming %}
@@ -206,11 +209,17 @@ bottombanner: true
                 </h2>
                 {% endif %} 
                 {% endunless %}
+                {% endunless %}
+                {% unless page.ico-detail.no-date %}
                 {% if ended %}
                 <h2 id="coin-page-card-status">Ended</h2>
                 {% endif %}
+                {% endunless %}
                 {% if cancelled %}
                 <h2 id="coin-page-card-status">Cancelled</h2>
+                {% endif %}
+                {% if page.ico-detail.no-date %}
+                <h2 id="coin-page-card-status">TBA</h2>
                 {% endif %}
                 <div id="coin-progress-hr"></div>
                 <img src="{{site.baseurl}}/images/coin-status-astro.png" alt="">
