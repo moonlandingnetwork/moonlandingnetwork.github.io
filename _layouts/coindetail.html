@@ -232,9 +232,11 @@ bottombanner: true
                 {% if cancelled %}
                 <h2 id="coin-page-card-status">Cancelled</h2>
                 {% endif %}
+                {% unless ended %}
                 {% if soldOut %}
                 <h2 id="coin-page-card-status">Sold Out</h2>
                 {% endif %}
+                {% endunless %}
                 {% if page.ico-detail.no-date %}
                 <h2 id="coin-page-card-status">TBA</h2>
                 {% endif %}
