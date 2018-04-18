@@ -25,20 +25,20 @@ collections:
       label: "Basic ICO Listing Information"
       widget: object
       fields:
-       - {label: "Cancelled", name: "cancelled", widget: "boolean", default: "false"}
+       - {label: "Cancelled", name: "cancelled", widget: "boolean", default: false}
        - {label: "ICO Name", name: "name", widget: "string" }
        - {label: "Token Name", name: "token-name", widget: "string" }
        - {label: "Logo", name: "logo", widget: "image", required: false}
        - {label: "Category", name: "category", widget: "string", required: false }
        - {label: "Two Word Description", name: "shortdesc", widget: "string",required: false }
-       - {label: "Featured", name: "featured", widget: "boolean", default: "false"}
+       - {label: "Featured", name: "featured", widget: "boolean", default: false}
        - label: "Featured Till"
          name: "featured-till"
          widget: "date"
          default: ""
          format: "YYYY-MM-DD"
-       - {label: "Show Rating For Featured", name: "show-rating", widget: "boolean", default: "false"}
-       - {label: "Top Banner Advert", name: "topbanner", widget: "boolean", default: "false", required: false }
+       - {label: "Show Rating For Featured", name: "show-rating", widget: "boolean", default: false}
+       - {label: "Top Banner Advert", name: "topbanner", widget: "boolean", default: false }
        - {label: "Top Banner Advert Blurb", name: "topbanner-content", widget: "string", required: false }
        - {label: "Video Link", name: "video", widget: "string", required: false }
        - {label: "Whitepaper Link", name: "whitepaper", widget: "string", required: false }
@@ -55,13 +55,14 @@ collections:
       label: "Whitelist Informtaion"
       widget: object
       fields:
-       - {label: "Whitelist Present", name: "status", widget: "boolean", default: "false"}
+       - {label: "Whitelist Present", name: "status", widget: "boolean", default: false}
        - name: "type"
          label: "Whitelist Type"
          widget: select
          options:
           - { label: "Whitelist", value: "Whitelist" }
           - { label: "Whitelist + KYC", value: "Whitelist + KYC" }
+       - {label: "Date Not Announced", name: "no-date", widget: "boolean", default: false }
        - label: "Whitelist Start Date"
          name: "start-date"
          widget: "date"
@@ -101,6 +102,7 @@ collections:
       label: "Pre ICO Information"
       widget: object
       fields:
+       - {label: "Date Not Announced", name: "no-date", widget: "boolean", default: false }
        - label: "Pre ICO Start Date"
          name: "start-date"
          widget: "date"
@@ -132,13 +134,14 @@ collections:
          fields:
           - {label: "Token Value in USD", name: "usd", widget: "string", required: false }
           - {label: "Token Value in ETH", name: "eth", widget: "string", required: false }
-          - {label: "Token Value in BTC", name: "btc", widget: "string" }
+          - {label: "Token Value in BTC", name: "btc", widget: "string", required: false }
        - {label: "Token Transferability", name: "token-issue", widget: "string", required: false }
        - {label: "Pre ICO Bonus", name: "pre-ico-bonus", widget: "string", required: false }
     - name: "ico-detail"
       label: "ICO Information"
       widget: object
       fields:
+       - {label: "Date Not Announced", name: "no-date", widget: "boolean", default: false }
        - label: "ICO Start Date"
          name: "start-date"
          widget: "date"
@@ -168,13 +171,9 @@ collections:
        - {label: "Investor Supply", name: "investor-supply", widget: "string", required: false }
        - name: "supply-distribution"
          label: "Supply Distribution"
-         widget: object
+         widget: list
          fields:
-          - {label: "Public", name: "public", widget: "string", required: false }
-          - {label: "Core Team", name: "core-team", widget: "string", required: false }
-          - {label: "Partners", name: "partners", widget: "string", required: false }
-          - {label: "Advisors", name: "advisors", widget: "string", required: false }
-          - {label: "Marketing", name: "marketing", widget: "string", required: false }
+          - {label: "Name and Value. (eg, Core team: 10%)", name: "distribution-item", widget: "string", required: false }
        - name: "conversion"
          label: "Conversion"
          widget: object
@@ -209,12 +208,12 @@ collections:
          label: "Currencies Accepted"
          widget: list
          fields:
-          - {label: "Currency", name: "currency", widget: "string" }
+          - {label: "Currency", name: "currency", widget: "string" ,required: false  }
        - name: "countries-notallowed"
          label: "Countries Not Allowed"
          widget: list
          fields:
-          - {label: "Country", name: "country", widget: "string" }
+          - {label: "Country", name: "country", widget: "string",required: false  }
     - {label: "Input Twitter Username to Display Feed", name: "twitter-username", widget: "string", required: false }      
  - name: "configuration"
    label: "Configuration"
