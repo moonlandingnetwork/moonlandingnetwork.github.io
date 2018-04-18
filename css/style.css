@@ -1537,6 +1537,7 @@ footer{
     margin:  1rem auto;
 }
 /* End Whitelist Page */
+
 /* Ico Inner Page */
 .ico-page-header{
     margin-top: 1.3rem;
@@ -1607,7 +1608,7 @@ footer{
 .ico-page-main-desc{
     width: 53%;
     margin: auto;
-    padding: 1rem 0 2rem;
+    padding: 1.5rem 0 0;
 }
 .ico-page-main-desc h6{
     color:#DC8C00;
@@ -1620,10 +1621,11 @@ footer{
     font-size: 1em;
     margin: 0.5rem 0;
 }
+
 .ico-coin-cards{
     display: flex;
     justify-content: space-between;
-    margin: 1rem 0 0 0;
+    padding: 1.5rem 0 0 0;
 }
 
 .coin-cards-left{
@@ -1755,6 +1757,9 @@ footer{
 .coincard-inneritem p{
     font-size: 0.7em;
     font-weight: 400;
+}
+#video-placeholder{
+    height: 310px;
 }
 .coinmeter-rating{
     font-size: 4rem !important;
@@ -1971,7 +1976,7 @@ footer{
     height: 150px;
 }
 .similar-projects{
-    height: 440px;
+    height: 430px;
     overflow-y: scroll;
 }
 .similar-projects a{
