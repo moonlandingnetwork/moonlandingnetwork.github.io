@@ -265,13 +265,13 @@ collections:
          fields:
           - name: "links-col-1"
             label: "Footer Links Column 1"
-            widget: object
+            widget: list
             fields:
              - {label: "Title", name: "name", widget: "string" }
              - {label: "URL", name: "href", widget: "string" }  
           - name: "links-col-2"
             label: "Footer Links Column 2"
-            widget: object
+            widget: list
             fields:
              - {label: "Title", name: "name", widget: "string" }
              - {label: "URL", name: "href", widget: "string" }          
