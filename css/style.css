@@ -314,8 +314,8 @@ select {
 .per-icon{
     cursor: pointer;
     margin: 0 auto;
-    height: 3.8rem;
-    width: 3.8rem;
+    height: 3.4rem;
+    width: 3.4rem;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -327,6 +327,9 @@ select {
     padding: 0.7rem;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
     transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+.per-icon:hover{
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 .per-icon.big{
     width: 3rem;
@@ -979,7 +982,7 @@ nav input::placeholder {
 
 /* ICO Promo Banner */
 .ico-promo-banner{
-    padding: 0.1rem 0;
+    padding: 0.5rem 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1003,8 +1006,14 @@ nav input::placeholder {
     width: 15rem;
     outline: none;
     border: none;
+    padding: 0 0.5rem;
 }
-
+.ico-promo-banner input[type="submit"]{
+    width: 5.5rem;
+    display: flex;
+    justify-content: center;
+    
+}
 /* Footer */
 footer{
     display: flex;
