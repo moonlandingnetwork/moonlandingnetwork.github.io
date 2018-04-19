@@ -327,11 +327,11 @@ select {
     padding: 0.7rem;
 }
 .per-icon.big{
-    width: 4rem;
-    height: 4rem;
+    width: 3rem;
+    height: 3rem;
 }
 .per-icon i{
-    font-size: 3.8rem;
+    font-size: 3rem;
     margin-right: 0.5rem;
 }
 .per-icon.skyblue{
@@ -1599,14 +1599,15 @@ footer{
 }
 .ico-page-tags li{
     padding: 0.3rem;
-    margin: 0.25rem 0.4rem;
+    margin: 0.25rem 0.2rem;
     flex: 0 1 25%;
+    min-width: 5.5rem;
     border: 2px solid #fff;
     border-radius: 15px;
     text-align: center;
 }
 .ico-page-main-desc{
-    width: 53%;
+    max-width: 50rem;
     margin: auto;
     padding: 1.5rem 0 0;
 }
