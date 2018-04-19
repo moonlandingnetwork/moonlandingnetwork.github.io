@@ -11,6 +11,8 @@ title: Ended ICOs | Moonlanding Network
 {% assign featuredEnded = "" | split: ',' %}
 {% assign featuredExpired = "" | split: ',' %}
 {% for coin in featuredcoins %}
+{% unless coin.pre-ico.no-date %}
+{% unless coin.ico-detail.no-date %}
 {% assign featuredTill = coin.ico.featured-till | date: "%s" | plus: 0 %}
 {% assign ico_end_date = coin.ico-detail.end-date | date: "%s" | plus: 0 %}
 {% if current_date > ico_end_date %}
@@ -20,15 +22,21 @@ title: Ended ICOs | Moonlanding Network
     {% assign featuredExpired = featuredExpired | push: coin %}
     {% endif %}
 {% endif %}
+{% endunless %}
+{% endunless %}
 {% endfor %}
 {% assign featuredEnded = featuredEnded | sort: 'date-added' | reverse %}
 <!-- Regular coins array -->
 {% assign regularEnded = "" | split: ',' %}
 {% for coin in regularcoins %}
+{% unless coin.pre-ico.no-date %}
+{% unless coin.ico-detail.no-date %}
 {% assign ico_end_date = coin.ico-detail.end-date | date: "%s" | plus: 0 %}
 {% if current_date > ico_end_date %}
 {% assign regularEnded = regularEnded | push: coin %}
 {% endif %}
+{% endunless %}
+{% endunless %}
 {% endfor %}
 
 <!-- Regular coins array + Featured Expired Coins  -->

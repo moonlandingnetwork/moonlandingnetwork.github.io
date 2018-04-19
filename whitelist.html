@@ -50,18 +50,23 @@ title: Whitelist  | Moonlanding Network
             <ul >
                 {% for coin in whitelistCoins %}
                 {% assign  whitelistStart = coin.whitelist.start-date | date: "%s" | plus: 0 %}
-                {% assign  whitelistEnd = coin.whitelist.end-date | date: "%s" | plus: 0 %}  
+                {% assign  whitelistEnd = coin.whitelist.end-date | date: "%s" | plus: 0 %}
+                {% unless coin.whitelist.no-date %}  
                 {% if whitelistStart > current_date  %}
                  {% assign status = 'Soon' %}
                 {% endif %}
                 {% if current_date > whitelistStart and whitelistEnd > current_date %}
-                 {% assign status = 'Active' %}
+                 {% assign status = 'Open' %}
                 {% endif %}
                 {% if current_date > whitelistEnd %}
                  {% assign status = 'Closed' %}
                 {% endif %}
+                {% endunless %}
+                {% if coin.whitelist.no-date %}
+                 {% assign status = 'TBA' %}
+                {% endif %}
                 <li>
-                    <button class="whitelist-status btn round green bulky">{{status}}</button>
+                    <button class="whitelist-status btn round bulky">{{status}}</button>
                 </li>
                 {% endfor %}
             </ul>

@@ -122,17 +122,17 @@ title: Moonlanding Network
             <div class="ico-col-title">Active ICO</div>
             <!-- Featured Active Coins Array -->
             {% assign featuredActive = "" | split: ',' %} {% assign featuredActiveExpired = "" | split: ',' %} {% for coin in featuredcoins
-            %} {% assign featuredTill = coin.ico.featured-till | date: "%s" | plus: 0 %} {% assign ico_start_date = coin.ico-detail.start-date
+            %}{% unless coin.pre-ico.no-date %} {% unless coin.ico-detail.no-date %} {% assign featuredTill = coin.ico.featured-till | date: "%s" | plus: 0 %} {% assign ico_start_date = coin.ico-detail.start-date
             | date: "%s" | plus: 0 %} {% assign ico_end_date = coin.ico-detail.end-date | date: "%s" | plus: 0 %} {% if current_date
             > ico_start_date and ico_end_date > current_date %} {% if featuredTill > current_date %} {% assign featuredActive
             = featuredActive | push: coin %} {% else if current_date > featuredTill %} {% assign featuredActiveExpired =
-            featuredActiveExpired | push: coin %} {% endif %} {% endif %} {% endfor %}
+            featuredActiveExpired | push: coin %} {% endif %} {% endif %} {% endunless %} {% endunless %} {% endfor %}
 
             <!-- Regular Active coins array -->
-            {% assign regularActive = "" | split: ',' %} {% for coin in regularcoins %} {% assign ico_start_date = coin.ico-detail.start-date
+            {% assign regularActive = "" | split: ',' %} {% for coin in regularcoins %} {% unless coin.pre-ico.no-date %}{% unless coin.ico-detail.no-date %}  {% assign ico_start_date = coin.ico-detail.start-date
             | date: "%s" | plus: 0 %} {% assign ico_end_date = coin.ico-detail.end-date | date: "%s" | plus: 0 %} {% if current_date
             > ico_start_date and ico_end_date > current_date %} {% assign regularActive = regularActive | push: coin %} {%
-            endif %} {% endfor %}
+            endif %} {% endunless %} {% endunless %} {% endfor %}
 
             <!-- Total Active coins array -->
             {% assign regularActive = regularActive | concat: featuredActiveExpired | sort: 'date-added' | reverse %} {% assign totalActive
@@ -178,15 +178,15 @@ title: Moonlanding Network
             <div class="ico-col-title">Ended ICO</div>
             <!-- Featured Ended Coins Array -->
             {% assign featuredEnded = "" | split: ',' %} {% assign featuredEndedExpired = "" | split: ',' %} {% for coin in featuredcoins
-            %} {% assign featuredTill = coin.ico.featured-till | date: "%s" | plus: 0 %} {% assign ico_end_date = coin.ico-detail.end-date
+            %} {% unless coin.pre-ico.no-date %}{% unless coin.ico-detail.no-date %} {% assign featuredTill = coin.ico.featured-till | date: "%s" | plus: 0 %} {% assign ico_end_date = coin.ico-detail.end-date
             | date: "%s" | plus: 0 %} {% if current_date > ico_end_date %} {% if featuredTill > current_date %} {% assign
             featuredEnded = featuredEnded | push: coin %} {% else if current_date > featuredTill %} {% assign featuredEndedExpired
-            = featuredEndedExpired | push: coin %} {% endif %} {% endif %} {% endfor %}
+            = featuredEndedExpired | push: coin %} {% endif %} {% endif %} {% endunless %} {% endunless %} {% endfor %}
 
             <!-- Regular Ended coins array -->
-            {% assign regularEnded = "" | split: ',' %} {% for coin in regularcoins %} {% assign ico_end_date = coin.ico-detail.end-date
+            {% assign regularEnded = "" | split: ',' %} {% for coin in regularcoins %} {% unless coin.pre-ico.no-date %}{% unless coin.ico-detail.no-date %} {% assign ico_end_date = coin.ico-detail.end-date
             | date: "%s" | plus: 0 %} {% if current_date > ico_end_date %} {% assign regularEnded = regularEnded | push:
-            coin %} {% endif %} {% endfor %}
+            coin %} {% endif %} {% endunless %} {% endunless %} {% endfor %}
 
             <!-- Total Ended coins array -->
             {% assign regularEnded = regularEnded | concat: featuredEndedExpired | sort: 'date-added' | reverse %} {% assign totalEnded

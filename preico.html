@@ -14,6 +14,7 @@ title: Pre ICOs | Moonlanding Network
 {% assign featuredExpiredActive = "" | split: ',' %}
 {% assign featuredExpiredUpcoming = "" | split: ',' %}
 {% for coin in featuredcoins %}
+{% unless coin.ico-detail.no-date %}
 {% assign featuredTill = coin.ico.featured-till | date: "%s" | plus: 0 %}
 {% assign pre_ico_start_date = coin.pre-ico.start-date | date: "%s" | plus: 0 %}
 {% assign pre_ico_end_date = coin.pre-ico.end-date | date: "%s" | plus: 0 %}
@@ -32,6 +33,7 @@ title: Pre ICOs | Moonlanding Network
     {% assign featuredExpiredUpcoming = featuredExpiredUpcoming | push: coin %}
     {% endif %}
 {% endif %}
+{% endunless %}
 {% endfor %}
 
 <!-- Featured Sorted -->
@@ -42,6 +44,7 @@ title: Pre ICOs | Moonlanding Network
 {% assign regularPreActive = "" | split: ',' %}
 {% assign regularPreUpcoming = "" | split: ',' %}
 {% for coin in regularcoins %}
+{% unless coin.ico-detail.no-date %}
 {% assign pre_ico_start_date = coin.pre-ico.start-date | date: "%s" | plus: 0 %}
 {% assign pre_ico_end_date = coin.pre-ico.end-date | date: "%s" | plus: 0 %}
 {% if current_date > pre_ico_start_date and pre_ico_end_date > current_date %}
@@ -50,12 +53,39 @@ title: Pre ICOs | Moonlanding Network
 {% if pre_ico_start_date > current_date %}
 {% assign regularPreUpcoming = regularPreUpcoming | push: coin %}
 {% endif %}
+{% endunless %}
 {% endfor %}
 
-<!-- Regular coins array + Featured Expired Coins  -->
+<!-- Undated Coins Array -->
+{% assign unDated = site.coins | where: 'pre-ico.no-date', 'true' %}
+{% assign featuredunDated = "" | split: ',' %}
+{% assign featuredunDatedExpired = "" | split: ',' %}
+{% assign regularunDated = "" | split: ',' %}
+
+{% for coin in unDated  %}
+{% if coin.ico.featured %}
+{% assign featuredTill = coin.ico.featured-till | date: "%s" | plus: 0 %}
+{% if featuredTill > current_date %}
+{% assign featuredunDated = featuredunDated | push: coin %}
+{% else %}
+{% assign featuredunDatedExpired = featuredunDatedExpired | push: coin %}
+{% endif %}
+{% endif %}
+{% unless coin.ico.featured %}
+{% assign regularunDated = regularunDated | push: coin %}
+{% endunless %}
+{% endfor %}
+<!-- Sort Featured Undated -->
+{% assign featuredunDated = featuredunDated | sort: 'date-added' | reverse %}
+<!-- Concat Undated Feature Expired to Undated Regular & Sort  -->
+{% assign regularunDated = regularunDated | concat: featuredunDatedExpired | sort: 'date-added' | reverse %}
+<!-- Featured Undated to Featured Upcoming -->
+{% assign featuredPreUpcoming = featuredPreUpcoming | concat: featuredunDated %}
+
+<!-- Regular coins array + Featured Expired Coins + Undated Coins  -->
 {% assign regularPreActiveTotal = regularPreActive | concat: featuredExpiredActive | sort: 'date-added' | reverse  %}
 {% assign regularPreUpcomingTotal = regularPreUpcoming | concat: featuredExpiredUpcoming | sort: 'date-added' | reverse %}
-
+{% assign regularPreUpcomingTotal = regularPreUpcomingTotal | concat: regularunDated %}
 <div class="page-end-gradient top">
 
 </div>
@@ -269,13 +299,13 @@ title: Pre ICOs | Moonlanding Network
                             %} {% assign secondsTo = pre_ico_start_date | minus: current_date %} {% assign hoursTo = secondsTo | divided_by:
                             60 | divided_by: 60 %} {% assign daysTo = hoursTo | divided_by: 24 %}
                             <li class="featured">
-                                <button class="btn round bulky"><span class="ico-date-value">{{ daysTo }}</span> Days</button>
+                                <button class="btn round bulky"><span class="ico-date-value">{% if coin.pre-ico.no-date %}TBA{% else %}{{ daysTo }}</span> Days{% endif %}</button>
                             </li>
                             {% endfor %} {% for coin in regularPreUpcomingTotal %} {% assign pre_ico_start_date = coin.pre-ico.start-date | date: "%s" | plus:
                             0 %} {% assign secondsTo = pre_ico_start_date | minus: current_date %} {% assign hoursTo = secondsTo | divided_by:
                             60 | divided_by: 60 %} {% assign daysTo = hoursTo | divided_by: 24 %}
                             <li>
-                                <button class="btn round bulky"><span class="ico-date-value">{{ daysTo }}</span> Days</button>
+                                <button class="btn round bulky"><span class="ico-date-value">{% if coin.pre-ico.no-date %}TBA{% else %}{{ daysTo }}</span> Days{% endif %}</button>
                             </li>
                             {% endfor %}
                         </ul>

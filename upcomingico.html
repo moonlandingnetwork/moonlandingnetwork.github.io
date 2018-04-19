@@ -4,6 +4,7 @@ bottombanner: true
 title: Upcoming ICOs  | Moonlanding Network 
 
 ---
+{% assign unDated = site.coins | where: 'ico.no-date', 'true' %}
 {% assign featuredcoins = site.coins | where: 'ico.featured', 'true' %}
 {% assign regularcoins = site.coins | where: 'ico.featured', 'false' %}
 {% assign timeframe =  86400 %}
@@ -22,6 +23,7 @@ title: Upcoming ICOs  | Moonlanding Network
     {% assign featuredExpired = featuredExpired | push: coin %}
     {% endif %}
 {% endif %}
+
 {% endfor %}
 {% assign featuredUpcoming = featuredUpcoming | sort: 'date-added' | reverse %}
 <!-- Regular coins array -->
@@ -34,10 +36,37 @@ title: Upcoming ICOs  | Moonlanding Network
 {% endif %}
 {% endfor %}
 
+<!-- Undated Coins Array -->
+{% assign unDated = site.coins | where: 'ico-detail.no-date', 'true' %}
+{% assign featuredunDated = "" | split: ',' %}
+{% assign featuredunDatedExpired = "" | split: ',' %}
+{% assign regularunDated = "" | split: ',' %}
+
+{% for coin in unDated  %}
+{% if coin.ico.featured %}
+{% assign featuredTill = coin.ico.featured-till | date: "%s" | plus: 0 %}
+{% if featuredTill > current_date %}
+{% assign featuredunDated = featuredunDated | push: coin %}
+{% else %}
+{% assign featuredunDatedExpired = featuredunDatedExpired | push: coin %}
+{% endif %}
+{% endif %}
+{% unless coin.ico.featured %}
+{% assign regularunDated = regularunDated | push: coin %}
+{% endunless %}
+{% endfor %}
+
+<!-- Sort Featured Undated -->
+{% assign featuredunDated = featuredunDated | sort: 'date-added' | reverse %}
+<!-- Concat Undated Feature Expired to Undated Regular & Sort  -->
+{% assign regularunDated = regularunDated | concat: featuredunDatedExpired | sort: 'date-added' | reverse %}
+
 <!-- Regular coins array + Featured Expired Coins  -->
-{% assign regularUpcomingTotal = regularUpcoming | concat: featuredExpired | sort: 'date-added' | reverse %}
+{% assign regularUpcomingTotal = regularUpcoming | concat: featuredExpired | sort: 'date-added'  | reverse %}
 
-
+<!-- Add Undated Coins to FeaturedUpcoming and Regular Upcoming -->
+{% assign featuredUpcoming = featuredUpcoming | concat: featuredunDated %}
+{% assign regularUpcomingTotal = regularUpcomingTotal | concat: regularunDated %}
 
 <div class="page-end-gradient top">
 
@@ -121,13 +150,13 @@ title: Upcoming ICOs  | Moonlanding Network
                 %} {% assign secondsTo = ico_start_date | minus: current_date %} {% assign hoursTo = secondsTo | divided_by:
                 60 | divided_by: 60 %} {% assign daysTo = hoursTo | divided_by: 24 %}
                 <li class="featured">
-                    <button class="btn round bulky"><span class="ico-date-value">{{ daysTo }}</span> Days</button>
+                    <button class="btn round bulky"><span class="ico-date-value">{% if coin.ico-detail.no-date %}TBA{% else %}{{ daysTo }}</span> Days{% endif %}</button>
                 </li>
                 {% endfor %} {% for coin in regularUpcomingTotal %} {% assign ico_start_date = coin.ico-detail.start-date | date: "%s" | plus:
                 0 %} {% assign secondsTo = ico_start_date | minus: current_date %} {% assign hoursTo = secondsTo | divided_by:
                 60 | divided_by: 60 %} {% assign daysTo = hoursTo | divided_by: 24 %}
                 <li>
-                    <button class="btn round bulky"><span class="ico-date-value">{{ daysTo }}</span> Days</button>
+                    <button class="btn round bulky"><span class="ico-date-value">{% if coin.ico-detail.no-date %}TBA{% else %}{{ daysTo }}</span> Days{% endif %}</button>
                 </li>
                 {% endfor %}
             </ul>
