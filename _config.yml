@@ -28,10 +28,12 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - _site
-
+  - node_modules
+keep_files: [images]
 #plugins:
 plugins:
   - jekyll-seo-tag
+  - jekyll-include-cache
 
 collections:
   coins:

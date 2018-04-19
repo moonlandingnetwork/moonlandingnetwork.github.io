@@ -3,6 +3,7 @@
            <li {% if page.url == "/preico.html" %}class="active"{% endif %}><a href="{{site.baseurl}}/preico">Pre ICO
             {% assign timeframe =  86400 %}
             {% for coin in site.coins %}
+            {% unless coin.ico-detail.no-date %}
             {% assign pre_ico_start_date = coin.pre-ico.start-date | date: "%s" | plus: 0 %}
             {% assign pre_ico_end_date = coin.pre-ico.end-date | date: "%s" | plus: 0 %}
             {% assign current_date = "now" | date: "%s" | minus: timeframe  %}
@@ -12,44 +13,55 @@
             {% if pre_ico_start_date > current_date %}
                 {% assign counterPreUpcoming = counterPreUpcoming | plus: 1 %}
             {% endif %}
+            {% if coin.pre-ico.no-date %}
+                {% assign counterunDatedPreUpcoming = counterunDatedPreUpcoming | plus: 1 %}
+            {% endif %}
+            {% endunless %}
             {% endfor %}
             {% assign countTotal = counterPreActive | plus: counterPreUpcoming %}
-                <span>{{countTotal}}</span>
+                <span>{{countTotal | plus: counterunDatedPreUpcoming }}</span>
             </a></li>
             <li {% if page.url == "/activeico.html" %}class="active"{% endif %}><a href="{{site.baseurl}}/activeico">Active ICO
             {% assign timeframe =  86400 %}
             {% for coin in site.coins %}
+            {% unless coin.ico-detail.no-date %}
             {% assign ico_start_date = coin.ico-detail.start-date | date: "%s" | plus: 0 %}
             {% assign ico_end_date = coin.ico-detail.end-date | date: "%s" | plus: 0 %}
             {% assign current_date = "now" | date: "%s" | minus: timeframe  %}
             {% if current_date > ico_start_date and ico_end_date > current_date %}
-                
                 {% assign counterActive = counterActive | plus: 1 %}
             {% endif %}
+            {% endunless %}
             {% endfor %}
                 <span>{{counterActive}}</span>
             </a></li>
             <li {% if page.url == "/upcomingico.html" %}class="active"{% endif %}><a href="{{site.baseurl}}/upcomingico">Upcoming ICO
             {% assign timeframe =  86400 %}
-            {% for coin in site.coins %}
+           {% for coin in site.coins %}
             {% assign ico_start_date = coin.ico-detail.start-date | date: "%s" | plus: 0 %}
             {% assign pre_ico_end_date = coin.pre-ico.end-date | date: "%s" | plus: 0 %}
             {% assign current_date = "now" | date: "%s" | minus: timeframe  %}
             {% if current_date > pre_ico_end_date and ico_start_date > current_date %}
-                
                 {% assign counterUpcoming = counterUpcoming | plus: 1 %}
             {% endif %}
+            {% if coin.ico-detail.no-date %}
+                {% assign counterunDated = counterunDated | plus: 1 %}
+            {% endif %}
             {% endfor %}
-            <span>{{counterUpcoming}}</span>
+            <span>{{counterUpcoming | plus: counterunDated}}</span>
             </a></li>
             <li {% if page.url == "/endedico.html" %}class="active"{% endif %}><a href="{{site.baseurl}}/endedico">Ended ICO
             {% assign timeframe =  86400 %}
             {% for coin in site.coins %}
+            {% unless coin.pre-ico.no-date %}
+            {% unless coin.ico-detail.no-date %}
             {% assign ico_end_date = coin.ico-detail.end-date | date: "%s" | plus: 0 %}
             {% assign current_date = "now" | date: "%s" | minus: timeframe  %}
             {% if current_date > ico_end_date %}
                 {% assign counterEnded = counterEnded | plus: 1 %}
             {% endif %}
+            {% endunless %}
+            {% endunless %}
             {% endfor %}
                 <span>{{counterEnded}}</span>
             </a></li>

@@ -33,13 +33,13 @@
     <meta name="keywords" content="{% if page.keywords %}{{page.keywords}}{% else %}{{site.keywords}}{% endif %}">
     <meta name="viewport" content="width=device-width, initial-scale=0.9">
     
-    {% include stylesheets.html %}
+    {% include_cached stylesheets.html %}
 </head>
 
 <body>
  <!-- Modals -->
-{% include subscribe.html %}
-{% include disclaimer-modal.html %}
+{% include_cached subscribe.html %}
+{% include_cached disclaimer-modal.html %}
     <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -51,24 +51,24 @@
     <!-- End Top Banner -->
     
     <!-- Navbar -->
-    {% include nav.html %}
+    {% include_cached nav.html %}
 
     <!-- Coin Value -->
-    {% include coinvalue.html %}
+    {% include_cached coinvalue.html %}
 
     <!-- Page Content -->
     {{ content }}
 
     <!-- Bottom Banner -->
     {% if page.bottombanner %}
-    {% include bottombanner.html %}
+    {% include_cached bottombanner.html %}
     {% endif %}
     <!-- Footer -->
-    {% include footer.html %}
-    {% include disclaimer.html %}
+    {% include_cached footer.html %}
+    {% include_cached disclaimer.html %}
 
     <!-- Persistent Buttons -->
-    {% include persistentbuttons.html %}
+    {% include_cached persistentbuttons.html %}
 
     
 
