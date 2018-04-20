@@ -3,7 +3,7 @@
            <li {% if page.url == "/preico.html" %}class="active"{% endif %}><a href="{{site.baseurl}}/preico">Pre ICO
             {% assign timeframe =  86400 %}
             {% for coin in site.coins %}
-            {% unless coin.ico-detail.no-date %}
+            
             {% assign pre_ico_start_date = coin.pre-ico.start-date | date: "%s" | plus: 0 %}
             {% assign pre_ico_end_date = coin.pre-ico.end-date | date: "%s" | plus: 0 %}
             {% assign current_date = "now" | date: "%s" | minus: timeframe  %}
@@ -16,7 +16,7 @@
             {% if coin.pre-ico.no-date %}
                 {% assign counterunDatedPreUpcoming = counterunDatedPreUpcoming | plus: 1 %}
             {% endif %}
-            {% endunless %}
+            
             {% endfor %}
             {% assign countTotal = counterPreActive | plus: counterPreUpcoming %}
                 <span>{{countTotal | plus: counterunDatedPreUpcoming }}</span>
@@ -44,9 +44,11 @@
             {% if current_date > pre_ico_end_date and ico_start_date > current_date %}
                 {% assign counterUpcoming = counterUpcoming | plus: 1 %}
             {% endif %}
+            {% unless coin.pre-ico.no-date %}
             {% if coin.ico-detail.no-date %}
                 {% assign counterunDated = counterunDated | plus: 1 %}
             {% endif %}
+            {% endunless %}
             {% endfor %}
             <span>{{counterUpcoming | plus: counterunDated}}</span>
             </a></li>
