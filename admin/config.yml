@@ -20,7 +20,6 @@ collections:
       name: "date-added"
       widget: "date"
       default: 
-      format: "YYYY-MM-DD"
     - name: "ico"
       label: "Basic ICO Listing Information"
       widget: object
