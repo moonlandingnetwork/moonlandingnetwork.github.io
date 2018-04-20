@@ -143,7 +143,7 @@ if(dateButton && dateButtonValue != null){
             date.classList.add('yellow');
         } else if(dateButtonValue[i].textContent >= 6){
             date.classList.add('green');
-        } else if(dateButtonValue[i].textContent >= 'Today'){
+        } else if(dateButtonValue[i].textContent == 'Today'){
             date.classList.add('red');
         }
         
