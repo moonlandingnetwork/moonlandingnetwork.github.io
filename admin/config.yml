@@ -184,7 +184,7 @@ collections:
           - {label: "Token Value in ETH", name: "eth", widget: "string", required: false }
           - {label: "Token Value in BTC", name: "btc", widget: "string", required: false }
        - {label: "Token Transferability", name: "token-issue", widget: "string", required: false }
-       - {label: "Pre ICO Bonus", name: "bonus", widget: "string", required: false }
+       - {label: "ICO Bonus", name: "bonus", widget: "string", required: false }
     - name: "team"
       label: "Team Information"
       widget: list
