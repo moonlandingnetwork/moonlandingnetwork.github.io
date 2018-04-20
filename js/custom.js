@@ -168,9 +168,7 @@ if(coinMeterNeedle != null){
     const coinMeter = document.querySelector('.coinmeter-rating');
     const coinMeterContent = coinMeter.textContent;
     var coinMeterValue = parseFloat(coinMeterContent, 10);
-    console.log(coinMeterValue);
     const coinMeterDegree = 30 + (coinMeterValue*30);
-    console.log(coinMeterDegree);
     coinMeterNeedle.style.transform = `rotate(${coinMeterDegree}deg)`;
 }
 
