@@ -188,6 +188,7 @@ collections:
     - name: "team"
       label: "Team Information"
       widget: list
+      required: false
       fields:
        - {label: "Name", name: "name", widget: "string", required: false}
        - {label: "Display Picture", name: "image", widget: "image", required: false }
@@ -196,6 +197,7 @@ collections:
     - name: "social"
       label: "ICO Website & Social Links"
       widget: object
+      required: false
       fields:
        - {label: "Website", name: "website", widget: "string", required: false }
        - {label: "Facebook", name: "facebook", widget: "string", required: false }
@@ -205,6 +207,7 @@ collections:
     - name: "ico-participation-details"
       label: "ICO Participation Terms"
       widget: object
+      required: false
       fields:
        - name: "currencies-accepted"
          label: "Currencies Accepted"
