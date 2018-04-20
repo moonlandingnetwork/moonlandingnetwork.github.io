@@ -43,6 +43,7 @@ title: Upcoming ICOs  | Moonlanding Network
 {% assign regularunDated = "" | split: ',' %}
 
 {% for coin in unDated  %}
+{% unless coin.pre-ico.no-date %}
 {% if coin.ico.featured %}
 {% assign featuredTill = coin.ico.featured-till | date: "%s" | plus: 0 %}
 {% if featuredTill > current_date %}
@@ -53,6 +54,7 @@ title: Upcoming ICOs  | Moonlanding Network
 {% endif %}
 {% unless coin.ico.featured %}
 {% assign regularunDated = regularunDated | push: coin %}
+{% endunless %}
 {% endunless %}
 {% endfor %}
 
