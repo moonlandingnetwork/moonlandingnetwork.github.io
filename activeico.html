@@ -11,34 +11,26 @@ title: Active ICOs | Moonlanding Network
 {% assign featuredActive = "" | split: ',' %}
 {% assign featuredExpired = "" | split: ',' %}
 {% for coin in featuredcoins %}
-{% unless coin.pre-ico.no-date %}
-{% unless coin.ico-detail.no-date %}
 {% assign featuredTill = coin.ico.featured-till | date: "%s" | plus: 0 %}
 {% assign ico_start_date = coin.ico-detail.start-date | date: "%s" | plus: 0 %}
 {% assign ico_end_date = coin.ico-detail.end-date | date: "%s" | plus: 0 %}
-{% if current_date > ico_start_date and ico_end_date > current_date %}
+{% if current_date >= ico_start_date and ico_end_date >= current_date %}
     {% if featuredTill > current_date %}
     {% assign featuredActive = featuredActive | push: coin %}
     {% else if current_date > featuredTill %}
     {% assign featuredExpired = featuredExpired | push: coin %}
     {% endif %}
 {% endif %}
-{% endunless %}
-{% endunless %}
 {% endfor %}
 {% assign featuredActive = featuredActive | sort: 'date-added' | reverse %}
 <!-- Regular coins array -->
 {% assign regularActive = "" | split: ',' %}
 {% for coin in regularcoins %}
-{% unless coin.pre-ico.no-date %}
-{% unless coin.ico-detail.no-date %}
 {% assign ico_start_date = coin.ico-detail.start-date | date: "%s" | plus: 0 %}
 {% assign ico_end_date = coin.ico-detail.end-date | date: "%s" | plus: 0 %}
-{% if current_date > ico_start_date and ico_end_date > current_date %}
+{% if current_date >= ico_start_date and ico_end_date >= current_date %}
 {% assign regularActive = regularActive | push: coin %}
 {% endif %}
-{% endunless %}
-{% endunless %}
 {% endfor %}
 
 <!-- Regular coins array + Featured Expired Coins  -->
