@@ -170,13 +170,13 @@ title: Pre ICOs | Moonlanding Network
                 %} {% assign secondsTo = pre_ico_end_date | minus: current_date %} {% assign hoursTo = secondsTo | divided_by:
                 60 | divided_by: 60 %} {% assign daysTo = hoursTo | divided_by: 24 %}
                 <li class="featured">
-                    <button class="btn round bulky"><span class="ico-date-value">{{ daysTo }}</span> Days</button>
+                    <button class="btn round bulky"><span class="ico-date-value">{% if daysTo == 0 %}Today{% else %}{{ daysTo }}</span> Days{% endif %}</button>
                 </li>
                 {% endfor %} {% for coin in regularPreActiveTotal %} {% assign pre_ico_end_date = coin.pre-ico.end-date | date: "%s" | plus:
                 0 %} {% assign secondsTo = pre_ico_end_date | minus: current_date %} {% assign hoursTo = secondsTo | divided_by:
                 60 | divided_by: 60 %} {% assign daysTo = hoursTo | divided_by: 24 %}
                 <li>
-                    <button class="btn round bulky"><span class="ico-date-value">{{ daysTo }}</span> Days</button>
+                    <button class="btn round bulky"><span class="ico-date-value">{% if daysTo == 0 %}Today{% else %}{{ daysTo }}</span> Days{% endif %}</button>
                 </li>
                 {% endfor %}
             </ul>
@@ -299,13 +299,13 @@ title: Pre ICOs | Moonlanding Network
                             %} {% assign secondsTo = pre_ico_start_date | minus: current_date %} {% assign hoursTo = secondsTo | divided_by:
                             60 | divided_by: 60 %} {% assign daysTo = hoursTo | divided_by: 24 %}
                             <li class="featured">
-                                <button class="btn round bulky"><span class="ico-date-value">{% if coin.pre-ico.no-date %}TBA{% else %}{{ daysTo }}</span> Days{% endif %}</button>
+                                <button class="btn round bulky"><span class="ico-date-value">{% if coin.pre-ico.no-date %}TBA{% endif %}{% unless coin.pre-ico.no-date %}{% if daysTo == 0 %}Today{% else %}{{ daysTo }}</span> Days{% endif %}{% endunless %}</button>
                             </li>
                             {% endfor %} {% for coin in regularPreUpcomingTotal %} {% assign pre_ico_start_date = coin.pre-ico.start-date | date: "%s" | plus:
                             0 %} {% assign secondsTo = pre_ico_start_date | minus: current_date %} {% assign hoursTo = secondsTo | divided_by:
                             60 | divided_by: 60 %} {% assign daysTo = hoursTo | divided_by: 24 %}
                             <li>
-                                <button class="btn round bulky"><span class="ico-date-value">{% if coin.pre-ico.no-date %}TBA{% else %}{{ daysTo }}</span> Days{% endif %}</button>
+                                <button class="btn round bulky"><span class="ico-date-value">{% if coin.pre-ico.no-date %}TBA{% endif %}{% unless coin.pre-ico.no-date %}{% if daysTo == 0 %}Today{% else %}{{ daysTo }}</span> Days{% endif %}{% endunless %}</button>
                             </li>
                             {% endfor %}
                         </ul>

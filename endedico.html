@@ -121,17 +121,25 @@ title: Ended ICOs | Moonlanding Network
             </ul>
             <ul class="ico-ends-in">
                 <h5 class="ico-table-title">Ended In</h5>
-                {% for coin in featuredEnded  %} {% assign ico_end_date = coin.ico-detail.end-date | date: "%s" | plus: 0
-                %} {% assign secondsTo = current_date | minus: ico_end_date %} {% assign hoursTo = secondsTo | divided_by:
-                60 | divided_by: 60 %} {% assign daysTo = hoursTo | divided_by: 24 %}
+                {% for coin in featuredEnded  %}
+                {% assign ico_end_date = coin.ico-detail.end-date | date: "%s" | plus: 0
+                %}
+                {% assign secondsTo = current_date | minus: ico_end_date %}
+                {% assign hoursTo = secondsTo | divided_by:
+                60 | divided_by: 60 %}
+                {% assign daysTo = hoursTo | divided_by: 24 %}
                 <li class="featured">
-                    <button class="btn round bulky"><span class="ico-date-value">{{ daysTo }}</span> Days</button>
+                    <button class="btn round bulky"><span class="ico-date-value">{% if daysTo == 0 %}Today{% else %}{{ daysTo }}</span> Days{% endif %}</button>
                 </li>
-                {% endfor %} {% for coin in regularEndedTotal %} {% assign ico_end_date = coin.ico-detail.end-date | date: "%s" | plus:
-                0 %} {% assign secondsTo = current_date | minus: ico_end_date %} {% assign hoursTo = secondsTo | divided_by:
+                {% endfor %}
+                {% for coin in regularEndedTotal %}
+                {% assign ico_end_date = coin.ico-detail.end-date | date: "%s" | plus:
+                0 %}
+                {% assign secondsTo = current_date | minus: ico_end_date %}
+                {% assign hoursTo = secondsTo | divided_by:
                 60 | divided_by: 60 %} {% assign daysTo = hoursTo | divided_by: 24 %}
                 <li>
-                    <button class="btn round bulky"><span class="ico-date-value">{{ daysTo }}</span> Days</button>
+                    <button class="btn round bulky"><span class="ico-date-value">{% if daysTo == 0 %}Today{% else %}{{ daysTo }}</span> Days{% endif %}</button>
                 </li>
                 {% endfor %}
             </ul>
