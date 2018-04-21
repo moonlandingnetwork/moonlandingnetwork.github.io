@@ -35,7 +35,6 @@ collections:
          name: "featured-till"
          widget: "date"
          default: ""
-         format: "YYYY-MM-DD"
        - {label: "Show Rating For Featured", name: "show-rating", widget: "boolean", default: false}
        - {label: "Top Banner Advert", name: "topbanner", widget: "boolean", default: false }
        - {label: "Top Banner Advert Blurb", name: "topbanner-content", widget: "string", required: false }
@@ -66,12 +65,10 @@ collections:
          name: "start-date"
          widget: "date"
          default: ""
-         format: "YYYY-MM-DD"
        - label: "Whitelist End Date"
          name: "end-date"
          widget: "date"
          default: ""
-         format: "YYYY-MM-DD"
     - name: "token"
       label: "Token Meta Information"
       widget: object
@@ -82,7 +79,6 @@ collections:
          name: "announced"
          widget: "date"
          default: ""
-         format: "MMMM-D-YYYY"
     - name: "progress"
       label: "ICO Progress"
       widget: object
@@ -106,12 +102,10 @@ collections:
          name: "start-date"
          widget: "date"
          default: ""
-         format: "MMM-DD-YYYY"
        - label: "Pre ICO End Date"
          name: "end-date"
          widget: "date"
          default: ""
-         format: "MMM-DD-YYYY"
        - name: "mvp"
          label: "MVP"
          widget: select
@@ -146,12 +140,10 @@ collections:
          name: "start-date"
          widget: "date"
          default: ""
-         format: "MMM-DD-YYYY"
        - label: "ICO End Date"
          name: "end-date"
          widget: "date"
          default: ""
-         format: "MMM-DD-YYYY"
        - name: "mvp"
          label: "MVP"
          widget: select
