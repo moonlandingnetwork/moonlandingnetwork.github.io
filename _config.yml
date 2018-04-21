@@ -20,7 +20,7 @@ keywords: "ico alert, ico analysis, ico list, list of icos, list of crypto icos,
 logo: "/images/logo-image.png"
 # Build settings
 markdown: kramdown
-
+timezone: Greenwich
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
