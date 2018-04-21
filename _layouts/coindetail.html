@@ -97,7 +97,7 @@ bottombanner: true
                     </div>
                     <div class="coin-card-body">
                         {% if page.ico.video %}
-                        <iframe width="560" height="315" src="{{page.ico.video}}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                        <iframe width="490" height="275" src="{{page.ico.video}}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                         {% endif %}
                         {% unless page.ico.video %}
                         <img id="video-placeholder" src="{{site.url}}/images/video_placeholer.jpg" alt="">
@@ -144,7 +144,7 @@ bottombanner: true
                             <img src="{{site.baseurl}}/images/announcement-icon.png" alt="">
                             <div class="coincard-inner-content">
                                 <h6>First Announced</h6>
-                                <p>{% if page.token.announced %}{{page.token.announced}}{% else %}Date Not Available{% endif %}</p>
+                                <p>{% if page.token.announced %}{{page.token.announced | date_to_long_string}}{% else %}Date Not Available{% endif %}</p>
                             </div>
                         </div>
                     </div>
@@ -253,15 +253,15 @@ bottombanner: true
     <p id="coin-progress-para">
         {% case true %}
             {% when ended %}
-            Ended on {{page.ico-detail.end-date}}
+            Ended on {{page.ico-detail.end-date | date_to_long_string}}
             {% when preActive %}
-            Ends on {{page.pre-ico.end-date}}
+            Ends on {{page.pre-ico.end-date | date_to_long_string}}
             {% when active %}
-            Ends on {{page.ico-detail.end-date}}
+            Ends on {{page.ico-detail.end-date | date_to_long_string}}
             {% when preUpcoming %}
-            Starts on {{page.pre-ico.start-date}}
+            Starts on {{page.pre-ico.start-date | date_to_long_string}}
             {% when upcoming %}
-            Starts on {{page.ico-detail.start-date}}
+            Starts on {{page.ico-detail.start-date | date_to_long_string}}
         {% endcase %}
     </p>
     {% endunless %}
@@ -349,14 +349,14 @@ bottombanner: true
                             <img src="{{site.baseurl}}/images/calender-icon.png" alt="">
                             <div class="coincard-inner-content">
                                 <h6>Pre-ICO Start Date</h6>
-                                <p>{% if page.pre-ico.no-date %}Not Available{% else %}{{page.pre-ico.start-date}}{% endif %}</p>
+                                <p>{% if page.pre-ico.no-date %}Not Available{% else %}{{page.pre-ico.start-date | date_to_long_string}}{% endif %}</p>
                             </div>
                         </div>
                         <div class="coincard-inneritem third">
                             <img src="{{site.baseurl}}/images/finish-icon.png" alt="">
                             <div class="coincard-inner-content">
                                 <h6>Pre-ICO End Date</h6>
-                                <p>{% if page.pre-ico.no-date %}Not Available{% else %}{{page.pre-ico.end-date}}{% endif %}</p>
+                                <p>{% if page.pre-ico.no-date %}Not Available{% else %}{{page.pre-ico.end-date | date_to_long_string}}{% endif %}</p>
                             </div>
                         </div>
                         <div class="coincard-inneritem third">
@@ -393,7 +393,7 @@ bottombanner: true
                             <img src="{{site.baseurl}}/images/conversion-icon.png" alt="">
                             <div class="coincard-inner-content">
                                 <h6>Pre-ICO Conversion</h6>
-                                <p>{% if page.pre-ico.conversion.usd %}1 {{page.ico.token-name}} = {{page.pre-ico.conversion.usd}} USD {% else %} USD : NA {% endif %}
+                                <p class="micro-text">{% if page.pre-ico.conversion.usd %}1 {{page.ico.token-name}} = {{page.pre-ico.conversion.usd}} USD {% else %} USD : NA {% endif %}
                                 <br>{% if page.pre-ico.conversion.eth %}1 {{page.ico.token-name}} = {{page.pre-ico.conversion.eth  | truncate:8, ""}} ETH {% else %} ETH : NA {% endif %}
                                 <br>{% if page.pre-ico.conversion.btc %}1 {{page.ico.token-name}} = {{page.pre-ico.conversion.btc  | truncate:8, ""}} BTC{% else %} BTC : NA {% endif %}</p>
                             </div>
@@ -442,14 +442,14 @@ bottombanner: true
                             <img src="{{site.baseurl}}/images/calender-icon.png" alt="">
                             <div class="coincard-inner-content">
                                 <h6>ICO Start Date</h6>
-                                <p>{% if page.ico-detail.no-date %}Not Available{% else %}{{page.ico-detail.start-date}}{% endif %}</p>
+                                <p>{% if page.ico-detail.no-date %}Not Available{% else %}{{page.ico-detail.start-date | date_to_long_string}}{% endif %}</p>
                             </div>
                         </div>
                         <div class="coincard-inneritem third">
                             <img src="{{site.baseurl}}/images/finish-icon.png" alt="">
                             <div class="coincard-inner-content">
                                 <h6>ICO End Date</h6>
-                                <p>{% if page.ico-detail.no-date %}Not Available{% else %}{{page.ico-detail.end-date}}{% endif %}</p>
+                                <p>{% if page.ico-detail.no-date %}Not Available{% else %}{{page.ico-detail.end-date }}{% endif %}</p>
                             </div>
                         </div>
                         <div class="coincard-inneritem third">
@@ -518,7 +518,7 @@ bottombanner: true
                             <img src="{{site.baseurl}}/images/conversion-icon.png" alt="">
                             <div class="coincard-inner-content">
                                 <h6>ICO Conversion</h6>
-                                <p>{% if page.ico-detail.conversion.usd %}1 {{page.ico.token-name}} = {{page.ico-detail.conversion.usd}} USD {% else %} USD : NA {% endif %}
+                                <p class="micro-text">{% if page.ico-detail.conversion.usd %}1 {{page.ico.token-name}} = {{page.ico-detail.conversion.usd}} USD {% else %} USD : NA {% endif %}
                                         <br>{% if page.ico-detail.conversion.eth %}1 {{page.ico.token-name}} = {{page.ico-detail.conversion.eth  | truncate:8, ""}} ETH {% else %} ETH : NA {% endif %}
                                         <br>{% if page.ico-detail.conversion.btc %}1 {{page.ico.token-name}} = {{page.ico-detail.conversion.btc  | truncate:8, ""}} BTC{% else %} BTC : NA {% endif %}</p>
                             </div>

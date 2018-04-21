@@ -265,6 +265,11 @@ function waitForElementToDisplay(selector, time) {
         let twitterFrameContent = twitterFrame.contentDocument || twitterFrame.contentWindow.document;
         let inner_tf = twitterFrameContent.getElementsByClassName('timeline-TweetList');
         inner_tf[0].style.padding = '1.5rem';
+        let inner_tf_text = twitterFrameContent.getElementsByClassName('timeline-Tweet-text');
+        console.dir(inner_tf_text);
+        for(i=0; i<inner_tf_text.length;i++){
+            inner_tf_text[i].style.fontSize = '13px';
+        }
         let head_tf = twitterFrameContent.querySelector('head');
         head_tf.querySelector('style').innerText += '::-webkit-scrollbar { width: 15px; } ::-webkit-scrollbar-track {  border-radius: 0; background: #4d6382;} ::-webkit-scrollbar-thumb { border-radius: 15px; -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); background: #1a2541; height: 5rem;}'; 
         }
