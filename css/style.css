@@ -698,7 +698,7 @@ nav ul li{
     align-self: center;
 }
 nav ul li a{
-    color: #fff !important;
+    color: #fff;
 }
 #disclaimer-modal-toggle{
     cursor: pointer;
