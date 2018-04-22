@@ -2116,9 +2116,12 @@ footer{
         width: 90%;
     }
     /* Home Page */
+    .intro-section{
+        background-repeat: repeat-y;
+    }
     .banner{
         height: 50vh;
-        margin-top: 6rem;
+        padding-top: 5rem;
     }
     .banner img{
         width: 96px;
