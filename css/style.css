@@ -2117,7 +2117,8 @@ footer{
     }
     /* Home Page */
     .banner{
-        height: 65vh;
+        height: 50vh;
+        margin-top: 4rem;
     }
     .banner img{
         width: 96px;
@@ -2137,11 +2138,11 @@ footer{
         
     }
     .banner-buttons button{
-        margin: 0.35em !important;
+        margin: 0.45em !important;
         align-items: center;
         justify-content: center;
         width: 8.5rem;
-        font-size: 0.65rem;
+        font-size: 0.7rem;
     }
     .down-arrow{
         width: 40%;
