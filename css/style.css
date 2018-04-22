@@ -2099,6 +2099,9 @@ footer{
     footer{
         flex-direction: column;
     }
+    .footer-logo{
+        margin-top: 1rem;
+    }
     .footer-about{
         margin: 3rem 0 0 0;
     }
@@ -2106,7 +2109,7 @@ footer{
         margin: 1rem 0;
     }
     .footer-links{
-        margin: 1rem 0 0 0;
+        margin: 0;
     }
     .disclaimer{
         height: 9rem;
@@ -2160,6 +2163,10 @@ footer{
     }
     .ico-grid{
         flex-direction: column;
+        margin: 1rem 0;
+    }
+    .ico-col{
+        margin: 2rem 0;
     }
     
 }
