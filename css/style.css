@@ -1356,6 +1356,9 @@ footer{
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    display: block;
 
 }
 .ico-col-title{
@@ -2326,6 +2329,9 @@ footer{
     }
     .ico-col{
         margin: 2rem 0;
+    }
+    .ico-col-btn{
+        margin: 0.6rem 4rem 1rem;
     }
     
 }
