@@ -2150,6 +2150,7 @@ footer{
     nav input{
         width: 95%;
         margin: auto;
+        border: solid 1px transparent;
     }
     nav input::placeholder { 
         font-family: '';
