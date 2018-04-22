@@ -1,0 +1,347 @@
+---
+pages:
+- _coins/test-coin.html
+hide_body: true
+is_partial: false
+fields:
+- type: text
+  hidden: true
+  config:
+    required: true
+  label: Layout
+  name: layout
+  description: Page Layout
+  default: coindetail
+- type: text
+  label: Title
+  name: title
+  description: Page Title
+  config:
+    required: true
+- type: text
+  name: metadesc
+  label: Meta Description
+  description: SEO Meta Description
+- type: text
+  name: metakeywords
+  label: Meta Keywords
+  description: SEO Meta Keywords
+- type: datetime
+  name: date-added
+  label: Date Added
+  description: Date on the which coin is added
+  config:
+    required: true
+  hidden: true
+- type: field_group
+  name: ico
+  description: Basic Listing Information
+  label: Primary ICO Details
+  fields:
+  - type: datetime
+    name: date-announced
+    label: Date Announced
+  - type: text
+    name: name
+    label: ICO Name
+    config:
+      required: true
+  - type: text
+    label: Token Name
+    name: token-name
+    config:
+      required: true
+  - type: text
+    name: token-type
+    label: Token Type
+    description: Type of Token (ERC20)
+  - type: file
+    name: logo
+    label: Logo
+  - type: text
+    name: category
+    label: Category
+    config:
+      required: true
+  - type: number
+    name: moonability
+    label: ICO Rating
+    config:
+      min: '0'
+      max: '10'
+  - type: text
+    name: project-location
+    label: Project Location
+  - type: text
+    name: video
+    label: 'ICO Video '
+    description: Youtube Video ID of the ICO
+  - type: text
+    name: whitepaper
+    label: Whitepaper Link
+    config:
+      required: false
+  - type: text
+    name: crowdsale
+    label: Crowdsale Link
+  - type: boolean
+    name: cancelled
+    label: Cancelled
+    description: Is this ICO cancelled?
+    default: false
+  - type: boolean
+    name: featured
+    label: Featured
+    description: Is this ICO Featured
+  - type: boolean
+    name: show-rating
+    label: Show Rating for featured
+    description: Only select for featured items
+  - type: boolean
+    name: topbanner
+    label: Top Banner Advert
+  - type: text
+    name: topbanner-content
+    label: Top Banner Advert Blurb
+    description: Decription to be shown on the Top Banner Advertisment
+  - type: datetime
+    name: featured-till
+    label: Featured Till
+    description: Date to which the listing stays featured
+    config:
+      required: false
+    default: Invalid date
+  - type: text
+    label: excerpt description
+    name: shortdesc
+    description: Two Word Description to be shown on the listing Pages
+  - type: textarea
+    name: desc
+    label: Main Description
+    description: Description to be shown on the coin page
+  - type: tag_list
+    name: tags
+    label: tags
+- type: field_group
+  name: whitelist
+  label: Whitelist Information
+  fields:
+  - type: boolean
+    name: status
+    label: Whitelist Present
+  - type: boolean
+    name: no-date
+    label: Whitelist Date Not Announced
+  - type: select
+    name: type
+    config:
+      source:
+        type: simple
+      options:
+      - Whitelist
+      - Whitelist + KYC
+    label: Whitelist Type
+  - type: datetime
+    name: start-date
+    label: Whitelist Start Date
+    default: Invalid date
+  - type: datetime
+    name: end-date
+    label: Whitelist End Date
+- type: field_group
+  name: progress
+  label: ICO Progress
+  description: ICO TOken Sale Progress
+  fields:
+  - type: number
+    label: Fundraising Goal
+    name: total
+  - type: number
+    name: collected
+    label: Collected
+- type: field_group
+  name: pre-ico
+  label: Pre ICO Details
+  fields:
+  - type: boolean
+    label: Pre ICO Date Yet to  be Announced
+    name: no-date
+  - type: datetime
+    label: Pre ICO Start Date
+    name: start-date
+    description: Leave Blank if Unknown
+  - type: datetime
+    name: end-date
+    label: Pre ICO End Date
+    description: Leave Blank if Unknown
+  - type: select
+    name: mvp
+    config:
+      source:
+        type: simple
+      options:
+      - 'No'
+      - 'Yes'
+      - Alpha
+    label: MVP
+    description: Status of minimum viable product avilable
+  - type: number
+    name: soft-cap
+    label: Soft Cap Value
+  - type: number
+    name: hard-cap
+    label: Hard Cap
+  - type: field_group
+    label: Pre ICO Conversion Rates
+    name: conversion
+    fields:
+    - type: number
+      name: usd
+      label: Token Value in USD
+    - type: number
+      name: eth
+      label: Token Value in ETH
+    - type: number
+      name: btc
+      label: Token Value in BTC
+  - type: field_group
+    name: contribution-size
+    label: Minimum Contribution Size
+    fields:
+    - type: number
+      label: Minimum Contribution Value in USD
+      name: usd
+    - type: number
+      name: eth
+      label: Minimum Contribution Value in ETH
+  - type: text
+    name: token-issue
+    label: Token Transferability Information
+  - type: text
+    label: Pre ICO Bonus
+    name: pre-ico-bonus
+- type: field_group
+  name: ico-detail
+  label: ICO Information
+  fields:
+  - type: boolean
+    name: no-date
+    label: ICO Date Yet To be Announced
+  - type: datetime
+    name: start-date
+    label: ICO Start Date
+    description: Leave Blank if unknown
+  - type: datetime
+    name: end-date
+    label: ICO End Date
+    description: Leave Blank if unknown
+  - type: select
+    name: mvp
+    config:
+      source:
+        type: simple
+      options:
+      - 'No'
+      - 'Yes'
+      - Alpha
+    label: MVP
+    description: Status of minimum viable product avilable
+  - type: number
+    name: soft-cap
+    label: Soft Cap
+  - type: number
+    name: hard-cap
+    label: Hard Cap
+  - type: number
+    name: total-supply
+    label: Total Supply
+  - type: number
+    name: investor-supply
+    label: Investor Supply
+  - type: field_group
+    name: conversion
+    label: ICO Conversion Rates
+    fields:
+    - type: number
+      name: usd
+      label: ICO Token Value in USD
+    - type: number
+      name: eth
+      label: ICO Token Value in ETH
+    - type: number
+      name: btc
+      label: ICO Token Value in BTC
+  - type: field_group
+    label: Minimum Contribution Value
+    name: contribution-size
+    fields:
+    - type: number
+      label: Minimum Contribution Value in USD
+      name: usd
+    - type: number
+      name: eth
+      label: Minimum Contribution Value in ETH
+  - type: list
+    label: Token Supply Distribution Info
+    name: supply-distribution
+  - type: text
+    label: Token Transferability Information
+    name: token-issue
+  - type: text
+    name: bonus
+    label: ICO Bonus
+    description: ICO Bonus in %
+- type: field_group_list
+  label: Team Information
+  name: team
+  fields:
+  - type: text
+    label: Name
+    name: name
+  - type: file
+    name: image
+    label: Display Picture
+  - type: text
+    name: position
+    label: Position
+  - type: text
+    name: linkedin
+    label: Linkedin Profile
+- type: field_group
+  name: social
+  label: Social Links
+  fields:
+  - type: text
+    label: Website Link
+    name: website
+  - type: text
+    name: twitter
+    label: Twitter
+  - type: text
+    name: twitter-username
+    label: Twiiter User ID to Display Feed
+  - type: text
+    name: telegram
+    label: Telegram
+  - type: text
+    name: medium
+    label: Medium
+  - type: text
+    name: facebook
+    label: Facebook
+  - type: text
+    name: reddit
+    label: Reddit
+  - type: text
+    name: github
+    label: Github
+- type: field_group
+  name: ico-participation-details
+  label: ICO Participation Conditions
+  fields:
+  - type: list
+    name: currencies-accepted
+    label: Currencies Accepted
+  - type: list
+    name: countries-notallowed
+    label: Countries Not Allowed
