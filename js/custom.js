@@ -20,13 +20,23 @@ if(topBannerElem != null){
 bannerData.send();
 }
 /* Mobile Navbar */
-navMenu = document.getElementById('humbruger-menu');
-navSearch = document.getElementById('nav-search');
+const navMenu = document.getElementById('humbruger-menu');
+const navSearch = document.getElementById('nav-search');
+const bodyElem = document.querySelector('body');
 const navList = document.querySelector('nav ul');
+const navModal = document.querySelector('.nav-modal');
 const navListItem = document.querySelectorAll('nav ul li');
 const navSearchBox = document.getElementById('search-container');
+const cryptoPrice = document.querySelector('.crypto-price');
 navMenu.addEventListener('click', function (){
-    navList.classList.toggle('flex');
+    navList.classList.toggle('absolute');
+    navModal.classList.toggle('open');
+    bodyElem.classList.toggle('modal-open');
+    if(navMenu.innerText == '☰'){
+        navMenu.innerText = 'X';
+    } else if (navMenu.innerText == 'X'){
+        navMenu.innerText = '☰';
+    }
     for(i=0; i<navListItem.length; i++){
     navListItem[i].style.display="flex";
     }
@@ -34,6 +44,7 @@ navMenu.addEventListener('click', function (){
     
 });
 navSearch.addEventListener('click', function(){
+    cryptoPrice.classList.toggle('hidden');
     navList.classList.toggle('flex');
     for(i=0; i<navListItem.length; i++){
     navListItem[i].style.display="none";
