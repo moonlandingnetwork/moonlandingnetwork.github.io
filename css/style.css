@@ -1,21 +1,16 @@
 @font-face {
     font-family: 'spincycle';
     src: url('../fonts/SpinCycle.eot');
-    src: url('../fonts/SpinCycle.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/SpinCycle.woff2') format('woff2'),
-        url('../fonts/SpinCycle.woff') format('woff'),
-        url('../fonts/SpinCycle.ttf') format('truetype');
+    src: url('../fonts/SpinCycle.eot?#iefix') format('embedded-opentype'), url('../fonts/SpinCycle.woff2') format('woff2'), url('../fonts/SpinCycle.woff') format('woff'), url('../fonts/SpinCycle.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
-
 body{
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     background: #072C59;
     color: #fff;
     position: relative;
-
 }
 body.modal-open{
     overflow: hidden;
@@ -38,18 +33,19 @@ a{
 }
 a.center{
     text-align: center;
-    display: -webkit-box;     display: -ms-flexbox;  display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     width: 100%;
-    -webkit-box-pack: center;         -ms-flex-pack: center;             justify-content: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
 }
 a.gray{
     color: #C7C8CA;
 }
 /* Scroll Bar */
-
-
 /* End Scroll Bar */
-
 /* Lists */
 ul{
     list-style: none;
@@ -69,7 +65,9 @@ span.golden{
 }
 /* Buttons */
 .button-group{
-    display: -webkit-box;     display: -ms-flexbox;     display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
 }
 .btn.disabled{
     cursor: not-allowed;
@@ -82,8 +80,11 @@ span.golden{
     color: #fff;
     padding: 0.6rem 0.7rem;
     margin: 0.5rem;
-    /*display: -webkit-box;     display: -ms-flexbox;     display: flex;
-    align-self: center; */
+   /*display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-self: center;
+    */
 }
 .btn.circle{
     border-radius: 50%;
@@ -102,7 +103,6 @@ span.golden{
     border-radius: 4px;
     letter-spacing: 0.05rem;
     font-size: 0.65em;
-
 }
 .btn.round{
     border-radius: 25px;
@@ -117,7 +117,8 @@ span.golden{
     border-radius: 35px;
     font-size: 1rem;
     border-width: 4px;
-    /* width: 10rem; */
+   /* width: 10rem;
+    */
 }
 .btn.green{
     background:#0AA645;
@@ -150,24 +151,20 @@ span.golden{
 }
 .btn.red{
     background: #D64117;
-   
 }
 .btn.gray{
     background-color: #fff;
     border: 2px solid #C9CACB;
     color:#C9CACB;
-    
 }
 .btn.hollow{
     background-color: #072C59;
     color: #F7F2EB;
-    
 }
 .btn.white{
     background-color: #fff;
     color: #091F47;
 }
-
 /* Buttons End */
 /* Input Box*/
 input.skyblue{
@@ -199,7 +196,6 @@ input.blue[type="checkbox"]{
 input.blue:checked[type="checkbox"]{
     background: #D6E5E8;
 }
-    
 input.blue:checked[type="checkbox"]:after{
     position: absolute;
     content: '';
@@ -248,7 +244,6 @@ textarea.blue::placeholder{
 }
 input.orange[type="checkbox"]{
     border: 2px solid #E39504 !important;
-
 }
 input.sqaure[type="checkbox"]{
     border-radius: 0 !important;
@@ -259,7 +254,6 @@ input.round[type="checkbox"]{
 }
 input:checked[type="checkbox"]{
     background: #E39504;
-    
 }
 input:checked[type="checkbox"]:after{
     position: absolute;
@@ -280,47 +274,38 @@ hr.small{
 }
 /* Progress Bars */
 progress, progress[role] {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  border: none;
-  background-size: auto;
-  
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    background-size: auto;
 }
 /* End Progress Bar */
 /* Select Element */
 select {
-    -webkit-appearance: none; 
+    -webkit-appearance: none;
     -moz-appearance: none;
-    appearance: none;       /* remove default arrow */
+    appearance: none;
+   /* remove default arrow */
     color: #072C59;
     border: 1px solid #072C59;
     padding: 0.8rem;
-    background:
-    linear-gradient(45deg, transparent 50%, #0B478A 50%),
-    linear-gradient(135deg, #0B478A 50%, transparent 50%),
-    linear-gradient(to right, white, white);
-  background-position:
-    calc(100% - 21px) calc(1em + 2px),
-    calc(100% - 16px) calc(1em + 2px),
-    100% 0;
-  background-size:
-    5px 5px,
-    5px 5px,
-    2.5em 2.5em;
-  background-repeat: no-repeat;
- }
- select option {
-    -webkit-appearance: none; 
+    background: linear-gradient(45deg, transparent 50%, #0B478A 50%), linear-gradient(135deg, #0B478A 50%, transparent 50%), linear-gradient(to right, white, white);
+    background-position: calc(100% - 21px) calc(1em + 2px), calc(100% - 16px) calc(1em + 2px), 100% 0;
+    background-size: 5px 5px, 5px 5px, 2.5em 2.5em;
+    background-repeat: no-repeat;
+}
+select option {
+    -webkit-appearance: none;
     -moz-appearance: none;
-    appearance: none;       /* remove default arrow */
+    appearance: none;
+   /* remove default arrow */
     color: #0B478A;
     background-color: #fff;
     padding: 0.8rem;
     font-size: 1rem;
- }
-
- /* End Select Element */
+}
+/* End Select Element */
 /* Persistent Icons */
 .persistent-icons{
     position: fixed;
@@ -331,8 +316,12 @@ select {
     color: #fff;
 }
 .per-icon-group{
-    display: -webkit-box;     display: -ms-flexbox;     display: flex;
-    -webkit-box-pack: justify;         -ms-flex-pack: justify;             justify-content: space-between;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
 }
 .per-icon-group .per-icon{
     margin: 0 0.5rem;
@@ -343,9 +332,15 @@ select {
     height: 3.4rem;
     width: 3.4rem;
     border-radius: 50%;
-    display: -webkit-box;     display: -ms-flexbox;     display: flex;
-    -webkit-box-pack: center;         -ms-flex-pack: center;             justify-content: center;
-    -webkit-box-align: center;         -ms-flex-align: center;             align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
     font-size: 1em;
     font-weight: 900;
     text-align: center;
@@ -371,11 +366,8 @@ select {
 .per-icon.orange{
     background: #E39300;
 }
-
 /* Elements End */
-
 /* Common Elements */
-
 /*Modal*/
 .modal-container{
     z-index: 99;
@@ -386,22 +378,29 @@ select {
     width: 100vw;
     overflow: hidden;
     display: none;
-    -webkit-box-pack: center;         -ms-flex-pack: center;             justify-content: center;
-    -webkit-box-align: center;         -ms-flex-align: center;             align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
 }
 .modal{
-    display: -webkit-box;     display: -ms-flexbox;     display: flex;
-    
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
 }
 .modal.alt{
     width: 50%;
-    
 }
 .modal.reverse{
     flex-direction: row-reverse;
 }
 .modal.column{
-        -webkit-box-orient: vertical;     -webkit-box-direction: normal;         -ms-flex-direction: column;             flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
 }
 .modal-head{
     background: #E39300;
@@ -409,21 +408,32 @@ select {
     border-radius: 15px 15px 0 0;
     position: relative;
 }
-
 .modal-head h1{
     text-transform: uppercase;
     text-align: center;
     font-weight: 500;
     letter-spacing: 1px;
-    display: -webkit-box;     display: -ms-flexbox;     display: flex;
-    -webkit-box-pack: center;         -ms-flex-pack: center;             justify-content: center;
-    -webkit-box-align: center;         -ms-flex-align: center;             align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
     font-size: 1.5em;
 }
 .modal-head h1 span{
-    display: -webkit-box;     display: -ms-flexbox;     display: flex;
-    -webkit-box-align: center;         -ms-flex-align: center;             align-items: center;
-    -webkit-box-pack: center;         -ms-flex-pack: center;             justify-content: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     background: #fff;
     color: #E39300;
     margin-right: 1rem;
@@ -435,9 +445,15 @@ select {
 .modal-head i{
     height: 64px;
     width: 64px;
-    display: -webkit-box;     display: -ms-flexbox;     display: flex;
-    -webkit-box-align: center;         -ms-flex-align: center;             align-items: center;
-    -webkit-box-pack: center;         -ms-flex-pack: center;             justify-content: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     cursor: pointer;
     position: absolute;
     right: -2rem;
@@ -459,7 +475,7 @@ select {
     font-weight: 500;
     font-size: 0.85rem;
 }
-.modal-body  p span{
+.modal-body p span{
     font-weight: 900;
     font-size: 1.03rem;
 }
@@ -473,10 +489,16 @@ select {
     color: #0B478A;
     flex: 1 1 50%;
     position: relative;
-    display: -webkit-box;     display: -ms-flexbox;     display: flex;
-        -webkit-box-orient: vertical;     -webkit-box-direction: normal;         -ms-flex-direction: column;             flex-direction: column;
-    -webkit-box-pack: center;         -ms-flex-pack: center;             justify-content: center;
-
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
 }
 .modal-content.minimal{
     padding: 5rem 2.8rem 2.5rem;
@@ -527,9 +549,12 @@ select {
     color: #C7C8CA;
 }
 .input-group {
-    display: -webkit-box;     display: -ms-flexbox;     display: flex;
-    -webkit-box-pack: justify;         -ms-flex-pack: justify;             justify-content: space-between;
-
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
 }
 .input-group input{
     width: 6.7rem;
@@ -538,8 +563,12 @@ select {
     margin-bottom: 1.5rem;
 }
 .input-checkbox{
-    display: -webkit-box;     display: -ms-flexbox;     display: flex;
-    -webkit-box-align: center;         -ms-flex-align: center;             align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
     margin: 1.7rem 0;
     font-size: 0.785rem;
     font-weight: 900;
@@ -549,7 +578,9 @@ select {
     color: #C7C8CA;
 }
 .input-checkbox.center{
-    -webkit-box-pack: center;         -ms-flex-pack: center;             justify-content: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
 }
 .input-checkbox.low-margin{
     margin: 1rem 0;
@@ -567,14 +598,15 @@ select {
     padding: 0.7rem 2rem;
 }
 /*Modal End*/
-
 /* Topbar Element style */
-
 #topbanner{
     background: #E39300;
-    display: -webkit-box;     display: -ms-flexbox;     display: flex;
-    -webkit-box-pack: center;         -ms-flex-pack: center;             justify-content: center;
-    
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
 }
 #topbanner img{
     height: 32px;
@@ -586,7 +618,6 @@ select {
     padding: 0.6rem;
     margin: 0.3rem 0;
     font-size: 0.8em;
-
 }
 #topbanner p span{
     font-weight: 700;
@@ -594,11 +625,14 @@ select {
 /* Top Bar Style End */
 /* Navigation Bar */
 nav{
-    display: -webkit-box;     display: -ms-flexbox;     display: flex;
-    -webkit-box-pack: justify;         -ms-flex-pack: justify;             justify-content: space-between;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
     margin: 1.5em auto;
     max-width: 1050px;
-    
 }
 .logo{
     font-family: spincycle;
@@ -608,36 +642,41 @@ nav{
     margin: 0;
     margin-top: 1rem;
     color: #fff;
-    
 }
 .logo span{
     color: #E09224;
     margin-left: 0.3rem;
 }
 .nav-actions{
-    display: -webkit-box;     display: -ms-flexbox;     display: flex;
-    
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
 }
 #nav-search{
     list-style: none;
     font-size: 1.5rem;
     margin: 0 0.6rem;
     display: none;
-    -webkit-box-align: center;         -ms-flex-align: center;             align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
     cursor: pointer;
 }
 #humbruger-menu{
     list-style: none;
     font-size: 2rem;
     display: none;
-    -webkit-box-align: center;         -ms-flex-align: center;             align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
     cursor: pointer;
 }
 nav ul{
-    display: -webkit-box;     display: -ms-flexbox;     display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     margin: 0;
     margin-right: -40px;
-    
 }
 nav ul.flex{
     display: flex !important;
@@ -651,11 +690,12 @@ nav ul.absolute{
 nav ul li{
     margin: 0 0.6rem;
     font-size: 0.9em;
-    color: #f5f1ece3;
+    color: #fff;
     letter-spacing: 0.5px;
-    display: -webkit-box;     display: -ms-flexbox;     display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     align-self: center;
-
 }
 nav ul li a{
     color: #fff !important;
@@ -664,24 +704,33 @@ nav ul li a{
     cursor: pointer;
 }
 #search-container{
-    display: -webkit-box;     display: -ms-flexbox;     display: flex;
-        -webkit-box-orient: vertical;     -webkit-box-direction: normal;         -ms-flex-direction: column;             flex-direction: column;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
     position: relative;
 }
 #results-container{
-    display: -webkit-box;     display: -ms-flexbox;     display: flex;
-        -webkit-box-orient: vertical;     -webkit-box-direction: normal;         -ms-flex-direction: column;             flex-direction: column;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
     background: #fff;
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
     position: absolute;
     top: 2.3rem;
     width: 100%;
-    
 }
 #results-container li{
-   align-self: flex-start;
-   margin: 0;
-   width: 100%;
+    align-self: flex-start;
+    margin: 0;
+    width: 100%;
 }
 #results-container li:hover{
     background-color: #f0f8ff;
@@ -695,22 +744,21 @@ nav ul li a{
     padding: 0.6rem 1rem;
 }
 nav input{
-font-size: 1rem;
-text-align: center;
-color: #fff;
-outline: none;
-width: 8rem;
-height: 1.7rem;
-border: solid 1.5px transparent;
-border-radius: 80px;
-background-image: linear-gradient(#072C59, #072C59), radial-gradient(circle at top left, #E9BA00,#4DF6DA);
-background-origin: border-box;
-background-clip: content-box, border-box;
-text-indent: 0.5rem;
-padding: 0;
-
+    font-size: 1rem;
+    text-align: center;
+    color: #fff;
+    outline: none;
+    width: 8rem;
+    height: 1.7rem;
+    border: solid 1.5px transparent;
+    border-radius: 80px;
+    background-image: linear-gradient(#072C59, #072C59), radial-gradient(circle at top left, #E9BA00,#4DF6DA);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    text-indent: 0.5rem;
+    padding: 0;
 }
-nav input::placeholder { 
+nav input::placeholder {
     text-align: left;
     font-family: 'Font Awesome\ 5 Free';
     font-weight: 600;
@@ -724,7 +772,7 @@ nav input::placeholder {
     -webkit-text-fill-color: transparent;
     padding: 0;
 }
-nav input::-webkit-input-placeholder { 
+nav input::-webkit-input-placeholder {
     text-align: left;
     font-family: 'Font Awesome\ 5 Free';
     font-weight: 600;
@@ -740,7 +788,7 @@ nav input::-webkit-input-placeholder {
     -webkit-text-fill-color: transparent;
     padding: 0;
 }
-nav input::-moz-placeholder { 
+nav input::-moz-placeholder {
     text-align: left;
     font-family: 'Font Awesome\ 5 Free';
     font-weight: 600;
@@ -756,7 +804,7 @@ nav input::-moz-placeholder {
     opacity: 1;
     padding: 0;
 }
-nav input:-ms-input-placeholder { 
+nav input:-ms-input-placeholder {
     text-align: left;
     font-family: 'Font Awesome\ 5 Free';
     font-weight: 600;
@@ -772,15 +820,13 @@ nav input:-ms-input-placeholder {
     padding: 0;
 }
 /* Navigation End */
-
 /* Crypto Price Box */
 .crypto-price{
-    display: -webkit-box;     display: -ms-flexbox;     display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     margin: 1rem;
-    
-    
 }
-
 .crypto-item{
     border: 1.5px solid #E39300;
     margin: 0 0.3rem;
@@ -796,7 +842,7 @@ nav input:-ms-input-placeholder {
     font-size: 0.8rem;
 }
 .crypto-item h2 span{
-    margin: 0  0.25em;
+    margin: 0 0.25em;
 }
 .crypto-name i{
     color: #E39300;
@@ -811,7 +857,6 @@ nav input:-ms-input-placeholder {
 .main-body-content{
     background: #fff;
     padding: 0 0 2.5rem;
-    
 }
 .main-body-content.bg{
     margin-top: 5rem;
@@ -829,13 +874,14 @@ nav input:-ms-input-placeholder {
     background-size: 65%;
 }
 /* End Main Body Content */
-
 /* ICO Navbar */
 .ico-nav{
     margin: 0 1.5rem;
 }
 .ico-nav ul{
-    display: -webkit-box;     display: -ms-flexbox;     display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
 }
 .ico-nav li{
     flex: 1 1 25%;
@@ -860,7 +906,6 @@ nav input:-ms-input-placeholder {
     padding: 0.1rem 0.4rem;
     border-radius: 5px;
     margin-left: 0.7rem;
-    
 }
 .ico-nav li.active span{
     color: #E39300;
@@ -875,7 +920,6 @@ nav input:-ms-input-placeholder {
     font-weight: 700;
     text-align: center;
     margin: 3rem 0 1rem;
-
 }
 .pre-ico-hr{
     background-color: #E39300;
@@ -884,17 +928,18 @@ nav input:-ms-input-placeholder {
     border: none;
     margin-bottom: -0.5rem;
 }
-
 /* ICO Table */
 .ico-table.minimal{
-    margin:  2.5rem 8rem 0;
+    margin: 2.5rem 8rem 0;
 }
 .ico-table{
-    display: -webkit-box;     display: -ms-flexbox;     display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     margin: 1.5rem 2rem;
-    /* padding-bottom: 3rem; */
+   /* padding-bottom: 3rem;
+    */
 }
-
 .ico-project-name{
     flex: 2.1;
 }
@@ -932,16 +977,22 @@ nav input:-ms-input-placeholder {
     border-radius: 15px 0 0 0;
 }
 .ico-table-title.last{
-    border-radius:  0 15px 0 0;
+    border-radius: 0 15px 0 0;
 }
 .ico-table ul li{
     background: #0B478A;
     color: #fff;
     font-size: 1rem;
     height: 85px;
-    display: -webkit-box;     display: -ms-flexbox;     display: flex;
-    -webkit-box-align: center;         -ms-flex-align: center;             align-items: center;
-    -webkit-box-pack: center;         -ms-flex-pack: center;             justify-content: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     border-bottom: 5px solid #072C59;
 }
 .ico-table ul li a i{
@@ -966,12 +1017,15 @@ nav input:-ms-input-placeholder {
 .ico-table .ico-project-name li.featured {
     border-bottom: 5px solid #DD7310;
 }
-
 .ico-project-name li{
-    display: -webkit-box;     display: -ms-flexbox;     display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     justify-content: flex-start !important;
-    -webkit-box-pack: start !important;;
-        -ms-flex-pack: start !important;;
+    -webkit-box-pack: start !important;
+   ;
+    -ms-flex-pack: start !important;
+   ;
     padding: 0 0 0 2rem;
 }
 .ico-project-name li h5 a, p{
@@ -980,14 +1034,19 @@ nav input:-ms-input-placeholder {
 .ico-project-name li.featured h5 a, li.featured p{
     color: #15223F;
 }
-
 .ico-table-title-image{
     background: #fff;
     padding: 0.5rem;
     border-radius: 50%;
-    display: -webkit-box;     display: -ms-flexbox;     display: flex;
-    -webkit-box-align: center;         -ms-flex-align: center;             align-items: center;
-    -webkit-box-pack: center;         -ms-flex-pack: center;             justify-content: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     height: 38px;
     width: 38px;
     margin-right: 0.7rem;
@@ -1030,7 +1089,6 @@ nav input:-ms-input-placeholder {
     color: #D64117;
 }
 .ico-category li{
-    
     font-weight: 900;
     font-size: 0.9rem !important;
 }
@@ -1039,8 +1097,13 @@ nav input:-ms-input-placeholder {
 }
 .ico-fund-raised li {
     font-size: 1.3rem !important;
-    display: -webkit-box;     display: -ms-flexbox;     display: flex;
-        -webkit-box-orient: vertical;     -webkit-box-direction: normal;         -ms-flex-direction: column;             flex-direction: column;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
 }
 .ico-fund-raised li h5{
     margin: 0.5rem 0;
@@ -1061,17 +1124,16 @@ nav input:-ms-input-placeholder {
 }
 .ico-fund-progress::-webkit-progress-value {
     background-image: linear-gradient(to right, #4AB9C0,#4DF2D6);
-  }
-  .ico-fund-progress::-moz-progress-bar {
+}
+.ico-fund-progress::-moz-progress-bar {
     background: linear-gradient(0deg, rgba(74, 185, 192, 1) 0%, rgba(77, 242, 214, 1) 100%);
-  }
-  .ico-fund-progress::-webkit-progress-bar{
-      background-color: #fff;
-  }
-  .ico-fund-progress::-moz-progress-bar{
+}
+.ico-fund-progress::-webkit-progress-bar{
     background-color: #fff;
 }
-  
+.ico-fund-progress::-moz-progress-bar{
+    background-color: #fff;
+}
 .ico-ends-in li button{
     cursor: default;
     font-size: 1.0rem;
@@ -1101,20 +1163,24 @@ nav input:-ms-input-placeholder {
     font-size: 0.95rem;
 }
 /* End ICO Table */
-
 /* ICO Promo Banner */
 .ico-promo-banner{
     padding: 0;
-    display: -webkit-box;     display: -ms-flexbox;     display: flex;
-    -webkit-box-pack: center;         -ms-flex-pack: center;             justify-content: center;
-    -webkit-box-align: center;         -ms-flex-align: center;             align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
     color: #023C6C;
     background: #E39300;
 }
 .ico-promo-banner h4 span{
     text-transform: uppercase;
     font-weight: 900;
-   
 }
 .ico-promo-banner h4 {
     margin: 0 1rem 0 0;
@@ -1132,24 +1198,35 @@ nav input:-ms-input-placeholder {
 }
 .ico-promo-banner input[type="submit"]{
     width: 5.5rem;
-    display: -webkit-box;     display: -ms-flexbox;     display: flex;
-    -webkit-box-pack: center;         -ms-flex-pack: center;             justify-content: center;
-    
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
 }
 .ico-promo-banner button{
     font-size: 0.7rem !important;
 }
 /* Footer */
 footer{
-    display: -webkit-box;     display: -ms-flexbox;     display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     margin: 0.5rem 2rem 2rem;
-    
 }
 .footer-logo{
     flex: 2;
-    display: -webkit-box;     display: -ms-flexbox;     display: flex;
-        -webkit-box-orient: vertical;     -webkit-box-direction: normal;         -ms-flex-direction: column;             flex-direction: column;
-    -webkit-box-align: center;         -ms-flex-align: center;             align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
     margin-top: 2rem;
 }
 .footer-logo img{
@@ -1167,7 +1244,6 @@ footer{
 .footer-about{
     flex: 1.8;
     margin: 5rem 0 0 0;
-    
 }
 .footer-about p{
     margin: 0.5rem 5.3rem 1rem 0;
@@ -1215,13 +1291,12 @@ footer{
     text-align: center;
     margin: 1.5rem 0 0 0;
     background : -webkit-gradient(linear,50% 15.15% ,50% 91.45% ,color-stop(0,rgba(7, 44, 89, 1) ),color-stop(1,rgba(20, 31, 59, 1) ));
-    background : -o-linear-gradient(-90deg, rgba(7, 44, 89, 1) 0%, rgba(20, 31, 59, 1) 100%);   
+    background : -o-linear-gradient(-90deg, rgba(7, 44, 89, 1) 0%, rgba(20, 31, 59, 1) 100%);
 }
 .disclaimer-head{
     color: #E39300;
     margin-bottom: 0.3rem;
     font-size: 0.9rem;
-    
 }
 .disclaimer-body{
     font-size: 0.8em;
@@ -1244,27 +1319,29 @@ footer{
     height: 3rem;
 }
 /* Common Elements End*/
-
-
 /* Home Page */
-
 /*Intro Section */
 .intro-section{
     background: url('../images/banner.png');
     background-size: contain;
     background-repeat: no-repeat;
-    
 }
-
 /* Banner */
 .banner{
     height: 50vh;
-    display: -webkit-box;     display: -ms-flexbox;     display: flex;
-        -webkit-box-orient: vertical;     -webkit-box-direction: normal;         -ms-flex-direction: column;             flex-direction: column;
-    -webkit-box-align: center;         -ms-flex-align: center;             align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
     -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
 }
 .banner img{
     width: 112px;
@@ -1272,10 +1349,9 @@ footer{
 .banner h1{
     font-size: 3.3rem;
     letter-spacing: 4px;
-
 }
 .banner h1 span{
-    background-image:  linear-gradient(to bottom,  #DB6213, #E9BA00); 
+    background-image: linear-gradient(to bottom, #DB6213, #E9BA00);
     color:transparent;
     -webkit-background-clip: text;
     background-clip: text;
@@ -1288,7 +1364,9 @@ footer{
 }
 .banner-buttons{
     margin-top: 1.7rem;
-    display: -webkit-box;     display: -ms-flexbox;     display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     font-size: 0.85em;
 }
 .banner-buttons button{
@@ -1299,16 +1377,29 @@ footer{
 /* Twitter Feed */
 .twitter-feed{
     margin-top: 4rem;
-    display: -webkit-box;     display: -ms-flexbox;     display: flex;
-    -webkit-box-pack: center;         -ms-flex-pack: center;             justify-content: center;
-        -webkit-box-orient: vertical;     -webkit-box-direction: normal;         -ms-flex-direction: column;             flex-direction: column;
-    -webkit-box-align: center;         -ms-flex-align: center;             align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
 }
 .down-arrow {
-    background:  #00B2D8;
+    background: #00B2D8;
     width: 18%;
-    display: -webkit-box;     display: -ms-flexbox;     display: flex;
-    -webkit-box-pack: center;         -ms-flex-pack: center;             justify-content: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     font-size: 2rem;
     margin-top: 1rem;
     padding: 0.6rem 0 0 0;
@@ -1320,18 +1411,27 @@ footer{
 .twitter-box{
     width: 450px;
     height: 325px;
-    background:  #00B2D8;
+    background: #00B2D8;
     margin-bottom: 1rem;
-    display: -webkit-box;     display: -ms-flexbox;     display: flex;
-    -webkit-box-pack: center;         -ms-flex-pack: center;             justify-content: center;
-    -webkit-box-align: center;         -ms-flex-align: center;             align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
 }
 /* Twitter Feed End */
-
 /* Ico List Buttons */
 .ico-list-buttons{
-    display: -webkit-box;     display: -ms-flexbox;     display: flex;
-    -webkit-box-pack: center;         -ms-flex-pack: center;             justify-content: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     margin-top: 1.5rem;
 }
 .ico-list-buttons button{
@@ -1340,46 +1440,55 @@ footer{
     margin: 0 0.3rem !important;
     padding: 0.4rem 0.8rem !important;
     width: 12rem !important;
-
 }
 /* End ICO List Buttons */
 /* ICO Grid */
 .ico-grid{
-    display: -webkit-box;     display: -ms-flexbox;     display: flex;
-    -webkit-box-pack: center;         -ms-flex-pack: center;             justify-content: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     margin: 5.5rem 0 2rem 0;
     background: url('../images/banner.png');
     background-size: contain;
     background-repeat: repeat-y;
-    
 }
 .ico-col{
     flex: 0 0 auto;
-    display: -webkit-box;     display: -ms-flexbox;     display: flex;
-        -webkit-box-orient: vertical;     -webkit-box-direction: normal;         -ms-flex-direction: column;             flex-direction: column;
-    -webkit-box-align: center;         -ms-flex-align: center;             align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
     -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
     -ms-flex-negative: 0;
-        flex-shrink: 0;
-    
-
+    flex-shrink: 0;
 }
 .ico-col-title{
     text-transform: uppercase;
-    color: #E39300;;
+    color: #E39300;
+   ;
     font-size: 1.7rem;
     font-weight: 700;
     text-align: center;
     margin-bottom: 1rem;
 }
 .ico-card{
-    display: -webkit-box;     display: -ms-flexbox;     display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     background-color: #fff;
     margin: 0.5rem auto;
     width: 16rem;
-    
 }
 .ico-card.featured{
     background-color: #E39300;
@@ -1391,13 +1500,24 @@ footer{
     color: #fff;
 }
 .card-title-action{
-    display: -webkit-box;     display: -ms-flexbox;     display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
 }
 .ico-card-sec{
-    display: -webkit-box;     display: -ms-flexbox;     display: flex;
-        -webkit-box-orient: vertical;     -webkit-box-direction: normal;         -ms-flex-direction: column;             flex-direction: column;
-    -webkit-box-align: center;         -ms-flex-align: center;             align-items: center;
-    -webkit-box-pack: center;         -ms-flex-pack: center;             justify-content: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     margin-left: -1.8rem;
 }
 .ico-card-image{
@@ -1413,8 +1533,12 @@ footer{
     background: linear-gradient(to top, #00AEBB, #4DF6DA );
     color: #fff;
     border-radius: 50%;
-    display: -webkit-box;     display: -ms-flexbox;     display: flex;
-    -webkit-box-pack: center;         -ms-flex-pack: center;             justify-content: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     align-self: center;
     width: 3rem;
     height: 2.6rem;
@@ -1441,23 +1565,27 @@ footer{
     margin: 0.4rem 1rem 0.4rem 1.6rem;
 }
 .ico-card h6{
- color: #072C59;
- margin: 0;
- font-size: 0.9rem;
- font-weight: 400;
+    color: #072C59;
+    margin: 0;
+    font-size: 0.9rem;
+    font-weight: 400;
 }
 .ico-card-title{
     color: #E39300;
     font-size: 1.3rem;
-    margin: 1.3rem 0 1.1rem
+    margin: 1.3rem 0 1.1rem 
 }
 .ico-card-title a{
     color: #E39300;
 }
 .ico-card-statusbanner{
-    display: -webkit-box;     display: -ms-flexbox;     display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     background: #E39300;
-    -webkit-box-pack: justify;         -ms-flex-pack: justify;             justify-content: space-between;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
     padding: 0.7rem 1rem;
 }
 .ico-card-statusbanner h6{
@@ -1474,10 +1602,13 @@ footer{
 .ico-card-status{
     font-weight: 900 !important;
 }
-
 .ico-card-meta{
-    display: -webkit-box;     display: -ms-flexbox;     display: flex;
-    -webkit-box-pack: justify;         -ms-flex-pack: justify;             justify-content: space-between;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
     margin: 1.4rem 0 1rem;
 }
 .ico-card-type{
@@ -1493,7 +1624,7 @@ footer{
     border: none;
     background: linear-gradient(-6.27% 146.84% 14.22deg,rgba(11, 71, 138, 1) 0%,rgba(10, 67, 131, 1) 13.34%,rgba(7, 44, 89, 1) 100%);
     background : -webkit-gradient(linear,-6.27% 146.84% ,129.31% -86.5% ,color-stop(0,rgba(11, 71, 138, 1) ),color-stop(0.1334,rgba(10, 67, 131, 1) ),color-stop(1,rgba(7, 44, 89, 1) ));
-  background : -o-linear-gradient(14.22deg, rgba(11, 71, 138, 1) 0%, rgba(10, 67, 131, 1) 13.34%, rgba(7, 44, 89, 1) 100%);
+    background : -o-linear-gradient(14.22deg, rgba(11, 71, 138, 1) 0%, rgba(10, 67, 131, 1) 13.34%, rgba(7, 44, 89, 1) 100%);
     width: 17.5rem;
     padding: 0.9rem 0;
     font-weight: 600;
@@ -1503,11 +1634,8 @@ footer{
     margin-left: 1rem;
 }
 /* ICO Grid End */
-
 /* End Home Page*/
-
 /* Publish ICO Page */
-
 .publish-ico-title {
     text-align: center;
     margin-bottom: 2rem;
@@ -1526,8 +1654,13 @@ footer{
     padding: 4rem 0;
 }
 .publish-question{
-    display: -webkit-box;     display: -ms-flexbox;     display: flex;
-        -webkit-box-orient: vertical;     -webkit-box-direction: normal;         -ms-flex-direction: column;             flex-direction: column;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
     width: 75%;
     margin: 2rem auto;
 }
@@ -1561,14 +1694,15 @@ footer{
     color: #072C59;
 }
 .publish-banner {
-    display: -webkit-box;     display: -ms-flexbox;     display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     margin: 4rem 0 0 0;
     border-bottom: 4px solid #D6E5E8;
 }
 .publish-banner img{
     width: 400px;
     margin: -0.3rem;
-    
 }
 .publish-banner h3{
     color: #072C59;
@@ -1589,16 +1723,24 @@ footer{
 }
 .publish-banner li{
     margin: 0.95em 0;
-    display: -webkit-box;     display: -ms-flexbox;     display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     font-size: 0.9rem;
 }
 .publish-banner li i{
     font-size: 0.7rem;
     display: inline-block;
-    display: -webkit-box;     display: -ms-flexbox;     display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     flex-shrink: 0;
-    -webkit-box-align: center;         -ms-flex-align: center;             align-items: center;
-    -webkit-box-pack: center;         -ms-flex-pack: center;             justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     padding: 0.05rem;
     margin-right: 1rem;
     color: #fff;
@@ -1609,8 +1751,13 @@ footer{
 }
 .publish-featured{
     flex: 1;
-    display: -webkit-box;     display: -ms-flexbox;     display: flex;
-        -webkit-box-orient: vertical;     -webkit-box-direction: normal;         -ms-flex-direction: column;             flex-direction: column;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
 }
 .publish-featured-head{
     background-color: #D6E5E8;
@@ -1619,8 +1766,13 @@ footer{
 }
 .publish-topbanner{
     flex: 1;
-    display: -webkit-box;     display: -ms-flexbox;     display: flex;
-        -webkit-box-orient: vertical;     -webkit-box-direction: normal;         -ms-flex-direction: column;             flex-direction: column;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
 }
 .publish-topbanner-head{
     background-color: #E39300;
@@ -1628,13 +1780,14 @@ footer{
     flex: 1;
 }
 .publish-question fieldset{
-    
     border: 1.1px solid #072C59;
     padding: 1rem 1rem 1rem 2rem;
     position: relative;
 }
 .publish-question-grid{
-    display: -webkit-box;     display: -ms-flexbox;     display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     flex-wrap: wrap;
 }
 .publish-question fieldset legend{
@@ -1656,7 +1809,6 @@ footer{
     margin-left: 1rem;
     margin-bottom: 0;
     font-size: 0.95rem;
-
 }
 .publish-category-item.other input[type="text"]{
     display: block;
@@ -1669,13 +1821,10 @@ footer{
     font-size: 1em;
 }
 /* End Publish ICO */
-
 /* Whitelist Page */
 .whitelist-title{
     padding-top: 3rem;
     margin-bottom: 1.5rem;
-  
-    
 }
 .whitelist-title h1{
     color: #E39300;
@@ -1689,19 +1838,24 @@ footer{
     font-size: 1em;
     text-align: center;
     width: 35%;
-    margin:  1rem auto;
+    margin: 1rem auto;
 }
 /* End Whitelist Page */
-
 /* Ico Inner Page */
 .ico-page-header{
     margin: 1.3rem 1.5rem 0;
-    display: -webkit-box;     display: -ms-flexbox;     display: flex;
-    -webkit-box-pack: justify;         -ms-flex-pack: justify;             justify-content: space-between;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
     padding-bottom: 0.5rem;
 }
 .ico-page-title {
-    display: -webkit-box;     display: -ms-flexbox;     display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     position: relative;
 }
 .ico-page-title-image{
@@ -1709,9 +1863,15 @@ footer{
     background: #fff;
     height: 82px;
     width: 82px;
-    display: -webkit-box;     display: -ms-flexbox;     display: flex;
-    -webkit-box-align: center;         -ms-flex-align: center;             align-items: center;
-    -webkit-box-pack: center;         -ms-flex-pack: center;             justify-content: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     margin: 0rem 1rem 0 0;
     position: absolute;
     top: 10%;
@@ -1741,20 +1901,26 @@ footer{
     margin: 0.35rem 0 0 0.1rem;
 }
 .ico-page-tags{
-    display: -webkit-box;     display: -ms-flexbox;     display: flex;
-    -webkit-box-align: center;         -ms-flex-align: center;             align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
     margin-top: -2.7rem;
 }
 .ico-page-tags h4{
     color: #DC8C00;
 }
 .ico-page-tags ul{
-    display: -webkit-box;     display: -ms-flexbox;     display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     flex-wrap: wrap;
     margin: 0 0 0 1rem;
 }
 .ico-page-tags li{
-    min-width:  4.4rem;
+    min-width: 4.4rem;
     font-size: 0.85rem;
     padding: 0.35rem 0.6rem;
     margin: 0.25rem 0.2rem;
@@ -1779,13 +1945,15 @@ footer{
     font-size: 0.9em;
     margin: 0.5rem 0;
 }
-
 .ico-coin-cards{
-    display: -webkit-box;     display: -ms-flexbox;     display: flex;
-    -webkit-box-pack: justify;         -ms-flex-pack: justify;             justify-content: space-between;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
     padding: 1.5rem 0 0 0;
 }
-
 .coin-cards-left{
     flex: 3;
     margin: 0 1rem 0 0;
@@ -1799,7 +1967,6 @@ footer{
 }
 .coin-card.full .coin-card-body{
     padding: 0;
-    
 }
 .coin-card.minimal .coin-card-body{
     border-radius: 10px 10px 10px 10px;
@@ -1813,11 +1980,17 @@ footer{
 }
 .coin-card-title{
     background: #15223F;
-    display: -webkit-box;     display: -ms-flexbox;     display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     border-radius: 10px 10px 0 0;
     padding: 0.5rem 2rem;
-    -webkit-box-pack: justify;         -ms-flex-pack: justify;             justify-content: space-between;
-    -webkit-box-align: center;         -ms-flex-align: center;             align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
 }
 .coin-card-title.progress span:first-child{
     font-weight: 700;
@@ -1840,35 +2013,42 @@ footer{
     background-color: #0B4783;
     padding: 1rem 0.9rem;
     border-radius: 0 0 10px 10px;
-    display: -webkit-box;     display: -ms-flexbox;     display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     flex-wrap: wrap;
     position: relative;
     overflow: hidden;
 }
 .coin-card-body::-webkit-scrollbar {
-    width: 14px; 
-} 
+    width: 14px;
+}
 .coin-card-body::-webkit-scrollbar-track {
     border-radius: 0 0 7px 0;
     background: #4d6382;
-} 
-.coin-card-body::-webkit-scrollbar-thumb { 
+}
+.coin-card-body::-webkit-scrollbar-thumb {
     border-radius: 15px;
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
     background: #1a2541;
     height: 5rem;
 }
-
 .button-group.coin-page {
     margin: 1.5rem 0 0;
-    -webkit-box-pack: center;         -ms-flex-pack: center;             justify-content: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
 }
 .button-group.coin-page button{
     padding: 0.45rem 1.2rem;
     font-size: 0.6rem;
     margin: 0 0.3rem;
-    display: -webkit-box;     display: -ms-flexbox;     display: flex;
-    -webkit-box-align: center;         -ms-flex-align: center;             align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
 }
 .button-group.coin-page button img{
     height: 18px;
@@ -1876,12 +2056,16 @@ footer{
 }
 .coincard-inneritem{
     flex: 1 1 40%;
-    display: -webkit-box;     display: -ms-flexbox;     display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     padding: 0.8rem 0.7rem;
-    -webkit-box-align: center;         -ms-flex-align: center;             align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
     -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
     border-bottom: 1.5px solid #506483;
     border-right: 1.5px solid #506483;
 }
@@ -1889,7 +2073,9 @@ footer{
     padding: 0 0 0 0.5rem;
 }
 .coincard-inneritem.center{
-    -webkit-box-pack: center;         -ms-flex-pack: center;             justify-content: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
 }
 .coincard-inneritem.full{
     flex: 1 1 100%;
@@ -1900,7 +2086,6 @@ footer{
     flex: 1 1 25%;
     padding: 1.3rem 0.4rem 1.2rem 0.9rem;
 }
-
 .coincard-inneritem.third p{
     font-size: 0.6rem;
 }
@@ -1949,9 +2134,15 @@ footer{
     border-radius: 50%;
     margin-left: 1rem;
     margin-right: 1rem;
-    display: -webkit-box;     display: -ms-flexbox;     display: flex;
-    -webkit-box-align: center;         -ms-flex-align: center;             align-items: center;
-    -webkit-box-pack: center;         -ms-flex-pack: center;             justify-content: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
 }
 .avatar .ico-logo{
     margin: 0;
@@ -2008,11 +2199,22 @@ footer{
 }
 .coin-status-card{
     text-transform: uppercase;
-    display: -webkit-box;     display: -ms-flexbox;     display: flex;
-        -webkit-box-orient: vertical;     -webkit-box-direction: normal;         -ms-flex-direction: column;             flex-direction: column;
-    -webkit-box-pack: center;         -ms-flex-pack: center;             justify-content: center;
-    -webkit-box-align: center;         -ms-flex-align: center;             align-items: center;
-    -webkit-box-align: center;         -ms-flex-align: center;             align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
     background-image: url('../images/coin-progress-banner.png');
     background-size: contain;
     background-repeat: no-repeat;
@@ -2023,7 +2225,9 @@ footer{
     font-size: 1rem;
 }
 .coin-status-card h2{
-    display: -webkit-box;     display: -ms-flexbox;     display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     font-size: 3rem;
     margin: 1rem 0;
     z-index: 2;
@@ -2034,19 +2238,26 @@ footer{
     display: block;
     margin: 0 0.5rem;
     border-radius: 10px;
-    
 }
 .progress-countdown{
-    display: -webkit-box;     display: -ms-flexbox;     display: flex;
-        -webkit-box-orient: vertical;     -webkit-box-direction: normal;         -ms-flex-direction: column;             flex-direction: column;
-    -webkit-box-pack: center;         -ms-flex-pack: center;             justify-content: center;
-    -webkit-box-align: center;         -ms-flex-align: center;             align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
 }
 .progress-dt{
     font-size: 0.8rem;
     text-transform: none;
     margin: 0.4rem 0;
-
 }
 #coin-progress-hr{
     position: absolute;
@@ -2054,7 +2265,6 @@ footer{
     width: 85%;
     background: linear-gradient(to right, #3EADB4, #45F4CE);
     border-radius: 15px;
-    
 }
 .coin-status-card img{
     position: absolute;
@@ -2067,19 +2277,22 @@ footer{
     color: #0B4783;
     text-align: center;
     font-weight: 700;
-
 }
 .coin-return p{
     flex: 1 1 20%;
     font-size: 0.55rem;
 }
 .coin-return h3{
-    flex: 1 1 25%
+    flex: 1 1 25% 
 }
 .coin-return-group{
     flex: 1 1 40%;
-    display: -webkit-box;     display: -ms-flexbox;     display: flex;
-    -webkit-box-pack: center;         -ms-flex-pack: center;             justify-content: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     margin: 0 0.5rem;
 }
 .coin-return-item {
@@ -2089,10 +2302,19 @@ footer{
     height: 56px;
     width: 56px;
     margin: 0 0.25rem;
-    display: -webkit-box;     display: -ms-flexbox;     display: flex;
-        -webkit-box-orient: vertical;     -webkit-box-direction: normal;         -ms-flex-direction: column;             flex-direction: column;
-    -webkit-box-pack: center;         -ms-flex-pack: center;             justify-content: center;
-    -webkit-box-align: center;         -ms-flex-align: center;             align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
 }
 .coin-return-item h6{
     color: #fff;
@@ -2111,7 +2333,10 @@ footer{
     flex-basis: 42.9%;
 }
 .coincard-inneritem.community{
-        -webkit-box-orient: vertical;     -webkit-box-direction: normal;         -ms-flex-direction: column;             flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
 }
 .coincard-inneritem.community:hover{
     background-color: #1066BC;
@@ -2149,59 +2374,69 @@ footer{
 .similar-projects .coincard-inneritem{
     border-right: none;
 }
-
-
 /* Media Queries */
 @media (max-width: 991px){
-    /* Elements */
+   /* Elements */
     .ico-list-buttons button{
         font-size: 0.8rem !important;
         border-width: 2px !important;
         width: 8rem !important;
         padding: 0.5rem 0.8rem !important;
-    }
+   }
     #topbanner{
-        -webkit-box-align: center;         -ms-flex-align: center;             align-items: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
         padding: 0 1rem;
-    }
+   }
     #topbanner p{
         font-size: 0.65rem;
         padding: 0 0.3rem;
-    }
+   }
     #topbanner button{
         width: 7rem;
         font-size: 0.55rem;
         margin: 0.5rem 0;
-    }
+   }
     .persistent-icons{
         bottom: 1rem;
         right: 1rem;
-    }
+   }
     .per-icon{
         height: 2.8rem;
         width: 2.8rem;
         font-size: 0.8rem;
-    }
-    
+   }
     nav{
         margin: 1rem;
-            -webkit-box-orient: vertical;     -webkit-box-direction: normal;         -ms-flex-direction: column;             flex-direction: column;
-    }
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+   }
     #nav-main{
         width: 100%;
-        display: -webkit-box;     display: -ms-flexbox;     display: flex;
-        -webkit-box-pack: justify;         -ms-flex-pack: justify;             justify-content: space-between;
-    }
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+   }
     #nav-search{
-        display: -webkit-box;     display: -ms-flexbox;     display: flex;
-    }
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+   }
     #humbruger-menu{
-        display: -webkit-box;     display: -ms-flexbox;     display: flex;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
         z-index: 2;
-    }
+   }
     .logo{
         font-size: 1.7rem;
-    }
+   }
     .nav-modal.open{
         background: rgba(0,0,0,0.8);
         position: absolute;
@@ -2209,37 +2444,39 @@ footer{
         width: 100vw;
         top: 0;
         left: 0;
-    }
+   }
     nav ul{
         display: none;
-            -webkit-box-orient: vertical;     -webkit-box-direction: normal;         -ms-flex-direction: column;             flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
         margin: 0;
-    }
+   }
     nav ul li{
         margin: 0.5rem 0;
         width: 100%;
         -webkit-box-pack: end;
         -ms-flex-pack: end;
-            justify-content: flex-end;
+        justify-content: flex-end;
         font-size: 1.4rem;
-    }
+   }
     #subscribe-modal-toggle{
         border: none;
         background: none;
         color: inherit;
         padding: inherit;
-    }
+   }
     #search-container{
         order: -1;
         display: none;
-    }
+   }
     nav input{
         width: 95%;
         margin: auto;
-        border: solid 1px transparent;
-        
-    }
-    nav input::placeholder { 
+        border: solid 1.5px transparent;
+   }
+    nav input::placeholder {
         font-family: '';
         overflow: hidden;
         vertical-align: top;
@@ -2248,100 +2485,120 @@ footer{
         padding-top: 0;
         font-size: 0;
         background: none;
-    }
+   }
     .crypto-price{
         margin: 1rem 0.5rem;
-        -webkit-box-pack: center;         -ms-flex-pack: center;             justify-content: center;
-    }
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+   }
     .crypto-item h2{
-        display: -webkit-box;     display: -ms-flexbox;     display: flex;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
         font-size: 0.7rem;
         margin: 0.35rem 0.4rem;
-    }
+   }
     .crypto-item h2 span{
-        display: -webkit-box;     display: -ms-flexbox;     display: flex;
-        -webkit-box-align: center;         -ms-flex-align: center;             align-items: center;
-    }
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+   }
     footer{
-            -webkit-box-orient: vertical;     -webkit-box-direction: normal;         -ms-flex-direction: column;             flex-direction: column;
-    }
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+   }
     .footer-logo{
         margin-top: 1rem;
-    }
+   }
     .footer-about{
         margin: 3rem 0 0 0;
-    }
+   }
     .footer-about p{
         margin: 1rem 0;
         color: #fff;
-    }
-    
+   }
     .footer-links{
         margin: 0;
-    }
+   }
     .disclaimer{
         height: 9rem;
-    }
+   }
     .disclaimer-body{
         font-size: 0.7rem;
         width: 90%;
-    }
-    /* Home Page */
+   }
+   /* Home Page */
     .intro-section{
         background-repeat: repeat-y;
-    }
+   }
     .banner{
         height: 30vh;
         padding-top: 4rem;
-    }
+   }
     .banner img{
         width: 96px;
-    }
+   }
     .banner h1{
         font-size: 1.8rem;
         letter-spacing: 2px;
-    }
+   }
     .banner h5{
         margin: -0.3rem 0 0 0;
         font-size: 1rem;
-    }
+   }
     .banner-buttons{
         display: none;
         margin-top: 2rem;
-            -webkit-box-orient: vertical;     -webkit-box-direction: normal;         -ms-flex-direction: column;             flex-direction: column;
-        -webkit-box-align: center;         -ms-flex-align: center;             align-items: center;
-        
-    }
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+   }
     .banner-buttons button{
         margin: 0.45em !important;
-        -webkit-box-align: center;         -ms-flex-align: center;             align-items: center;
-        -webkit-box-pack: center;         -ms-flex-pack: center;             justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
         width: 8.5rem;
         font-size: 0.7rem;
-    }
+   }
     .twitter-feed{
         margin-top: 3rem;
-    }
+   }
     .down-arrow{
         width: 40%;
-    }
+   }
     .down-arrow img{
         height: 16px;
-    }
+   }
     .twitter-box{
         width: 85vw;
         height: 300px;
         padding: 0.5rem;
-    }
+   }
     .ico-grid{
-            -webkit-box-orient: vertical;     -webkit-box-direction: normal;         -ms-flex-direction: column;             flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
         margin: 1rem 0;
-    }
+   }
     .ico-col{
         margin: 2rem 0;
-    }
+   }
     .ico-col-btn{
         margin: 0.6rem auto 1rem;
-    }
-    
+   }
 }
