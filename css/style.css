@@ -2060,12 +2060,13 @@ footer{
         padding: 0 1rem;
     }
     #topbanner p{
-        font-size: 0.7rem;
+        font-size: 0.6rem;
         padding: 0.3rem;
     }
     #topbanner button{
         width: 7rem;
         font-size: 0.55rem;
+        margin: 0.5rem 0;
     }
     .persistent-icons{
         bottom: 1rem;
@@ -2130,16 +2131,17 @@ footer{
         font-size: 1rem;
     }
     .banner-buttons{
-        margin-top: 2.3rem;
+        margin-top: 2rem;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
-        width: 7.5rem;
-        font-size: 0.6rem;
+        
     }
     .banner-buttons button{
-        margin: 0.3em !important;
+        margin: 0.35em !important;
         align-items: center;
+        justify-content: center;
+        width: 8.5rem;
+        font-size: 0.65rem;
     }
     .down-arrow{
         width: 40%;
