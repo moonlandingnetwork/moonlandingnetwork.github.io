@@ -2122,7 +2122,7 @@ footer{
         margin: 0.5rem 0;
         width: 100%;
         justify-content: flex-end;
-        font-size: 1.4rem;
+        font-size: 1.2rem;
     }
     #subscribe-modal-toggle{
         border: none;
@@ -2137,6 +2137,16 @@ footer{
     nav input{
         width: 85%;
         margin: auto;
+    }
+    nav input::placeholder { 
+        font-family: '';
+        overflow: hidden;
+        vertical-align: top;
+        display: none !important;
+        padding-left: 0;
+        padding-top: 0;
+        font-size: 0;
+        background: none;
     }
     .crypto-price{
         margin: 1rem 0.5rem;
