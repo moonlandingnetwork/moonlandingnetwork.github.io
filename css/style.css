@@ -1248,6 +1248,7 @@ footer{
     background: url('../images/banner.png');
     background-size: contain;
     background-repeat: no-repeat;
+    display: block;
 }
 
 /* Banner */
@@ -2331,7 +2332,7 @@ footer{
         margin: 2rem 0;
     }
     .ico-col-btn{
-        margin: 0.6rem 4rem 1rem;
+        margin: 0.6rem 2rem 1rem;
     }
     
 }
