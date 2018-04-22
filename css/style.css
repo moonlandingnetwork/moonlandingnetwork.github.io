@@ -707,6 +707,7 @@ background-image: linear-gradient(#072C59, #072C59), radial-gradient(circle at t
 background-origin: border-box;
 background-clip: content-box, border-box;
 text-indent: 0.5rem;
+padding: 0;
 
 }
 nav input::placeholder { 
@@ -721,6 +722,7 @@ nav input::placeholder {
     background: linear-gradient(to bottom,#E9BA00, #4DF6DA);
     background-clip: text;
     -webkit-text-fill-color: transparent;
+    padding: 0;
 }
 nav input::-webkit-input-placeholder { 
     text-align: left;
@@ -736,6 +738,7 @@ nav input::-webkit-input-placeholder {
     background: linear-gradient(to bottom,#E9BA00, #4DF6DA);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    padding: 0;
 }
 nav input::-moz-placeholder { 
     text-align: left;
@@ -751,6 +754,7 @@ nav input::-moz-placeholder {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     opacity: 1;
+    padding: 0;
 }
 nav input:-ms-input-placeholder { 
     text-align: left;
@@ -765,6 +769,7 @@ nav input:-ms-input-placeholder {
     background: linear-gradient(to bottom,#E9BA00, #4DF6DA);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    padding: 0;
 }
 /* Navigation End */
 
