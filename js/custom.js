@@ -19,6 +19,27 @@ if(topBannerElem != null){
     }
 bannerData.send();
 }
+/* Mobile Navbar */
+navMenu = document.getElementById('humbruger-menu');
+navSearch = document.getElementById('nav-search');
+const navList = document.querySelector('nav ul');
+const navListItem = document.querySelectorAll('nav ul li');
+const navSearchBox = document.getElementById('search-container');
+navMenu.addEventListener('click', function (){
+    navList.classList.toggle('flex');
+    for(i=0; i<navListItem.length; i++){
+    navListItem[i].style.display="flex";
+    }
+    navSearchBox.style.display = 'none';
+    
+});
+navSearch.addEventListener('click', function(){
+    navList.classList.toggle('flex');
+    for(i=0; i<navListItem.length; i++){
+    navListItem[i].style.display="none";
+    }
+    navSearchBox.style.display = 'flex';
+});
 /* Split & Wrap Logo Element inside span */
 const logo = document.querySelectorAll('.logo');
 for(let i=0; i<logo.length; i++){
