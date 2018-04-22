@@ -2135,7 +2135,7 @@ footer{
         margin: 0.5rem 0;
         width: 100%;
         justify-content: flex-end;
-        font-size: 1.2rem;
+        font-size: 1.4rem;
     }
     #subscribe-modal-toggle{
         border: none;
@@ -2168,8 +2168,8 @@ footer{
     }
     .crypto-item h2{
         display: flex;
-        font-size: 0.65rem;
-        margin: 0.3rem 0.4rem;
+        font-size: 0.7rem;
+        margin: 0.35rem 0.4rem;
     }
     .crypto-item h2 span{
         display: flex;
