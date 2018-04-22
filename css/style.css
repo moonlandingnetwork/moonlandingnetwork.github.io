@@ -1248,7 +1248,7 @@ footer{
     background: url('../images/banner.png');
     background-size: contain;
     background-repeat: no-repeat;
-    display: block;
+    
 }
 
 /* Banner */
@@ -1359,7 +1359,7 @@ footer{
             justify-content: flex-start;
     -ms-flex-negative: 0;
         flex-shrink: 0;
-    display: block;
+    
 
 }
 .ico-col-title{
@@ -2269,7 +2269,9 @@ footer{
     }
     .footer-about p{
         margin: 1rem 0;
+        color: #fff;
     }
+    
     .footer-links{
         margin: 0;
     }
@@ -2332,7 +2334,7 @@ footer{
         margin: 2rem 0;
     }
     .ico-col-btn{
-        margin: 0.6rem 2rem 1rem;
+        margin: 0.6rem auto 1rem;
     }
     
 }
