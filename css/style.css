@@ -2102,6 +2102,7 @@ footer{
         display: flex;
         justify-content: space-between;
 
+        position: relative;
     }
     #nav-search{
         display: flex;
@@ -2121,6 +2122,7 @@ footer{
         margin: 0.5rem 0;
         width: 100%;
         justify-content: flex-end;
+        font-size: 1.4rem;
     }
     #subscribe-modal-toggle{
         border: none;
@@ -2176,7 +2178,7 @@ footer{
         background-repeat: repeat-y;
     }
     .banner{
-        height: 50vh;
+        height: 30vh;
         padding-top: 5rem;
     }
     .banner img{
@@ -2191,6 +2193,7 @@ footer{
         font-size: 1rem;
     }
     .banner-buttons{
+        display: none;
         margin-top: 2rem;
         flex-direction: column;
         align-items: center;
