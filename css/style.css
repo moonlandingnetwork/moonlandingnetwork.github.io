@@ -601,7 +601,9 @@ nav{
     display: none;
     align-items: center;
     cursor: pointer;
-    background: linear-gradient(to bottom,#E9BA00, #4DF6DA);
+    background: #fff;
+    background-clip:text;
+    text-fill-color: transparent;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
