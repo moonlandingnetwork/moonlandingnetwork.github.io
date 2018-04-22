@@ -117,7 +117,7 @@ span.golden{
     border-radius: 35px;
     font-size: 1rem;
     border-width: 4px;
-    width: 10rem !important;
+    /* width: 10rem; */
 }
 .btn.green{
     background:#0AA645;
@@ -2048,6 +2048,13 @@ footer{
 
 /* Media Queries */
 @media (max-width: 991px){
+    /* Elements */
+    .ico-list-buttons button{
+        font-size: 0.8rem !important;
+        border-width: 2px !important;
+        width: 8rem !important;
+        padding: 0.5rem 0.8rem !important;
+    }
     #topbanner{
         align-items: center;
         padding: 0 1rem;
@@ -2060,8 +2067,16 @@ footer{
         width: 7rem;
         font-size: 0.55rem;
     }
+    .persistent-icons{
+        bottom: 1rem;
+        right: 1rem;
+    }
+    
     nav{
         margin: 1rem;
+    }
+    .logo{
+        font-size: 1.7rem;
     }
     nav ul{
         display: none;
@@ -2074,7 +2089,29 @@ footer{
     .crypto-item h2{
         font-size: 0.75rem;
     }
-
+    footer{
+        flex-direction: column;
+    }
+    .footer-about{
+        margin: 3rem 0 0 0;
+    }
+    .footer-about p{
+        margin: 1rem 0;
+    }
+    .footer-links{
+        margin: 1rem 0 0 0;
+    }
+    .disclaimer{
+        height: 9rem;
+    }
+    .disclaimer-body{
+        font-size: 0.7rem;
+        width: 90%;
+    }
+    /* Home Page */
+    .banner{
+        height: 65vh;
+    }
     .banner img{
         width: 112px;
     }
@@ -2101,8 +2138,12 @@ footer{
         height: 16px;
     }
     .twitter-box{
-        width: 350px;
+        width: 85vw;
         height: 300px;
         padding: 0.5rem;
     }
+    .ico-grid{
+        flex-direction: column;
+    }
+    
 }
