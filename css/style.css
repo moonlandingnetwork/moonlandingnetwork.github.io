@@ -2747,8 +2747,13 @@ footer{
         top: 45%;
         left: 44%;
     }
+    .coinmeter.featured img{
+        width: 76px;
+        height: 76px;
+    }
     .coinmeter-rating.featured{
         letter-spacing: 4px;
+        padding: 0.4rem 0;
     }
     .coin-card-title.progress{
         padding: 0.5rem 0.5rem 0.5rem 0.7rem;

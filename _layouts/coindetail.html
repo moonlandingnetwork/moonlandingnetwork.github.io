@@ -149,7 +149,8 @@ bottombanner: true
                         </div>
                     </div>
                 </div>
-                <div class="coin-card minimal coinmeter">
+                <div class="coin-card minimal coinmeter {% if page.ico.featured == true and page.ico.show-rating == false %}featured
+                {% endif %}">
                     <div class="coin-card-body">
                         <div id="moonability-rating-meter">
                         <img  id="coinmeter-dial" src="{% if page.ico.featured == true %}{{site.baseurl}}/images/featured-icon.png{% endif %}{% if page.ico.featured == false %}
