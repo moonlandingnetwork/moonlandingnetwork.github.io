@@ -299,6 +299,18 @@ cmcRequest.onload = function(){
 }
 cmcRequest.send();
 }
+/* Nested Flexbox Layout Break */
+let width = window.screen.width;
+if(width <= 991){
+    const flexColFirst = document.querySelector('#card-col-1');
+    const flexColSecond = document.querySelector('#card-col-2');
+    const flexParent = document.querySelector('#card-col-parent');
+    while (flexColFirst.firstChild) flexParent.insertBefore(flexColFirst.firstChild, flexColFirst);
+    while (flexColSecond.firstChild) flexParent.insertBefore(flexColSecond.firstChild, flexColSecond);
+    flexParent.removeChild(flexColFirst);
+    flexParent.removeChild(flexColSecond);
+}
+
 /* Twitter Iframe Styling  */
 waitForElementToDisplay('#twitter-widget-0',5000);
 function waitForElementToDisplay(selector, time) {
@@ -309,7 +321,6 @@ function waitForElementToDisplay(selector, time) {
         let inner_tf = twitterFrameContent.getElementsByClassName('timeline-TweetList');
         inner_tf[0].style.padding = '1.5rem';
         let inner_tf_text = twitterFrameContent.getElementsByClassName('timeline-Tweet-text');
-        console.dir(inner_tf_text);
         for(i=0; i<inner_tf_text.length;i++){
             inner_tf_text[i].style.fontSize = '13px';
         }

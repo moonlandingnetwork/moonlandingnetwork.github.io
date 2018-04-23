@@ -270,8 +270,8 @@ bottombanner: true
     {% endunless %} 
    
     <div class="container max">
-        <div class="ico-coin-cards">
-            <div class="coin-cards-left">
+        <div class="ico-coin-cards" id="card-col-parent">
+            <div class="coin-cards-left" id="card-col-1">
                 <div id="coin-returns" class="coin-card full">
                     <div class="coin-card-title">
                         <h6>Market & Returns</h6>
@@ -567,7 +567,7 @@ bottombanner: true
                 </div>
                 {% endif %}
                 {% if page.twitter-username %}
-                <div class="coin-card full">
+                <div class="coin-card full twitter-card">
                     <div class="coin-card-title">
                         <h6>Tweets by
                             <span class="golden">@{{page.twitter-username}}</span>
@@ -585,7 +585,7 @@ bottombanner: true
                 </div>
                 {% endif %}
             </div>
-            <div class="coin-cards-right">
+            <div class="coin-cards-right" id="card-col-2">
                 {% if page.social %}
                 <div class="coin-card full">
                     <div class="coin-card-title">
@@ -708,7 +708,7 @@ bottombanner: true
 
                     </div>
                 </div>
-                <div class="coin-card full">
+                <div class="coin-card full more-ico-coins">
                     <div class="coin-card-title">
                         <h6>Similar Projects</h6>
                         <div class="card-title-action">
