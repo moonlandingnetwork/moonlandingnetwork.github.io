@@ -2712,8 +2712,15 @@ footer{
     #moonability-rating-meter{
         left: -7.3%;
     }
+    .coin-card-title.progress{
+        padding: 0.5rem 0.5rem 0.5rem 0.7rem;
+    }
     .coin-card-title.progress span:first-child{
         font-size: 0.7rem;
+        margin-right: 0.3rem;
+    }
+    .coin-card-title.progress span:last-child{
+        font-size: 0.6rem;
     }
     .progress-dt{
         font-size: 0.65rem;
