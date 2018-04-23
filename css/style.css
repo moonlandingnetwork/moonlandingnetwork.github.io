@@ -2083,8 +2083,9 @@ footer{
     padding: 1.1rem 2.5rem;
 }
 .coincard-inneritem.third{
-    flex: 1 1 25%;
+    flex: 0 0 33.3333%;
     padding: 1.3rem 0.4rem 1.2rem 0.9rem;
+    box-sizing: border-box;
 }
 .coincard-inneritem.third p{
     font-size: 0.6rem;
@@ -2094,6 +2095,9 @@ footer{
 }
 .coincard-inneritem.similar{
     padding: 0.9rem 1.1rem;
+}
+.coincard-inneritem.similar h6{
+    font-size: 0.7em;
 }
 .coincard-inneritem h6{
     margin: 0.2rem 0;
@@ -2327,10 +2331,12 @@ footer{
 }
 .coincard-inneritem.nogrow{
     flex: none;
-    flex-basis: 45.3%;
+    flex-basis: 50%;
+    box-sizing: border-box;
 }
 .coincard-inneritem.nogrow.alt{
-    flex-basis: 42.9%;
+    flex-basis: 50%;
+    box-sizing: border-box;
 }
 .coincard-inneritem.community{
     -webkit-box-orient: vertical;
@@ -2364,7 +2370,7 @@ footer{
     height: 150px;
 }
 .similar-projects{
-    height: 430px;
+    height: 300px;
     overflow-y: scroll;
 }
 .similar-projects a{
@@ -2373,6 +2379,9 @@ footer{
 }
 .similar-projects .coincard-inneritem{
     border-right: none;
+}
+.similar-projects .coincard-inneritem:hover{
+    background-color: #1066BC;
 }
 /* Media Queries */
 @media (max-width: 991px){
@@ -2691,12 +2700,13 @@ footer{
         display: none;
     }
     .coincard-inneritem.nogrow{
-        flex-basis: 94.1%;
+        flex-basis: 100%;
     }
     .coincard-inneritem.nogrow.alt{
-        flex-basis: 43.6%;
+        flex-basis: 50%;
     }
     .coincard-inneritem.third{
-        flex: 0 0 44%;
+        flex: 0 0 50%;
+        
     }
 }
