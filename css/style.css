@@ -2572,17 +2572,19 @@ footer{
    }
    .ico-promo-banner h4{
        visibility: hidden;
-       margin: 0.7rem 0.5rem 0.6rem 1rem;
+       margin: 0.7rem 0 0.6rem;
        height: 1rem;
+       text-align: center;
    }
    .ico-promo-banner h4 span{
        visibility: visible;
-       font-size: 0.8rem;
+       font-size: 0.7rem;
    }
    .ico-promo-banner button{
-        font-size: 0.65rem !important;
-        width: 9rem;
-        padding: 0.7rem;
+        font-size: 0.53rem !important;
+        width: 7rem;
+        padding: 0.7rem 0.3em;
+        box-sizing: border-box;
         
    }
    /* Home Page */
@@ -2744,6 +2746,9 @@ footer{
     #coinmeter-center{
         top: 45%;
         left: 44%;
+    }
+    .coinmeter-rating.featured{
+        letter-spacing: 4px;
     }
     .coin-card-title.progress{
         padding: 0.5rem 0.5rem 0.5rem 0.7rem;
