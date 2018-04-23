@@ -2567,6 +2567,15 @@ footer{
         font-size: 0.7rem;
         width: 90%;
    }
+   .ico-promo-banner h4{
+       font-size: .65rem;
+       margin: 0.7rem 0.5rem 0.6rem 1rem;
+   }
+   .ico-promo-banner button{
+        font-size: 0.55rem !important;
+        width: 5.5rem;
+        
+   }
    /* Home Page */
     .intro-section{
         background-repeat: repeat-y;
