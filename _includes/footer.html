@@ -3,9 +3,6 @@
  {% assign about = item.site-info %}
  {% assign social = item.social %}
  {% endfor %}
- {% for item in site.data.footer.footer %}
- {% assign footer = item %}
- {% endfor %}
  <footer>
     <!-- Footer Col 1 -->
     
@@ -24,7 +21,7 @@
     <!-- Footer Col 3 -->
     <div class="footer-links">
         <ul>
-            {% for item in footer.links-col-1 %}
+            {% for item in site.data.footer.links-col-1 %}
             <a href="{{item.href}}"><li>{{item.name}}</li></a>
             {% endfor %}
         </ul>
@@ -33,7 +30,7 @@
     <!-- Footer Col 4 -->
     <div class="footer-links">
         <ul>
-            {% for item in footer.links-col-2 %}
+            {% for item in site.data.footer.links-col-2 %}
             <a href="{{item.href}}"><li>{{item.name}}</li></a>
             {% endfor %}
         </ul>

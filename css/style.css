@@ -2606,11 +2606,44 @@ footer{
    .main-body-content{
        padding: 0 1rem 2.5rem;
    }
+   .ico-page-tags{
+       display: none;
+   }
+   .ico-page-header{
+       margin: 1.5rem 1.5rem 0.8rem;
+   }
+   .ico-page-title{
+       z-index: -1;
+   }
+   .ico-page-title-content h4 i{
+       margin: 0 0.1rem;
+   }
+   .ico-page-title-image{
+       height: 56px;
+       width: 56px;
+       top: 0;
+
+   }
+   .ico-page-title-image img{
+       height: 32px;
+       width: 32px;
+       border-radius: 10%;
+   }
+   .ico-page-title-content{
+       margin: 0 0 0 4.5rem;
+   }
+   .ico-page-main-desc{
+       padding: 1.5rem 1rem 0;
+   }
+   .ico-page-main-desc p{
+       font-size: 0.8em;
+   }
    .ico-coin-cards{
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    padding: 0.5rem 0 0 0;
     }
     .coin-cards-right{
         margin: 0;

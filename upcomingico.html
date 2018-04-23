@@ -31,7 +31,7 @@ title: Upcoming ICOs  | Moonlanding Network
 {% for coin in regularcoins %}
 {% assign pre_ico_end_date = coin.pre-ico.end-date | date: "%s" | plus: 0 %}
 {% assign ico_start_date = coin.ico-detail.start-date | date: "%s" | plus: 0 %}
-{% if current_date > pre_ico_end_date and ico_start_date > current_date %}
+{% if current_date > pre_ico_end_date and ico_start_date > current_date  %}
 {% assign regularUpcoming = regularUpcoming | push: coin %}
 {% endif %}
 {% endfor %}
