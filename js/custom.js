@@ -1,4 +1,5 @@
-
+/* Global Window Width Variable */
+let width = window.screen.width;
 /* Random TopBanner */
 const topBannerElem = document.getElementById('topbanner');
 if(topBannerElem != null){
@@ -300,7 +301,6 @@ cmcRequest.onload = function(){
 cmcRequest.send();
 }
 /* Nested Flexbox Layout Break */
-let width = window.screen.width;
 if(width <= 991){
     const flexColFirst = document.querySelector('#card-col-1');
     const flexColSecond = document.querySelector('#card-col-2');
@@ -312,6 +312,7 @@ if(width <= 991){
 }
 
 /* Twitter Iframe Styling  */
+if(width >= 991){
 waitForElementToDisplay('#twitter-widget-0',5000);
 function waitForElementToDisplay(selector, time) {
     if(document.querySelector(selector)!=null) {
@@ -336,7 +337,7 @@ function waitForElementToDisplay(selector, time) {
         }, time);
     }
 }
-
+}
 
 
 
