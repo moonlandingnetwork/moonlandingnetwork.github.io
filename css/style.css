@@ -2634,7 +2634,7 @@ footer{
        display: none;
    }
    .ico-page-header{
-       margin: 1.5rem 1.5rem 0;
+       margin: 1rem 1.5rem 0;
    }
    .ico-page-title{
        z-index: -1;
@@ -2645,20 +2645,20 @@ footer{
    .ico-page-title-image{
        height: 56px;
        width: 56px;
-       top: 10%;
-       border-radius: 5%;
+       top: 0;
+       border-radius: 35% 15% 0 0;
 
    }
    .ico-page-title-image img{
        height: 32px;
        width: 32px;
-       border-radius: 10%;
+       border-radius: 10%
    }
    .ico-page-title-content{
        margin: 0 0 0 4.5rem;
    }
    .ico-page-main-desc{
-       padding: 1.5rem 1rem 0;
+       padding: 1.5rem 1rem 1rem;
    }
    .ico-page-main-desc p{
        font-size: 0.8em;
