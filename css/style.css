@@ -1958,12 +1958,21 @@ footer{
     flex: 3;
     margin: 0 1rem 0 0;
 }
-.coin-cards-right{
-    flex: 2;
+.coin-cards-right {
+    -webkit-box-flex: 2;
+        -ms-flex: 2;
+            flex: 2;
     margin: 0 0 0 2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 }
 .coin-card{
-    margin: 1.5rem 0;
+    margin:  0 0 1.5rem;
 }
 .coin-card.full .coin-card-body{
     padding: 0;
@@ -2034,7 +2043,7 @@ footer{
     height: 5rem;
 }
 .button-group.coin-page {
-    margin: 1.5rem 0 0;
+    margin:  0 0 1.5rem;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
@@ -2683,6 +2692,11 @@ footer{
     }
     .coin-status-card h2{
         margin: 0.55rem 0 ;
+    }
+    #token-details{
+       -webkit-box-ordinal-group: 2;
+       -ms-flex-order: 1;
+           order: 1
     }
     .coin-card-title.progress span:first-child{
         font-size: 0.7rem;
