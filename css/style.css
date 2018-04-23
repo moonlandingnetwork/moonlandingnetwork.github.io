@@ -2706,7 +2706,8 @@ footer{
         padding: 0.4rem 1.2rem;
     }
     .coinmeter .coin-card-body{
-        margin: 1.4rem 1.5rem 0 2rem;
+        width: 17rem;
+        margin-top: 0.5rem;
     }
     #moonability-rating-meter{
         left: -7.3%;
