@@ -272,7 +272,7 @@ bottombanner: true
     <div class="container max">
         <div class="ico-coin-cards">
             <div class="coin-cards-left">
-                <div class="coin-card full">
+                <div id="coin-returns" class="coin-card full">
                     <div class="coin-card-title">
                         <h6>Market & Returns</h6>
                         <div class="card-title-action">
@@ -553,7 +553,7 @@ bottombanner: true
                         {% for team in page.team %}
                         <div class="coincard-inneritem nogrow">
                             <img class="avatar" src="{{team.image}}" alt="">
-                            <div class="coincard-inner-content">
+                            <div class="coincard-inner-content team">
                                 <h6>{{team.name}}
                                     <a href="{{team.linkedin}}">
                                         <span class="linkedin">in</span>

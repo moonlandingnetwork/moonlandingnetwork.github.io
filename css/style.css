@@ -2078,9 +2078,11 @@ footer{
     justify-content: center;
 }
 .coincard-inneritem.full{
-    flex: 1 1 100%;
+    box-sizing: border-box;
+    flex: 0 0 100%;
     justify-content: start;
     padding: 1.1rem 2.5rem;
+    
 }
 .coincard-inneritem.third{
     flex: 0 0 33.3333%;
@@ -2232,12 +2234,12 @@ footer{
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    font-size: 3rem;
+    font-size: 2.5rem;
     margin: 1rem 0;
     z-index: 2;
 }
 .coin-status-card h2 span{
-    padding: 1rem;
+    padding: 0.9rem;
     background: #E39504;
     display: block;
     margin: 0 0.5rem;
@@ -2269,13 +2271,14 @@ footer{
     width: 85%;
     background: linear-gradient(to right, #3EADB4, #45F4CE);
     border-radius: 15px;
+    z-index: 1;
 }
 .coin-status-card img{
     position: absolute;
     width: 36px;
     height: 58px;
     right: 6%;
-    bottom: 56%;
+    bottom: 54%;
 }
 #coin-progress-para{
     color: #0B4783;
@@ -2386,6 +2389,9 @@ footer{
 /* Media Queries */
 @media (max-width: 991px){
    /* Elements */
+   .crypto-price.hidden-mobile{
+       display: none;
+   }
     .ico-list-buttons button{
         font-size: 0.8rem !important;
         border-width: 2px !important;
@@ -2619,7 +2625,7 @@ footer{
        display: none;
    }
    .ico-page-header{
-       margin: 1.5rem 1.5rem 0.8rem;
+       margin: 1.5rem 1.5rem 0;
    }
    .ico-page-title{
        z-index: -1;
@@ -2630,7 +2636,8 @@ footer{
    .ico-page-title-image{
        height: 56px;
        width: 56px;
-       top: 0;
+       top: 10%;
+       border-radius: 5%;
 
    }
    .ico-page-title-image img{
@@ -2708,5 +2715,12 @@ footer{
     .coincard-inneritem.third{
         flex: 0 0 50%;
         
+    }
+    .coincard-inneritem.third p.micro-text{
+        font-size: 0.45rem;
+        line-height: 1.6;
+    }
+    .coincard-inner-content.team h6{
+        margin: 0.4rem 0;
     }
 }
