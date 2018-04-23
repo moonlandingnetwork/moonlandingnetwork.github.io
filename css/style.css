@@ -2165,7 +2165,7 @@ footer{
 .coinmeter .coin-card-body{
     margin-left: 10%;
     padding: 3.5% 6%;
-    width: 76%;
+    box-sizing: border-box;
 }
 .coinmeter .coincard-inneritem{
     margin-left: 25%;
@@ -2293,6 +2293,7 @@ footer{
     color: #0B4783;
     text-align: center;
     font-weight: 700;
+    margin-bottom: 1rem;
 }
 .coin-return p{
     flex: 1 1 20%;
@@ -2684,7 +2685,7 @@ footer{
         margin: 0 0.4rem;
     }
     .coin-card-title{
-        padding: 0.5rem 1rem;
+        padding: 0.5rem;
         font-size: 0.7rem;
     }
     .coin-card-title h6{
@@ -2704,12 +2705,21 @@ footer{
     .button-group.coin-page button{
         padding: 0.5rem 1.2rem;
     }
+    .coinmeter .coin-card-body{
+        margin: 1.5rem 1rem 0 1.5rem;
+    }
     .coin-card-title.progress span:first-child{
         font-size: 0.7rem;
     }
     .progress-dt{
         font-size: 0.65rem;
         font-weight: 400;
+    }
+    #coin-progress-hr{
+        display: none;
+    }
+    .coin-status-card img{
+        display: none;
     }
     .coin-return{
         display: -webkit-box;
