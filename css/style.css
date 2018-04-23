@@ -2696,4 +2696,7 @@ footer{
     .coincard-inneritem.nogrow.alt{
         flex-basis: 43.6%;
     }
+    .coincard-inneritem.third{
+        flex: 0 0 44%;
+    }
 }
