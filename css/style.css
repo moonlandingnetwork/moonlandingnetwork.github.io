@@ -86,6 +86,14 @@ span.golden{
     align-self: center;
     */
 }
+.btn-vertical{
+    display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
 .btn.circle{
     border-radius: 50%;
     height: 14px;
