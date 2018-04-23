@@ -2748,12 +2748,15 @@ footer{
         left: 44%;
     }
     .coinmeter.featured img{
-        width: 76px;
-        height: 76px;
+        width: 78px;
+        height: 78px;
     }
     .coinmeter-rating.featured{
         letter-spacing: 4px;
         padding: 0.4rem 0;
+    }
+    .coinmeter.featured .coincard-inneritem{
+        margin-left: 15%;
     }
     .coin-card-title.progress{
         padding: 0.5rem 0.5rem 0.5rem 0.7rem;
