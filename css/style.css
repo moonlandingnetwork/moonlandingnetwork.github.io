@@ -2698,6 +2698,12 @@ footer{
        -ms-flex-order: 1;
            order: 1
     }
+    .button-group.coin-page{
+        margin: 0 0 1rem;
+    }
+    .button-group.coin-page button{
+        padding: 0.5rem 1.2rem;
+    }
     .coin-card-title.progress span:first-child{
         font-size: 0.7rem;
     }
@@ -2736,5 +2742,8 @@ footer{
     }
     .coincard-inner-content.team h6{
         margin: 0.4rem 0;
+    }
+    .coin-card-body{
+        padding: 0.7rem;
     }
 }
