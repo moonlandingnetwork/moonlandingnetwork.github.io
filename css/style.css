@@ -2640,6 +2640,9 @@ footer{
    .ico-page-title{
        z-index: -1;
    }
+   .ico-page-title-content h4{
+       font-size: 0.8rem;
+   }
    .ico-page-title-content h4 i{
        margin: 0 0.1rem;
    }
@@ -2712,6 +2715,10 @@ footer{
     #moonability-rating-meter{
         left: -7.3%;
     }
+    #coinmeter-center{
+        top: 45%;
+        left: 44%;
+    }
     .coin-card-title.progress{
         padding: 0.5rem 0.5rem 0.5rem 0.7rem;
     }
@@ -2740,6 +2747,7 @@ footer{
        -webkit-box-direction: normal;
            -ms-flex-direction: column;
                flex-direction: column;
+        flex-shrink: 0;
     }
     .coin-return-group{
         margin-top: 0.6rem;
