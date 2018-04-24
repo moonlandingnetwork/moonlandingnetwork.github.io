@@ -230,7 +230,7 @@ fields:
   - type: datetime
     name: start-date
     label: ICO Start Date
-    description: Leave Blank if unknown
+    description: Leave Blank if Not Applicable
   - type: datetime
     name: end-date
     label: ICO End Date
