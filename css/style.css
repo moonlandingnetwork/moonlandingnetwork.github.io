@@ -2655,6 +2655,33 @@ footer{
     .ico-col-btn{
         margin: 0.6rem auto 1rem;
    }
+   /* Modal */
+   .modal.alt{
+       width: 80%;
+   }
+   .modal-head h1 span{
+       height: 18px;
+       width: 18px;
+       margin-right: 0.4rem;
+   }
+   .modal-head h1{
+       font-size: 1.2rem;
+   }
+   .modal-head i{
+       height: 48px;
+       width: 48px;
+       font-size: 1.4rem;
+       right: -1.4rem;
+       top: -1.5rem;
+
+   }
+   .modal-body{
+       padding: 1rem 2rem;
+   }
+   .modal-body p{
+       font-size: 0.55rem;
+       margin: 1rem 0;
+   }
    /* Coin Page */
    .main-body-content{
        padding: 0 1rem 2.5rem;
