@@ -2713,7 +2713,7 @@ footer{
     }
     .coin-status-card h2 span{
         padding: 0.5rem;
-        margin: 0 0.3rem;
+        margin: 0 0.25rem;
     }
     .coin-card-title{
         padding: 0.5rem 0.5rem 0.5rem 1rem;
@@ -2748,12 +2748,12 @@ footer{
         left: 44%;
     }
     .coinmeter.featured img{
-        width: 78px;
-        height: 78px;
+        width: 82px;
+        height: 82px;
     }
     .coinmeter-rating.featured{
         letter-spacing: 4px;
-        padding: 0.4rem 0;
+        padding: 0.55rem 0;
     }
     .coinmeter.featured .coincard-inneritem{
         margin-left: 20%;
