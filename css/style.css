@@ -944,35 +944,20 @@ nav input:-ms-input-placeholder {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin: 1.5rem 2rem;
-   /* padding-bottom: 3rem;
-    */
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 4rem 2rem;
 }
-.ico-project-name{
-    flex: 2.1;
-}
-.ico-project-name.minimal{
-    flex: 1;
-}
-.ico-moonability{
-    flex:1;
-}
-.ico-category{
-    flex: 1.2;
-}
-.ico-category.minimal{
-    flex: 1;
-}
-.ico-fund-raised{
-    flex:2.6;
-}
-.ico-ends-in{
-    flex:1;
-}
-.ico-social-media{
-    flex:1.3;
-}
+
+
 .ico-table-title{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+.ico-table-title th{
     font-size: 0.9rem;
     background: #15223F;
     color: #fff;
@@ -980,14 +965,33 @@ nav input:-ms-input-placeholder {
     text-transform: uppercase;
     padding: 1rem 0;
     margin-bottom: 0;
+
 }
-.ico-table-title.first{
+.ico-table-title th:first-child{
     border-radius: 15px 0 0 0;
 }
-.ico-table-title.last{
+.ico-table-title th:last-child{
     border-radius: 0 15px 0 0;
 }
-.ico-table ul li{
+.ico-table-title th:nth-child(1),td:nth-child(1){
+    flex: 2.1;
+}
+.ico-table-title th:nth-child(2),td:nth-child(2){
+    flex: 1;
+}
+.ico-table-title th:nth-child(3),td:nth-child(3){
+    flex: 1.2;
+}
+.ico-table-title th:nth-child(4),td:nth-child(4){
+    flex: 2.6;
+}
+.ico-table-title th:nth-child(5),td:nth-child(5){
+    flex: 1;
+}
+.ico-table-title th:nth-child(6),td:nth-child(6){
+    flex: 1.3;
+}
+.ico-table tbody tr{
     background: #0B478A;
     color: #fff;
     font-size: 1rem;
@@ -997,51 +1001,53 @@ nav input:-ms-input-placeholder {
     display: flex;
     -webkit-box-align: center;
     -ms-flex-align: center;
-    align-items: center;
+        align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+    border-bottom: 5px solid #072C59;
+}
+.ico-table tbody td{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    border-bottom: 5px solid #072C59;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
-.ico-table ul li a i{
-    color: #fff;
-}
-.ico-table ul li.featured a i{
-    color: #072C59;
-}
-.ico-table ul li:last-of-type {
-    border-bottom: none;
-}
-.ico-table .ico-project-name li:last-of-type {
-    border-bottom: 5px solid #072C59;
-}
-.ico-table .ico-project-name a:last-of-type li{
-    border-bottom: none;
-}
-.ico-table ul li.featured{
+
+
+
+.ico-table tbody tr.featured{
     background: #E39300;
     border-bottom: 5px solid #DD7310;
 }
-.ico-table .ico-project-name li.featured {
-    border-bottom: 5px solid #DD7310;
+.ico-table tbody tr.featured a i{
+    color: #072C59;
 }
-.ico-project-name li{
+.ico-table tbody td a i{
+    color: #fff;
+}
+.ico-table tbody tr:last-of-type {
+    border-bottom: none;
+}
+
+.ico-project-name{
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     justify-content: flex-start !important;
     -webkit-box-pack: start !important;
-   ;
     -ms-flex-pack: start !important;
-   ;
-    padding: 0 0 0 2rem;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+        align-items: center;
+    
 }
-.ico-project-name li h5 a, p{
-    color: #fff;
-}
-.ico-project-name li.featured h5 a, li.featured p{
-    color: #15223F;
-}
+
 .ico-table-title-image{
     background: #fff;
     padding: 0.5rem;
@@ -1057,53 +1063,57 @@ nav input:-ms-input-placeholder {
     justify-content: center;
     height: 38px;
     width: 38px;
-    margin-right: 0.7rem;
+    margin: 0.7rem 0.7rem 0.7rem 2rem;
 }
-.ico-project-name li img{
+.ico-table-title-image img{
     height: 28px;
     width: 28px;
+    
 }
-.ico-project-name li h5{
+.ico-project-name  h5{
     font-size: 1.1rem;
-}
-.ico-project-name li p{
-    font-size: 0.65rem;
-    margin: 0.4rem 0;
-}
-.ico-project-name li.featured p{
-    font-weight: 600;
-}
-.ico-table-title-content h5,p{
     margin: 0;
 }
-.ico-moonability li {
+.ico-project-name h5, a, p{
+    color: #fff;
+}
+.featured .ico-project-name p{
+    color: #15223F;
+    font-weight: 600;
+}
+.ico-project-name  p{
+    font-size: 0.65rem;
+    margin: 0.2rem 0;
+}
+
+.ico-moonability {
     text-transform: uppercase;
     font-weight: 700;
     letter-spacing: 2px;
 }
-.ico-moonability li.featured {
+.featured .number {
     color: #fff !important;
 }
-.ico-moonability li.number{
+.ico-moonability.number{
     font-size: 2.1rem;
 }
-.ico-moonability li.green{
+.ico-moonability.green{
     color: #0AA645;
 }
-.ico-moonability li.yellow {
+.ico-moonability.yellow {
     color: #E9BA00;
 }
-.ico-moonability li.red{
+.ico-moonability.red{
     color: #D64117;
 }
-.ico-category li{
+.ico-category {
     font-weight: 900;
     font-size: 0.9rem !important;
 }
-.ico-category li.featured {
+.featured .ico-category {
     color: #15223F;
 }
-.ico-fund-raised li {
+.ico-fund-raised {
     font-size: 1.3rem !important;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1113,15 +1123,15 @@ nav input:-ms-input-placeholder {
     -ms-flex-direction: column;
     flex-direction: column;
 }
-.ico-fund-raised li h5{
+.ico-fund-raised h5{
     margin: 0.5rem 0;
     font-weight: 900;
     font-size: 0.7em;
 }
-.ico-fund-raised li.featured h5 {
+.featured .ico-fund-raised h5 {
     color: #15223F;
 }
-.ico-fund-raised li h5 span{
+.ico-fund-raised h5 span{
     font-weight: 400;
     font-size: 1rem;
     margin-left: 0.2rem;
@@ -1142,7 +1152,7 @@ nav input:-ms-input-placeholder {
 .ico-fund-progress::-moz-progress-bar{
     background-color: #fff;
 }
-.ico-ends-in li button{
+.ico-ends-in button{
     cursor: default;
     font-size: 1.0rem;
     font-weight: 600;
@@ -1151,19 +1161,19 @@ nav input:-ms-input-placeholder {
 .ico-date-value{
     margin-right: 0.3rem;
 }
-.ico-social-media li {
+.ico-social-media {
     font-size: 1.3rem !important;
 }
-.ico-social-media li.featured {
+.ico-social-media.featured {
     color: #15223F;
 }
-.ico-social-media li span{
+.ico-social-media span{
     margin: 0 0.4rem;
 }
 .ico-action{
     flex: 0.7;
 }
-.ico-action li a{
+.ico-action  a{
     color: #E39300;
     text-transform: uppercase;
     text-decoration: none;

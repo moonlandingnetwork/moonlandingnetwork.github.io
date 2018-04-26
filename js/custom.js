@@ -153,7 +153,7 @@ if(ratingStarts != null){
     });
 }
 /*  Full List */
-let ratingNumber = document.querySelectorAll('.ico-moonability .number');
+let ratingNumber = document.querySelectorAll('.ico-moonability.number');
 if(ratingNumber != null){
     ratingNumber.forEach(function (number){
         if(number.textContent <= 3){
@@ -166,7 +166,7 @@ if(ratingNumber != null){
     });
 }
 /*  Dynamically Set Date Background based on Number */
-let dateButton = document.querySelectorAll('.ico-ends-in li button');
+let dateButton = document.querySelectorAll('.ico-ends-in button');
 let dateButtonValue = document.querySelectorAll('.ico-date-value');
 if(dateButton && dateButtonValue != null){
     dateButton.forEach(function(date, i){

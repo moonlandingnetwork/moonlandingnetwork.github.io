@@ -36,6 +36,8 @@ title: Active ICOs | Moonlanding Network
 <!-- Regular coins array + Featured Expired Coins  -->
 {% assign regularActiveTotal = regularActive | concat: featuredExpired | sort: 'date-added' | reverse %}
 
+<!-- Total Active Coins Array -->
+{% assign totalActive = featuredActive | concat: regularActiveTotal %}
 
 <div class="page-end-gradient top">
 
@@ -48,129 +50,88 @@ title: Active ICOs | Moonlanding Network
         {% include iconav.html %}
         <!-- End ICO Nav -->
         <!-- ICO Table -->
-        <div class="ico-table">
-            <ul class="ico-project-name">
-                <h5 class="ico-table-title first">Project</h5>
-                {% for coin in featuredActive  %}
-                <a href="{{coin.url}}"><li class="featured">
-                    <div class="ico-table-title-image">
-                        <img src="{{coin.ico.logo}}" alt="">
-                    </div>
-                    <div class="ico-table-title-content">
-                        <h5>{{coin.ico.name}}</h5>
-                        <p>{{coin.ico.shortdesc}}</p>
-                    </div>
-                </li></a>
-                {% endfor %} {% for coin in regularActiveTotal %}
-                <a href="{{coin.url}}"><li>
-                    <div class="ico-table-title-image">
-                        <img src="{{coin.ico.logo}}" alt="">
-                    </div>
-                    <div class="ico-table-title-content">
-                        <h5>{{coin.ico.name}}</h5>
-                        <p>{{coin.ico.shortdesc}}</p>
-                    </div>
-                </li></a>
-                {% endfor %}
-            </ul>
-            <ul class="ico-moonability">
-                <h5 class="ico-table-title">Moonability</h5>
-                {% for coin in featuredActive  %}
-                <li class="featured {% if coin.ico.show-rating %}number{% endif %}">{% unless coin.ico.show-rating %}Featured{% endunless %}{% if coin.ico.show-rating %}{{coin.moonability}}{% endif %}</li>
-                {% endfor %} {% for coin in regularActiveTotal %}
-                <li class="number">{{coin.moonability}}</li>
-                {% endfor %}
-            </ul>
-            <ul class="ico-category">
-                <h5 class="ico-table-title">Category</h5>
-                {% for coin in featuredActive  %}
-                <li class="featured">{{coin.ico.category}}</li>
-                {% endfor %} {% for coin in regularActiveTotal %}
-                <li>{{coin.ico.category}}</li>
-                {% endfor %}
+        <table id="active-ico" class="ico-table">
+            <thead>
+                <tr class="ico-table-title">
+                    <th scope="col">Project</th>
+                    <th scope="col">Moonability</th>
+                    <th scope="col">Category</th>
+                    <th scope="col">Fund Raised</th>
+                    <th scope="col">Ends In</th>
+                    <th scope="col">Social Media</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for coin in totalActive %}
+                <!-- Check If Featured -->
+                {% if coin.ico.featured %}
+                {% assign featuredTill = coin.ico.featured-till | date: "%s" | plus: 0 %}
+                {% if featuredTill > current_date %}
+                {% assign featured = true %}
+                {% endif %}
+                {% else %}
+                {% assign featured = false %}
+                {% endif %}
 
-            </ul>
-            <ul class="ico-fund-raised">
-                <h5 class="ico-table-title">Fund Raised</h5>
-                {% for coin in featuredActive  %}
-                <li class="featured">
-                    {% assign collected = coin.progress.collected %} {% assign total = coin.progress.total %} {% assign percent = collected |
-                    times: 100 | divided_by: total %}
-                    <h5>${{collected}} / ${{total}}
-                        <span>({{percent}}%)</span>
-                    </h5>
-                    <progress class="ico-fund-progress" min="0" max="100" value="{{percent}}"></progress>
-                </li>
-                {% endfor %} {% for coin in regularActiveTotal %}
-                <li>
-                    {% assign collected = coin.progress.collected %} {% assign total = coin.progress.total %} {% assign percent = collected |
-                    times: 100 | divided_by: total %}
-                    <h5>${{collected}} / ${{total}}
-                        <span>({{percent}}%)</span>
-                    </h5>
-                    <progress class="ico-fund-progress" min="0" max="100" value="{{percent}}"></progress>
-                </li>
-                {% endfor %}
-            </ul>
-            <ul class="ico-ends-in">
-                <h5 class="ico-table-title">Ends In</h5>
-                {% for coin in featuredActive  %} {% assign ico_end_date = coin.ico-detail.end-date | date: "%s" | plus: 0
-                %} {% assign secondsTo = ico_end_date | minus: current_date %} {% assign hoursTo = secondsTo | divided_by:
-                60 | divided_by: 60 %} {% assign daysTo = hoursTo | divided_by: 24 %}
-                <li class="featured">
-                    <button class="btn round bulky"><span class="ico-date-value">{% if daysTo == 0 %}Today{% else %}{{ daysTo }}</span> Days{% endif %}</button>
-                </li>
-                {% endfor %} {% for coin in regularActiveTotal %} {% assign ico_end_date = coin.ico-detail.end-date | date: "%s" | plus:
-                0 %} {% assign secondsTo = ico_end_date | minus: current_date %} {% assign hoursTo = secondsTo | divided_by:
-                60 | divided_by: 60 %} {% assign daysTo = hoursTo | divided_by: 24 %}
-                <li>
-                    <button class="btn round bulky"><span class="ico-date-value">{% if daysTo == 0 %}Today{% else %}{{ daysTo }}</span> Days{% endif %}</button>
-                </li>
-                {% endfor %}
-            </ul>
-            <ul class="ico-social-media">
-                <h5 class="ico-table-title last">Social Media</h5>
-                {% for coin in featuredActive  %}
-                <li class="featured">
-                    <span>
-                        <a href="{{coin.social.twitter}}">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                    </span>
-                    <span>
-                        <a href="{{coin.social.telegram}}">
-                            <i class="fab fa-telegram-plane"></i>
-                        </a>
-                    </span>
-                    <span>
-                        <a href="{{coin.social.facebook}}">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                    </span>
-                </li>
-                {% endfor %} {% for coin in regularActiveTotal %}
-                <li>
-                    <span>
-                        <a href="{{coin.social.twitter}}">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                    </span>
-                    <span>
-                        <a href="{{coin.social.telegram}}">
-                            <i class="fab fa-telegram-plane"></i>
-                        </a>
-                    </span>
-                    <span>
-                        <a href="{{coin.social.facebook}}">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                    </span>
-                </li>
-                {% endfor %}
+                <tr class="{% if featured %}featured{% endif %}">
 
-            </ul>
 
-        </div>
+                    <td class="ico-project-name">
+                        <div class="ico-table-title-image">
+                            <img src="{{coin.ico.logo}}" alt="">
+                        </div>
+                        <div class="ico-table-title-content">
+                            <h5>{{coin.ico.name}}</h5>
+                            <p>{{coin.ico.shortdesc}}</p>
+                        </div>
+                    </td>
+
+
+                    <td class="ico-moonability {% if featured %} {% if coin.ico.show-rating %}number{% endif %}{% else if featured == false %}number{% endif %}">{% if featured %} {% if coin.ico.show-rating %}{{coin.moonability}}{% else %}Featured {% endif %}{% else
+                        %}{{coin.moonability}}{% endif %}</td>
+
+                    <td class="ico-category">{{coin.ico.category}}</td>
+
+                    <td class="ico-fund-raised">
+                        {% assign collected = coin.progress.collected %} {% assign total = coin.progress.total %} {% assign percent = collected |
+                        times: 100 | divided_by: total %}
+                        <h5>${{collected}} / ${{total}}
+                            <span>({{percent}}%)</span>
+                        </h5>
+                        <progress class="ico-fund-progress" min="0" max="100" value="{{percent}}"></progress>
+                    </td>
+
+                     {% assign ico_end_date = coin.ico-detail.end-date | date: "%s" | plus: 0 %} {% assign secondsTo = ico_end_date | minus:
+                    current_date %} {% assign hoursTo = secondsTo | divided_by: 60 | divided_by: 60 %} {% assign daysTo = hoursTo | divided_by:
+                    24 %}
+                    <td class="ico-ends-in">
+                        <button class="btn round bulky">
+                            <span class="ico-date-value">{% if coin.ico-detail.no-date %}TBA{% endif %}{% unless coin.ico-detail.no-date %}{% if daysTo
+                                == 0 %}Today{% else %}{{ daysTo }}</span> Days{% endif %}{% endunless %}</button>
+                    </td>
+
+                    <td class="ico-social-media">
+                        <span>
+                            <a href="{{coin.social.twitter}}">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </span>
+                        <span>
+                            <a href="{{coin.social.telegram}}">
+                                <i class="fab fa-telegram-plane"></i>
+                            </a>
+                        </span>
+                        <span>
+                            <a href="{{coin.social.facebook}}">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </span>
+                    </td>
+
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
     </div>
     <!-- End Body Content -->
 
