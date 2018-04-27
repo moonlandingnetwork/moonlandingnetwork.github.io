@@ -2885,7 +2885,7 @@ footer{
         
     }
     .ico-nav li.active::after{
-        content: "☰";
+        content: "▼";
         font-size: 1.25rem;
         position: absolute;
         right: 5%;
@@ -2959,6 +2959,9 @@ footer{
     .ico-ends-in button{
         font-size: 0.75rem !important;
         padding: 0.45rem 0.9rem !important;
+    }
+    .ico-date-value{
+        margin-right: 0;
     }
     .ico-social-media{
         display: none !important;
