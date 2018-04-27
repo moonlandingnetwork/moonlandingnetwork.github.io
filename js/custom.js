@@ -136,6 +136,7 @@ cmcEth.send();
 /* End  CoinmarketCap API Data For Live BTC / ETH */
 
 /* ICO Nav Mobile Humburger Menu */
+if(width <= 991){
 let icoNav = document.querySelector('.ico-nav li.active');
 if(icoNav != null){
     let icoNavList = document.querySelectorAll('.ico-nav li');
@@ -152,7 +153,7 @@ if(icoNav != null){
         });
     });
 }
-
+}
 /*  Dynamically Set Rating Background based on Number */
 
 /*  Home Page */
