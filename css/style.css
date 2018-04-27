@@ -2864,8 +2864,33 @@ footer{
         padding: 0.7rem;
     }
     /*ICO Table */
+    .ico-table{
+        margin: 2.5rem 1rem 2rem;
+    }
+    .ico-nav{
+        margin:  0 0.7rem;
+    }
     .ico-nav ul{
         flex-direction: column;
+    }
+    .ico-nav li{
+        border-radius: 0;
+        display: none;
+    }
+
+    .ico-nav li.active{
+        order: -1;
+        position: relative;
+        display: block;
+        
+    }
+    .ico-nav li.active::after{
+        content: "☰";
+        font-size: 1.25rem;
+        position: absolute;
+        right: 5%;
+        top: 25%;
+        
     }
     .ico-table thead{
         display: none;
@@ -2874,22 +2899,62 @@ footer{
         height: auto;
         -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-        padding: 1rem;
+        padding: 0.5rem 0.5rem 1rem 0.5rem;
+    }
+    .ico-project-name{
+        order: 1;
+    }
+    .ico-project-name h5{
+        font-size: 0.9rem;
     }
     .ico-project-name p{
         display: none;
     }
     .ico-table-title-image{
         margin: 0.7rem;
+        height: 32px;
+        width: 32px;
+        padding: 0.35rem;
+    }
+    .ico-table-title-image img{
+        height: 24px;
+        width: 24px;
     }
     .ico-moonability{
-        order: 5 !important;
+        order: 2 !important;
+        letter-spacing: 1px;
+        font-size: 0.8rem;
+    }
+    .ico-moonability.number{
+        font-size: 1.6rem;
+    }
+    .ico-category{
+        font-size: 0.7rem !important;
+        order: 4;
     }
     .ico-fund-raised{
         margin: 0.5rem 0 1rem;
         -webkit-box-flex: 1 !important;
         -ms-flex: 1 1 100% !important;
             flex: 1 1 100% !important;
+        order: 3;
+    }
+    .ico-fund-raised h5{
+        font-size: 0.75rem;
+    }
+    .ico-fund-raised h5 span{
+        font-size: 0.75rem;
+    }
+    .ico-fund-progress{
+        height: 7.5px;
+        width: 13.5rem;
+    }
+    .ico-ends-in{
+        order: 5;
+    }
+    .ico-ends-in button{
+        font-size: 0.75rem !important;
+        padding: 0.45rem 0.9rem !important;
     }
     .ico-social-media{
         display: none !important;
