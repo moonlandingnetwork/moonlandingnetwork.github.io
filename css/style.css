@@ -2229,6 +2229,7 @@ footer{
 }
 .coinmeter p{
     font-size: .8rem;
+    margin: 0;
 }
 .coin-status-card{
     text-transform: uppercase;
