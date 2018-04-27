@@ -2865,7 +2865,7 @@ footer{
     }
     /*ICO Table */
     .ico-table{
-        margin: 2.5rem 1rem 2rem;
+        margin: 2.5rem 1.5rem 2rem;
     }
     .ico-nav{
         margin:  0 0.7rem;
@@ -2909,7 +2909,7 @@ footer{
         order: 1;
     }
     .ico-project-name h5{
-        font-size: 0.9rem;
+        font-size: 1rem;
     }
     .ico-project-name p{
         display: none;
@@ -2933,7 +2933,7 @@ footer{
         font-size: 1.6rem;
     }
     .ico-category{
-        font-size: 0.7rem !important;
+        font-size: 0.8rem !important;
         order: 4;
     }
     .ico-fund-raised{
@@ -2944,14 +2944,14 @@ footer{
         order: 3;
     }
     .ico-fund-raised h5{
-        font-size: 0.75rem;
+        font-size: 0.85rem;
     }
     .ico-fund-raised h5 span{
-        font-size: 0.75rem;
+        font-size: 0.85rem;
     }
     .ico-fund-progress{
-        height: 7.5px;
-        width: 13.5rem;
+        height: 8.5px;
+        width: 14.5rem;
     }
     .ico-ends-in{
         order: 5;
@@ -2963,4 +2963,23 @@ footer{
     .ico-social-media{
         display: none !important;
     }
+}
+@media (max-width: 380px){
+    .ico-table{
+        margin: 2.5rem 1rem 2rem;
+    }
+    .ico-project-name h5{
+        font-size: 0.9rem;
+    }
+    .ico-fund-raised h5{
+        font-size: 0.75rem;
+    }
+    .ico-fund-progress{
+        height: 7.5px;
+        width: 13.5rem;
+    }
+    .ico-category{
+        font-size: 0.7rem !important;
+    }
+
 }
