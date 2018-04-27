@@ -2872,7 +2872,7 @@ footer{
     }
     .ico-nav li{
         border-radius: 0;
-        display: none;
+        
     }
 
     .ico-nav li.active{

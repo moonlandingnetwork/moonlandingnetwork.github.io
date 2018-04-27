@@ -135,6 +135,24 @@ cmcEth.onload = function(){
 cmcEth.send();
 /* End  CoinmarketCap API Data For Live BTC / ETH */
 
+/* ICO Nav Mobile Humburger Menu */
+let icoNav = document.querySelector('.ico-nav li.active');
+if(icoNav != null){
+    let icoNavList = document.querySelectorAll('.ico-nav li');
+    icoNavList.forEach((item) => {
+        if(!item.classList.contains('active')){
+        item.classList.add('hidden');
+        }
+    });
+    icoNav.addEventListener('click', ()=>{
+        icoNavList.forEach((item) => {
+            if(!item.classList.contains('active')){
+            item.classList.toggle('hidden');
+            }
+        });
+    });
+}
+
 /*  Dynamically Set Rating Background based on Number */
 
 /*  Home Page */
