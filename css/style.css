@@ -2865,10 +2865,7 @@ footer{
     }
     /*ICO Table */
     .ico-table{
-        margin: 2.5rem 1.5rem 2rem;
-    }
-    .ico-nav{
-        margin:  0 0.7rem;
+        margin: 1rem 1.5rem;
     }
     .ico-nav ul{
         flex-direction: column;
@@ -2885,7 +2882,7 @@ footer{
         
     }
     .ico-nav li.active::after{
-        content: "▼";
+        content: "☰";
         font-size: 1.25rem;
         position: absolute;
         right: 5%;
@@ -2969,7 +2966,7 @@ footer{
 }
 @media (max-width: 380px){
     .ico-table{
-        margin: 2.5rem 1rem 2rem;
+        margin: 1rem 1rem;
     }
     .ico-project-name h5{
         font-size: 0.9rem;
