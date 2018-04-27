@@ -2937,7 +2937,7 @@ footer{
         order: 4;
     }
     .ico-fund-raised{
-        margin: 0.5rem 0 1rem;
+        margin: 0.5rem 0 1.4rem;
         -webkit-box-flex: 1 !important;
         -ms-flex: 1 1 100% !important;
             flex: 1 1 100% !important;
