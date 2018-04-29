@@ -1837,8 +1837,9 @@ footer{
 }
 .publish-ico-body form input[type="submit"]{
     margin: 3rem auto 0 !important;
-    padding: 0.8rem 1.3rem;
+    padding: 0.7rem 1.3rem;
     font-size: 1em;
+    display: flex;
 }
 /* End Publish ICO */
 /* Whitelist Page */
@@ -2419,17 +2420,16 @@ footer{
 }
 /* Media Queries */
 @media (max-width: 991px){
-    .page-end-gradient.top.mobile-none{
-        background: none;
+
+   /* Elements */
+   .page-end-gradient.top.mobile-none{
+    background: none;
     }
     .main-body-content.bg-mobile{
         background-color: #072C59;
         background-image: url('../images/banner.png');
         background-size: contain;
-
-
     }
-   /* Elements */
    .crypto-price.hidden-mobile{
        display: none;
    }
@@ -2463,6 +2463,13 @@ footer{
         height: 2.8rem;
         width: 2.8rem;
         font-size: 0.8rem;
+   }
+   .per-icon.big{
+       width: 2.4rem;
+       height: 2.4rem;
+   }
+   .per-icon i{
+       font-size: 2.2rem;
    }
     nav{
         margin: 1rem;
@@ -3066,6 +3073,7 @@ footer{
         display: flex;
         margin: 2rem auto 0 !important;
         padding: 0.6rem 1.1rem;
+        
     }
 }
 @media (max-width: 390px){
