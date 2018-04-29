@@ -2418,6 +2418,9 @@ footer{
 }
 /* Media Queries */
 @media (max-width: 991px){
+    .page-end-gradient.top.mobile-none{
+        background: none;
+    }
     .main-body-content.bg-mobile{
         background: none;
     }
@@ -2904,7 +2907,7 @@ footer{
         padding: 0.5rem 0.5rem 1rem 1.5rem;
         border-bottom: none !important;
         margin: 0.5rem 0;
-        /*box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 2px 6px rgba(0,0,0,0.23); */
+        box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 2px 6px rgba(0,0,0,0.23);
         background: #fff;
         color: #072C59;
 
