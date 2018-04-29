@@ -689,11 +689,9 @@ nav ul{
 nav ul.flex{
     display: flex !important;
 }
-nav ul.absolute{
+nav ul.open{
     display: flex !important;
-    position: absolute;
-    right: 1rem;
-    top: 7rem;
+
 }
 nav ul li{
     margin: 0 0.6rem;
@@ -1090,6 +1088,9 @@ nav input:-ms-input-placeholder {
     text-transform: uppercase;
     font-weight: 700;
     letter-spacing: 2px;
+}
+.featured-logo{
+    display: none;
 }
 .featured .number {
     color: #fff !important;
@@ -3039,13 +3040,16 @@ footer{
     }
     .ico-table-title-image{
         margin: 0.7rem 1rem 0.7rem 0.7rem;
-        height: 36px;
-        width: 36px;
+        height: 38px;
+        width: 38px;
         padding: 0.35rem;
     }
     .ico-table-title-image img{
         height: 28px;
         width: 28px;
+    }
+    .ico-moonability{
+        top: 50%;
     }
     .ico-moonability .featured-logo{
         font-size: 1.6rem;
@@ -3067,7 +3071,7 @@ footer{
     }
     .ico-fund-progress{
         height: 7.5px;
-        width: 13rem;
+        width: 12.5rem;
     }
     .ico-category{
         font-size: 0.7rem !important;

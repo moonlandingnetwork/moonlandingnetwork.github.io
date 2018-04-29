@@ -23,16 +23,12 @@ bannerData.send();
 /* Mobile Navbar */
 const navMenu = document.getElementById('humbruger-menu');
 const navSearch = document.getElementById('nav-search');
-const bodyElem = document.querySelector('body');
 const navList = document.querySelector('nav ul');
-const navModal = document.querySelector('.nav-modal');
 const navListItem = document.querySelectorAll('nav ul li');
 const navSearchBox = document.getElementById('search-container');
 const cryptoPrice = document.querySelector('.crypto-price');
 navMenu.addEventListener('click', function (){
-    navList.classList.toggle('absolute');
-    navModal.classList.toggle('open');
-    bodyElem.classList.toggle('modal-open');
+    navList.classList.toggle('open');
     if(navMenu.innerText == '☰'){
         navMenu.innerText = 'X';
     } else if (navMenu.innerText == 'X'){
