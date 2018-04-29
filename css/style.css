@@ -2923,6 +2923,10 @@ footer{
         color: #072C59;
 
     }
+    .pre-ico-title{
+        font-size: 1.5rem;
+        color: #fff;
+    }
     .ico-project-name{
         order: 1;
         position: absolute;
@@ -3034,6 +3038,9 @@ footer{
 @media (max-width: 380px){
     .ico-table{
         margin: 1rem 2rem;
+    }
+    .pre-ico-title{
+        font-size: 1.3rem;
     }
     .ico-project-name h5{
         font-size: 1rem;
