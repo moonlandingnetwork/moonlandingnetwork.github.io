@@ -2422,7 +2422,11 @@ footer{
         background: none;
     }
     .main-body-content.bg-mobile{
-        background: none;
+        background-color: #072C59;
+        background-image: url('../images/banner.png');
+        background-size: contain;
+
+
     }
    /* Elements */
    .crypto-price.hidden-mobile{
@@ -2933,13 +2937,13 @@ footer{
     }
     .ico-table-title-image{
         margin: 0.7rem 1rem 0.7rem 0.7rem;
-        height: 42px;
-        width: 42px;
+        height: 44px;
+        width: 44px;
         padding: 0.35rem;
     }
     .ico-table-title-image img{
-        height: 28px;
-        width: 28px;
+        height: 32px;
+        width: 32px;
     }
     .ico-moonability{
         order: 2 !important;
@@ -2954,7 +2958,7 @@ footer{
     }
     .ico-moonability .featured-logo{
         color: #fff;
-        font-size: 1.8rem;
+        font-size: 1.7rem;
         background: linear-gradient(to top, #00AEBB, #4DF6DA );
         border-radius: 50%;
         height: 48px;
