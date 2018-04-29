@@ -2872,7 +2872,7 @@ footer{
     }
     /*ICO Table */
     .ico-table{
-        margin: 1rem 2rem;
+        margin: 2rem 2rem 1rem 2.5rem;
     }
     .ico-nav ul{
         flex-direction: column;
@@ -2918,7 +2918,7 @@ footer{
     .ico-project-name{
         order: 1;
         position: absolute;
-        left: -11%;
+        left: -12%;
         top: 10%;
     }
     .ico-project-name h5{
@@ -2946,7 +2946,7 @@ footer{
         letter-spacing: 1px;
         font-size: 0.8rem;
         position: absolute;
-        left: -6%;
+        left: -7%;
         top: 55%;
     }
     .ico-moonability .featured-text {

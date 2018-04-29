@@ -80,7 +80,7 @@ title: Ended ICOs | Moonlanding Network
                             <p>{{coin.ico.shortdesc}}</p>
                         </div>
                     </td>
-                    <td class="ico-moonability {% if featured %} {% if coin.ico.show-rating %}number{% endif %}{% else if featured == false %}number{% endif %}">{% if featured %} {% if coin.ico.show-rating %}{{coin.moonability}}{% else %}Featured {% endif %}{% else
+                    <td class="ico-moonability {% if featured %} {% if coin.ico.show-rating %}number{% endif %}{% else if featured == false %}number{% endif %}">{% if featured %} {% if coin.ico.show-rating %}{{coin.moonability}}{% else %}<span class="featured-text">Featured</span><span class="featured-logo">★</span>  {% endif %}{% else
                         %}{{coin.moonability}}{% endif %}</td>
 
                     <td class="ico-category">{{coin.ico.category}}</td>
