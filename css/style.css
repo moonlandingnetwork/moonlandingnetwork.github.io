@@ -3035,7 +3035,7 @@ footer{
         margin: 1rem 2rem;
     }
     .ico-project-name h5{
-        font-size: 0.9rem;
+        font-size: 1rem;
     }
     .ico-table-title-image{
         margin: 0.7rem 1rem 0.7rem 0.7rem;
@@ -3053,14 +3053,14 @@ footer{
         width: 42px;
     }
     .ico-moonability.number{
-        font-size: 0.9rem;
+        font-size: 0.8rem;
         flex: none;
         border-radius: 50%;
-        height: 42px;
-        width: 42px;
+        height: 40px;
+        width: 40px;
     }
     .ico-fund-raised{
-        margin: 3.5rem 0 1.4rem;
+        margin: 4rem 0 1.4rem;
     }
     .ico-fund-raised h5{
         font-size: 0.75rem;
