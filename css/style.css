@@ -3140,13 +3140,20 @@ footer{
         font-size: 0.7em;
     }
     .publish-banner img{
-        width: 300px;
+        width: 290px;
+    }
+    .publish-banner li{
+        font-size: 0.8em;
     }
     .publish-question.row label{
         font-size: 0.85em;
     }
+    .publish-category-item.other input[type="text"]{
+        width: 8rem;
+    }
     .publish-ico-body form input[type="submit"]{
         font-size: 0.85em;
+        
     }
 
 }
