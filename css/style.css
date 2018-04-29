@@ -3068,7 +3068,12 @@ footer{
         padding: 0.6rem 1.1rem;
     }
 }
-@media (max-width: 380px){
+@media (max-width: 390px){
+    /* Elements */
+    select{
+        font-size: 80%;
+    }
+    /* ICO Table */
     .ico-table{
         margin: 1rem 2rem;
     }
@@ -3118,6 +3123,22 @@ footer{
     }
     .ico-category{
         font-size: 0.7rem !important;
+    }
+    /* Publish ICO Page */
+    .publish-ico-title h1{
+        font-size: 1.4em;
+    }
+    .publish-ico-title p{
+        font-size: 0.7em;
+    }
+    .publish-banner img{
+        width: 300px;
+    }
+    .publish-question.row label{
+        font-size: 0.85em;
+    }
+    .publish-ico-body form input[type="submit"]{
+        font-size: 0.85em;
     }
 
 }
