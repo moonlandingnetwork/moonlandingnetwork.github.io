@@ -3034,6 +3034,33 @@ footer{
     .ico-social-media{
         display: none !important;
     }
+    /* Publish ICO Page */
+    .publish-ico-title h1{
+        font-size: 1.5em;
+    }
+    .publish-ico-title p{
+        font-size: 0.8em;
+    }
+    .publish-banner{
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+            -ms-flex-direction: column-reverse;
+                flex-direction: column-reverse;
+        }
+    .publish-banner img{
+        width: 330px;
+    }
+    .publish-category-item{
+        flex: 1 1 100%;
+    }
+    .publish-category-item.other input[type="text"]{
+        width: 9.5rem;
+    }
+    .publish-ico-body form input[type="submit"]{
+        display: flex;
+        padding: 0.6rem 1rem;
+        font-size: 0.9em;
+    }
 }
 @media (max-width: 380px){
     .ico-table{
