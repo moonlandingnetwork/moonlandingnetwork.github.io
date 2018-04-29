@@ -2877,6 +2877,9 @@ footer{
     .ico-nav ul{
         flex-direction: column;
     }
+    .ico-nav{
+        margin: 0 -1rem;
+    }
     .ico-nav li{
         border-radius: 0;
         
