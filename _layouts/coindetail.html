@@ -519,9 +519,9 @@ bottombanner: true
                             <img src="{{site.baseurl}}/images/conversion-icon.png" alt="">
                             <div class="coincard-inner-content">
                                 <h6>ICO Conversion</h6>
-                                <p class="micro-text">{% if page.ico-detail.conversion.usd %}1 {{page.ico.token-name}} = {{page.ico-detail.conversion.usd}} USD {% else %} USD : NA {% endif %}
-                                        <br>{% if page.ico-detail.conversion.eth %}1 {{page.ico.token-name}} = {{page.ico-detail.conversion.eth  | truncate:8, ""}} ETH {% else %} ETH : NA {% endif %}
-                                        <br>{% if page.ico-detail.conversion.btc %}1 {{page.ico.token-name}} = {{page.ico-detail.conversion.btc  | truncate:8, ""}} BTC{% else %} BTC : NA {% endif %}</p>
+                                <p class="micro-text">{% if page.ico-detail.conversion.usd %}1 {{page.ico.token-name}} = <span id="ico-usd-price">{{page.ico-detail.conversion.usd}}</span> USD {% else %} USD : NA {% endif %}
+                                        <br>{% if page.ico-detail.conversion.eth %}1 {{page.ico.token-name}} = <span id="ico-eth-price">{{page.ico-detail.conversion.eth  | truncate:8, ""}}</span> ETH {% else %} ETH : NA {% endif %}
+                                        <br>{% if page.ico-detail.conversion.btc %}1 {{page.ico.token-name}} = <span id="ico-btc-price">{{page.ico-detail.conversion.btc  | truncate:8, ""}}</span> BTC{% else %} BTC : NA {% endif %}</p>
                             </div>
                         </div>
                         <div class="coincard-inneritem third">

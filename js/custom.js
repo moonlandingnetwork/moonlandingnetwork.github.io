@@ -154,6 +154,7 @@ if(icoNav != null){
     });
 }
 }
+
 /*  Dynamically Set Rating Background based on Number */
 
 /*  Home Page */
