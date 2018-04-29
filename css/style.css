@@ -2922,7 +2922,7 @@ footer{
         top: 10%;
     }
     .ico-project-name h5{
-        font-size: 1rem;
+        font-size: 1.2rem;
         color: #E39300;
     }
     .featured .ico-project-name h5{
@@ -2932,14 +2932,14 @@ footer{
         display: none;
     }
     .ico-table-title-image{
-        margin: 0.7rem;
-        height: 32px;
-        width: 32px;
+        margin: 0.7rem 1rem 0.7rem 0.7rem;
+        height: 42px;
+        width: 42px;
         padding: 0.35rem;
     }
     .ico-table-title-image img{
-        height: 24px;
-        width: 24px;
+        height: 28px;
+        width: 28px;
     }
     .ico-moonability{
         order: 2 !important;
@@ -2954,21 +2954,21 @@ footer{
     }
     .ico-moonability .featured-logo{
         color: #fff;
-        font-size: 1.5rem;
+        font-size: 1.8rem;
         background: linear-gradient(to top, #00AEBB, #4DF6DA );
         border-radius: 50%;
-        height: 38px;
-        width: 38px;
+        height: 48px;
+        width: 48px;
         display: flex;
         align-items: center;
         justify-content: center;
     }
     .ico-moonability.number{
-        font-size: 0.9rem;
+        font-size: 1rem;
         flex: none;
         border-radius: 50%;
-        height: 38px;
-        width: 38px;
+        height: 48px;
+        width: 48px;
     }
     .ico-moonability.green{
         background: #0AA645;
@@ -2986,8 +2986,11 @@ footer{
         font-size: 0.8rem !important;
         order: 4;
     }
+    .featured .ico-category{
+        color: #fff;
+    }
     .ico-fund-raised{
-        margin: 3.5rem 0 1.4rem;
+        margin: 4.5rem 0 1.4rem;
         -webkit-box-flex: 1 !important;
         -ms-flex: 1 1 100% !important;
             flex: 1 1 100% !important;
@@ -3018,14 +3021,36 @@ footer{
     }
 }
 @media (max-width: 380px){
-    .ico-nav {
-        margin: 0 1rem;
-    }
     .ico-table{
         margin: 1rem 2rem;
     }
     .ico-project-name h5{
         font-size: 0.9rem;
+    }
+    .ico-table-title-image{
+        margin: 0.7rem;
+        height: 32px;
+        width: 32px;
+        padding: 0.35rem;
+    }
+    .ico-table-title-image img{
+        height: 24px;
+        width: 24px;
+    }
+    .ico-moonability .featured-logo{
+        font-size: 1.5rem;
+        height: 38px;
+        width: 38px;
+    }
+    .ico-moonability.number{
+        font-size: 0.9rem;
+        flex: none;
+        border-radius: 50%;
+        height: 38px;
+        width: 38px;
+    }
+    .ico-fund-raised{
+        margin: 3.5rem 0 1.4rem;
     }
     .ico-fund-raised h5{
         font-size: 0.75rem;
