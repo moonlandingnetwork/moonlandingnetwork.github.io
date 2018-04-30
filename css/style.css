@@ -2626,10 +2626,13 @@ footer{
        padding: 0 1rem;
    }
    .ico-promo-banner h4{
-       display: none;
+       visibility: hidden;
        margin: 0.7rem 0 0.6rem;
        height: 1rem;
        text-align: center;
+   }
+   .ico-promo-banner.minimal h4{
+       display: none;
    }
    .ico-promo-banner h4 span{
        visibility: visible;
@@ -2761,7 +2764,6 @@ footer{
        width: 56px;
        top: 0;
        border-radius: 35% 15% 0 0;
-
    }
    .ico-page-title-image img{
        height: 32px;
@@ -2961,7 +2963,7 @@ footer{
     .ico-table .tbody a{
         display: block;
     }
-    .ico-project-name h5, .ico-project-name h5 a, .ico-project-name h5 p{
+    .tbody h5, .tbody a, .tbody p{
         color: #072C59;
     }
     .pre-ico-title{
