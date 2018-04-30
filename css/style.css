@@ -1237,6 +1237,7 @@ nav input:-ms-input-placeholder {
     outline: none;
     border: none;
     padding: 0 0.5rem;
+    text-indent: 2rem;
 }
 .ico-promo-banner input[type="submit"]{
     width: 5.5rem;
@@ -1246,6 +1247,7 @@ nav input:-ms-input-placeholder {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
+    text-indent: 0;
 }
 .ico-promo-banner button{
     font-size: 0.7rem !important;
@@ -2624,7 +2626,7 @@ footer{
        padding: 0 1rem;
    }
    .ico-promo-banner h4{
-       visibility: hidden;
+       display: none;
        margin: 0.7rem 0 0.6rem;
        height: 1rem;
        text-align: center;
@@ -2909,6 +2911,9 @@ footer{
     .ico-table{
         margin: 2rem 2rem 1rem 2.5rem;
     }
+    .ico-table.minimal{
+        margin: 2rem;
+    }
     .ico-nav ul{
         flex-direction: column;
     }
@@ -2956,7 +2961,7 @@ footer{
     .ico-table .tbody a{
         display: block;
     }
-    .ico-project-name h5, a, p{
+    .ico-project-name h5, .ico-project-name h5 a, .ico-project-name h5 p{
         color: #072C59;
     }
     .pre-ico-title{
@@ -3100,6 +3105,47 @@ footer{
     }
     .ico-social-media{
         display: none !important;
+    }
+    /* Whitelist Page */
+    .ico-table.minimal .tbody a {
+        color: #072C59;
+    }
+    .whitelist-title{
+        padding-top: 1rem;
+    }
+    .whitelist-title p {
+        color: #fff;
+        font-size: 0.9em;
+        width: 85%;
+    }
+    .ico-project-category-parent.minimal  {
+        display: none !important;
+    }
+    .ico-project-name.minimal{
+        position: relative;
+        margin-left: -0.5rem;   
+    }
+    .ico-project-name.minimal h5{
+        font-size: 1.1rem;
+    }
+    .ico-project-name.minimal .ico-table-title-image{
+        margin: 0.7rem 0.3rem 0.7rem 0.7rem;
+    }
+    .ico-project-name-parent.minimal{
+        order: 1;
+        flex: 0 1 50% !important; 
+    }
+    #whitelist-status-parent{
+        order: 2;
+        flex: 0 1 50%;
+    }
+    #whitelist-status-parent button{
+        font-size: 0.7rem;
+        padding: 0.4rem 0.8rem;
+    }
+    .ico-action{
+        order: 1;
+        flex: 0 1 35%;
     }
     /* Publish ICO Page */
     .publish-ico-title h1{
