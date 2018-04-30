@@ -2557,7 +2557,9 @@ footer{
         padding: inherit;
    }
     #search-container{
-        order: -1;
+        -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
         display: none;
    }
     nav input{
@@ -2961,7 +2963,9 @@ footer{
     }
 
     .ico-nav li.active{
-        order: -1;
+        -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
         position: relative;
         display: block;
         
@@ -3001,7 +3005,9 @@ footer{
         color: #fff;
     }
     .ico-project-name{
-        order: 1;
+        -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
         position: absolute;
         left: -12%;
         top: 10%;
@@ -3027,7 +3033,9 @@ footer{
         width: 32px;
     }
     .ico-table-title li:nth-child(3), .tbody ul a:nth-child(3){
-        order: 4 !important;
+        -webkit-box-ordinal-group: 5 !important;
+        -ms-flex-order: 4 !important;
+            order: 4 !important;
     }
     .ico-moonability{
         letter-spacing: 1px;
@@ -3085,7 +3093,9 @@ footer{
     }
     .ico-category{
         font-size: 0.8rem !important;
-        order: 4;
+        -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+            order: 4;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -3097,7 +3107,9 @@ footer{
         color: #fff;
     }
     .ico-table-title li:nth-child(4), .tbody ul a:nth-child(4){
-        order: 3;
+        -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
         flex: 1 1 100%;
     }
     .ico-fund-raised{
@@ -3118,7 +3130,9 @@ footer{
         width: 14.5rem;
     }
     .ico-table-title li:nth-child(5), .tbody ul a:nth-child(5){
-        order: 5;
+        -webkit-box-ordinal-group: 6;
+        -ms-flex-order: 5;
+            order: 5;
     }
     .ico-ends-in{
         display: -webkit-box;
@@ -3164,11 +3178,15 @@ footer{
         margin: 0.7rem 0.3rem 0.7rem 0.7rem;
     }
     .ico-project-name-parent.minimal{
-        order: 1;
+        -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
         flex: 0 1 50% !important; 
     }
     #whitelist-status-parent{
-        order: 2;
+        -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
         flex: 0 1 50%;
     }
     #whitelist-status-parent button{
@@ -3176,7 +3194,9 @@ footer{
         padding: 0.4rem 0.8rem;
     }
     .ico-action{
-        order: 1;
+        -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
         flex: 0 1 35%;
     }
     .ico-promo-banner input{
