@@ -23,9 +23,11 @@ title: Whitelist  | Moonlanding Network
     <div class="container">
         <!-- ICO Table -->
         <div class="ico-table minimal">
-            <ul class="ico-project-name minimal">
-                {% for coin in whitelistCoins %}
-                <a href="{{coin.url}}"><li>
+         <div class="tbody">
+            {% for coin in whitelistCoins %}
+            <ul class="">
+                <a class="ico-project-name-parent" href="{{coin.url}}">
+                <li class="ico-project-name minimal">
                     <div class="ico-table-title-image">
                         <img src="{{site.baseurl}}{{coin.ico.logo}}" alt="">
                     </div>
@@ -33,22 +35,14 @@ title: Whitelist  | Moonlanding Network
                         <h5>{{coin.ico.name}}</h5>
 
                     </div>
-                </li></a>
-                {% endfor %}
-            </ul>
-            <ul class="ico-category minimal">
-                {% for coin in whitelistCoins %}    
-                <li>{{coin.ico.category}}</li>
-                {% endfor %}
-            </ul>
-            <ul class="ico-category minimal">
-                {% for coin in whitelistCoins %}    
-                <li>{{coin.whitelist.type}}</li>
-                {% endfor %}
-            </ul>
-
-            <ul >
-                {% for coin in whitelistCoins %}
+                </li>
+                </a>
+                <a class="ico-project-category-parent" href="{{coin.url}}">
+                <li class="ico-category minimal">{{coin.ico.category}}</li>
+                </a>
+                <a href="{{coin.url}}">
+                <li class="ico-category minimal">{{coin.whitelist.type}}</li>
+                </a>
                 {% assign  whitelistStart = coin.whitelist.start-date | date: "%s" | plus: 0 %}
                 {% assign  whitelistEnd = coin.whitelist.end-date | date: "%s" | plus: 0 %}
                 {% unless coin.whitelist.no-date %}  
@@ -65,20 +59,19 @@ title: Whitelist  | Moonlanding Network
                 {% if coin.whitelist.no-date %}
                  {% assign status = 'TBA' %}
                 {% endif %}
+                <a id="whitelist-status-parent" href="{{coin.url}}">
                 <li>
                     <button class="whitelist-status btn round bulky">{{status}}</button>
                 </li>
-                {% endfor %}
-            </ul>
-            <ul class="ico-action">
-                {% for coin in whitelistCoins %}
-                <li>
+                </a>
+                <li class="ico-action">
                     <a href="{{coin.social.website}}">Join Now</a>
                 </li>
-                {% endfor %}
               </ul>
+              {% endfor %}
 
         </div>
+    </div>
     </div>
     <!-- End Whitelist Table -->
 </div>
