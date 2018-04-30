@@ -1533,7 +1533,7 @@ footer{
     display: flex;
     background-color: #fff;
     margin: 0.5rem auto;
-    width: 16rem;
+    width: 1rem;
 }
 .ico-card.featured{
     background-color: #E39300;
@@ -2742,7 +2742,7 @@ footer{
    }
    /* Homepage */
    .ico-card-sec{
-       margin-left: -1.5rem;
+       margin-left: -1.45rem;
    }
    .ico-card-image img{
        width: 26px;
@@ -2754,9 +2754,12 @@ footer{
     }
     .ico-card-rating{
         width: 2.5rem;
-        font-size: 1.7rem;
+        font-size: 1.6rem;
         padding: 0.1rem 0 0 0;
         height: 2.4rem;
+    }
+    .ico-card{
+        width: 17rem;
     }
    /* Coin Page */
    .main-body-content{
