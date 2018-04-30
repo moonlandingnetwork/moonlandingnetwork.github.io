@@ -102,62 +102,72 @@ title: Pre ICOs | Moonlanding Network
         <h1 class="pre-ico-title">Active PRE-ICOS</h1>
         <hr class="pre-ico-hr">
         <!-- ICO Table -->
-        <table id="pre-active-ico" class="ico-table">
-            <thead>
-                <tr class="ico-table-title">
-                    <th scope="col">Project</th>
-                    <th scope="col">Moonability</th>
-                    <th scope="col">Category</th>
-                    <th scope="col">Fund Raised</th>
-                    <th scope="col">Ends In</th>
-                    <th scope="col">Social Media</th>
-                </tr>
-            </thead>
-            <tbody>
+        <div id="active-pre-ico" class="ico-table">
+            <div class="table-head">
+                <ul class="ico-table-title">
+                    <li>Project</li>
+                    <li>Moonability</li>
+                    <li>Category</li>
+                    <li>Fund Raised</li>
+                    <li>Ends In</li>
+                    <li>Social Media</li>
+                </ul>
+            </div>
+            <div class="tbody">
                 {% for coin in totalPreActive %}
                 <!-- Check If Featured -->
                 {% if coin.ico.featured %} {% assign featuredTill = coin.ico.featured-till | date: "%s" | plus: 0 %} {% if featuredTill >
                 current_date %} {% assign featured = true %} {% endif %} {% else %} {% assign featured = false %} {% endif
                 %}
 
-                <tr class="{% if featured %}featured{% endif %}">
+                <ul class="{% if featured %}featured{% endif %}">
 
+                    <a class="ico-project-name-parent" href="{{coin.url}}">
+                        <li class="ico-project-name">
+                            <div class="ico-table-title-image">
+                                <img src="{{coin.ico.logo}}" alt="">
+                            </div>
+                            <div class="ico-table-title-content">
+                                <h5>{{coin.ico.name}}</h5>
+                                <p>{{coin.ico.shortdesc}}</p>
+                            </div>
+                        </li>
+                    </a>
 
-                    <td class="ico-project-name">
-                        <div class="ico-table-title-image">
-                            <img src="{{coin.ico.logo}}" alt="">
-                        </div>
-                        <div class="ico-table-title-content">
-                            <h5>{{coin.ico.name}}</h5>
-                            <p>{{coin.ico.shortdesc}}</p>
-                        </div>
-                    </td>
+                    <a href="{{coin.url}}">
+                        <li class="ico-moonability {% if featured %} {% if coin.ico.show-rating %}number{% endif %}{% else if featured == false %}number{% endif %}">{% if featured %} {% if coin.ico.show-rating %}{{coin.moonability}}{% else %}
+                            <span class="featured-text">Featured</span>
+                            <span class="featured-logo">★</span> {% endif %}{% else %}{{coin.moonability}}{% endif %}</li>
+                    </a>
 
+                    <a href="{{coin.url}}">
+                        <li class="ico-category">{{coin.ico.category}}</li>
+                    </a>
 
-                    <td class="ico-moonability {% if featured %} {% if coin.ico.show-rating %}number{% endif %}{% else if featured == false %}number{% endif %}">{% if featured %} {% if coin.ico.show-rating %}{{coin.moonability}}{% else %}<span class="featured-text">Featured</span><span class="featured-logo">★</span>  {% endif %}{% else
-                        %}{{coin.moonability}}{% endif %}</td>
-
-                    <td class="ico-category">{{coin.ico.category}}</td>
-
-                    <td class="ico-fund-raised">
-                        {% assign collected = coin.progress.collected %} {% assign total = coin.progress.total %} {% assign percent = collected |
-                        times: 100 | divided_by: total %}
-                        <h5>${{collected}} / ${{total}}
-                            <span>({{percent}}%)</span>
-                        </h5>
-                        <progress class="ico-fund-progress" min="0" max="100" value="{{percent}}"></progress>
-                    </td>
+                    <a href="{{coin.url}}">
+                        <li class="ico-fund-raised">
+                            {% assign collected = coin.progress.collected %} {% assign total = coin.progress.total %} {% assign percent = collected |
+                            times: 100 | divided_by: total %}
+                            <h5>${{collected}} / ${{total}}
+                                <span>({{percent}}%)</span>
+                            </h5>
+                            <progress class="ico-fund-progress" min="0" max="100" value="{{percent}}"></progress>
+                        </li>
+                    </a>
 
                     {% assign ico_end_date = coin.pre-ico.end-date | date: "%s" | plus: 0 %} {% assign secondsTo = ico_end_date | minus: current_date
                     %} {% assign hoursTo = secondsTo | divided_by: 60 | divided_by: 60 %} {% assign daysTo = hoursTo | divided_by:
                     24 %}
-                    <td class="ico-ends-in">
-                        <button class="btn round bulky">
-                            <span class="ico-date-value">{% if coin.pre-ico.no-date %}TBA{% endif %}{% unless coin.pre-ico.no-date %}{% if daysTo
-                                == 0 %}Today{% else %}{{ daysTo }}</span> Days{% endif %}{% endunless %}</button>
-                    </td>
-
-                    <td class="ico-social-media">
+                    <a href="{{coin.url}}">
+                        <li class="ico-ends-in">
+                            <form style="display: inline" action="{{coin.url}}" method="get">
+                                <button class="btn round bulky">
+                                    <span class="ico-date-value">{% if coin.pre-ico.no-date %}TBA{% endif %}{% unless coin.pre-ico.no-date %}{% if daysTo
+                                        == 0 %}Today{% else %}{{ daysTo }}</span> Days{% endif %}{% endunless %}</button>
+                            </form>
+                        </li>
+                    </a>
+                    <li class="ico-social-media">
                         <span>
                             <a href="{{coin.social.twitter}}">
                                 <i class="fab fa-twitter"></i>
@@ -173,65 +183,84 @@ title: Pre ICOs | Moonlanding Network
                                 <i class="fab fa-facebook-f"></i>
                             </a>
                         </span>
-                    </td>
+                    </li>
 
-                </tr>
+                </ul>
+
                 {% endfor %}
-            </tbody>
-        </table>
+            </div>
+        </div>
+
         <!-- Pre ICO Title -->
         <h1 class="pre-ico-title">Upcoming PRE-ICOS</h1>
         <hr class="pre-ico-hr">
         <!-- ICO Table -->
-        <!-- ICO Table -->
-        <table id="upcoming-ico" class="ico-table">
-            <thead>
-                <tr class="ico-table-title">
-                    <th scope="col">Project</th>
-                    <th scope="col">Moonability</th>
-                    <th scope="col">Category</th>
-                    <th scope="col">Fund Raised</th>
-                    <th scope="col">Starts In</th>
-                    <th scope="col">Social Media</th>
-                </tr>
-            </thead>
-            <tbody>
+        <div id="pre-upcoming-ico" class="ico-table">
+            <div class="table-head">
+                <ul class="ico-table-title">
+                    <li>Project</li>
+                    <li>Moonability</li>
+                    <li>Category</li>
+                    <li>Fund Raised</li>
+                    <li>Ends In</li>
+                    <li>Social Media</li>
+                </ul>
+            </div>
+            <div class="tbody">
                 {% for coin in totalPreUpcoming %}
                 <!-- Check If Featured -->
                 {% if coin.ico.featured %} {% assign featuredTill = coin.ico.featured-till | date: "%s" | plus: 0 %} {% if featuredTill >
                 current_date %} {% assign featured = true %} {% endif %} {% else %} {% assign featured = false %} {% endif
                 %}
-                <tr class="{% if featured %}featured{% endif %}">
-                    <td class="ico-project-name">
-                        <div class="ico-table-title-image">
-                            <img src="{{coin.ico.logo}}" alt="">
-                        </div>
-                        <div class="ico-table-title-content">
-                            <h5>{{coin.ico.name}}</h5>
-                            <p>{{coin.ico.shortdesc}}</p>
-                        </div>
-                    </td>
-                    <td class="ico-moonability {% if featured %} {% if coin.ico.show-rating %}number{% endif %}{% else if featured == false %}number{% endif %}">{% if featured %} {% if coin.ico.show-rating %}{{coin.moonability}}{% else %}Featured {% endif %}{% else
-                        %}{{coin.moonability}}{% endif %}</td>
 
-                    <td class="ico-category">{{coin.ico.category}}</td>
-                    <td class="ico-fund-raised">
-                        {% assign collected = coin.progress.collected %} {% assign total = coin.progress.total %} {% assign percent = collected |
-                        times: 100 | divided_by: total %}
-                        <h5>${{collected}} / ${{total}}
-                            <span>({{percent}}%)</span>
-                        </h5>
-                        <progress class="ico-fund-progress" min="0" max="100" value="{{percent}}"></progress>
-                    </td>
+                <ul class="{% if featured %}featured{% endif %}">
+
+                    <a class="ico-project-name-parent" href="{{coin.url}}">
+                        <li class="ico-project-name">
+                            <div class="ico-table-title-image">
+                                <img src="{{coin.ico.logo}}" alt="">
+                            </div>
+                            <div class="ico-table-title-content">
+                                <h5>{{coin.ico.name}}</h5>
+                                <p>{{coin.ico.shortdesc}}</p>
+                            </div>
+                        </li>
+                    </a>
+
+                    <a href="{{coin.url}}">
+                        <li class="ico-moonability {% if featured %} {% if coin.ico.show-rating %}number{% endif %}{% else if featured == false %}number{% endif %}">{% if featured %} {% if coin.ico.show-rating %}{{coin.moonability}}{% else %}
+                            <span class="featured-text">Featured</span>
+                            <span class="featured-logo">★</span> {% endif %}{% else %}{{coin.moonability}}{% endif %}</li>
+                    </a>
+
+                    <a href="{{coin.url}}">
+                        <li class="ico-category">{{coin.ico.category}}</li>
+                    </a>
+
+                    <a href="{{coin.url}}">
+                        <li class="ico-fund-raised">
+                            {% assign collected = coin.progress.collected %} {% assign total = coin.progress.total %} {% assign percent = collected |
+                            times: 100 | divided_by: total %}
+                            <h5>${{collected}} / ${{total}}
+                                <span>({{percent}}%)</span>
+                            </h5>
+                            <progress class="ico-fund-progress" min="0" max="100" value="{{percent}}"></progress>
+                        </li>
+                    </a>
+
                     {% assign ico_start_date = coin.pre-ico.start-date | date: "%s" | plus: 0 %} {% assign secondsTo = ico_start_date | minus:
                     current_date %} {% assign hoursTo = secondsTo | divided_by: 60 | divided_by: 60 %} {% assign daysTo =
                     hoursTo | divided_by: 24 %}
-                    <td class="ico-ends-in">
-                        <button class="btn round bulky">
-                            <span class="ico-date-value">{% if coin.pre-ico.no-date %}TBA{% endif %}{% unless coin.pre-ico.no-date %}{% if daysTo == 0
-                                %}Today{% else %}{{ daysTo }}</span> Days{% endif %}{% endunless %}</button>
-                    </td>
-                    <td class="ico-social-media">
+                    <a href="{{coin.url}}">
+                        <li class="ico-ends-in">
+                            <form style="display: inline" action="{{coin.url}}" method="get">
+                                <button class="btn round bulky">
+                                    <span class="ico-date-value">{% if coin.pre-ico.no-date %}TBA{% endif %}{% unless coin.pre-ico.no-date %}{% if daysTo
+                                        == 0 %}Today{% else %}{{ daysTo }}</span> Days{% endif %}{% endunless %}</button>
+                            </form>
+                        </li>
+                    </a>
+                    <li class="ico-social-media">
                         <span>
                             <a href="{{coin.social.twitter}}">
                                 <i class="fab fa-twitter"></i>
@@ -247,11 +276,14 @@ title: Pre ICOs | Moonlanding Network
                                 <i class="fab fa-facebook-f"></i>
                             </a>
                         </span>
-                    </td>
-                </tr>
+                    </li>
+
+                </ul>
+
                 {% endfor %}
-            </tbody>
-        </table>
+            </div>
+        </div>
+
         <!-- End ICO Table -->
 
     </div>
