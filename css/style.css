@@ -3263,5 +3263,25 @@ footer{
         font-size: 0.85em;
         
     }
+    /* Whitelist Page */
+    .whitelist-title h1{
+        font-size: 1.75em;
+    }
+    .whitelist-title p{
+        font-size: 0.75em;
+    }
+    .ico-project-name.minimal h5{
+        font-size: 0.95rem;
+    }
+    .ico-category{
+        font-size: 0.65rem !important;
+    }
+    #whitelist-status-parent button {
+        font-size: 0.6rem;
+        padding: 0.4rem 0.7rem;
+    }
+    .ico-action a{
+        font-size: 0.75rem;
+    }
 
 }
