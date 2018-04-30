@@ -2617,6 +2617,10 @@ footer{
     .footer-links{
         margin: 0;
    }
+   .footer-links li span {
+    font-size: 0.65rem;
+    padding: 0.2rem 0.75rem;
+    }
     .disclaimer{
         height: 9rem;
    }
