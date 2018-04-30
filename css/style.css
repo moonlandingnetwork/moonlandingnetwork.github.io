@@ -2740,6 +2740,24 @@ footer{
        font-size: 0.55rem;
        margin: 1rem 0;
    }
+   /* Homepage */
+   .ico-card-sec{
+       margin-left: -1.5rem;
+   }
+   .ico-card-image img{
+       width: 26px;
+       padding: 0.5rem 0.7rem;
+   }
+   .ico-card-rating.number {
+    font-size: 0.95rem;
+    padding-top: 0.7rem;
+    }
+    .ico-card-rating{
+        width: 2.5rem;
+        font-size: 1.7rem;
+        padding: 0.1rem 0 0 0;
+        height: 2.4rem;
+    }
    /* Coin Page */
    .main-body-content{
        padding: 0 1rem 2.5rem;
@@ -3148,6 +3166,9 @@ footer{
     .ico-action{
         order: 1;
         flex: 0 1 35%;
+    }
+    .ico-promo-banner input{
+        font-size: 0.8rem;
     }
     /* Publish ICO Page */
     .publish-ico-title h1{
