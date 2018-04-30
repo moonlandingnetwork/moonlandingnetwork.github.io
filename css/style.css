@@ -2751,15 +2751,15 @@ footer{
 
    .ico-card-rating.number {
         font-size: 0.95rem;
-        padding-top: 0.7rem;
-        height: 1.9em;
+        padding-top: 0.8rem;
+        height: 1.9rem;
+        width: 2.7rem;
     }
     .ico-card-rating{
-        width: 2.5rem;
         font-size: 1.6rem;
-        padding: 0.2rem 0 0 0;
-        height: 2.3rem;
-        width: 2.5rem;
+        padding: 0.3rem 0 0 0;
+        height: 2.5rem;
+        width: 2.75rem;
     }
     .ico-card{
         width: 18rem;
