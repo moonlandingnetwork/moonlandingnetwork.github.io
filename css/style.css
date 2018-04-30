@@ -2945,6 +2945,9 @@ footer{
         
 
     }
+    .ico-table .tbody a{
+        display: block;
+    }
     .ico-project-name h5, a, p{
         color: #072C59;
     }
@@ -3038,6 +3041,12 @@ footer{
     .ico-category{
         font-size: 0.8rem !important;
         order: 4;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
     }
     .featured .ico-category{
         color: #fff;
@@ -3065,6 +3074,14 @@ footer{
     }
     .ico-table-title li:nth-child(5), .tbody ul a:nth-child(5){
         order: 5;
+    }
+    .ico-ends-in{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
     }
     .ico-ends-in button{
         font-size: 0.75rem !important;
