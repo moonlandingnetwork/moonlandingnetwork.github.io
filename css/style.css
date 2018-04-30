@@ -3339,6 +3339,9 @@ footer{
         
     }
     /* Whitelist Page */
+    .ico-table.minimal{
+        margin: 2rem 1rem;
+    }
     .whitelist-title h1{
         font-size: 1.75em;
     }
