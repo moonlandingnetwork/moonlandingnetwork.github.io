@@ -1533,7 +1533,7 @@ footer{
     display: flex;
     background-color: #fff;
     margin: 0.5rem auto;
-    width: 1rem;
+    width: 17rem;
 }
 .ico-card.featured{
     background-color: #E39300;
@@ -1563,7 +1563,7 @@ footer{
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    margin-left: -1.8rem;
+    margin-left: -1.5rem;
 }
 .ico-card-image{
     background-color: #fff;
@@ -1571,8 +1571,8 @@ footer{
     margin: 0.3rem 0;
 }
 .ico-card-image img{
-    width: 32px;
-    padding: .6rem 0.8rem;
+    width: 28px;
+    padding: .6rem 0.65rem;
 }
 .ico-card-rating{
     background: linear-gradient(to top, #00AEBB, #4DF6DA );
@@ -1585,17 +1585,17 @@ footer{
     -ms-flex-pack: center;
     justify-content: center;
     align-self: center;
-    width: 3rem;
-    height: 2.6rem;
+    width: 2.6rem;
+    height: 2.4rem;
     font-size: 1.8rem;
-    padding: 0.3rem 0 0 0;
+    padding: 0.1rem 0 0 0;
     margin: 0.3rem 0;
 }
 .ico-card-rating.number{
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 700;
     padding-top: 0.8rem;
-    height: 1.9em;
+    height: 1.8em;
 }
 .ico-card-rating.high{
     background: #0AA645;
@@ -2765,7 +2765,10 @@ footer{
         width: 18rem;
     }
     .ico-card-meta{
-        margin: 1rem 0 1rem;
+        margin: 1rem -1.5rem 1rem;
+    }
+    .ico-card-meta h6:first-child{
+        visibility: hidden;
     }
    /* Coin Page */
    .main-body-content{
