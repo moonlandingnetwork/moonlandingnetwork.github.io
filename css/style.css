@@ -2958,6 +2958,10 @@ footer{
         border-radius: 0;
         
     }
+    .ico-nav li a{
+        width: 60%;
+        margin: 0 auto;
+    }
     .ico-nav li span{
         font-size: 0.9rem;
     }
