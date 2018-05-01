@@ -701,6 +701,7 @@ nav ul li{
 }
 nav ul li a{
     color: #fff;
+    width: 100%;
 }
 #disclaimer-modal-toggle{
     cursor: pointer;
