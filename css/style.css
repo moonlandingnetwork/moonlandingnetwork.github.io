@@ -2560,16 +2560,22 @@ footer{
     nav ul li{
         margin: 0.5rem 0;
         width: 100%;
-        -webkit-box-pack: end;
-        -ms-flex-pack: end;
-        justify-content: flex-end;
-        font-size: 1.7rem;
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        font-weight: 500;
+        padding-bottom: 0.45rem;
+        border-bottom: 1px solid #fff;
    }
     #subscribe-modal-toggle{
         border: none;
         background: none;
         color: inherit;
         padding: inherit;
+        text-transform: uppercase;
+        font-weight: 500;
    }
     #search-container{
         -webkit-box-ordinal-group: 0;
