@@ -3277,7 +3277,7 @@ footer{
 @media (max-width: 390px){
     /* Elements */
     select{
-        font-size: 80%;
+        font-size: 70%;
     }
     /* Homepage */
     .ico-card-sec{
@@ -3354,27 +3354,56 @@ footer{
         font-size: 0.7rem !important;
     }
     /* Publish ICO Page */
+    .publish-ico-body{
+        padding: 1.5rem 0 2.5rem;
+    }
     .publish-ico-title h1{
         font-size: 1.4em;
     }
     .publish-ico-title p{
-        font-size: 0.7em;
+        font-size: 0.65em;
+    }
+    .publish-banner{
+        margin: 2rem 0 0 0;
     }
     .publish-banner img{
-        width: 290px;
+        width: 280px;
+    }
+    .publish-banner ul{
+        padding: 0.5rem 4rem 0.3rem 2rem;
     }
     .publish-banner li{
+        font-size: 0.75em;
+    }
+    .publish-question label{
         font-size: 0.8em;
     }
     .publish-question.row label{
-        font-size: 0.85em;
+        font-size: 0.8em;
+        letter-spacing: 0;
+    }
+    input.blue{
+        padding: 0.6rem;
     }
     .publish-category-item.other input[type="text"]{
         width: 8rem;
+        margin: 1rem 1rem 0;
+    }
+    .publish-question fieldset legend {
+        font-size: 0.8em;
+        top: -3.5%;
     }
     .publish-ico-body form input[type="submit"]{
-        font-size: 0.85em;
+        font-size: 0.75em;
+        padding: 0.55rem 1rem;
+        margin: 1rem auto 0 !important;
         
+    }
+    .publish-question p {
+        font-size: 0.8em;
+    }
+    .publish-question.row input {
+        margin-right: 0.8rem;
     }
     /* Whitelist Page */
     .ico-table.minimal{
