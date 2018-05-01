@@ -3063,6 +3063,8 @@ footer{
         -webkit-box-ordinal-group: 5 !important;
         -ms-flex-order: 4 !important;
             order: 4 !important;
+        flex: 0 1 40%;
+        flex-shrink: 0;
     }
     .ico-moonability{
         letter-spacing: 1px;
@@ -3161,6 +3163,7 @@ footer{
         -webkit-box-ordinal-group: 6;
         -ms-flex-order: 5;
             order: 5;
+        flex: 0 1 40%;
     }
     .ico-ends-in{
         display: -webkit-box;
