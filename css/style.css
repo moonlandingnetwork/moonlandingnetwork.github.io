@@ -1450,8 +1450,6 @@ footer{
     height: 18px;
 }
 .twitter-box{
-    width: 445px;
-    height: 320px;
     background: #00B2D8;
     margin-bottom: 1rem;
     display: -webkit-box;
@@ -1464,6 +1462,8 @@ footer{
     -ms-flex-align: center;
     align-items: center;
     border-radius: 5px;
+    margin: 0 1rem;
+    padding: 0.5rem;
 }
 /* Twitter Feed End */
 /* Ico List Buttons */
@@ -2456,11 +2456,25 @@ footer{
     background-color: #1066BC;
 }
 /* Media Queries */
+@media (max-width: 1100px){
+    nav ul{
+        margin-right: 0;
+    }
+    nav {
+        margin: 1.5em 2rem;
+    }
+}
 @media (max-width: 991px){
-
-   /* Elements */
-   .page-end-gradient.top.mobile-none{
-    background: none;
+    /* Elements */
+    .btn.round.bulky{
+        padding: 0.5rem 0.7rem;
+        font-size: 0.7rem;
+    }
+    .modal.alt{
+        width: 85%;
+    }
+    .page-end-gradient.mobile-none{
+        background: none;
     }
     .main-body-content.bg-mobile{
         background-color: #072C59;
@@ -2470,46 +2484,24 @@ footer{
    .crypto-price.hidden-mobile{
        display: none;
    }
-    .ico-list-buttons button{
-        font-size: 0.8rem !important;
-        border-width: 2px !important;
-        width: 8rem !important;
-        padding: 0.5rem 0.8rem !important;
-   }
+   .ico-list-buttons button{
+    font-size: 0.8rem !important;
+    border-width: 2px !important;
+    width: 8rem !important;
+    padding: 0.5rem 0.8rem !important;
+    }
     #topbanner{
         -webkit-box-align: center;
         -ms-flex-align: center;
         align-items: center;
         padding: 0 1rem;
    }
-    #topbanner p{
-        font-size: 0.65rem;
-        padding: 0 0.5rem;
-   }
-    #topbanner button{
-        width: 7rem;
-        font-size: 0.55rem;
-        margin: 0.5rem 0;
-        padding: 0.6rem 0.2rem;
-   }
-    .persistent-icons{
-        bottom: 1rem;
-        right: 1rem;
-   }
-    .per-icon{
-        height: 2.6rem;
-        width: 2.6rem;
-        font-size: 0.8rem;
-   }
-   .per-icon.big{
-       width: 2.4rem;
-       height: 2.4rem;
-   }
-   .per-icon i{
-       font-size: 2.2rem;
-   }
+   #topbanner p{
+    font-size: 0.7rem;
+    padding: 0 0.5rem;
+    }
     nav{
-        margin: 1rem;
+        margin: 1rem 2.5rem;
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -2535,9 +2527,9 @@ footer{
         display: flex;
         z-index: 2;
    }
-    .logo{
-        font-size: 1.7rem;
-   }
+   .logo{
+    font-size: 1.7rem;
+    }
     nav ul{
         display: none;
         -webkit-box-orient: vertical;
@@ -2545,7 +2537,7 @@ footer{
         -ms-flex-direction: column;
         flex-direction: column;
         margin: 0;
-   }
+    }
     nav ul li{
         margin: 0.5rem 0;
         width: 100%;
@@ -2557,10 +2549,10 @@ footer{
         font-weight: 500;
         padding-bottom: 0.45rem;
         border-bottom: 1px solid #fff;
-   }
-   #search-container{
-       border-bottom: none;
-   }
+    }
+    #search-container{
+    border-bottom: none;
+    }
     #subscribe-modal-toggle{
         border: none;
         background: none;
@@ -2568,18 +2560,18 @@ footer{
         padding: inherit;
         text-transform: uppercase;
         font-weight: 500;
-   }
+    }
     #search-container{
         -webkit-box-ordinal-group: 0;
         -ms-flex-order: -1;
             order: -1;
         display: none;
-   }
+    }
     nav input{
         width: 95%;
         margin: auto;
         border: solid 1.5px transparent;
-   }
+    }
     nav input::placeholder {
         font-family: '';
         overflow: hidden;
@@ -2589,87 +2581,41 @@ footer{
         padding-top: 0;
         font-size: 0;
         background: none;
-   }
+    }
     .crypto-price{
-        margin: 1rem 0.5rem;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-   }
-    .crypto-item h2{
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        font-size: 0.7rem;
-        margin: 0.35rem 0.4rem;
-   }
-    .crypto-item h2 span{
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-   }
+        margin: 1rem 2.5rem;
+    }
     footer{
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-   }
+        margin: 3.5rem 2rem 2rem;
+    }
     .footer-logo{
-        margin-top: 1rem;
-   }
+        margin-top: 0;
+        margin-right: 0.5rem;
+    }
+    .footer-logo h2 {
+        font-size: 1.4rem;
+        margin-bottom: 0.5rem;
+    }
     .footer-about{
-        margin: 3rem 0 0 0;
-   }
-    .footer-about p{
-        margin: 1rem 0;
-        color: #fff;
-   }
+        display: none;
+    }
     .footer-links{
         margin: 0;
-   }
-   .footer-links li span {
-    font-size: 0.65rem;
-    padding: 0.2rem 0.75rem;
+        font-size: 0.75rem;
     }
-    .disclaimer{
-        height: 9rem;
-   }
-    .disclaimer-body{
-        font-size: 0.7rem;
-        width: 90%;
-   }
-   .ico-promo-banner{
-       padding: 0 1rem;
-   }
-   .ico-promo-banner h4{
-       visibility: hidden;
-       margin: 0.7rem 0 0.6rem;
-       height: 1rem;
-       text-align: center;
-   }
-   .ico-promo-banner.minimal h4{
-       display: none;
-   }
-   .ico-promo-banner h4 span{
-       visibility: visible;
-       font-size: 0.7rem;
-   }
-   .ico-promo-banner button{
-        font-size: 0.53rem !important;
-        width: 7rem;
-        padding: 0.7rem 0.3em;
-        box-sizing: border-box;
-        
-   }
-   /* Home Page */
-    .intro-section{
-        background-repeat: repeat-y;
-   }
+    .footer-links li span{
+        visibility: hidden;
+    }
+    .disclaimer-body {
+        font-size: 0.7em;
+        width: 80%;
+    }
+    .ico-promo-banner h4{
+        font-size: 0.65rem;
+    }
+    /* Homepage */
     .banner{
-        height: 30vh;
+        height: 35vh;
         padding-top: 4rem;
    }
     .banner img{
@@ -2683,120 +2629,432 @@ footer{
         margin: -0.3rem 0 0 0;
         font-size: 1rem;
    }
-    .banner-buttons{
-        display: none;
-        margin-top: 2rem;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-   }
-    .banner-buttons button{
-        margin: 0.45em !important;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        width: 8.5rem;
-        font-size: 0.7rem;
-   }
-    .twitter-feed{
-        margin-top: 3rem;
-   }
-    .down-arrow{
-        width: 40%;
-   }
-    .down-arrow img{
-        height: 16px;
-   }
-    .twitter-box{
-        width: 85vw;
-        height: 300px;
-        padding: 0.5rem;
-   }
     .ico-grid{
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
         -ms-flex-direction: column;
         flex-direction: column;
-        margin: 1rem 0;
+        margin: 3rem 0;
    }
-    .ico-col{
-        margin: 2rem 0;
+   .ico-col{
+    margin: 2rem auto;
+    width: 100%;
    }
+   .ico-col-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 2rem;
+    }
+    .ico-col-content a{
+        flex: 0 1 45%;
+    }
+    .ico-col-content::after {
+        content: '';
+        flex: 0 1 45%;
+    }        
+    .ico-col-btn-parent{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    }
     .ico-col-btn{
-        margin: 0.6rem auto 1rem;
-   }
-   /* Modal */
-   .modal.alt{
-       width: 80%;
-   }
-   .modal-head h1 span{
-       height: 18px;
-       width: 18px;
-       margin-right: 0.4rem;
-   }
-   .modal-head h1{
-       font-size: 1.2rem;
-   }
-   .modal-head i{
-       height: 48px;
-       width: 48px;
-       font-size: 1.4rem;
-       right: -1.4rem;
-       top: -1.5rem;
+        width: 80%;
+        margin: 2rem auto;
+    }
+    /* Publish ICO Page */
+    .publish-ico-body{
+        width: 90%;
+    }
+    .publish-ico-title h1{
+        font-size: 1.5em;
+    }
+    .publish-ico-title p{
+        font-size: 0.8em;
+    }
 
-   }
-   .modal-body{
-       padding: 1rem 2rem;
-   }
-   .modal-body p{
-       font-size: 0.55rem;
-       margin: 1rem 0;
-   }
-   .modal-body p span{
-       display: block;
-       margin-bottom: 0.5rem;
-   }
-   /* Homepage */
-   .ico-card-sec{
-       margin-left: -1.5rem;
-   }
-   .ico-card-image img{
-        width: 28px;
-        padding: 0.65rem 0.75rem;
-   }
+    .publish-banner{
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+            -ms-flex-direction: column-reverse;
+                flex-direction: column-reverse;
+        }
+    .publish-banner img{
+        width: 330px;
+    }
+    .publish-featured ul{
+        border-right: none;
+    }
+    .publish-category-item{
+        flex: 1 1 40%;
+    }
+    .publish-question.row label{
+        font-size: 0.95em;
+    }
+    .publish-category-item.other input[type="text"]{
+        width: 15rem;
+    }
+    .publish-ico-body form input[type="submit"]{
+        display: flex;
+        margin: 2rem auto 0 !important;
+        padding: 0.6rem 1.1rem;
+        
+    }
+    /* ICO Table */
+    .ico-nav{
+        margin: 0;
+    }
+    .ico-nav li{
+        border-radius: 0;
+    }
+    .ico-table{
+        margin: 4rem 2rem 1rem;
+    }
+    .ico-table .tbody ul{
+        margin: 0 0.5rem;
+    }
+    .ico-table-title-image{
+        margin: 0.7rem .8rem 0.7rem 1rem;
+    }
+    .ico-project-name h5{
+        font-size: 1rem;
+    }
+    .ico-moonability{
+        font-size: 0.8rem;
+    }
+    .ico-moonability.number{
+        font-size: 1.7rem;
+    }
+    .ico-category-parent{
+        display: none !important;
+    }
+    .ico-social-media{
+        display: none !important;
+    }
+    .ico-project-name p{
+        display: none;
+    }
+    .ico-table.full .ico-table-title li:nth-child(1){
+        border-radius: 0;
+    }
+    .ico-table.full .tbody li:nth-child(1){
+        flex: 2;
+    }
+    .ico-table.full .ico-table-title li:nth-child(3){
+        display: none;
+    }
+    .ico-table.full .ico-table-title li:nth-child(5){
+        text-align: left;
+    }
+    .ico-table.full .ico-table-title li:nth-child(6){
+        display: none;
+    }
+    .ico-fund-raised h5{
+        font-size: 0.65em;
+    }
+    .ico-fund-progress{
+        width: 13rem;
+        height: 7.5px;
+    }
+    
+    /* Whitelist Page */
+    .ico-table.minimal {
+        margin: 2.5rem 2rem 0;
+        
+    }
+    .whitelist-title p{
+        width: 80%;
+        color: #fff;
+    }
 
-   .ico-card-rating.number {
-        font-size: 0.95rem;
-        padding-top: 0.8rem;
-        height: 1.9rem;
-        width: 2.7rem;
+}
+@media (max-width: 690px){
+    /* Elements */
+    .footer-links li i{
+        display: none;
     }
-    .ico-card-rating{
-        font-size: 1.55rem;
-        padding: 0.45rem 0 0 0;
-        height: 2.3rem;
-        width: 2.75rem;
+    .ico-promo-banner.minimal h4{
+        display: none;
     }
-    .ico-card{
-        width: 18rem;
+    .modal.alt{
+        width: 85%;
     }
-    .ico-card-meta{
-        margin: 1rem -2rem 1rem;
+    .ico-promo-banner{
+        padding: 0 1rem;
     }
-    .ico-etr{
-        margin-right: 0 !important;
-    }
-    .ico-card-meta h6:first-child{
+    .ico-promo-banner h4{
         visibility: hidden;
+        margin: 0.7rem 0 0.6rem;
+        height: 1rem;
+        text-align: center;
     }
-   /* Coin Page */
+    .ico-promo-banner.minimal h4{
+        display: none;
+    }
+    .ico-promo-banner h4 span{
+        visibility: visible;
+        font-size: 0.7rem;
+    }
+    .ico-promo-banner button{
+         font-size: 0.53rem !important;
+         width: 7rem;
+         padding: 0.7rem 0.3em;
+         box-sizing: border-box;
+         
+    }
+    /* Homepage */
+    .ico-col-content a {
+        flex: 0 1 100%;
+    }
+    .ico-col-btn{
+        max-width: 20rem;
+    }
+    /* ICO Table */
+    
+    .ico-nav ul{
+        flex-direction: column;
+    }
+    .ico-nav{
+        margin: 0 -1rem;
+    }
+    .ico-nav li{
+        border-radius: 0;
+        
+    }
+    .ico-nav li a{
+        width: 60%;
+        margin: 0 auto;
+    }
+    .ico-nav li span{
+        font-size: 0.9rem;
+    }
+
+    .ico-nav li.active{
+        -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+        position: relative;
+        display: block;
+        
+    }
+    .ico-nav li.active::after{
+        content: "☰";
+        font-size: 1.25rem;
+        position: absolute;
+        right: 5%;
+        top: 25%;
+        
+    }
+
+    .ico-table{
+        margin: 2rem 2rem 1rem 2.5rem;
+    }
+    .ico-table .table-head{
+        display: none;
+    }
+    .ico-table.full .tbody{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+    }
+    
+    .ico-table .tbody ul{
+        height: auto;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        position: relative;
+        padding: 0.5rem 0.5rem 1rem 1.5rem;
+        border-bottom: none !important;
+        margin: 0.5rem 0;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 2px 6px rgba(0,0,0,0.23);
+        background: #fff;
+        max-width: 16rem;
+        
+
+    }
+    .ico-table .tbody a{
+        display: block;
+        flex-shrink: 0 !important;
+        height: auto;
+        width: auto;
+    }
+    .tbody h5, .tbody a, .tbody p{
+        color: #072C59;
+    }
+    .pre-ico-title{
+        font-size: 1.5rem;
+        color: #fff;
+    }
+    .ico-project-name{
+        -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+        position: absolute;
+        left: -17%;
+        top: 10%;
+    }
+    .ico-project-name h5{
+        font-size: 1.2rem;
+        color: #E39300;
+    }
+    .featured .ico-project-name h5{
+        color: #fff;
+    }
+    .ico-project-name p{
+        display: none;
+    }
+    .ico-table-title-image{
+        margin: 0.7rem 1rem 0.7rem 0.7rem;
+        height: 44px;
+        width: 44px;
+        padding: 0.35rem;
+    }
+    .ico-table-title-image img{
+        height: 32px;
+        width: 32px;
+    }
+    .ico-table-title li:nth-child(3), .tbody ul a:nth-child(3){
+        -webkit-box-ordinal-group: 5 !important;
+        -ms-flex-order: 4 !important;
+            order: 4 !important;
+        flex: 0 1 40%;
+        flex-shrink: 0;
+    }
+    .ico-moonability{
+        letter-spacing: 1px;
+        font-size: 0.8rem;
+        position: absolute;
+        left: -7%;
+        top: 55%;
+    }
+    .ico-moonability .featured-text {
+        display: none;
+    }
+    .ico-moonability .featured-logo{
+        color: #fff;
+        font-size: 1.6rem;
+        background: linear-gradient(to top, #00AEBB, #4DF6DA );
+        border-radius: 50%;
+        height: 48px;
+        width: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .ico-moonability.number{
+        font-size: 1rem;
+        -webkit-box-flex: 0;
+            -ms-flex: none;
+                flex: none;
+        border-radius: 50%;
+        height: 48px;
+        width: 48px;
+        font-weight: 600;
+        background-color: #072C59;
+        color: #fff;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+    }
+    .ico-moonability.green{
+        background: #0AA645;
+        color: #fff;
+    }
+    .ico-moonability.yellow {
+        background: #E9BA00;
+        color: #fff;
+    }
+    .ico-moonability.red{
+        background: #D64117;
+        color: #fff;
+    }
+    .ico-category{
+        font-size: 0.8rem !important;
+        -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+            order: 4;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+    }
+    .featured .ico-category{
+        color: #fff;
+    }
+    .ico-table-title li:nth-child(4), .tbody ul a:nth-child(4){
+        -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+        flex: 0 1 100%;
+        flex-shrink: 0;
+    }
+    .ico-fund-raised{
+        margin: 4.5rem 0 1.4rem;
+        -webkit-box-flex: 1 !important;
+        -ms-flex: 1 1 100% !important;
+            flex: 1 1 100% !important;
+        align-items: center;
+    }
+    .ico-fund-raised h5{
+        font-size: 0.85rem;
+    }
+    .ico-fund-raised h5 span{
+        font-size: 0.85rem;
+    }
+    .ico-fund-progress{
+        height: 8px;
+        width: 14.5rem;
+    }
+    .ico-table-title li:nth-child(5), .tbody ul a:nth-child(5){
+        -webkit-box-ordinal-group: 6;
+        -ms-flex-order: 5;
+            order: 5;
+        flex: 0 1 40%;
+    }
+    .ico-ends-in{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+    }
+    .ico-ends-in button{
+        font-size: 0.75rem !important;
+        padding: 0.45rem 0.9rem !important;
+    }
+    .ico-date-value{
+        margin-right: 0;
+    }
+    .ico-social-media{
+        display: none !important;
+    }
+    /* Coin Page */
    .main-body-content{
        padding: 0 1rem 2.5rem;
    }
@@ -2965,227 +3223,28 @@ footer{
     .coin-card-body{
         padding: 0.7rem;
     }
-    /*ICO Table */
-    .ico-table{
-        margin: 2rem 2rem 1rem 2.5rem;
-    }
-    .ico-table.minimal{
-        margin: 2rem;
-    }
-    .ico-nav ul{
-        flex-direction: column;
-    }
-    .ico-nav{
-        margin: 0 -1rem;
-    }
-    .ico-nav li{
-        border-radius: 0;
-        
-    }
-    .ico-nav li a{
-        width: 60%;
-        margin: 0 auto;
-    }
-    .ico-nav li span{
-        font-size: 0.9rem;
-    }
-
-    .ico-nav li.active{
-        -webkit-box-ordinal-group: 0;
-        -ms-flex-order: -1;
-            order: -1;
-        position: relative;
-        display: block;
-        
-    }
-    .ico-nav li.active::after{
-        content: "☰";
-        font-size: 1.25rem;
-        position: absolute;
-        right: 5%;
-        top: 25%;
-        
-    }
-    .ico-table .table-head{
-        display: none;
-    }
-    .ico-table .tbody ul{
-        height: auto;
-        -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-        position: relative;
-        padding: 0.5rem 0.5rem 1rem 1.5rem;
-        border-bottom: none !important;
-        margin: 0.5rem 0;
-        box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 2px 6px rgba(0,0,0,0.23);
-        background: #fff;
-        
-
-    }
-    .ico-table .tbody a{
-        display: block;
-        flex-shrink: 0 !important;
-    }
-    .tbody h5, .tbody a, .tbody p{
-        color: #072C59;
-    }
-    .pre-ico-title{
-        font-size: 1.5rem;
-        color: #fff;
-    }
-    .ico-project-name{
-        -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
-        position: absolute;
-        left: -12%;
-        top: 10%;
-    }
-    .ico-project-name h5{
-        font-size: 1.2rem;
-        color: #E39300;
-    }
-    .featured .ico-project-name h5{
-        color: #fff;
-    }
-    .ico-project-name p{
-        display: none;
-    }
-    .ico-table-title-image{
-        margin: 0.7rem 1rem 0.7rem 0.7rem;
-        height: 44px;
-        width: 44px;
-        padding: 0.35rem;
-    }
-    .ico-table-title-image img{
-        height: 32px;
-        width: 32px;
-    }
-    .ico-table-title li:nth-child(3), .tbody ul a:nth-child(3){
-        -webkit-box-ordinal-group: 5 !important;
-        -ms-flex-order: 4 !important;
-            order: 4 !important;
-        flex: 0 1 40%;
-        flex-shrink: 0;
-    }
-    .ico-moonability{
-        letter-spacing: 1px;
-        font-size: 0.8rem;
-        position: absolute;
-        left: -7%;
-        top: 55%;
-    }
-    .ico-moonability .featured-text {
-        display: none;
-    }
-    .ico-moonability .featured-logo{
-        color: #fff;
-        font-size: 1.6rem;
-        background: linear-gradient(to top, #00AEBB, #4DF6DA );
-        border-radius: 50%;
-        height: 48px;
-        width: 48px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .ico-moonability.number{
-        font-size: 1rem;
-        -webkit-box-flex: 0;
-            -ms-flex: none;
-                flex: none;
-        border-radius: 50%;
-        height: 48px;
-        width: 48px;
-        font-weight: 600;
-        background-color: #072C59;
-        color: #fff;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: center;
-            -ms-flex-pack: center;
-                justify-content: center;
-        -webkit-box-align: center;
-            -ms-flex-align: center;
-                align-items: center;
-    }
-    .ico-moonability.green{
-        background: #0AA645;
-        color: #fff;
-    }
-    .ico-moonability.yellow {
-        background: #E9BA00;
-        color: #fff;
-    }
-    .ico-moonability.red{
-        background: #D64117;
-        color: #fff;
-    }
-    .ico-category{
-        font-size: 0.8rem !important;
-        -webkit-box-ordinal-group: 5;
-        -ms-flex-order: 4;
-            order: 4;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: center;
-            -ms-flex-pack: center;
-                justify-content: center;
-    }
-    .featured .ico-category{
-        color: #fff;
-    }
-    .ico-table-title li:nth-child(4), .tbody ul a:nth-child(4){
-        -webkit-box-ordinal-group: 4;
-        -ms-flex-order: 3;
-            order: 3;
-        flex: 0 1 100%;
-        flex-shrink: 0;
-    }
-    .ico-fund-raised{
-        margin: 4.5rem 0 1.4rem;
-        -webkit-box-flex: 1 !important;
-        -ms-flex: 1 1 100% !important;
-            flex: 1 1 100% !important;
-        align-items: center;
-    }
-    .ico-fund-raised h5{
-        font-size: 0.85rem;
-    }
-    .ico-fund-raised h5 span{
-        font-size: 0.85rem;
-    }
-    .ico-fund-progress{
-        height: 8px;
-        width: 14.5rem;
-    }
-    .ico-table-title li:nth-child(5), .tbody ul a:nth-child(5){
-        -webkit-box-ordinal-group: 6;
-        -ms-flex-order: 5;
-            order: 5;
-        flex: 0 1 40%;
-    }
-    .ico-ends-in{
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: center;
-            -ms-flex-pack: center;
-                justify-content: center;
-    }
-    .ico-ends-in button{
-        font-size: 0.75rem !important;
-        padding: 0.45rem 0.9rem !important;
-    }
-    .ico-date-value{
-        margin-right: 0;
-    }
-    .ico-social-media{
-        display: none !important;
+    /* Publish Page */
+    .publish-category-item{
+        flex: 1 1 100%;
     }
     /* Whitelist Page */
+    .ico-table.minimal{
+        margin: 2rem 1rem;
+    }
+
+    .ico-table.minimal .tbody{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    }
+    .ico-table.minimal .tbody ul{
+        width: 18rem;
+        box-sizing: border-box;
+    }
     .ico-table.minimal .tbody a {
         color: #072C59;
     }
@@ -3197,7 +3256,13 @@ footer{
         font-size: 0.9em;
         width: 85%;
     }
-    .ico-project-category-parent.minimal  {
+    .ico-project-name h5{
+        font-size: 0.9rem;
+    }
+    .ico-table-title-image{
+        margin: 0.7rem 0.7rem 0.7rem 1.5rem;
+    }
+    .ico-project-category-parent.minimal{
         display: none !important;
     }
     .ico-project-name.minimal{
@@ -3205,7 +3270,7 @@ footer{
         margin-left: -0.5rem;   
     }
     .ico-project-name.minimal h5{
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
     .ico-project-name.minimal .ico-table-title-image{
         margin: 0.7rem 0.3rem 0.7rem 0.7rem;
@@ -3238,40 +3303,253 @@ footer{
     .ico-promo-banner input{
         font-size: 0.8rem;
     }
-    /* Publish ICO Page */
-    .publish-ico-title h1{
-        font-size: 1.5em;
-    }
-    .publish-ico-title p{
-        font-size: 0.8em;
-    }
-    .publish-banner{
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: reverse;
-            -ms-flex-direction: column-reverse;
-                flex-direction: column-reverse;
+    .ico-table.minimal .tbody::after {
+        content: '';
+        flex: 0 1 50%;
+        box-sizing: border-box;
+        max-width: 16rem;
         }
-    .publish-banner img{
-        width: 330px;
+
+}
+@media (max-width: 570px){
+    /* Elements */
+    select{
+        font-size: 80%;
     }
-    .publish-featured ul{
-        border-right: none;
+    #topbanner p{
+        font-size: 0.65rem;
+        padding: 0 0.5rem;
+   }
+    #topbanner button{
+        width: 7rem;
+        font-size: 0.55rem;
+        margin: 0.5rem 0;
+        padding: 0.6rem 0.2rem;
+   }
+    .persistent-icons{
+        bottom: 1rem;
+        right: 1rem;
+   }
+    .per-icon{
+        height: 2.6rem;
+        width: 2.6rem;
+        font-size: 0.8rem;
+   }
+   .per-icon.big{
+       width: 2.4rem;
+       height: 2.4rem;
+   }
+   .per-icon i{
+       font-size: 2.2rem;
+   }
+    nav{
+        margin: 1rem;
     }
-    .publish-category-item{
-        flex: 1 1 100%;
+    .crypto-price{
+        margin: 1rem 0.5rem;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+   }
+    .crypto-item h2{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        font-size: 0.7rem;
+        margin: 0.35rem 0.4rem;
+   }
+    .crypto-item h2 span{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+   }
+    footer{
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+   }
+    .footer-logo{
+        margin-top: 1rem;
+   }
+    .footer-about{
+        margin: 3rem 0 0 0;
+        display: block;
+   }
+    .footer-about p{
+        margin: 1rem 0;
+        color: #fff;
+   }
+    .footer-links{
+        margin: 0;
+   }
+   .footer-links li span {
+    font-size: 0.65rem;
+    padding: 0.2rem 0.75rem;
+    visibility: visible;
     }
-    .publish-question.row label{
-        font-size: 0.95em;
+    .disclaimer{
+        height: 9rem;
+   }
+    .disclaimer-body{
+        font-size: 0.7rem;
+        width: 90%;
+   }
+
+   /* Home Page */
+    .intro-section{
+        background-repeat: repeat-y;
+   }
+    .banner{
+        height: 30vh;
+        padding-top: 4rem;
+   }
+    .banner img{
+        width: 96px;
+   }
+    .banner h1{
+        font-size: 1.8rem;
+        letter-spacing: 2px;
+   }
+    .banner h5{
+        margin: -0.3rem 0 0 0;
+        font-size: 1rem;
+   }
+    .banner-buttons{
+        display: none;
+        margin-top: 2rem;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+   }
+    .banner-buttons button{
+        margin: 0.45em !important;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        width: 8.5rem;
+        font-size: 0.7rem;
+   }
+    .twitter-feed{
+        margin-top: 3rem;
+   }
+    .down-arrow{
+        width: 40%;
+   }
+    .down-arrow img{
+        height: 16px;
+   }
+    .ico-grid{
+        margin: 1rem 0;
+   }
+    .ico-col{
+        margin: 2rem 0;
+   }
+   .ico-col-content a{
+       flex: 0 0 100%;
+   }
+   .ico-col-content::after {
+    content: '';
+    flex: none;
+    }
+    .ico-col-btn{
+        margin: 0.6rem auto 1rem;
+        max-width: 20rem;
+   }
+   /* Modal */
+   .modal.alt{
+       width: 80%;
+   }
+   .modal-head h1 span{
+       height: 18px;
+       width: 18px;
+       margin-right: 0.4rem;
+   }
+   .modal-head h1{
+       font-size: 1.2rem;
+   }
+   .modal-head i{
+       height: 48px;
+       width: 48px;
+       font-size: 1.4rem;
+       right: -1.4rem;
+       top: -1.5rem;
+
+   }
+   .modal-body{
+       padding: 1rem 2rem;
+   }
+   .modal-body p{
+       font-size: 0.55rem;
+       margin: 1rem 0;
+   }
+   .modal-body p span{
+       display: block;
+       margin-bottom: 0.5rem;
+   }
+   /* Homepage */
+   .ico-card-sec{
+       margin-left: -1.5rem;
+   }
+   .ico-card-image img{
+        width: 28px;
+        padding: 0.65rem 0.75rem;
+   }
+
+   .ico-card-rating.number {
+        font-size: 0.95rem;
+        padding-top: 0.8rem;
+        height: 1.9rem;
+        width: 2.7rem;
+    }
+    .ico-card-rating{
+        font-size: 1.55rem;
+        padding: 0.45rem 0 0 0;
+        height: 2.3rem;
+        width: 2.75rem;
+    }
+    .ico-card{
+        width: 18rem;
+    }
+    .ico-card-meta{
+        margin: 1rem -2rem 1rem;
+    }
+    .ico-etr{
+        margin-right: 0 !important;
+    }
+    .ico-card-meta h6:first-child{
+        visibility: hidden;
+    }
+
+
+   
+    
+    /* Publish page */
+    .publish-ico-body{
+        border-radius: 10px;
+        width: 100%;
     }
     .publish-category-item.other input[type="text"]{
-        width: 9.5rem;
+        width: 7.5rem;
     }
-    .publish-ico-body form input[type="submit"]{
-        display: flex;
-        margin: 2rem auto 0 !important;
-        padding: 0.6rem 1.1rem;
-        
+    .publish-banner img{
+        width: 320px;
     }
+    /* Whitelist Page */
+    .ico-table.minimal .tbody ul{
+        width: auto;
+    }
+    
 }
 @media (max-width: 390px){
     /* Elements */
@@ -3355,6 +3633,7 @@ footer{
     /* Publish ICO Page */
     .publish-ico-body{
         padding: 1.5rem 0 2.5rem;
+        border-radius: 10px;
     }
     .publish-ico-title h1{
         font-size: 1.4em;
@@ -3387,7 +3666,7 @@ footer{
         padding: 0.6rem;
     }
     .publish-category-item.other input[type="text"]{
-        width: 8rem;
+        width: 6.5rem;
         margin: 1rem 1rem 0;
     }
     .publish-question fieldset legend {

@@ -158,7 +158,7 @@ cmcEth.send();
 /* End  CoinmarketCap API Data For Live BTC / ETH */
 
 /* ICO Nav Mobile Humburger Menu */
-if(width <= 991){
+if(width <= 690){
 let icoNav = document.querySelector('.ico-nav li.active');
 if(icoNav != null){
     let icoNavList = document.querySelectorAll('.ico-nav li');
@@ -343,7 +343,7 @@ cmcRequest.onload = function(){
 cmcRequest.send();
 }
 /* Nested Flexbox Layout Break */
-if(width <= 991){
+if(width <= 690){
     const flexColFirst = document.querySelector('#card-col-1');
     const flexColSecond = document.querySelector('#card-col-2');
     const flexParent = document.querySelector('#card-col-parent');

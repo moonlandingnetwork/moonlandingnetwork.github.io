@@ -65,6 +65,7 @@ title: Moonlanding Network
         assign current_date = "now" | date: "%s" | minus: timeframe %}
         <div class="ico-col">
             <div class="ico-col-title">Upcoming ICO</div>
+            <div class="ico-col-content">
             <!-- Featured Upcoming Coins Array -->
             {% assign featuredUpcoming = "" | split: ',' %} {% assign featuredUpcomingExpired = "" | split: ',' %} {% for coin in featuredcoins
             %} {% assign featuredTill = coin.ico.featured-till | date: "%s" | plus: 0 %} {% assign pre_ico_end_date = coin.pre-ico.end-date
@@ -111,15 +112,17 @@ title: Moonlanding Network
                 </div>
             </a>
             {% endfor %}
-
-            <a href="{{site.baseurl}}/upcomingico">
+            </div>
+            <a class="ico-col-btn-parent" href="{{site.baseurl}}/upcomingico">
                 <button class="ico-col-btn">View All Upcoming ICO
                     <i class="fas fa-arrow-right"></i>
                 </button>
             </a>
+        
         </div>
         <div class="ico-col">
             <div class="ico-col-title">Active ICO</div>
+            <div class="ico-col-content">
             <!-- Featured Active Coins Array -->
             {% assign featuredActive = "" | split: ',' %} {% assign featuredActiveExpired = "" | split: ',' %} {% for coin in featuredcoins
             %}{% unless coin.pre-ico.no-date %} {% unless coin.ico-detail.no-date %} {% assign featuredTill = coin.ico.featured-till | date: "%s" | plus: 0 %} {% assign ico_start_date = coin.ico-detail.start-date
@@ -167,15 +170,17 @@ title: Moonlanding Network
             </a>
             {% endfor %}
 
-
-            <a href="{{site.baseurl}}/activeico">
+        </div>
+            <a class="ico-col-btn-parent" href="{{site.baseurl}}/activeico">
                 <button class="ico-col-btn">View All Active ICO
                     <i class="fas fa-arrow-right"></i>
                 </button>
             </a>
+        
         </div>
         <div class="ico-col">
             <div class="ico-col-title">Ended ICO</div>
+            <div class="ico-col-content">
             <!-- Featured Ended Coins Array -->
             {% assign featuredEnded = "" | split: ',' %} {% assign featuredEndedExpired = "" | split: ',' %} {% for coin in featuredcoins
             %} {% unless coin.pre-ico.no-date %}{% unless coin.ico-detail.no-date %} {% assign featuredTill = coin.ico.featured-till | date: "%s" | plus: 0 %} {% assign ico_end_date = coin.ico-detail.end-date
@@ -220,12 +225,13 @@ title: Moonlanding Network
                 </div>
             </a>
             {% endfor %}
-
-            <a href="{{site.baseurl}}/endedico">
+            </div>
+            <a class="ico-col-btn-parent" href="{{site.baseurl}}/endedico">
                 <button class="ico-col-btn">View All Ended ICO
                     <i class="fas fa-arrow-right"></i>
                 </button>
             </a>
+        
         </div>
     </div>
 </div>

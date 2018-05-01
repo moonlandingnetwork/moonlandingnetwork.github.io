@@ -48,7 +48,7 @@ title: Active ICOs | Moonlanding Network
         {% include iconav.html %}
         <!-- End ICO Nav -->
         <!-- ICO Table -->
-        <div id="active-ico" class="ico-table">
+        <div id="active-ico" class="ico-table full">
             <div class="table-head">
                 <ul class="ico-table-title">
                     <li>Project</li>
@@ -86,7 +86,7 @@ title: Active ICOs | Moonlanding Network
                             <span class="featured-logo">★</span> {% endif %}{% else %}{{coin.moonability}}{% endif %}</li>
                     </a>
 
-                    <a href="{{coin.url}}">
+                    <a class="ico-category-parent" href="{{coin.url}}">
                         <li class="ico-category">{{coin.ico.category}}</li>
                     </a>
 
@@ -104,7 +104,7 @@ title: Active ICOs | Moonlanding Network
                     {% assign ico_end_date = coin.ico-detail.end-date | date: "%s" | plus: 0 %} {% assign secondsTo = ico_end_date | minus: current_date
                     %} {% assign hoursTo = secondsTo | divided_by: 60 | divided_by: 60 %} {% assign daysTo = hoursTo | divided_by:
                     24 %}
-                    <a href="{{coin.url}}">
+                    <a class="ico-ends-in-parent" href="{{coin.url}}">
                         <li class="ico-ends-in">
                             <form style="display: inline" action="{{coin.url}}" method="get">
                                 <button class="btn round bulky">
