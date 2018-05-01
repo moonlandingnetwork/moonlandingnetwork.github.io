@@ -100,7 +100,9 @@ bottombanner: true
                         <iframe width="500" height="280" src="{{page.ico.video}}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                         {% endif %}
                         {% unless page.ico.video %}
-                        <img id="video-placeholder" src="{{site.url}}/images/video_placeholer.jpg" alt="">
+                        <div id="video-placeholder">
+                                <h5>Video Coming Soon</h5>
+                        </div>
                         {% endunless %}
                         
                     </div>

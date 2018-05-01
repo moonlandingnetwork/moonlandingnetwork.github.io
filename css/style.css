@@ -1656,6 +1656,9 @@ footer{
     justify-content: space-between;
     margin: 1.4rem 0 1rem;
 }
+.ico-etr{
+    margin-right: -1rem !important;
+}
 .ico-card-type{
     color: #fff !important;
     font-weight: 700 !important;
@@ -2169,6 +2172,18 @@ footer{
 }
 #video-placeholder{
     height: 280px;
+    width: 100%;
+    background-color: #000000b3;
+    color: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 .coinmeter-rating{
     font-size: 3.3rem !important;
@@ -2773,6 +2788,9 @@ footer{
     .ico-card-meta{
         margin: 1rem -1.5rem 1rem;
     }
+    .ico-etr{
+        margin-right: 0 !important;
+    }
     .ico-card-meta h6:first-child{
         visibility: hidden;
     }
@@ -3004,6 +3022,7 @@ footer{
     }
     .ico-table .tbody a{
         display: block;
+        flex-shrink: 0 !important;
     }
     .tbody h5, .tbody a, .tbody p{
         color: #072C59;
@@ -3118,7 +3137,8 @@ footer{
         -webkit-box-ordinal-group: 4;
         -ms-flex-order: 3;
             order: 3;
-        flex: 1 1 100%;
+        flex: 0 1 100%;
+        flex-shrink: 0;
     }
     .ico-fund-raised{
         margin: 4.5rem 0 1.4rem;
