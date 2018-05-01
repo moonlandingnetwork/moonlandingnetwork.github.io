@@ -2767,6 +2767,10 @@ footer{
        font-size: 0.55rem;
        margin: 1rem 0;
    }
+   .modal-body p span{
+       display: block;
+       margin-bottom: 0.5rem;
+   }
    /* Homepage */
    .ico-card-sec{
        margin-left: -1.5rem;
@@ -2792,7 +2796,7 @@ footer{
         width: 18rem;
     }
     .ico-card-meta{
-        margin: 1rem -1.5rem 1rem;
+        margin: 1rem -2rem 1rem;
     }
     .ico-etr{
         margin-right: 0 !important;
@@ -3219,6 +3223,9 @@ footer{
         -ms-flex-order: 1;
             order: 1;
         flex: 0 1 50% !important; 
+    }
+    .ico-category.minimal{
+        margin-left: -1.5rem;
     }
     #whitelist-status-parent{
         -webkit-box-ordinal-group: 3;
