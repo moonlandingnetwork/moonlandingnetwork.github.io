@@ -47,6 +47,7 @@ navSearch.addEventListener('click', function(){
     navListItem[i].style.display="none";
     }
     navSearchBox.style.display = 'flex';
+    navSearchBox.style.borderBottom = 'none';
 });
 /* Split & Wrap Logo Element inside span */
 const logo = document.querySelectorAll('.logo');
