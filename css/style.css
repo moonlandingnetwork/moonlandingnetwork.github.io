@@ -3369,6 +3369,8 @@ footer{
     }
     .publish-ico-title p{
         font-size: 0.65em;
+        width: 80%;
+        margin: auto;
     }
     .publish-banner{
         margin: 2rem 0 0 0;
