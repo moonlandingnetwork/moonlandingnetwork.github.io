@@ -28,11 +28,21 @@ const navListItem = document.querySelectorAll('nav ul li');
 const navSearchBox = document.getElementById('search-container');
 const cryptoPrice = document.querySelector('.crypto-price');
 navMenu.addEventListener('click', function (){
-    navList.classList.toggle('open');
-    if(navMenu.innerText == '☰'){
+    if (navSearch.innerHTML == '<i class="far fa-eye-slash"></i>'){
+        navSearch.innerHTML = '<i class="fas fa-search"></i>';
+        cryptoPrice.classList.remove('hidden');
+        navList.classList.remove('flex');
+        for(i=0; i<navListItem.length; i++){
+            navListItem[i].style.display="flex";
+            }
+        navSearchBox.style.display = 'none';
+    }
+    if(navMenu.innerHTML == '<i class="fas fa-bars"></i>'){
         navMenu.innerText = 'X';
+        navList.classList.add('flex');
     } else if (navMenu.innerText == 'X'){
-        navMenu.innerText = '☰';
+        navMenu.innerHTML = '<i class="fas fa-bars"></i>';
+        navList.classList.remove('flex');
     }
     for(i=0; i<navListItem.length; i++){
     navListItem[i].style.display="flex";
@@ -41,13 +51,28 @@ navMenu.addEventListener('click', function (){
     
 });
 navSearch.addEventListener('click', function(){
-    cryptoPrice.classList.toggle('hidden');
-    navList.classList.toggle('flex');
-    for(i=0; i<navListItem.length; i++){
-    navListItem[i].style.display="none";
+    if (navMenu.innerText == 'X'){
+        navMenu.innerHTML = '<i class="fas fa-bars"></i>';
+        navList.classList.remove('flex');
     }
-    navSearchBox.style.display = 'flex';
-    navSearchBox.style.borderBottom = 'none';
+    if(navSearch.innerHTML == '<i class="fas fa-search"></i>'){
+        navSearch.innerHTML = '<i class="far fa-eye-slash"></i>';
+        cryptoPrice.classList.add('hidden');
+        navList.classList.add('flex');
+        for(i=0; i<navListItem.length; i++){
+            navListItem[i].style.display="none";
+            }
+        navSearchBox.style.display = 'flex';
+    } else if (navSearch.innerHTML == '<i class="far fa-eye-slash"></i>'){
+        navSearch.innerHTML = '<i class="fas fa-search"></i>';
+        cryptoPrice.classList.remove('hidden');
+        navList.classList.remove('flex');
+        for(i=0; i<navListItem.length; i++){
+            navListItem[i].style.display="flex";
+            }
+        navSearchBox.style.display = 'none';
+    }
+
 });
 /* Split & Wrap Logo Element inside span */
 const logo = document.querySelectorAll('.logo');
