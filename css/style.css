@@ -2024,7 +2024,7 @@ footer{
     padding: 0;
 }
 .coin-card.minimal .coin-card-body{
-    border-radius: 10px 10px 10px 10px;
+    border-radius: 80px 10px 10px 80px;
     overflow: visible;
     position: relative;
 }
@@ -2075,6 +2075,9 @@ footer{
     position: relative;
     overflow: hidden;
 }
+.coin-card-body iframe {
+    width: 100%;
+}
 .coin-card-body::-webkit-scrollbar {
     width: 14px;
 }
@@ -2110,7 +2113,8 @@ footer{
     margin: 0 0.4rem;
 }
 .coincard-inneritem{
-    flex: 1 1 40%;
+    box-sizing: border-box;
+    flex: 1 1 50%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2125,7 +2129,7 @@ footer{
     border-right: 1.5px solid #506483;
 }
 .coin-card.minimal .coincard-inneritem{
-    padding: 0 0 0 0.5rem;
+    padding: 0 0 0 2rem;
 }
 .coincard-inneritem.center{
     -webkit-box-pack: center;
@@ -2182,6 +2186,12 @@ footer{
         -ms-flex-align: center;
             align-items: center;
 }
+#token-details-2{
+    display: none;
+}
+#ico-team-2{
+    display: none;
+}
 .coinmeter-rating{
     font-size: 3.3rem !important;
     color: #DC8C00;
@@ -2221,9 +2231,10 @@ footer{
     margin: 0;
 }
 .coinmeter .coin-card-body{
-    margin-left: 10%;
+    margin: auto;
     padding: 3.3% 6%;
     box-sizing: border-box;
+    max-width: 20rem;
 }
 .coinmeter .coincard-inneritem{
     margin-left: 25%;
@@ -2235,7 +2246,7 @@ footer{
 #moonability-rating-meter{
     position: absolute;
     top: -7%;
-    left: -7%;
+    left: -1%;
 }
 #coinmeter-dial{
     position: relative;
@@ -2611,7 +2622,7 @@ footer{
         width: 80%;
     }
     .ico-promo-banner h4{
-        font-size: 0.65rem;
+        font-size: 0.6rem;
     }
     /* Homepage */
     .banner{
@@ -2763,7 +2774,50 @@ footer{
         width: 13rem;
         height: 7.5px;
     }
-    
+    /* Coin Page */
+    .ico-page-tags{
+        display: none;
+    }
+    .ico-page-main-desc{
+        padding: 3.5rem 2rem 0;
+    }
+    .coin-return p{
+        display: none;
+    }
+    .coincard-inneritem > h6{
+        display: none;
+    }
+    .coincard-inneritem.third{
+        flex: 0 1 100%;
+    }
+    .coincard-inneritem.nogrow{
+        flex-basis: 100%;
+    }
+
+    .ico-coin-cards{
+        margin:  0 1rem;
+    }
+    .coin-card.progress{
+        margin: 0 1rem;
+    }
+    .coin-cards-left{
+        margin-right: 0.5rem;
+    }
+    .coin-cards-right{
+        margin-left: 0.5rem;
+    }
+    #token-details{
+        display: none;
+    }
+    #ico-team{
+        display: none;
+    }
+    #token-details-2{
+        display: block;
+    }
+    #ico-team-2{
+        display: block;
+    }
     /* Whitelist Page */
     .ico-table.minimal {
         margin: 2.5rem 2rem 0;
@@ -2772,6 +2826,41 @@ footer{
     .whitelist-title p{
         width: 80%;
         color: #fff;
+    }
+
+}
+@media screen and (max-width: 991px) and (min-width: 690px) {
+    /* Coin Page*/
+    .ico-coin-cards.first{
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+            -ms-flex-direction: column-reverse;
+                flex-direction: column-reverse;
+    }
+    .ico-coin-cards.first .coin-cards-right{
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: reverse;
+            -ms-flex-direction: row-reverse;
+                flex-direction: row-reverse;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+     }
+     .button-group.coin-page{
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        flex: 0 1 30%;
+      }
+    .button-group.coin-page a{
+        margin: 0.2rem 0;
+    }
+    .coinmeter{
+        flex: 0 1 50%;
+    }
+    .coin-card.minimal .coin-card-body{
+        border-radius: 80px 10px 50px 80px;
     }
 
 }
@@ -2809,6 +2898,7 @@ footer{
          box-sizing: border-box;
          
     }
+    
     /* Homepage */
     .ico-col-content a {
         flex: 0 1 100%;
@@ -3102,6 +3192,13 @@ footer{
     }
     .coin-cards-right{
         margin: 0;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        justify-content: center;
     }
     .coin-cards-left{
         margin: 0;
@@ -3124,22 +3221,45 @@ footer{
         margin: 0.55rem 0 ;
     }
     #token-details{
-       -webkit-box-ordinal-group: 2;
-       -ms-flex-order: 1;
-           order: 1
+        -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+        flex: 0 1 100%;
+    
+    }
+    #token-details-2{
+        display: none;
+    }
+    #ico-team-2{
+        display: none;
     }
     .button-group.coin-page{
         margin: 0 0 1rem;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+        flex: 0 1 30%;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     }
     .button-group.coin-page button{
         padding: 0.45rem 1.2rem;
+        margin: 0.3rem 0;
     }
+
     .coinmeter .coin-card-body{
         width: 76vw;
         margin-top: 0.5rem;
+        max-width: 18.5rem;
+        padding: 0.7rem;
     }
-    #moonability-rating-meter{
-        left: -7.3%;
+    .coincard-inneritem{
+        flex: 1 1 33.333%
     }
     #coinmeter-center{
         top: 45%;
@@ -3210,7 +3330,7 @@ footer{
         flex-basis: 50%;
     }
     .coincard-inneritem.third{
-        flex: 0 0 50%;
+        flex: 0 0 33.333%;
         
     }
     .coincard-inneritem.third p.micro-text{
@@ -3222,6 +3342,18 @@ footer{
     }
     .coin-card-body{
         padding: 0.7rem;
+    }
+    #ico-team{
+        display: block;
+    }
+    #ico-team-2{
+        display: none;
+    }
+    #token-details{
+        display: block;
+    }
+    #token-details-2{
+        display: none;
     }
     /* Publish Page */
     .publish-category-item{
@@ -3530,10 +3662,50 @@ footer{
     .ico-card-meta h6:first-child{
         visibility: hidden;
     }
-
-
-   
-    
+    /* Coin Page */
+    .coin-cards-right{
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+    }
+    .button-group.coin-page{
+        margin: 0 0 1rem;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1
+    }
+    .coin-card.coinmeter {
+        -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 2;
+            order: 2;
+    }
+    #token-details{
+        -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+    }
+    .button-group.coin-page button{
+        padding: 0.45rem 1.2rem;
+        margin: 0 0.3rem;
+    }
+    .coincard-inneritem{
+        flex:  1 1 50%;
+    }
+    .coincard-inneritem.third{
+        flex: 0 0 50%;
+        
+    }
+    #token-details-2{
+        display: none;
+    }
+    #ico-team-2{
+        display: none;
+    }
     /* Publish page */
     .publish-ico-body{
         border-radius: 10px;
@@ -3630,6 +3802,8 @@ footer{
     .ico-category{
         font-size: 0.7rem !important;
     }
+    /* Coin Page */
+
     /* Publish ICO Page */
     .publish-ico-body{
         padding: 1.5rem 0 2.5rem;

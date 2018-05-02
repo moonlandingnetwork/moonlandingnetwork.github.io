@@ -84,7 +84,7 @@ bottombanner: true
     {% endif %}
     <div class="container max">
         <!-- ICO Coin Info Cards -->
-        <div class="ico-coin-cards">
+        <div class="ico-coin-cards first">
             <div class="coin-cards-left">
                 
                 <div class="coin-card">
@@ -175,7 +175,7 @@ bottombanner: true
             </div>
         </div>
         <!-- End ICO Coin Cards -->
-        <div class="coin-card">
+        <div class="coin-card progress">
             <div class="coin-card-title">
                 <h6>ICO Details</h6>
                 <div class="coin-card-title progress">
@@ -544,7 +544,7 @@ bottombanner: true
                     </div>
                 </div>
                 {% if page.team %}
-                <div class="coin-card full">
+                <div id="ico-team" class="coin-card full">
                     <div class="coin-card-title">
                         <h6>Token Founding Team</h6>
                         <div class="card-title-action">
@@ -590,6 +590,38 @@ bottombanner: true
             </div>
             <div class="coin-cards-right" id="card-col-2">
                 {% if page.social %}
+                <div class="coin-card full" id="token-details-2">
+                    <div class="coin-card-title">
+                        <h6>Token Details</h6>
+                        <div class="card-title-action">
+                            <button class="btn circle cyan"></button>
+                            <button class="btn circle darkorange"></button>
+                        </div>
+                    </div>
+                    <div class="coin-card-body">
+                        <div class="coincard-inneritem">
+                            <img src="{{site.baseurl}}/images/blockchain-icon.png" alt="">
+                            <div class="coincard-inner-content">
+                                <h6>Blockchain</h6>
+                                <p>{% if page.token.type %}{{page.token.type}}{% else %}Not Available{% endif %}</p>
+                            </div>
+                        </div>
+                        <div class="coincard-inneritem">
+                            <img src="{{site.baseurl}}/images/location-icon.png" alt="">
+                            <div class="coincard-inner-content">
+                                <h6>Team Location</h6>
+                                <p>{% if page.token.location %}{{page.token.location}}{% else %}Not Available{% endif %}</p>
+                            </div>
+                        </div>
+                        <div class="coincard-inneritem center">
+                            <img src="{{site.baseurl}}/images/announcement-icon.png" alt="">
+                            <div class="coincard-inner-content">
+                                <h6>First Announced</h6>
+                                <p>{% if page.token.announced %}{{page.token.announced | date_to_long_string}}{% else %}Date Not Available{% endif %}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="coin-card full">
                     <div class="coin-card-title">
                         <h6>Token Community</h6>
@@ -711,6 +743,32 @@ bottombanner: true
 
                     </div>
                 </div>
+                {% if page.team %}
+                <div id="ico-team-2" class="coin-card full">
+                    <div class="coin-card-title">
+                        <h6>Token Founding Team</h6>
+                        <div class="card-title-action">
+                            <button class="btn circle cyan"></button>
+                            <button class="btn circle darkorange"></button>
+                        </div>
+                    </div>
+                    <div class="coin-card-body">
+                        {% for team in page.team %}
+                        <div class="coincard-inneritem nogrow">
+                            <img class="avatar" src="{{team.image}}" alt="">
+                            <div class="coincard-inner-content team">
+                                <h6>{{team.name}}
+                                    <a href="{{team.linkedin}}">
+                                        <span class="linkedin">in</span>
+                                    </a>
+                                </h6>
+                                <p>{{team.position}}</p>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endif %}
                 <div class="coin-card full more-ico-coins">
                     <div class="coin-card-title">
                         <h6>Similar Projects</h6>
