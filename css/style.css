@@ -3707,7 +3707,7 @@ footer{
         display: none;
     }
     .main-body-content.dot-bg{
-        padding: 2.5rem 0;
+        padding: 0;
     }
     /* Publish page */
     .publish-ico-body{
