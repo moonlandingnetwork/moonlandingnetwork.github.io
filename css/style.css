@@ -3507,9 +3507,11 @@ footer{
         -ms-flex-wrap: wrap;
             flex-wrap: wrap;
    }
-    .footer-logo{
+    .footer-logo-parent{
+        display: block;
         margin: 0;
         flex: 0 0 100%;
+        flex-shrink: 0;
    }
     .footer-about{
         margin: 3rem 0 0 0;
@@ -3528,6 +3530,7 @@ footer{
             -ms-flex-pack: center;
                 justify-content: center;
         flex: 0 0 33.333%;
+        flex-shrink: 0;
    }
    .footer-links li span {
     display: none;
