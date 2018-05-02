@@ -3509,7 +3509,7 @@ footer{
    }
     .footer-logo{
         margin: 0;
-        flex: 1 1 100%;
+        flex: 0 1 100%;
    }
     .footer-about{
         margin: 3rem 0 0 0;
