@@ -3706,6 +3706,9 @@ footer{
     #ico-team-2{
         display: none;
     }
+    .main-body-content.dot-bg{
+        padding: 2.5rem 0;
+    }
     /* Publish page */
     .publish-ico-body{
         border-radius: 10px;
