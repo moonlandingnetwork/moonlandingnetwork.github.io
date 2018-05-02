@@ -3499,35 +3499,50 @@ footer{
         align-items: center;
    }
     footer{
-        -webkit-box-orient: vertical;
+        -webkit-box-orient: horizontal;
         -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
+        -ms-flex-direction: row;
+            flex-direction: row;
+        margin: 1rem 2rem 2rem;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
    }
     .footer-logo{
-        margin-top: 1rem;
+        margin: 0;
+        flex: 1 1 100%;
    }
     .footer-about{
         margin: 3rem 0 0 0;
-        display: block;
+
    }
     .footer-about p{
         margin: 1rem 0;
         color: #fff;
    }
     .footer-links{
-        margin: 0;
+        margin: 2rem 0 0;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
    }
    .footer-links li span {
+    display: none;
     font-size: 0.65rem;
     padding: 0.2rem 0.75rem;
     visibility: visible;
     }
+    .footer-links.more{
+        flex: 1;
+    }
     .disclaimer{
-        height: 9rem;
+        height: 8rem;
+
    }
     .disclaimer-body{
-        font-size: 0.7rem;
+        font-size: 0.6rem;
         width: 90%;
    }
 
