@@ -3701,7 +3701,7 @@ footer{
         -webkit-box-direction: normal;
             -ms-flex-direction: column;
                 flex-direction: column;
-    /*
+    
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;
@@ -3710,13 +3710,14 @@ footer{
     -ms-flex-negative: 0;
         flex-shrink: 0;
     margin-left: 0;
-    */
+   
     }
+    /*
     .coin-cards-left{
     flex: 0 1 100%;
     flex-shrink: 0; 
     }
-    
+    */
     .button-group.coin-page{
         display: flex;
         margin: 0 0 1rem;
@@ -3727,7 +3728,7 @@ footer{
         -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
-        flex: 0 1 100%;
+        flex: 0 0 100%;
         flex-shrink: 0;
     }
     
