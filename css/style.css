@@ -3742,7 +3742,7 @@ footer{
     }
     /* Whitelist Page */
     .ico-table.minimal .tbody ul{
-        width: auto;
+        max-width: 20rem;
     }
     
 }
