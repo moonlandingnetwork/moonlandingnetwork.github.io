@@ -3197,16 +3197,7 @@ footer{
             flex-direction: column;
     padding: 0.5rem 0 0 0;
     }
-    .coin-cards-right{
-        margin: 0;
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-        -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
+
     .coin-cards-left{
         margin: 0;
     }
@@ -3264,7 +3255,7 @@ footer{
     .coinmeter .coin-card-body{
         width: 76vw;
         margin-top: 0.5rem;
-        max-width: 18.5rem;
+        max-width: 18rem;
         padding: 0.7rem;
     }
     .coincard-inneritem{
@@ -3451,6 +3442,19 @@ footer{
         max-width: 16rem;
         }
 
+}
+@media screen and (max-width: 690px) and (min-width: 570px){
+    /* Coin Page */
+    .coin-cards-right{
+        margin: 0;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 }
 @media (max-width: 570px){
     /* Elements */
