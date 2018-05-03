@@ -3743,6 +3743,7 @@ footer{
     /* Whitelist Page */
     .ico-table.minimal .tbody ul{
         max-width: 20rem;
+        width: 100%;
     }
     
 }
