@@ -3232,25 +3232,8 @@ footer{
     #ico-team-2{
         display: none;
     }
-    .button-group.coin-page{
-        margin: 0 0 1rem;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: column;
-                flex-direction: column;
-        -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
-        flex: 0 1 30%;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-        flex-shrink: 0;
-    }
     .button-group.coin-page button{
-        padding: 0.45rem 1.2rem;
-        margin: 0.3rem 0;
-    }
+
 
     .coinmeter .coin-card-body{
         width: 76vw;
@@ -3454,6 +3437,25 @@ footer{
         -ms-flex-wrap: wrap;
         flex-wrap: wrap;
         justify-content: center;
+    }
+    .button-group.coin-page{
+        margin: 0 0 1rem;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+        flex: 0 1 30%;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+        flex-shrink: 0;
+    }
+    .button-group.coin-page button{
+        padding: 0.45rem 1.2rem;
+        margin: 0.3rem 0;
     }
 }
 @media (max-width: 570px){
@@ -3707,6 +3709,7 @@ footer{
         flex-wrap: nowrap;
     -ms-flex-negative: 0;
         flex-shrink: 0;
+    margin-left: 0;
     }
     .coin-cards-left{
     flex: 0 1 100%;
