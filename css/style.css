@@ -3714,8 +3714,9 @@ footer{
     flex: 0 1 100%;
     flex-shrink: 0; 
     }
-    /*
+    
     .button-group.coin-page{
+        display: flex;
         margin: 0 0 1rem;
         -webkit-box-orient: horizontal;
         -webkit-box-direction: normal;
@@ -3724,10 +3725,8 @@ footer{
         -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
-        flex: 0 1 100%;
-        flex-shrink: 0;
     }
-    */
+    
     .coin-card.coinmeter {
         -webkit-box-ordinal-group: 1;
         -ms-flex-order: 2;
