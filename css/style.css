@@ -2864,6 +2864,7 @@ footer{
     }
     .coinmeter{
         flex: 0 1 50%;
+        flex-shrink: 0;
     }
     .coin-card.minimal .coin-card-body{
         border-radius: 80px 10px 50px 80px;
@@ -3253,6 +3254,7 @@ footer{
         -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+        flex-shrink: 0;
     }
     .button-group.coin-page button{
         padding: 0.45rem 1.2rem;
