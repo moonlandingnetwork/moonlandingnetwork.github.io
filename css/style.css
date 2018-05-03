@@ -3696,31 +3696,13 @@ footer{
     margin-left: 0;
    
     }
-    /*
-    .coin-cards-left{
-    flex: 0 1 100%;
-    flex-shrink: 0; 
-    }
-    */
-    /*
-    .button-group.coin-page {
-        display: flex;
-        margin: 0 0 1rem;
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: row;
-                flex-direction: row;
-        -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
-        flex: 0 0 100%;
-        flex-shrink: 0;
-    }
-    */
     .coin-card.coinmeter {
         -webkit-box-ordinal-group: 1;
         -ms-flex-order: 2;
             order: 2;
+    }
+    .coinmeter .coin-card-body{
+        max-width: 19rem;
     }
     #token-details{
         -webkit-box-ordinal-group: 4;
@@ -3844,7 +3826,7 @@ footer{
         font-size: 0.7rem !important;
     }
     /* Coin Page */
-
+    
     /* Publish ICO Page */
     .publish-ico-body{
         padding: 1.5rem 0 2.5rem;
