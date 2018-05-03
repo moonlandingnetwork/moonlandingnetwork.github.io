@@ -3696,9 +3696,13 @@ footer{
         -webkit-box-direction: normal;
             -ms-flex-direction: column;
                 flex-direction: column;
-    flex: 1;
-    flex-wrap: nowrap;
-    flex-shrink: 0;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
     }
     .coin-cards-left{
     flex: 0 1 100%;
