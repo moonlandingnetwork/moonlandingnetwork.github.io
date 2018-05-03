@@ -3696,7 +3696,8 @@ footer{
         -webkit-box-direction: normal;
             -ms-flex-direction: column;
                 flex-direction: column;
-    flex: 0 1 100%;
+    flex: 1;
+    flex-wrap: nowrap;
     flex-shrink: 0;
     }
     .coin-cards-left{
