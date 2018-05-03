@@ -3509,7 +3509,7 @@ footer{
         -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-        margin: 1rem 2rem 2rem;
+        margin: 3rem 2rem 2rem;
         -ms-flex-wrap: wrap;
             flex-wrap: wrap;
    }
@@ -3826,7 +3826,7 @@ footer{
         font-size: 0.7rem !important;
     }
     /* Coin Page */
-    
+
     /* Publish ICO Page */
     .publish-ico-body{
         padding: 1.5rem 0 2.5rem;
