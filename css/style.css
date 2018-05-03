@@ -2099,6 +2099,9 @@ footer{
     -ms-flex-pack: center;
     justify-content: center;
 }
+.button-group.coin-page > a{
+    display: block;
+}
 .button-group.coin-page button{
     padding: 0.45rem 1.2rem;
     font-size: 0.6rem;
@@ -3228,6 +3231,7 @@ footer{
         -ms-flex-order: 3;
             order: 3;
         flex: 0 1 100%;
+        flex-shrink: 0;
     
     }
     #token-details-2{
