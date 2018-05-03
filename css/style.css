@@ -2003,6 +2003,7 @@ footer{
 .coin-cards-left{
     flex: 3;
     margin: 0 1rem 0 0;
+    flex-shrink: 0;
 }
 .coin-cards-right {
     -webkit-box-flex: 2;
@@ -2016,6 +2017,7 @@ footer{
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    flex-shrink: 0;
 }
 .coin-card{
     margin:  0 0 1.5rem;
@@ -2852,6 +2854,7 @@ footer{
             -ms-flex-direction: column;
                 flex-direction: column;
         flex: 0 1 30%;
+        flex-shrink: 0;
       }
     .button-group.coin-page a{
         margin: 0.2rem 0;
