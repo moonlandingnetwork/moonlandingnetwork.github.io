@@ -1,6 +1,6 @@
 ---
 pages:
-- _coins/test-coin.html
+- _coins/test-1.html
 - _coins/test.html
 hide_body: true
 is_partial: false
