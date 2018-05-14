@@ -26,13 +26,6 @@ fields:
   name: metakeywords
   label: Meta Keywords
   description: SEO Meta Keywords
-- type: datetime
-  name: date-added
-  label: Date Added
-  description: Date on the which coin is added
-  config:
-    required: true
-  hidden: true
 - type: field_group
   name: ico
   description: Basic Listing Information
