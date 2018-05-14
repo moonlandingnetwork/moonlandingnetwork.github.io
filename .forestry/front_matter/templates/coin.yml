@@ -1,4 +1,6 @@
 ---
+pages:
+- _coins/welltrado.html
 hide_body: true
 is_partial: false
 fields:
