@@ -1,5 +1,6 @@
 ---
 pages:
+- _coins/tester.html
 - _coins/tescoin.html
 - _coins/test.html
 hide_body: true
