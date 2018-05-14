@@ -111,7 +111,7 @@ fields:
     description: Date to which the listing stays featured
     config:
       required: false
-    default: Invalid date
+    default: ''
   - type: text
     label: excerpt description
     name: shortdesc
@@ -145,7 +145,7 @@ fields:
   - type: datetime
     name: start-date
     label: Whitelist Start Date
-    default: Invalid date
+    default: ''
   - type: datetime
     name: end-date
     label: Whitelist End Date
