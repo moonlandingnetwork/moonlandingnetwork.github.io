@@ -2114,6 +2114,22 @@ footer{
     height: 18px;
     margin: 0 0.4rem;
 }
+.participation-detail {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+            justify-content: space-between;
+}
+.participation-detail button{
+    cursor: default;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 48%;
+    flex: 0 0 48%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+
+}
 .coincard-inneritem{
     box-sizing: border-box;
     flex: 1 1 50%;
@@ -2448,7 +2464,7 @@ footer{
 .participation-detail button.white{
     font-size: 0.7rem;
     font-weight: 700;
-    margin: 1.5rem 0.2rem 0 !important;
+    margin: 0.5rem 0 0 !important;
 }
 #coin-page-analytics{
     width: 350px;

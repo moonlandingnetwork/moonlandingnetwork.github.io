@@ -37,8 +37,8 @@ title: Pre ICOs | Moonlanding Network
 {% endfor %}
 
 <!-- Featured Sorted -->
-{% assign featuredPreActive = featuredPreActive | sort: 'date-added' | reverse %}
-{% assign featuredPreUpcoming = featuredPreUpcoming | sort: 'date-added' | reverse %}
+{% assign featuredPreActive = featuredPreActive | sort: 'date' | reverse %}
+{% assign featuredPreUpcoming = featuredPreUpcoming | sort: 'date' | reverse %}
 
 <!-- Regular coins array -->
 {% assign regularPreActive = "" | split: ',' %}
@@ -76,15 +76,15 @@ title: Pre ICOs | Moonlanding Network
 {% endunless %}
 {% endfor %}
 <!-- Sort Featured Undated -->
-{% assign featuredunDated = featuredunDated | sort: 'date-added' | reverse %}
+{% assign featuredunDated = featuredunDated | sort: 'date' | reverse %}
 <!-- Concat Undated Feature Expired to Undated Regular & Sort  -->
-{% assign regularunDated = regularunDated | concat: featuredunDatedExpired | sort: 'date-added' | reverse %}
+{% assign regularunDated = regularunDated | concat: featuredunDatedExpired | sort: 'date' | reverse %}
 <!-- Featured Undated to Featured Upcoming -->
 {% assign featuredPreUpcoming = featuredPreUpcoming | concat: featuredunDated %}
 
 <!-- Regular coins array + Featured Expired Coins + Undated Coins  -->
-{% assign regularPreActiveTotal = regularPreActive | concat: featuredExpiredActive | sort: 'date-added' | reverse  %}
-{% assign regularPreUpcomingTotal = regularPreUpcoming | concat: featuredExpiredUpcoming | sort: 'date-added' | reverse %}
+{% assign regularPreActiveTotal = regularPreActive | concat: featuredExpiredActive | sort: 'date' | reverse  %}
+{% assign regularPreUpcomingTotal = regularPreUpcoming | concat: featuredExpiredUpcoming | sort: 'date' | reverse %}
 {% assign regularPreUpcomingTotal = regularPreUpcomingTotal | concat: regularunDated %}
 
 <!-- Total Pre Active & Total Preupcoming -->
@@ -135,9 +135,9 @@ title: Pre ICOs | Moonlanding Network
                     </a>
 
                     <a href="{{coin.url}}">
-                        <li class="ico-moonability {% if featured %} {% if coin.ico.show-rating %}number{% endif %}{% else if featured == false %}number{% endif %}">{% if featured %} {% if coin.ico.show-rating %}{{coin.moonability}}{% else %}
+                        <li class="ico-moonability {% if featured %} {% if coin.ico.show-rating %}number{% endif %}{% else if featured == false %}number{% endif %}">{% if featured %} {% if coin.ico.show-rating %}{{coin.ico.moonability}}{% else %}
                             <span class="featured-text">Featured</span>
-                            <span class="featured-logo">★</span> {% endif %}{% else %}{{coin.moonability}}{% endif %}</li>
+                            <span class="featured-logo">★</span> {% endif %}{% else %}{{coin.ico.moonability}}{% endif %}</li>
                     </a>
 
                     <a href="{{coin.url}}">
@@ -228,9 +228,9 @@ title: Pre ICOs | Moonlanding Network
                     </a>
 
                     <a href="{{coin.url}}">
-                        <li class="ico-moonability {% if featured %} {% if coin.ico.show-rating %}number{% endif %}{% else if featured == false %}number{% endif %}">{% if featured %} {% if coin.ico.show-rating %}{{coin.moonability}}{% else %}
+                        <li class="ico-moonability {% if featured %} {% if coin.ico.show-rating %}number{% endif %}{% else if featured == false %}number{% endif %}">{% if featured %} {% if coin.ico.show-rating %}{{coin.ico.moonability}}{% else %}
                             <span class="featured-text">Featured</span>
-                            <span class="featured-logo">★</span> {% endif %}{% else %}{{coin.moonability}}{% endif %}</li>
+                            <span class="featured-logo">★</span> {% endif %}{% else %}{{coin.ico.moonability}}{% endif %}</li>
                     </a>
 
                     <a href="{{coin.url}}">

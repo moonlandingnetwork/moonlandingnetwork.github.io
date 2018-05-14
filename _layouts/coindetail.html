@@ -64,7 +64,7 @@ bottombanner: true
             <h4>Tags</h4>
             <ul>
                 {% for item in page.ico.tags %}
-                <li>{{item.tag}}</li>
+                <li>{{item}}</li>
                 {% endfor %}
 
             </ul>
@@ -97,7 +97,7 @@ bottombanner: true
                     </div>
                     <div class="coin-card-body">
                         {% if page.ico.video %}
-                        <iframe width="500" height="280" src="{{page.ico.video}}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                        <iframe width="500" height="280" src="https://www.youtube.com/embed/{{page.ico.video}}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                         {% endif %}
                         {% unless page.ico.video %}
                         <div id="video-placeholder">
@@ -132,21 +132,21 @@ bottombanner: true
                             <img src="{{site.baseurl}}/images/blockchain-icon.png" alt="">
                             <div class="coincard-inner-content">
                                 <h6>Blockchain</h6>
-                                <p>{% if page.token.type %}{{page.token.type}}{% else %}Not Available{% endif %}</p>
+                                <p>{% if page.ico.token-type %}{{page.ico.token-type}}{% else %}Not Available{% endif %}</p>
                             </div>
                         </div>
                         <div class="coincard-inneritem">
                             <img src="{{site.baseurl}}/images/location-icon.png" alt="">
                             <div class="coincard-inner-content">
                                 <h6>Team Location</h6>
-                                <p>{% if page.token.location %}{{page.token.location}}{% else %}Not Available{% endif %}</p>
+                                <p>{% if page.ico.project-location %}{{page.ico.project-location}}{% else %}Not Available{% endif %}</p>
                             </div>
                         </div>
                         <div class="coincard-inneritem center">
                             <img src="{{site.baseurl}}/images/announcement-icon.png" alt="">
                             <div class="coincard-inner-content">
                                 <h6>First Announced</h6>
-                                <p>{% if page.token.announced %}{{page.token.announced | date_to_long_string}}{% else %}Date Not Available{% endif %}</p>
+                                <p>{% if page.ico.date-announced %}{{page.ico.date-announced | date_to_long_string}}{% else %}Date Not Available{% endif %}</p>
                             </div>
                         </div>
                     </div>
@@ -163,7 +163,7 @@ bottombanner: true
                         <div class="coincard-inneritem">
                             
                             <p class="coinmeter-rating {% if page.ico.featured == true and page.ico.show-rating == false %}featured
-                            {% endif %}">{% if page.ico.featured == true and page.ico.show-rating == false  %}Featured{% endif %}{% if page.ico.featured == false or page.ico.show-rating == true %}{{page.moonability}}</p>
+                            {% endif %}">{% if page.ico.featured == true and page.ico.show-rating == false  %}Featured{% endif %}{% if page.ico.featured == false or page.ico.show-rating == true %}{{page.ico.moonability}}</p>
                             <div class="coincard-inner-content">
                                 <h6>Our Rating</h6>
                                 <p>Moonability</p>
@@ -452,7 +452,7 @@ bottombanner: true
                             <img src="{{site.baseurl}}/images/finish-icon.png" alt="">
                             <div class="coincard-inner-content">
                                 <h6>ICO End Date</h6>
-                                <p>{% if page.ico-detail.no-date %}Not Available{% else %}{{page.ico-detail.end-date }}{% endif %}</p>
+                                <p>{% if page.ico-detail.no-date %}Not Available{% else %}{{page.ico-detail.end-date | date_to_long_string }}{% endif %}</p>
                             </div>
                         </div>
                         <div class="coincard-inneritem third">
@@ -508,7 +508,7 @@ bottombanner: true
                                 <p>
                                     {% if  page.ico-detail.supply-distribution %}
                                     {% for item in page.ico-detail.supply-distribution %}
-                                    {{item.distribution-item}}
+                                    {{item}}
                                     <br>
                                     {% endfor %}
                                     {% else %}
@@ -569,11 +569,11 @@ bottombanner: true
                     </div>
                 </div>
                 {% endif %}
-                {% if page.twitter-username %}
+                {% if page.social.twitter-username %}
                 <div class="coin-card full twitter-card">
                     <div class="coin-card-title">
                         <h6>Tweets by
-                            <span class="golden">@{{page.twitter-username}}</span>
+                            <span class="golden">@{{page.social.twitter-username}}</span>
                         </h6>
                         <div class="card-title-action">
                             <button class="btn circle cyan"></button>
@@ -582,7 +582,7 @@ bottombanner: true
                     </div>
                     <div class="coin-card-body">
                         <a class="twitter-timeline" data-lang="en" data-height="400" data-chrome="noheader nofooter noborders transparent" link-color="#db8b00"
-                            data-theme="dark" href="https://twitter.com/{{page.twitter-username}}?ref_src=twsrc%5Etfw"></a>
+                            data-theme="dark" href="https://twitter.com/{{page.social.twitter-username}}?ref_src=twsrc%5Etfw"></a>
                         <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                     </div>
                 </div>
@@ -603,21 +603,21 @@ bottombanner: true
                             <img src="{{site.baseurl}}/images/blockchain-icon.png" alt="">
                             <div class="coincard-inner-content">
                                 <h6>Blockchain</h6>
-                                <p>{% if page.token.type %}{{page.token.type}}{% else %}Not Available{% endif %}</p>
+                                <p>{% if page.ico.token-type %}{{page.ico.token-type}}{% else %}Not Available{% endif %}</p>
                             </div>
                         </div>
                         <div class="coincard-inneritem">
                             <img src="{{site.baseurl}}/images/location-icon.png" alt="">
                             <div class="coincard-inner-content">
                                 <h6>Team Location</h6>
-                                <p>{% if page.token.location %}{{page.token.location}}{% else %}Not Available{% endif %}</p>
+                                <p>{% if page.ico.project-location %}{{page.ico.project-location}}{% else %}Not Available{% endif %}</p>
                             </div>
                         </div>
                         <div class="coincard-inneritem center">
                             <img src="{{site.baseurl}}/images/announcement-icon.png" alt="">
                             <div class="coincard-inner-content">
                                 <h6>First Announced</h6>
-                                <p>{% if page.token.announced %}{{page.token.announced | date_to_long_string}}{% else %}Date Not Available{% endif %}</p>
+                                <p>{% if page.ico.date-announced %}{{page.ico.date-announced | date_to_long_string}}{% else %}Date Not Available{% endif %}</p>
                             </div>
                         </div>
                     </div>
@@ -705,9 +705,9 @@ bottombanner: true
                             <div class="coincard-inner-content">
                                 <h6>currencies Accepted</h6>
                                 <p>The following currencies will be accepted druing the crowdsale :</p>
-                                <div class="button-group">
+                                <div class="button-group participation-detail">
                                     {% for item in page.ico-participation-details.currencies-accepted %}
-                                    <button class="btn white round">{{item.currency}}</button>
+                                    <button class="btn white round">{{item}}</button>
                                     {% endfor %}
                                 </div>
                             </div>
@@ -718,9 +718,9 @@ bottombanner: true
                             <div class="coincard-inner-content">
                                 <h6>Countries Not Allowed</h6>
                                 <p>The following countries are not allowed to participate in the crowdsale :</p>
-                                <div class="button-group">
+                                <div class="button-group participation-detail">
                                     {% for item in page.ico-participation-details.countries-notallowed %}
-                                    <button class="btn white round">{{item.country}}</button>
+                                    <button class="btn white round">{{item}}</button>
                                     {% endfor %}
                                 </div>
                             </div>
@@ -778,7 +778,7 @@ bottombanner: true
                         </div>
                     </div>
                     <div class="coin-card-body similar-projects">
-                        {% assign sortedCoins = site.coins | sort: 'date-added' | reverse %}
+                        {% assign sortedCoins = site.coins | sort: 'date' | reverse %}
                         {% for coin in sortedCoins  %}
                         <a href="{{coin.url}}"><div class="coincard-inneritem full similar">
                             <div class="avatar"><img class="ico-logo" src="{{site.url}}{{coin.ico.logo}}" alt=""></div>

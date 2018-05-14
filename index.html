@@ -60,8 +60,8 @@ title: Moonlanding Network
     <!-- End Intro Section -->
     <!-- ICO Grid -->
     <div class="ico-grid">
-        {% assign featuredcoins = site.coins | where: 'ico.featured', 'true' | sort: 'date-added' | reverse %} {% assign regularcoins
-        = site.coins | where: 'ico.featured', 'false' | sort: 'date-added' | reverse %} {% assign timeframe = 86400 %} {%
+        {% assign featuredcoins = site.coins | where: 'ico.featured', 'true' | sort: 'date' | reverse %} {% assign regularcoins
+        = site.coins | where: 'ico.featured', 'false' | sort: 'date' | reverse %} {% assign timeframe = 86400 %} {%
         assign current_date = "now" | date: "%s" | minus: timeframe %}
         <div class="ico-col">
             <div class="ico-col-title">Upcoming ICO</div>
@@ -91,10 +91,10 @@ title: Moonlanding Network
                 <div class="ico-card {% unless featuredExpired %} {% if coin.ico.featured %} featured {% endif %} {% endunless %}">
                     <div class="ico-card-sec">
                         <div class="ico-card-image">
-                            <img src="{{site.baseurl}}{{coin.ico.logo}}" alt="">
+                            <img src="{{site.url}}{{coin.ico.logo}}" alt="">
                         </div>
                         <div class="ico-card-rating {% if coin.ico.featured == false or coin.ico.show-rating == true %}number{% endif %}">{% if coin.ico.featured == true and coin.ico.show-rating == false %}&#9733;{% endif %}{% if coin.ico.featured
-                            == false or coin.ico.show-rating == true %}{{coin.moonability}}{% endif %}</div>
+                            == false or coin.ico.show-rating == true %}{{coin.ico.moonability}}{% endif %}</div>
                     </div>
                     <div class="ico-card-main">
                         <h4 class="ico-card-title">{{coin.ico.name}}</h4>
@@ -148,10 +148,10 @@ title: Moonlanding Network
                 <div class="ico-card {% unless featuredExpiredActive %}{% if coin.ico.featured %}featured{% endif %}{% endunless %} ">
                     <div class="ico-card-sec">
                         <div class="ico-card-image">
-                            <img src="{{site.baseurl}}{{coin.ico.logo}}" alt="">
+                            <img src="{{site.url}}{{coin.ico.logo}}" alt="">
                         </div>
                         <div class="ico-card-rating {% if coin.ico.featured == false or coin.ico.show-rating == true %}number{% endif %}">{% if coin.ico.featured == true and coin.ico.show-rating == false %}&#9733;{% endif %}{% if coin.ico.featured
-                            == false or coin.ico.show-rating == true %}{{coin.moonability}}{% endif %}</div>
+                            == false or coin.ico.show-rating == true %}{{coin.ico.moonability}}{% endif %}</div>
                     </div>
                     <div class="ico-card-main">
                         <h4 class="ico-card-title">{{coin.ico.name}}</h4>
@@ -204,10 +204,10 @@ title: Moonlanding Network
                 <div class="ico-card {% unless featuredExpiredEnded %}{% if coin.ico.featured %}featured{% endif %}{% endunless %} ">
                     <div class="ico-card-sec">
                         <div class="ico-card-image">
-                            <img src="{{site.baseurl}}{{coin.ico.logo}}" alt="">
+                            <img src="{{site.url}}{{coin.ico.logo}}" alt="">
                         </div>
                         <div class="ico-card-rating {% if coin.ico.featured == false or coin.ico.show-rating == true %}number{% endif %}">{% if coin.ico.featured == true and coin.ico.show-rating == false %}&#9733;{% endif %}{% if coin.ico.featured
-                            == false or coin.ico.show-rating == true %}{{coin.moonability}}{% endif %}</div>
+                            == false or coin.ico.show-rating == true %}{{coin.ico.moonability}}{% endif %}</div>
                     </div>
                     <div class="ico-card-main">
                         <h4 class="ico-card-title">{{coin.ico.name}}</h4>
