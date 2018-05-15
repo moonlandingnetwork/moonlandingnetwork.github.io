@@ -14,7 +14,7 @@ title: Publish ICO | Moonlanding Network
             <div class="publish-question">
                 <label for="application-type">Type of application</label>
                 <select id="application-type" name="application-type">
-                    {% for item in site.data.configuration.config %}
+                    {% for item in site.data.configuration %}
                     {% assign listingPrice = item.listing-price %}
                     {% endfor %}
                     <option class='short' data-limit='37' value="Top Banner listing for 7 days">Top Banner listing for 7 days ({{listingPrice.topbanner}})</option>
