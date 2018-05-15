@@ -99,9 +99,9 @@ title: Moonlanding Network
                     <div class="ico-card-main">
                         <h4 class="ico-card-title">{{coin.ico.name}}</h4>
                         <h6 class="ico-card-desc">{{coin.ico.category}}</h6>
-                        {% assign collected = coin.progress.collected %} {% assign total = coin.progress.total %} {% assign percent = collected |
-                        times: 100 | divided_by: total %}
-                        <h6 class="ico-card-status">${{collected}} / ${{total}}</h6>
+                        {% assign collected = coin.progress.collected %} {% assign total = coin.progress.total %} {% if collected.size > 0 and collected != 0 %} {% assign percent = collected |
+                            times: 100 | divided_by: total %} {% else %} {% assign percent = 0 %}{% endif %}
+                        <h6 class="ico-card-status">{% if collected.size != 0 %}${{collected}}{% else %} 0 {% endif %} / {% if total.size != 0 %} ${{total}} {% else %} 0 {% endif %}</h6>
                         <h6 class="ico-card-percentage">{{percent}}%</h6>
                         <div class="ico-card-meta">
                             <h6 class="ico-card-type">Featured</h6>
@@ -156,9 +156,9 @@ title: Moonlanding Network
                     <div class="ico-card-main">
                         <h4 class="ico-card-title">{{coin.ico.name}}</h4>
                         <h6 class="ico-card-desc">{{coin.ico.category}}</h6>
-                        {% assign collected = coin.progress.collected %} {% assign total = coin.progress.total %} {% assign percent = collected |
-                        times: 100 | divided_by: total %}
-                        <h6 class="ico-card-status">${{collected}} / ${{total}}</h6>
+                        {% assign collected = coin.progress.collected %} {% assign total = coin.progress.total %} {% if collected.size > 0 and collected != 0 %} {% assign percent = collected |
+                            times: 100 | divided_by: total %} {% else %} {% assign percent = 0 %}{% endif %}
+                        <h6 class="ico-card-status">{% if collected.size != 0 %}${{collected}}{% else %} 0 {% endif %} / {% if total.size != 0 %} ${{total}} {% else %} 0 {% endif %}</h6>
                         <h6 class="ico-card-percentage">{{percent}}%</h6>
                         <div class="ico-card-meta">
                             <h6 class="ico-card-type">Featured</h6>
@@ -212,9 +212,9 @@ title: Moonlanding Network
                     <div class="ico-card-main">
                         <h4 class="ico-card-title">{{coin.ico.name}}</h4>
                         <h6 class="ico-card-desc">{{coin.ico.category}}</h6>
-                        {% assign collected = coin.progress.collected %} {% assign total = coin.progress.total %} {% assign percent = collected |
-                        times: 100 | divided_by: total %}
-                        <h6 class="ico-card-status">${{collected}} / ${{total}}</h6>
+                        {% assign collected = coin.progress.collected %} {% assign total = coin.progress.total %} {% if collected.size > 0 and collected != 0 %} {% assign percent = collected |
+                            times: 100 | divided_by: total %} {% else %} {% assign percent = 0 %}{% endif %}
+                        <h6 class="ico-card-status">{% if collected.size != 0 %}${{collected}}{% else %} 0 {% endif %} / {% if total.size != 0 %} ${{total}} {% else %} 0 {% endif %}</h6>
                         <h6 class="ico-card-percentage">{{percent}}%</h6>
                         <div class="ico-card-meta">
                             <h6 class="ico-card-type">Featured</h6>
