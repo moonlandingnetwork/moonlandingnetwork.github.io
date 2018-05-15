@@ -179,8 +179,8 @@ bottombanner: true
             <div class="coin-card-title">
                 <h6>ICO Details</h6>
                 <div class="coin-card-title progress">
-                    {% assign collected = page.progress.collected %} {% assign total = page.progress.total %} {% assign percent = collected |
-                    times: 100 | divided_by: total %}
+                    {% assign collected = page.progress.collected %} {% assign total = page.progress.total %} {% if collected.size > 0 and collected != 0 %}{% assign percent = collected |
+                    times: 100 | divided_by: total %}{% else %}{% assign percent = 0 %}{% endif %}
                     <span>${{collected}}</span> OF ${{total}}
                     <span>{{percent}}%</span>
                 </div>

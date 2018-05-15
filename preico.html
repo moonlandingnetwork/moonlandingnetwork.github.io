@@ -242,9 +242,9 @@ title: Pre ICOs | Moonlanding Network
 
                     <a href="{{coin.url}}">
                         <li class="ico-fund-raised">
-                            {% assign collected = coin.progress.collected %} {% assign total = coin.progress.total %} {% assign percent = collected |
-                            times: 100 | divided_by: total %}
-                            <h5>${{collected}} / ${{total}}
+                            {% assign collected = coin.progress.collected %} {% assign total = coin.progress.total %} {% if collected.size > 0 and collected != 0 %} {% assign percent = collected |
+                            times: 100 | divided_by: total %} {% else %} {% assign percent = 0 %}{% endif %}
+                            <h5>{% if collected.size != 0 %}${{collected}}{% else %} 0 {% endif %} / {% if total.size != 0 %} ${{total}} {% else %} 0 {% endif %}
                                 <span>({{percent}}%)</span>
                             </h5>
                             <progress class="ico-fund-progress" min="0" max="100" value="{{percent}}"></progress>
