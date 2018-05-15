@@ -93,6 +93,13 @@ fields:
     name: featured
     label: Featured
     description: Is this ICO Featured
+  - type: datetime
+    name: featured-till
+    label: Featured Till
+    description: Date to which the listing stays featured
+    config:
+      required: false
+    default: ''
   - type: boolean
     name: show-rating
     label: Show Rating for featured
@@ -104,13 +111,6 @@ fields:
     name: topbanner-content
     label: Top Banner Advert Blurb
     description: Decription to be shown on the Top Banner Advertisment
-  - type: datetime
-    name: featured-till
-    label: Featured Till
-    description: Date to which the listing stays featured
-    config:
-      required: false
-    default: ''
   - type: text
     label: excerpt description
     name: shortdesc
