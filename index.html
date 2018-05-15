@@ -183,15 +183,15 @@ title: Moonlanding Network
             <div class="ico-col-content">
             <!-- Featured Ended Coins Array -->
             {% assign featuredEnded = "" | split: ',' %} {% assign featuredEndedExpired = "" | split: ',' %} {% for coin in featuredcoins
-            %} {% unless coin.pre-ico.no-date %}{% unless coin.ico-detail.no-date %} {% assign featuredTill = coin.ico.featured-till | date: "%s" | plus: 0 %} {% assign ico_end_date = coin.ico-detail.end-date
+            %} {% unless coin.pre-ico.no-date %}{% unless coin.ico-detail.no-date %}{% unless coin.ico-detail.end-date.size == 0 %} {% assign featuredTill = coin.ico.featured-till | date: "%s" | plus: 0 %} {% assign ico_end_date = coin.ico-detail.end-date
             | date: "%s" | plus: 0 %} {% if current_date > ico_end_date %} {% if featuredTill > current_date %} {% assign
             featuredEnded = featuredEnded | push: coin %} {% else if current_date > featuredTill %} {% assign featuredEndedExpired
-            = featuredEndedExpired | push: coin %} {% endif %} {% endif %} {% endunless %} {% endunless %} {% endfor %}
+            = featuredEndedExpired | push: coin %} {% endif %} {% endif %} {% endunless %} {% endunless %} {% endunless %}{% endfor %}
 
             <!-- Regular Ended coins array -->
-            {% assign regularEnded = "" | split: ',' %} {% for coin in regularcoins %} {% unless coin.pre-ico.no-date %}{% unless coin.ico-detail.no-date %} {% assign ico_end_date = coin.ico-detail.end-date
+            {% assign regularEnded = "" | split: ',' %} {% for coin in regularcoins %} {% unless coin.pre-ico.no-date %}{% unless coin.ico-detail.no-date %}{% unless coin.ico-detail.end-date.size == 0 %} {% assign ico_end_date = coin.ico-detail.end-date
             | date: "%s" | plus: 0 %} {% if current_date > ico_end_date %} {% assign regularEnded = regularEnded | push:
-            coin %} {% endif %} {% endunless %} {% endunless %} {% endfor %}
+            coin %} {% endif %} {% endunless %} {% endunless %}{% endunless %} {% endfor %}
 
             <!-- Total Ended coins array -->
             {% assign regularEnded = regularEnded | concat: featuredEndedExpired | sort: 'date-added' | reverse %} {% assign totalEnded
