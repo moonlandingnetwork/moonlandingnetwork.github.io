@@ -57,11 +57,13 @@
             {% for coin in site.coins %}
             {% unless coin.pre-ico.no-date %}
             {% unless coin.ico-detail.no-date %}
+            {% unless coin.ico-detail.end-date.size == 0 %}
             {% assign ico_end_date = coin.ico-detail.end-date | date: "%s" | plus: 0 %}
             {% assign current_date = "now" | date: "%s" | minus: timeframe  %}
             {% if current_date > ico_end_date %}
                 {% assign counterEnded = counterEnded | plus: 1 %}
             {% endif %}
+            {% endunless %}
             {% endunless %}
             {% endunless %}
             {% endfor %}
