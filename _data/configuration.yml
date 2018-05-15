@@ -1,19 +1,19 @@
-- listing-price:
-    featured: 1 ETH
-    topbanner: 3 ETH
-  site-info:
-    description: |-
-      Lorem ipsum dolor sit amet,<br><br>consectetur adipiscing elit. Mauris
-            hendrerit suscipit iaculis. Vestibulum luctus sem massa, eget facilisis erat
-            vehicula eget. Pellentesque sapien magna, semper vitae tincidunt ac, eleifend
-            sit amet nibh. Praesent eu accumsan mauris, in auctor lorem. Cras non iaculis
-            velit.<br><br>Nulla auctor pulvinar urna nec ullamcorper.
-    logo-image: "/images/logo-image.png"
-    logo-name: Moon Landing
-    logo-name-subtitle: Network
-  social:
-    facebook-link: https://facebook.com/#
-    telegram-broadcast: https://t.me/moonlandingnetwork
-    telegram-chat: https://t.me/MoonlandingNetworkChat
-    twitter-link: https://twitter.com/#
-    twitter-username: ethereum
+listing-price:
+  featured: 1 ETH
+  topbanner: 3 ETH
+site-info:
+  description: |-
+    Lorem ipsum dolor sit amet,<br><br>consectetur adipiscing elit. Mauris
+          hendrerit suscipit iaculis. Vestibulum luctus sem massa, eget facilisis erat
+          vehicula eget. Pellentesque sapien magna, semper vitae tincidunt ac, eleifend
+          sit amet nibh. Praesent eu accumsan mauris, in auctor lorem. Cras non iaculis
+          velit.<br><br>Nulla auctor pulvinar urna nec ullamcorper.
+  logo-image: "/images/logo-image.png"
+  logo-name: Moon Landing
+  logo-name-subtitle: Network
+social:
+  facebook-link: https://facebook.com/#
+  telegram-broadcast: https://t.me/moonlandingnetwork
+  telegram-chat: https://t.me/MoonlandingNetworkChat
+  twitter-link: https://twitter.com/#
+  twitter-username: ethereum
