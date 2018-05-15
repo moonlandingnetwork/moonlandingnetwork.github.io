@@ -1,14 +1,13 @@
 ---
 pages:
-- _coins/adsigma.html
+- _coins/akaiito.html
+- _coins/bitnautic.html
 - _coins/nauticus.html
 - _coins/kelta.html
 - _coins/bubbletone.html
 - _coins/bidium.html
 - _coins/dorado.html
-- _coins/akaiito.html
 - _coins/aworker.html
-- _coins/bitnautic.html
 - _coins/welltrado.html
 hide_body: true
 is_partial: false
