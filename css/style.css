@@ -3058,6 +3058,7 @@ footer{
             order: 4 !important;
         flex: 0 1 40%;
         flex-shrink: 0;
+        margin-left: 1rem;
     }
     .ico-moonability{
         letter-spacing: 1px;
@@ -3121,9 +3122,9 @@ footer{
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
-        -webkit-box-pack: center;
-            -ms-flex-pack: center;
-                justify-content: center;
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
     }
     .featured .ico-category{
         color: #fff;
