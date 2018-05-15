@@ -242,6 +242,7 @@ fields:
       - Alpha
     label: MVP
     description: Status of minimum viable product avilable
+    default: 'No'
   - type: number
     name: soft-cap
     label: Soft Cap
