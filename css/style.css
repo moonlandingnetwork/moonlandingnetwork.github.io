@@ -3035,7 +3035,7 @@ footer{
             order: 1;
         position: absolute;
         left: -17%;
-        top: 10%;
+        top: 5%;
     }
     .ico-project-name h5{
         font-size: 1.2rem;
@@ -3146,7 +3146,7 @@ footer{
         flex-shrink: 0;
     }
     .ico-fund-raised{
-        margin: 4.5rem 0 1.4rem;
+        margin: 3.5rem 0 1.4rem;
         -webkit-box-flex: 1 !important;
         -ms-flex: 1 1 100% !important;
             flex: 1 1 100% !important;
@@ -3396,7 +3396,7 @@ footer{
         font-size: 0.9rem;
     }
     .ico-table-title-image{
-        margin: 0.7rem 0.7rem 0.7rem 1.5rem;
+        margin: 0.7rem 1rem 0.7rem 1.5rem;
     }
     .ico-project-category-parent.minimal{
         display: none !important;
@@ -3814,6 +3814,7 @@ footer{
     }
     .ico-project-name{
         left: -13%;
+        top: 10%;
     }
     .ico-project-name h5{
         font-size: 1rem;
