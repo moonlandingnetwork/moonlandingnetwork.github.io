@@ -2499,6 +2499,9 @@ footer{
 }
 @media (max-width: 991px){
     /* Elements */
+    .main-body-content.coin-page{
+        padding-top: 1.5rem !important;
+    }
     .btn.round.bulky{
         padding: 0.5rem 0.7rem;
         font-size: 0.7rem;
@@ -2799,7 +2802,7 @@ footer{
         display: none;
     }
     .ico-page-main-desc{
-        padding: 3.5rem 2rem 0;
+        padding: 1.5rem 2rem 0;
     }
     .coin-return p{
         display: none;
@@ -3217,7 +3220,7 @@ footer{
        margin: 0 0 0 4.5rem;
    }
    .ico-page-main-desc{
-       padding: 1.5rem 1rem 1rem;
+       padding: 0 1rem 1rem;
    }
    .ico-page-main-desc p{
        font-size: 0.8em;
