@@ -861,6 +861,9 @@ nav input:-ms-input-placeholder {
     background: #fff;
     padding: 0 0 2.5rem;
 }
+.main-body-content.coin-page{
+    padding-top: 1.5rem;
+}
 .main-body-content.bg{
     margin-top: 5rem;
     background: #072C59;
@@ -1979,7 +1982,7 @@ footer{
 .ico-page-main-desc{
     max-width: 45rem;
     margin: auto;
-    padding: 1.5rem 0 0;
+    /*padding: 1.5rem 0 0; */
 }
 .ico-page-main-desc h6{
     color:#DC8C00;
