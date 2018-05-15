@@ -2765,9 +2765,7 @@ footer{
     .ico-moonability.number{
         font-size: 1.7rem;
     }
-    .ico-category-parent{
-        display: none !important;
-    }
+
     .ico-social-media{
         display: none !important;
     }
@@ -2852,6 +2850,10 @@ footer{
 
 }
 @media screen and (max-width: 991px) and (min-width: 690px) {
+    /* ICO Table */
+    .ico-category-parent{
+        display: block !important;
+    }
     /* Coin Page*/
     .ico-coin-cards.first{
         -webkit-box-orient: vertical;
