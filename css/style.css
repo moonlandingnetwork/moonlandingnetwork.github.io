@@ -1153,7 +1153,7 @@ nav input:-ms-input-placeholder {
 }
 .ico-fund-progress{
     height: 10.5px;
-    width: 16rem;
+    width: 15rem;
 }
 .ico-fund-progress::-webkit-progress-value {
     background-image: linear-gradient(to right, #4AB9C0,#4DF2D6);

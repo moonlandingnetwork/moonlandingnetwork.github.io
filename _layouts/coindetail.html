@@ -59,7 +59,7 @@ bottombanner: true
                 <p>{{page.ico.category}}</p>
             </div>
         </div>
-        {% if page.ico.tags %}
+        {% if page.ico.tags.size > 0 %}
         <div class="ico-page-tags">
             <h4>Tags</h4>
             <ul>
@@ -75,7 +75,7 @@ bottombanner: true
 <!-- ICO Page Title -->
 <!-- Main Body Content -->
 <div class="main-body-content dot-bg">
-    {% if page.ico.desc %}
+    {% if page.ico.desc.size > 0 %}
     <div class="ico-page-main-desc">
         <h6>What is it?</h6>
         <p>{{page.ico.desc}}</p>
@@ -96,14 +96,14 @@ bottombanner: true
                         </div>
                     </div>
                     <div class="coin-card-body">
-                        {% if page.ico.video %}
+                        {% if page.ico.video.size > 0 %}
                         <iframe width="500" height="280" src="https://www.youtube.com/embed/{{page.ico.video}}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                         {% endif %}
-                        {% unless page.ico.video %}
+                        {% if page.ico.video.size == 0 %}
                         <div id="video-placeholder">
                                 <h5>Video Coming Soon</h5>
                         </div>
-                        {% endunless %}
+                        {% endif %}
                         
                     </div>
                 </div>
@@ -111,11 +111,11 @@ bottombanner: true
             <div class="coin-cards-right">
                 <div class="button-group coin-page">
                     <a href="{{page.ico.whitepaper}}">
-                        <button class="btn round orange {% unless page.ico.whitepaper %}disabled{% endunless %}"><span class="btn-vertical"><img src="{{site.baseurl}}/images/whitepaper-icon.png" alt="">Read Whitepaper</span>
+                        <button class="btn round orange {% if page.ico.whitepaper.size == 0 %}disabled{% endif %}"><span class="btn-vertical"><img src="{{site.baseurl}}/images/whitepaper-icon.png" alt="">Read Whitepaper</span>
                             </button>
                     </a>
                     <a href="{{page.ico.crowdsale}}">
-                        <button class="btn round blue {% unless page.ico.crowdsale %}disabled{% endunless %}">
+                        <button class="btn round blue {% if page.ico.crowdsale.size == 0 %}disabled{% endif %}">
                             <span class="btn-vertical"><img src="{{site.baseurl}}/images/crowdsale-icon.png" alt="">Go to Crowdsale</span></button>
                     </a>
                 </div>
@@ -132,21 +132,21 @@ bottombanner: true
                             <img src="{{site.baseurl}}/images/blockchain-icon.png" alt="">
                             <div class="coincard-inner-content">
                                 <h6>Blockchain</h6>
-                                <p>{% if page.ico.token-type %}{{page.ico.token-type}}{% else %}Not Available{% endif %}</p>
+                                <p>{% if page.ico.token-type.size > 0 %}{{page.ico.token-type}}{% else %}Not Available{% endif %}</p>
                             </div>
                         </div>
                         <div class="coincard-inneritem">
                             <img src="{{site.baseurl}}/images/location-icon.png" alt="">
                             <div class="coincard-inner-content">
                                 <h6>Team Location</h6>
-                                <p>{% if page.ico.project-location %}{{page.ico.project-location}}{% else %}Not Available{% endif %}</p>
+                                <p>{% if page.ico.project-location.size > 0 %}{{page.ico.project-location}}{% else %}Not Available{% endif %}</p>
                             </div>
                         </div>
                         <div class="coincard-inneritem center">
                             <img src="{{site.baseurl}}/images/announcement-icon.png" alt="">
                             <div class="coincard-inner-content">
                                 <h6>First Announced</h6>
-                                <p>{% if page.ico.date-announced %}{{page.ico.date-announced | date_to_long_string}}{% else %}Date Not Available{% endif %}</p>
+                                <p>{% if page.ico.date-announced.size > 0 %}{{page.ico.date-announced | date_to_long_string}}{% else %}Date Not Available{% endif %}</p>
                             </div>
                         </div>
                     </div>
@@ -373,7 +373,7 @@ bottombanner: true
                             <img src="{{site.baseurl}}/images/money-icon.png" alt="">
                             <div class="coincard-inner-content">
                                 <h6>Pre-ICO Soft Cap</h6>
-                                <p>{% if page.pre-ico.soft-cap %}{{page.pre-ico.soft-cap}} {{page.ico.token-name}}{% else %}Not Available{% endif %}
+                                <p>{% if page.pre-ico.soft-cap.size > 0 %}{{page.pre-ico.soft-cap}} {{page.ico.token-name}}{% else %}Not Available{% endif %}
                                     <span class="social"></p>
                             </div>
                         </div>
@@ -381,7 +381,7 @@ bottombanner: true
                             <img src="{{site.baseurl}}/images/money-icon.png" alt="">
                             <div class="coincard-inner-content">
                                 <h6>Pre-ICO Hard Cap</h6>
-                                <p>{% if page.pre-ico.hard-cap %}{{page.pre-ico.hard-cap}} {{page.ico.token-name}}{% else %}Not Available{% endif %}
+                                <p>{% if page.pre-ico.hard-cap.size > 0 %}{{page.pre-ico.hard-cap}} {{page.ico.token-name}}{% else %}Not Available{% endif %}
                                     <span class="social"></p>
                             </div>
                         </div>
@@ -389,30 +389,30 @@ bottombanner: true
                             <img src="{{site.baseurl}}/images/contribution-icon.png" alt="">
                             <div class="coincard-inner-content">
                                 <h6>Contribution Size</h6>
-                                <p>{% if page.pre-ico.contribution-size.usd %}Min : ${{page.pre-ico.contribution-size.usd}}{% else %}USD: NA {% endif %} | {% if page.pre-ico.contribution-size.eth %} {{page.pre-ico.contribution-size.eth}} ETH{% else %}ETH: NA {% endif %} </p>
+                                <p>{% if page.pre-ico.contribution-size.usd.size > 0 %}Min : ${{page.pre-ico.contribution-size.usd}}{% else %}USD: NA {% endif %} | {% if page.pre-ico.contribution-size.eth.size > 0 %} {{page.pre-ico.contribution-size.eth}} ETH{% else %}ETH: NA {% endif %} </p>
                             </div>
                         </div>
                         <div class="coincard-inneritem third">
                             <img src="{{site.baseurl}}/images/conversion-icon.png" alt="">
                             <div class="coincard-inner-content">
                                 <h6>Pre-ICO Conversion</h6>
-                                <p class="micro-text">{% if page.pre-ico.conversion.usd %}1 {{page.ico.token-name}} = {{page.pre-ico.conversion.usd}} USD {% else %} USD : NA {% endif %}
-                                <br>{% if page.pre-ico.conversion.eth %}1 {{page.ico.token-name}} = {{page.pre-ico.conversion.eth  | truncate:8, ""}} ETH {% else %} ETH : NA {% endif %}
-                                <br>{% if page.pre-ico.conversion.btc %}1 {{page.ico.token-name}} = {{page.pre-ico.conversion.btc  | truncate:8, ""}} BTC{% else %} BTC : NA {% endif %}</p>
+                                <p class="micro-text">{% if page.pre-ico.conversion.usd.size > 0 %}1 {{page.ico.token-name}} = {{page.pre-ico.conversion.usd}} USD {% else %} USD : NA {% endif %}
+                                <br>{% if page.pre-ico.conversion.eth.size > 0 %}1 {{page.ico.token-name}} = {{page.pre-ico.conversion.eth  | truncate:8, ""}} ETH {% else %} ETH : NA {% endif %}
+                                <br>{% if page.pre-ico.conversion.btc.size > 0 %}1 {{page.ico.token-name}} = {{page.pre-ico.conversion.btc  | truncate:8, ""}} BTC{% else %} BTC : NA {% endif %}</p>
                             </div>
                         </div>
                         <div class="coincard-inneritem third">
                             <img src="{{site.baseurl}}/images/token-icon.png" alt="">
                             <div class="coincard-inner-content">
                                 <h6>Token Issue</h6>
-                                <p>{% if page.pre-ico.token-issue %}{{page.pre-ico.token-issue}}{% else %}Not Available {% endif %}</p>
+                                <p>{% if page.pre-ico.token-issue.size > 0 %}{{page.pre-ico.token-issue}}{% else %}Not Available {% endif %}</p>
                             </div>
                         </div>
                         <div class="coincard-inneritem third">
                             <img src="{{site.baseurl}}/images/bonus-icon.png" alt="">
                             <div class="coincard-inner-content">
                                 <h6>Pre-ICO Bonus</h6>
-                                <p>{% if page.pre-ico.pre-ico-bonus %}{{page.pre-ico.pre-ico-bonus}}{% else %}Not Available {% endif %}</p>
+                                <p>{% if page.pre-ico.pre-ico-bonus.size > 0 %}{{page.pre-ico.pre-ico-bonus}}{% else %}Not Available {% endif %}</p>
                             </div>
                         </div>
 
@@ -466,7 +466,7 @@ bottombanner: true
                             <img src="{{site.baseurl}}/images/softcap-icon.png" alt="">
                             <div class="coincard-inner-content">
                                 <h6>Soft Cap</h6>
-                                <p>{% if page.ico-detail.soft-cap %}{{page.ico-detail.soft-cap}} ${% else %}Not Available{% endif %}
+                                <p>{% if page.ico-detail.soft-cap.size > 0 %}{{page.ico-detail.soft-cap}} {{page.ico.token-name}}{% else %}Not Available{% endif %}
                                     <span class="social"></p>
                             </div>
                         </div>
@@ -474,7 +474,7 @@ bottombanner: true
                             <img src="{{site.baseurl}}/images/money-icon.png" alt="">
                             <div class="coincard-inner-content">
                                 <h6>Hard Cap</h6>
-                                <p>{% if page.ico-detail.hard-cap %}{{page.ico-detail.hard-cap}} ${% else %}Not Available{% endif %}
+                                <p>{% if page.ico-detail.hard-cap.size > 0 %}{{page.ico-detail.hard-cap}} {{page.ico.token-name}}{% else %}Not Available{% endif %}
                                     <span class="social"></p>
                             </div>
                         </div>
@@ -482,14 +482,14 @@ bottombanner: true
                             <img src="{{site.baseurl}}/images/contribution-icon.png" alt="">
                             <div class="coincard-inner-content">
                                 <h6>Contribution Size</h6>
-                                <p>{% if page.ico-detail.contribution-size.usd %}Min : ${{page.ico-detail.contribution-size.usd}}{% else %}USD: NA {% endif %} | {% if page.ico-detail.contribution-size.eth %} {{page.ico-detail.contribution-size.eth}} ETH{% else %}ETH: NA {% endif %}</p>
+                                <p>{% if page.ico-detail.contribution-size.usd.size > 0 %}Min : ${{page.ico-detail.contribution-size.usd}}{% else %}USD: NA {% endif %} | {% if page.ico-detail.contribution-size.eth.size > 0 %} {{page.ico-detail.contribution-size.eth}} ETH{% else %}ETH: NA {% endif %}</p>
                             </div>
                         </div>
                         <div class="coincard-inneritem third">
                             <img src="{{site.baseurl}}/images/pie-icon.png" alt="">
                             <div class="coincard-inner-content">
                                 <h6>Total Supply</h6>
-                                <p>{% if page.ico-detail.total-supply %}{{page.ico-detail.total-supply}} {{page.ico.token-name}}{% else %}Not Available{% endif %}
+                                <p>{% if page.ico-detail.total-supply.size > 0 %}{{page.ico-detail.total-supply}} {{page.ico.token-name}}{% else %}Not Available{% endif %}
                                     <span class="social"></p>
                             </div>
                         </div>
@@ -497,7 +497,7 @@ bottombanner: true
                             <img src="{{site.baseurl}}/images/pie-icon.png" alt="">
                             <div class="coincard-inner-content">
                                 <h6>Investor Supply</h6>
-                                <p>{% if page.ico-detail.investor-supply %}{{page.ico-detail.investor-supply}} {{page.ico.token-name}}{% else %}Not Available{% endif %}
+                                <p>{% if page.ico-detail.investor-supply.size > 0 %}{{page.ico-detail.investor-supply}} {{page.ico.token-name}}{% else %}Not Available{% endif %}
                                     <span class="social"></p>
                             </div>
                         </div>
@@ -506,7 +506,7 @@ bottombanner: true
                             <div class="coincard-inner-content">
                                 <h6>Supply Distribution</h6>
                                 <p>
-                                    {% if  page.ico-detail.supply-distribution %}
+                                    {% if  page.ico-detail.supply-distribution.size > 0 %}
                                     {% for item in page.ico-detail.supply-distribution %}
                                     {{item}}
                                     <br>
@@ -521,29 +521,29 @@ bottombanner: true
                             <img src="{{site.baseurl}}/images/conversion-icon.png" alt="">
                             <div class="coincard-inner-content">
                                 <h6>ICO Conversion</h6>
-                                <p class="micro-text">{% if page.ico-detail.conversion.usd %}1 {{page.ico.token-name}} = <span id="ico-usd-price">{{page.ico-detail.conversion.usd}}</span> USD {% else %} USD : NA {% endif %}
-                                        <br>{% if page.ico-detail.conversion.eth %}1 {{page.ico.token-name}} = <span id="ico-eth-price">{{page.ico-detail.conversion.eth  | truncate:8, ""}}</span> ETH {% else %} ETH : NA {% endif %}
-                                        <br>{% if page.ico-detail.conversion.btc %}1 {{page.ico.token-name}} = <span id="ico-btc-price">{{page.ico-detail.conversion.btc  | truncate:8, ""}}</span> BTC{% else %} BTC : NA {% endif %}</p>
+                                <p class="micro-text">{% if page.ico-detail.conversion.usd.size > 0 %}1 {{page.ico.token-name}} = <span id="ico-usd-price">{{page.ico-detail.conversion.usd}}</span> USD {% else %} USD : NA {% endif %}
+                                        <br>{% if page.ico-detail.conversion.eth.size > 0 %}1 {{page.ico.token-name}} = <span id="ico-eth-price">{{page.ico-detail.conversion.eth  | truncate:8, ""}}</span> ETH {% else %} ETH : NA {% endif %}
+                                        <br>{% if page.ico-detail.conversion.btc.size > 0 %}1 {{page.ico.token-name}} = <span id="ico-btc-price">{{page.ico-detail.conversion.btc  | truncate:8, ""}}</span> BTC{% else %} BTC : NA {% endif %}</p>
                             </div>
                         </div>
                         <div class="coincard-inneritem third">
                             <img src="{{site.baseurl}}/images/token-icon.png" alt="">
                             <div class="coincard-inner-content">
                                 <h6>Token Issue</h6>
-                                <p>{% if page.ico-detail.token-issue %}{{page.ico-detail.token-issue}}{% else %}Not Available {% endif %}</p>
+                                <p>{% if page.ico-detail.token-issue.size > 0 %}{{page.ico-detail.token-issue}}{% else %}Not Available {% endif %}</p>
                             </div>
                         </div>
                         <div class="coincard-inneritem third">
                             <img src="{{site.baseurl}}/images/bonus-icon.png" alt="">
                             <div class="coincard-inner-content">
                                 <h6>Bonus Structure</h6>
-                                <p>{% if page.ico-detail.bonus %}{{page.ico-detail.bonus}}{% else %}Not Available {% endif %}</p>
+                                <p>{% if page.ico-detail.bonus.size > 0 %}{{page.ico-detail.bonus}}{% else %}Not Available {% endif %}</p>
                             </div>
                         </div>
 
                     </div>
                 </div>
-                {% if page.team %}
+                {% if page.team.size > 0 %}
                 <div id="ico-team" class="coin-card full">
                     <div class="coin-card-title">
                         <h6>Token Founding Team</h6>
@@ -569,7 +569,7 @@ bottombanner: true
                     </div>
                 </div>
                 {% endif %}
-                {% if page.social.twitter-username %}
+                {% if page.social.twitter-username.size > 0 %}
                 <div class="coin-card full twitter-card">
                     <div class="coin-card-title">
                         <h6>Tweets by
@@ -589,7 +589,7 @@ bottombanner: true
                 {% endif %}
             </div>
             <div class="coin-cards-right" id="card-col-2">
-                {% if page.social %}
+                
                 <div class="coin-card full" id="token-details-2">
                     <div class="coin-card-title">
                         <h6>Token Details</h6>
@@ -603,25 +603,26 @@ bottombanner: true
                             <img src="{{site.baseurl}}/images/blockchain-icon.png" alt="">
                             <div class="coincard-inner-content">
                                 <h6>Blockchain</h6>
-                                <p>{% if page.ico.token-type %}{{page.ico.token-type}}{% else %}Not Available{% endif %}</p>
+                                <p>{% if page.ico.token-type.size > 0 %}{{page.ico.token-type}}{% else %}Not Available{% endif %}</p>
                             </div>
                         </div>
                         <div class="coincard-inneritem">
                             <img src="{{site.baseurl}}/images/location-icon.png" alt="">
                             <div class="coincard-inner-content">
                                 <h6>Team Location</h6>
-                                <p>{% if page.ico.project-location %}{{page.ico.project-location}}{% else %}Not Available{% endif %}</p>
+                                <p>{% if page.ico.project-location.size > 0 %}{{page.ico.project-location}}{% else %}Not Available{% endif %}</p>
                             </div>
                         </div>
                         <div class="coincard-inneritem center">
                             <img src="{{site.baseurl}}/images/announcement-icon.png" alt="">
                             <div class="coincard-inner-content">
                                 <h6>First Announced</h6>
-                                <p>{% if page.ico.date-announced %}{{page.ico.date-announced | date_to_long_string}}{% else %}Date Not Available{% endif %}</p>
+                                <p>{% if page.ico.date-announced.size > 0 %}{{page.ico.date-announced | date_to_long_string}}{% else %}Date Not Available{% endif %}</p>
                             </div>
                         </div>
                     </div>
                 </div>
+                {% if page.social.website.size > 0 or page.social.facebook.size > 0 or page.social.twitter.size > 0 or page.social.telegram.size > 0 or page.social.medium.size > 0 or page.social.reddit.size > 0 or page.social.github.size > 0 %}
                 <div class="coin-card full">
                     <div class="coin-card-title">
                         <h6>Token Community</h6>
@@ -631,7 +632,7 @@ bottombanner: true
                         </div>
                     </div>
                     <div class="coin-card-body">
-                        {% if page.social.website %}
+                        {% if page.social.website.size > 0 %}
                         <a class="coincard-inneritem community nogrow alt" href="{{page.social.website}}">
                             <img src="{{site.baseurl}}/images/location-net-icon.png" alt="">
                             <div class="coincard-inner-content">
@@ -639,7 +640,7 @@ bottombanner: true
                             </div>
                         </a>
                         {% endif %}
-                        {% if page.social.facebook %}
+                        {% if page.social.facebook.size > 0 %}
                         <a class="coincard-inneritem community nogrow alt" href="{{page.social.facebook}}">
                             <i class="fab fa-facebook-f"></i>
                             <div class="coincard-inner-content">
@@ -647,7 +648,7 @@ bottombanner: true
                             </div>
                         </a>
                         {% endif %}
-                        {% if page.social.twitter %}
+                        {% if page.social.twitter.size > 0 %}
                         <a class="coincard-inneritem community nogrow alt" href="{{page.social.twitter}}">
                             <i class="fab fa-twitter"></i>
                             <div class="coincard-inner-content">
@@ -655,7 +656,7 @@ bottombanner: true
                             </div>
                         </a>
                         {% endif %}
-                        {% if page.social.telegram %}
+                        {% if page.social.telegram.size > 0 %}
                         <a class="coincard-inneritem community nogrow alt" href="{{page.social.telegram}}">
                             <i class="fab fa-telegram-plane"></i>
                             <div class="coincard-inner-content">
@@ -663,7 +664,7 @@ bottombanner: true
                             </div>
                         </a>
                         {% endif %}
-                        {% if page.social.medium %}
+                        {% if page.social.medium.size > 0 %}
                         <a class="coincard-inneritem community nogrow alt" href="{{page.social.medium}}">
                             <img src="{{site.baseurl}}/images/medium-logo.png" alt="">
                             <div class="coincard-inner-content">
@@ -671,7 +672,7 @@ bottombanner: true
                             </div>
                         </a>
                         {% endif %}
-                        {% if page.social.reddit %}
+                        {% if page.social.reddit.size > 0 %}
                         <a class="coincard-inneritem community nogrow alt" href="{{page.social.reddit}}">
                             <i class="fab fa-reddit-alien"></i>
                             <div class="coincard-inner-content">
@@ -679,7 +680,7 @@ bottombanner: true
                             </div>
                         </a>
                         {% endif %}
-                        {% if page.social.github %}
+                        {% if page.social.github.size > 0 %}
                         <a class="coincard-inneritem community nogrow alt" href="{{page.social.github}}">
                             <i class="fab fa-github"></i>
                             <div class="coincard-inner-content">
@@ -690,7 +691,7 @@ bottombanner: true
                     </div>
                 </div>
                 {% endif %}
-                {% if page.ico-participation-details %}
+                {% if page.ico-participation-details.currencies-accepted.size > 0 or page.ico-participation-details.countries-notallowed.size > 0 %}
                 <div class="coin-card full participation-detail">
                     <div class="coin-card-title">
                         <h6>ICO Details</h6>
@@ -700,7 +701,7 @@ bottombanner: true
                         </div>
                     </div>
                     <div class="coin-card-body">
-                        {% if page.ico-participation-details.currencies-accepted %}
+                        {% if page.ico-participation-details.currencies-accepted.size > 0 %}
                         <div class="coincard-inneritem full">
                             <div class="coincard-inner-content">
                                 <h6>currencies Accepted</h6>
@@ -713,7 +714,7 @@ bottombanner: true
                             </div>
                         </div>
                         {% endif %}
-                        {% if page.ico-participation-details.countries-notallowed %}
+                        {% if page.ico-participation-details.countries-notallowed.size > 0 %}
                         <div class="coincard-inneritem full">
                             <div class="coincard-inner-content">
                                 <h6>Countries Not Allowed</h6>
@@ -743,7 +744,7 @@ bottombanner: true
 
                     </div>
                 </div>
-                {% if page.team %}
+                {% if page.team.size > 0 %}
                 <div id="ico-team-2" class="coin-card full">
                     <div class="coin-card-title">
                         <h6>Token Founding Team</h6>

@@ -98,6 +98,7 @@ title: Pre ICOs | Moonlanding Network
         <!-- ICO Nav -->
         {% include iconav.html %}
         <!-- End ICO Nav -->
+        {% if totalPreActive.size > 0 %}
         <!-- Pre ICO Title -->
         <h1 class="pre-ico-title">Active PRE-ICOS</h1>
         <hr class="pre-ico-hr">
@@ -113,6 +114,7 @@ title: Pre ICOs | Moonlanding Network
                     <li>Social Media</li>
                 </ul>
             </div>
+        {% endif %}
             <div class="tbody">
                 {% for coin in totalPreActive %}
                 <!-- Check If Featured -->
@@ -190,7 +192,7 @@ title: Pre ICOs | Moonlanding Network
                 {% endfor %}
             </div>
         </div>
-
+        {% if totalPreUpcoming.size > 0 %}
         <!-- Pre ICO Title -->
         <h1 class="pre-ico-title">Upcoming PRE-ICOS</h1>
         <hr class="pre-ico-hr">
@@ -206,6 +208,7 @@ title: Pre ICOs | Moonlanding Network
                     <li>Social Media</li>
                 </ul>
             </div>
+            {% endif %}
             <div class="tbody">
                 {% for coin in totalPreUpcoming %}
                 <!-- Check If Featured -->
