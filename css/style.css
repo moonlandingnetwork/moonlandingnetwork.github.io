@@ -1967,7 +1967,7 @@ footer{
     margin: 0 0 0 1rem;
 }
 .ico-page-tags li{
-    min-width: 4.4rem;
+    /* min-width: 4.4rem; */
     font-size: 0.85rem;
     padding: 0.35rem 0.6rem;
     margin: 0.25rem 0.2rem;
