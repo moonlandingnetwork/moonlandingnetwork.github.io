@@ -32,9 +32,11 @@ bottombanner: true
 {% if preActive or active %}
 {% assign activeNow = true %}
 {% endif %}
+{% unless page.progress.collected == 0 or page.progress.collected.size == 0 %}
 {% if page.progress.collected >= page.progress.total %}
 {% assign soldOut = true %}
 {% endif %}
+{% endunless %}
 <!-- ICO Page Title -->
 <div class="container">
     <div class="ico-page-header">
@@ -181,7 +183,7 @@ bottombanner: true
                 <div class="coin-card-title progress">
                     {% assign collected = page.progress.collected %} {% assign total = page.progress.total %} {% if collected.size > 0 and collected != 0 %}{% assign percent = collected |
                     times: 100 | divided_by: total %}{% else %}{% assign percent = 0 %}{% endif %}
-                    <span>${{collected}}</span> OF ${{total}}
+                    <span>{% if collected.size != 0 %}${{collected}}{% else %} 0 {% endif %}</span> OF {% if total.size != 0 %} ${{total}} {% else %} 0 {% endif %}
                     <span>{{percent}}%</span>
                 </div>
                 <div class="card-title-action">
@@ -228,9 +230,11 @@ bottombanner: true
                 {% endunless %}
                 {% endunless %}
                 {% unless page.ico-detail.no-date %}
+                {% unless page.ico-detail.end-date.size == 0 %}
                 {% if ended %}
                 <h2 id="coin-page-card-status">Ended</h2>
                 {% endif %}
+                {% endunless %}
                 {% endunless %}
                 {% if cancelled %}
                 <h2 id="coin-page-card-status">Cancelled</h2>
@@ -240,7 +244,7 @@ bottombanner: true
                 <h2 id="coin-page-card-status">Sold Out</h2>
                 {% endif %}
                 {% endunless %}
-                {% if page.ico-detail.no-date %}
+                {% if page.ico-detail.no-date or page.pre-ico.no-date %}
                 <h2 id="coin-page-card-status">TBA</h2>
                 {% endif %}
                 <div id="coin-progress-hr"></div>
@@ -352,14 +356,14 @@ bottombanner: true
                             <img src="{{site.baseurl}}/images/calender-icon.png" alt="">
                             <div class="coincard-inner-content">
                                 <h6>Pre-ICO Start Date</h6>
-                                <p>{% if page.pre-ico.no-date %}Not Available{% else %}{{page.pre-ico.start-date | date_to_long_string}}{% endif %}</p>
+                                <p>{% if page.pre-ico.no-date or page.pre-ico.start-date.size == 0 %}Not Available{% else %}{{page.pre-ico.start-date | date_to_long_string}}{% endif %}</p>
                             </div>
                         </div>
                         <div class="coincard-inneritem third">
                             <img src="{{site.baseurl}}/images/finish-icon.png" alt="">
                             <div class="coincard-inner-content">
                                 <h6>Pre-ICO End Date</h6>
-                                <p>{% if page.pre-ico.no-date %}Not Available{% else %}{{page.pre-ico.end-date | date_to_long_string}}{% endif %}</p>
+                                <p>{% if page.pre-ico.no-date or page.pre-ico.end-date.size == 0 %}Not Available{% else %}{{page.pre-ico.end-date | date_to_long_string}}{% endif %}</p>
                             </div>
                         </div>
                         <div class="coincard-inneritem third">
@@ -445,14 +449,14 @@ bottombanner: true
                             <img src="{{site.baseurl}}/images/calender-icon.png" alt="">
                             <div class="coincard-inner-content">
                                 <h6>ICO Start Date</h6>
-                                <p>{% if page.ico-detail.no-date %}Not Available{% else %}{{page.ico-detail.start-date | date_to_long_string}}{% endif %}</p>
+                                <p>{% if page.ico-detail.no-date or page.ico-detail.start-date.size == 0 %}Not Available{% else %}{{page.ico-detail.start-date | date_to_long_string}}{% endif %}</p>
                             </div>
                         </div>
                         <div class="coincard-inneritem third">
                             <img src="{{site.baseurl}}/images/finish-icon.png" alt="">
                             <div class="coincard-inner-content">
                                 <h6>ICO End Date</h6>
-                                <p>{% if page.ico-detail.no-date %}Not Available{% else %}{{page.ico-detail.end-date | date_to_long_string }}{% endif %}</p>
+                                <p>{% if page.ico-detail.no-date or page.ico-detail.end-date.size == 0 %}Not Available{% else %}{{page.ico-detail.end-date | date_to_long_string }}{% endif %}</p>
                             </div>
                         </div>
                         <div class="coincard-inneritem third">

@@ -11,8 +11,8 @@ title: Ended ICOs | Moonlanding Network
 {% assign featuredEnded = "" | split: ',' %}
 {% assign featuredExpired = "" | split: ',' %}
 {% for coin in featuredcoins %}
-{% unless coin.pre-ico.no-date %}
-{% unless coin.ico-detail.no-date %}
+{% unless coin.pre-ico.no-date or coin.ico-detail.no-date %}
+{% unless coin.ico-detail.end-date.size == 0 %}
 {% assign featuredTill = coin.ico.featured-till | date: "%s" | plus: 0 %}
 {% assign ico_end_date = coin.ico-detail.end-date | date: "%s" | plus: 0 %}
 {% if current_date > ico_end_date %}
@@ -29,8 +29,8 @@ title: Ended ICOs | Moonlanding Network
 <!-- Regular coins array -->
 {% assign regularEnded = "" | split: ',' %}
 {% for coin in regularcoins %}
-{% unless coin.pre-ico.no-date %}
-{% unless coin.ico-detail.no-date %}
+{% unless coin.pre-ico.no-date or coin.ico-detail.no-date %}
+{% unless coin.ico-detail.end-date.size == 0 %}
 {% assign ico_end_date = coin.ico-detail.end-date | date: "%s" | plus: 0 %}
 {% if current_date > ico_end_date %}
 {% assign regularEnded = regularEnded | push: coin %}
@@ -61,7 +61,7 @@ title: Ended ICOs | Moonlanding Network
                     <li>Moonability</li>
                     <li>Category</li>
                     <li>Fund Raised</li>
-                    <li>Ends In</li>
+                    <li>Ended In</li>
                     <li>Social Media</li>
                 </ul>
             </div>
