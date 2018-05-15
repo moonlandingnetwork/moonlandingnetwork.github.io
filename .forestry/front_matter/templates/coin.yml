@@ -1,5 +1,6 @@
 ---
 pages:
+- _coins/verasity.html
 - _coins/welltrado.html
 hide_body: true
 is_partial: false
