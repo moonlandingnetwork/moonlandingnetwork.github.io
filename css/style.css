@@ -2852,7 +2852,7 @@ footer{
 @media screen and (max-width: 991px) and (min-width: 690px) {
     /* ICO Table */
     .ico-category-parent{
-        display: block !important;
+        display: none !important;
     }
     /* Coin Page*/
     .ico-coin-cards.first{
