@@ -3062,6 +3062,10 @@ footer{
         flex-shrink: 0;
         margin-left: 1rem;
     }
+    .ico-whitelist-type-parent.minimal{
+        flex: 0 1 30% !important;
+        margin-left: 0 !important;
+    }
     .ico-moonability{
         letter-spacing: 1px;
         font-size: 0.8rem;
