@@ -2965,7 +2965,7 @@ footer{
         align-items: center;
         text-transform: uppercase;
         color: #E09224;
-        margin: 3rem 0 0;
+        margin: 3rem 0.5rem 0;
         border-bottom: 2px solid #E39300;
     }
     .ico-grid-tab{
