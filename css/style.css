@@ -943,7 +943,7 @@ nav input:-ms-input-placeholder {
     height: 0.25rem;
     border: none;
     margin-bottom: -0.5rem;
-    margin-top: 1rem;
+    margin-top: 2rem;
     display: none;
 }
 /* ICO Table */
@@ -2950,7 +2950,7 @@ footer{
     
     /* Homepage */
     .home-ico-hr{
-        display: block;
+        display: none;
     }
     .ico-col-content a {
         flex: 0 1 100%;
