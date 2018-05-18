@@ -1,18 +1,6 @@
 ---
 pages:
-- _coins/exaking.html
-- _coins/exchain.html
-- _coins/etherinc.html
-- _coins/bulltoken.html
-- _coins/bubbletone.html
-- _coins/aworker.html
-- _coins/akaiito.html
-- _coins/bitnautic.html
-- _coins/nauticus.html
-- _coins/kelta.html
-- _coins/bidium.html
-- _coins/dorado.html
-- _coins/welltrado.html
+- _coins/quarkchain.html
 hide_body: true
 is_partial: false
 fields:
