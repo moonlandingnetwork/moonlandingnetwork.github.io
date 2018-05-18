@@ -59,11 +59,17 @@ title: Moonlanding Network
     
     <!-- End Intro Section -->
     <!-- ICO Grid -->
+    <div class='ico-grid-tabs'>
+            <div data-id="1" class='ico-grid-tab'>Upcoming</div>
+            <div data-id="2" class='ico-grid-tab active'>Active</div>
+            <div data-id="3" class='ico-grid-tab'>Ended </div>
+    </div>
     <div class="ico-grid">
+        
         {% assign featuredcoins = site.coins | where: 'ico.featured', 'true' | sort: 'date' | reverse %} {% assign regularcoins
         = site.coins | where: 'ico.featured', 'false' | sort: 'date' | reverse %} {% assign timeframe = 86400 %} {%
         assign current_date = "now" | date: "%s" | minus: timeframe %}
-        <div class="ico-col">
+        <div class="ico-col" id="ico-col-1">
             <div class="ico-col-title">Upcoming ICO</div>
             <div class="ico-col-content">
             <!-- Featured Upcoming Coins Array -->
@@ -120,7 +126,7 @@ title: Moonlanding Network
             </a>
         
         </div>
-        <div class="ico-col">
+        <div class="ico-col active" id="ico-col-2">
             <div class="ico-col-title">Active ICO</div>
             <div class="ico-col-content">
             <!-- Featured Active Coins Array -->
@@ -178,7 +184,7 @@ title: Moonlanding Network
             </a>
         
         </div>
-        <div class="ico-col">
+        <div class="ico-col" id="ico-col-3">
             <div class="ico-col-title">Ended ICO</div>
             <div class="ico-col-content">
             <!-- Featured Ended Coins Array -->

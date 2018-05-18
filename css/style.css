@@ -1500,6 +1500,9 @@ footer{
     background-size: contain;
     background-repeat: repeat-y;
 }
+.ico-grid-tabs{
+    display: none;
+}
 .ico-col{
     flex: 0 0 auto;
     display: -webkit-box;
@@ -2943,6 +2946,36 @@ footer{
     .ico-col-btn{
         max-width: 20rem;
     }
+    .ico-grid-tabs{
+        display: flex;
+        font-size: 1.1rem;
+        justify-content: space-around;
+        align-items: center;
+        text-transform: uppercase;
+        color: #E09224;
+        margin-top: 4rem;
+        border-bottom: 2px solid #E39300;
+    }
+    .ico-grid-tab{
+        flex: 1;
+        text-align: center;
+    }
+    .ico-grid-tab.active {
+        font-size: 1.3rem;
+        font-weight: 600;
+        color: #E39300;
+        padding-bottom: 0.4rem;
+        border-bottom: 2px solid #E39300;
+    }
+    .ico-col{
+        display: none;
+    }
+    .ico-col.active{
+        display: flex;
+    }
+    .ico-col-content{
+        margin-top: 0;
+    }
     /* ICO Table */
     
     .ico-nav ul{
@@ -3639,6 +3672,7 @@ footer{
     .ico-grid{
         margin: 1rem 0;
    }
+
     .ico-col{
         margin: 2rem 0;
    }

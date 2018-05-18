@@ -156,7 +156,25 @@ cmcEth.onload = function(){
 }
 cmcEth.send();
 /* End  CoinmarketCap API Data For Live BTC / ETH */
-
+/* Homepage ICO Grid Tabs */
+if(width <= 690){
+    const icoGridTabs = document.querySelectorAll('.ico-grid-tab');
+    if(icoGridTabs != null){
+       icoGridTabs.forEach((tab) => {
+          tab.addEventListener('click', (e) =>{
+              icoGridTabs.forEach((tab) => tab.classList.remove('active'));
+              tab.classList.add('active');
+              let tabId = e.target.dataset.id;
+              const activeIcoCol = document.getElementById(`ico-col-${(tabId)}`);
+              const icoColAll = document.querySelectorAll('.ico-col');
+              icoColAll.forEach((col) =>{
+                  col.classList.remove('active');
+              });
+              activeIcoCol.classList.add('active');
+          });
+       });
+    }
+}
 /* ICO Nav Mobile Humburger Menu */
 if(width <= 690){
 let icoNav = document.querySelector('.ico-nav li.active');
@@ -347,10 +365,12 @@ if(width <= 690){
     const flexColFirst = document.querySelector('#card-col-1');
     const flexColSecond = document.querySelector('#card-col-2');
     const flexParent = document.querySelector('#card-col-parent');
+    if(flexParent != null){
     while (flexColFirst.firstChild) flexParent.insertBefore(flexColFirst.firstChild, flexColFirst);
     while (flexColSecond.firstChild) flexParent.insertBefore(flexColSecond.firstChild, flexColSecond);
     flexParent.removeChild(flexColFirst);
     flexParent.removeChild(flexColSecond);
+    }
 }
 
 /* Twitter Iframe Styling  */
