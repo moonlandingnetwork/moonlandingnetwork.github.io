@@ -31,6 +31,11 @@ fields:
   description: Basic Listing Information
   label: Primary ICO Details
   fields:
+  - type: boolean
+    name: cancelled
+    label: Cancelled
+    description: Is this ICO cancelled?
+    default: false
   - type: datetime
     name: date-announced
     label: Date Announced
@@ -78,11 +83,6 @@ fields:
   - type: text
     name: crowdsale
     label: Crowdsale Link
-  - type: boolean
-    name: cancelled
-    label: Cancelled
-    description: Is this ICO cancelled?
-    default: false
   - type: boolean
     name: featured
     label: Featured
