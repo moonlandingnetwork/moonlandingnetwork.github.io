@@ -2965,7 +2965,7 @@ footer{
         align-items: center;
         text-transform: uppercase;
         color: #E09224;
-        margin: 3rem 0.5rem 0;
+        margin: 2rem 0.5rem 0;
         border-bottom: 2px solid #E39300;
     }
     .ico-grid-tab{
@@ -3634,6 +3634,7 @@ footer{
    /* Home Page */
     .intro-section{
         background-repeat: repeat-y;
+        display: none;
    }
     .banner{
         height: 30vh;
@@ -3674,6 +3675,7 @@ footer{
    }
     .twitter-feed{
         margin-top: 3rem;
+        display: none;
    }
     .down-arrow{
         width: 40%;
