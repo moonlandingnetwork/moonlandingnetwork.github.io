@@ -1,6 +1,4 @@
 ---
-pages:
-- _coins/quarkchain.html
 hide_body: true
 is_partial: false
 fields:
@@ -341,3 +339,6 @@ fields:
   - type: list
     name: countries-notallowed
     label: Countries Not Allowed
+pages:
+- _coins/spaceship.html
+- _coins/quarkchain.html
