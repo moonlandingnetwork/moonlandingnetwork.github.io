@@ -346,19 +346,26 @@ cmcRequest.onload = function(){
     let dailyVolume = document.querySelector('#daily-volume');
     let marketCap = document.querySelector('#market-cap');
     
-    let usdReturn = cmcData[0].price_usd/icoUsdPrice.textContent + '';
-    let ethReturn = cmcData[0].price_eth/icoEthPrice.textContent + '';
-    let btcReturn = cmcData[0].price_btc/icoBtcPrice.textContent + '';
-
-
-    returnsUsd.textContent = usdReturn.substring(0,4)+'x';
-    returnsEth.textContent = ethReturn.substring(0,4)+'x';
-    returnsBtc.textContent = btcReturn.substring(0,4)+'x';
-    usdLive.textContent = cmcData[0].price_usd + ' $';
-    ethLive.textContent = cmcData[0].price_eth + ' ETH';
-    btcLive.textContent = cmcData[0].price_btc + ' BTC';
-    dailyVolume.textContent =  cmcData[0]['24h_volume_usd'] + ' $';
-    marketCap.textContent = cmcData[0].market_cap_usd + ' $';
+    console.log(cmcData[0]);
+    if(icoUsdPrice != null){
+        let usdReturn = cmcData[0].price_usd/icoUsdPrice.textContent + '';
+        returnsUsd.textContent = usdReturn.substring(0,4)+'x';
+    }
+    if (icoEthPrice != null){
+        let ethReturn = cmcData[0].price_eth/icoEthPrice.textContent + '';
+        returnsEth.textContent = ethReturn.substring(0,4)+'x';
+    }
+    if (icoBtcPrice != null){
+        let btcReturn = cmcData[0].price_btc/icoBtcPrice.textContent + '';
+        returnsBtc.textContent = btcReturn.substring(0,4)+'x';
+    }
+  
+    
+    usdLive.textContent = parseFloat(cmcData[0].price_usd).toLocaleString() + ' $';
+    ethLive.textContent = parseFloat(cmcData[0].price_eth) + ' ETH';
+    btcLive.textContent = parseFloat(cmcData[0].price_btc) + ' BTC';
+    dailyVolume.textContent = '$ '+ parseFloat(cmcData[0]['24h_volume_usd']).toLocaleString();
+    marketCap.textContent = '$ ' + parseFloat(cmcData[0].market_cap_usd).toLocaleString();
 
     
     }
