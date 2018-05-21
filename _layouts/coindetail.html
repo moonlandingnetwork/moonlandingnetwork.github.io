@@ -184,7 +184,7 @@ bottombanner: true
                     {% assign collected = page.progress.collected %} {% assign total = page.progress.total %} {% if collected.size > 0 and collected != 0 %}{% assign percent = collected |
                     times: 100 | divided_by: total %}{% else %}{% assign percent = 0 %}{% endif %}
                     <span>{% if collected.size != 0 %}${{collected}}{% else %} 0 {% endif %}</span> OF {% if total.size != 0 %} ${{total}} {% else %} 0 {% endif %}
-                    <span>{{percent}}%</span>
+                    <span id="ico-coin-percentage">{{percent}}%</span>
                 </div>
                 <div class="card-title-action">
                     <button class="btn circle cyan"></button>
@@ -247,8 +247,10 @@ bottombanner: true
                 {% if page.ico-detail.no-date or page.pre-ico.no-date %}
                 <h2 id="coin-page-card-status">TBA</h2>
                 {% endif %}
-                <div id="coin-progress-hr"></div>
-                <img src="{{site.baseurl}}/images/coin-status-astro.png" alt="">
+                <div id="coin-progress-hr">
+                    <img id="coin-progress-baloon" src="{{site.baseurl}}/images/coin-status-astro.png" alt="">
+                </div>
+                
             </div>
         </div>
 

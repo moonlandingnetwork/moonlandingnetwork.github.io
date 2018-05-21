@@ -265,7 +265,16 @@ if(coinMeterNeedle != null){
     coinMeterNeedle.style.transform = `rotate(${coinMeterDegree}deg)`;
 }
 
+/* ICO Inner Page Progress Bar Dynamic Color */
+const icoProgressBar = document.getElementById('coin-progress-hr');
+if(icoProgressBar != null){
+    const icoProgressPercentageElem = document.getElementById('ico-coin-percentage');
+    icoProgressPercentage = icoProgressPercentageElem.textContent;
+    icoProgressBar.style.background = 'linear-gradient(90deg, #3EADB4, #45F4CE ' + icoProgressPercentage + ', darkgray 0%)';
+    const icoProgressBaloon = document.getElementById('coin-progress-baloon');
+    icoProgressBaloon.style.left = 'calc('+icoProgressPercentage+' - 16.5px)';
 
+}
 /* ICO Inner Page Coin Progress Element Word Split */
 let text = document.getElementById("coin-page-card-status");
 if(text != null){
