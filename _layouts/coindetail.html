@@ -183,7 +183,7 @@ bottombanner: true
                 <div class="coin-card-title progress">
                     {% assign collected = page.progress.collected %} {% assign total = page.progress.total %} {% if collected.size > 0 and collected != 0 %}{% assign percent = collected |
                     times: 100 | divided_by: total %}{% else %}{% assign percent = 0 %}{% endif %}
-                    <span>{% if collected.size != 0 %}${{collected}}{% else %} 0 {% endif %}</span> OF {% if total.size != 0 %} ${{total}} {% else %} 0 {% endif %}
+                    <span>{% if collected.size != 0 %}$ <span id="coin-page-progress-collected" class="formatted-no">{{collected}}</span>{% else %} 0 {% endif %}</span> OF {% if total.size != 0 %} $<span class="formatted-no">{{total}}</span> {% else %} 0 {% endif %}
                     <span id="ico-coin-percentage">{{percent}}%</span>
                 </div>
                 <div class="card-title-action">
@@ -379,7 +379,7 @@ bottombanner: true
                             <img src="{{site.baseurl}}/images/money-icon.png" alt="">
                             <div class="coincard-inner-content">
                                 <h6>Pre-ICO Soft Cap</h6>
-                                <p>{% if page.pre-ico.soft-cap.size > 0 %}{{page.pre-ico.soft-cap}} {{page.ico.token-name}}{% else %}Not Available{% endif %}
+                                <p>{% if page.pre-ico.soft-cap.size > 0 %}<span class="formatted-no">{{page.pre-ico.soft-cap}}</span> {{page.ico.token-name}}{% else %}Not Available{% endif %}
                                     <span class="social"></p>
                             </div>
                         </div>
@@ -387,7 +387,7 @@ bottombanner: true
                             <img src="{{site.baseurl}}/images/money-icon.png" alt="">
                             <div class="coincard-inner-content">
                                 <h6>Pre-ICO Hard Cap</h6>
-                                <p>{% if page.pre-ico.hard-cap.size > 0 %}{{page.pre-ico.hard-cap}} {{page.ico.token-name}}{% else %}Not Available{% endif %}
+                                <p>{% if page.pre-ico.hard-cap.size > 0 %}<span class="formatted-no">{{page.pre-ico.hard-cap}}</span> {{page.ico.token-name}}{% else %}Not Available{% endif %}
                                     <span class="social"></p>
                             </div>
                         </div>
@@ -472,7 +472,7 @@ bottombanner: true
                             <img src="{{site.baseurl}}/images/softcap-icon.png" alt="">
                             <div class="coincard-inner-content">
                                 <h6>Soft Cap</h6>
-                                <p>{% if page.ico-detail.soft-cap.size > 0 %}{{page.ico-detail.soft-cap}} {{page.ico.token-name}}{% else %}Not Available{% endif %}
+                                <p>{% if page.ico-detail.soft-cap.size > 0 %}<span class="formatted-no">{{page.ico-detail.soft-cap}}</span> {{page.ico.token-name}}{% else %}Not Available{% endif %}
                                     <span class="social"></p>
                             </div>
                         </div>
@@ -480,7 +480,7 @@ bottombanner: true
                             <img src="{{site.baseurl}}/images/money-icon.png" alt="">
                             <div class="coincard-inner-content">
                                 <h6>Hard Cap</h6>
-                                <p>{% if page.ico-detail.hard-cap.size > 0 %}{{page.ico-detail.hard-cap}} {{page.ico.token-name}}{% else %}Not Available{% endif %}
+                                <p>{% if page.ico-detail.hard-cap.size > 0 %}<span class="formatted-no">{{page.ico-detail.hard-cap}}</span> {{page.ico.token-name}}{% else %}Not Available{% endif %}
                                     <span class="social"></p>
                             </div>
                         </div>
@@ -495,7 +495,7 @@ bottombanner: true
                             <img src="{{site.baseurl}}/images/pie-icon.png" alt="">
                             <div class="coincard-inner-content">
                                 <h6>Total Supply</h6>
-                                <p>{% if page.ico-detail.total-supply.size > 0 %}{{page.ico-detail.total-supply}} {{page.ico.token-name}}{% else %}Not Available{% endif %}
+                                <p>{% if page.ico-detail.total-supply.size > 0 %}<span class="formatted-no">{{page.ico-detail.total-supply}}</span> {{page.ico.token-name}}{% else %}Not Available{% endif %}
                                     <span class="social"></p>
                             </div>
                         </div>
@@ -503,7 +503,7 @@ bottombanner: true
                             <img src="{{site.baseurl}}/images/pie-icon.png" alt="">
                             <div class="coincard-inner-content">
                                 <h6>Investor Supply</h6>
-                                <p>{% if page.ico-detail.investor-supply.size > 0 %}{{page.ico-detail.investor-supply}} {{page.ico.token-name}}{% else %}Not Available{% endif %}
+                                <p>{% if page.ico-detail.investor-supply.size > 0 %}<span class="formatted-no">{{page.ico-detail.investor-supply}}</span> {{page.ico.token-name}}{% else %}Not Available{% endif %}
                                     <span class="social"></p>
                             </div>
                         </div>

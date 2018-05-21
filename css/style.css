@@ -26,6 +26,10 @@ body.modal-open{
 .hidden{
     display: none !important;
 }
+.formatted-no{
+    margin: 0;
+    color: inherit;
+}
 /* Elements */
 /* Anchor Tag */
 a{
@@ -1141,7 +1145,7 @@ nav input:-ms-input-placeholder {
     color: #15223F;
 }
 .ico-fund-raised {
-    font-size: 1.3rem !important;
+    font-size: 1.2rem !important;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1158,7 +1162,7 @@ nav input:-ms-input-placeholder {
 .featured .ico-fund-raised h5 {
     color: #15223F;
 }
-.ico-fund-raised h5 span{
+.ico-fund-raised h5 span.percent{
     font-weight: 400;
     font-size: 1rem;
     margin-left: 0.2rem;
@@ -2358,6 +2362,13 @@ footer{
     margin: 0 0.5rem;
     border-radius: 10px;
 }
+#coin-page-progress-collected{
+    margin: 0;
+    color: inherit;
+    /* font-size: 0.7rem; */
+    font-weight: normal;
+    letter-spacing: 0;
+}
 .progress-countdown{
     display: -webkit-box;
     display: -ms-flexbox;
@@ -3200,7 +3211,7 @@ footer{
     .ico-fund-raised h5{
         font-size: 0.85rem;
     }
-    .ico-fund-raised h5 span{
+    .ico-fund-raised h5 span.percent{
         font-size: 0.85rem;
     }
     .ico-fund-progress{

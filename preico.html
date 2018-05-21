@@ -150,8 +150,8 @@ title: Pre ICOs | Moonlanding Network
                         <li class="ico-fund-raised">
                             {% assign collected = coin.progress.collected %} {% assign total = coin.progress.total %} {% assign percent = collected |
                             times: 100 | divided_by: total %}
-                            <h5>${{collected}} / ${{total}}
-                                <span>({{percent}}%)</span>
+                            <h5>$<span class="formatted-no">{{collected}}</span> / $<span class="formatted-no">{{total}}</span>
+                                <span class="percent">({{percent}}%)</span>
                             </h5>
                             <progress class="ico-fund-progress" min="0" max="100" value="{{percent}}"></progress>
                         </li>
@@ -244,8 +244,8 @@ title: Pre ICOs | Moonlanding Network
                         <li class="ico-fund-raised">
                             {% assign collected = coin.progress.collected %} {% assign total = coin.progress.total %} {% if collected.size > 0 and collected != 0 %} {% assign percent = collected |
                             times: 100 | divided_by: total %} {% else %} {% assign percent = 0 %}{% endif %}
-                            <h5>{% if collected.size != 0 %}${{collected}}{% else %} 0 {% endif %} / {% if total.size != 0 %} ${{total}} {% else %} 0 {% endif %}
-                                <span>({{percent}}%)</span>
+                            <h5>{% if collected.size != 0 %}$<span class="formatted-no">{{collected}}</span>{% else %} 0 {% endif %} / {% if total.size != 0 %} $<span class="formatted-no">{{total}}</span> {% else %} 0 {% endif %}
+                                <span class="percent">({{percent}}%)</span>
                             </h5>
                             <progress class="ico-fund-progress" min="0" max="100" value="{{percent}}"></progress>
                         </li>

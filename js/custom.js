@@ -410,6 +410,11 @@ function waitForElementToDisplay(selector, time) {
 }
 }
 
-
-
-
+/* Format Numbers and add comma separtors */
+var noToFormatArray = document.querySelectorAll('.formatted-no');
+if(noToFormatArray != null){
+    noToFormatArray.forEach((item) =>{
+        let numberToFormat = parseInt(item.textContent);
+        item.textContent = numberToFormat.toLocaleString();
+    });
+}
