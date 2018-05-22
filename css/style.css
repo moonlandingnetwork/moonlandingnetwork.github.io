@@ -2284,6 +2284,7 @@ footer{
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
+    object-fit: cover;
 }
 .avatar .ico-logo{
     margin: 0;
