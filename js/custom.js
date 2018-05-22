@@ -82,8 +82,8 @@ for(let i=0; i<logo.length; i++){
   logoString.innerHTML = logoStringText[0] +"<span>" + logoStringText[1] + "<span>";
 }
 const navLogo = document.querySelector('#nav-main .logo');
-navLogo.innerHTML += '<span class="navlogo-subtitle">Network</span>';
-console.log(navLogo);
+navLogo.innerHTML += '<span class="navlogo-subtitle">.Network</span>';
+
 /* Telegeram Chat */
 const telegramChatToggle = document.getElementById('telegram-chat-toggle');
 if(telegramChatToggle != null ){
