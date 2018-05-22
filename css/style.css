@@ -2192,6 +2192,9 @@ footer{
 .coincard-inneritem.third p.micro-text{
     font-size: 0.55rem;
 }
+.coincard-inneritem.third p.mini-text{
+    font-size: 0.6rem;
+}
 .coincard-inneritem.similar{
     padding: 0.9rem 1.1rem;
 }
@@ -3403,6 +3406,9 @@ footer{
         font-size: 0.45rem;
         line-height: 1.6;
     }
+    /* .coincard-inneritem.third p.mini-text{
+        font-size: 0.5rem;
+    }    */
     .coincard-inner-content.team h6{
         margin: 0.4rem 0;
     }

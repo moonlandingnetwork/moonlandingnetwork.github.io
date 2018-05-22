@@ -362,8 +362,8 @@ cmcRequest.onload = function(){
   
     
     usdLive.textContent = parseFloat(cmcData[0].price_usd).toLocaleString() + ' $';
-    ethLive.textContent = parseFloat(cmcData[0].price_eth) + ' ETH';
-    btcLive.textContent = parseFloat(cmcData[0].price_btc) + ' BTC';
+    ethLive.textContent = parseFloat(cmcData[0].price_eth).toLocaleString(undefined, { minimumFractionDigits: 5 }) + ' ETH';
+    btcLive.textContent = parseFloat(cmcData[0].price_btc).toLocaleString(undefined, { minimumFractionDigits: 5 }) + ' BTC';
     dailyVolume.textContent = '$ '+ parseFloat(cmcData[0]['24h_volume_usd']).toLocaleString();
     marketCap.textContent = '$ ' + parseFloat(cmcData[0].market_cap_usd).toLocaleString();
 
