@@ -1395,7 +1395,7 @@ footer{
 }
 /* Banner */
 .banner{
-    height: 40vh;
+    height: 25vh;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1411,10 +1411,10 @@ footer{
     justify-content: flex-end;
 }
 .banner img{
-    width: 96px;
+    width: 82px;
 }
 .banner h1{
-    font-size: 2.7rem;
+    font-size: 2.4rem;
     letter-spacing: 4px;
 }
 .banner h1 span{
@@ -1424,9 +1424,9 @@ footer{
     background-clip: text;
 }
 .banner h5{
-    margin: -0.8rem 0 0 0;
+    margin: -0.6rem 0 0 0;
     text-transform: uppercase;
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: #F7F2EB;
 }
 .banner-buttons{
@@ -1505,10 +1505,11 @@ footer{
 }
 .ico-list-buttons button{
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 0.85rem !important;
     margin: 0 0.3rem !important;
-    padding: 0.4rem 0.8rem !important;
-    width: 12rem !important;
+    padding: 0.3rem 0.8rem !important;
+    width: 9rem !important;
+    border-width: 2px !important;
 }
 /* End ICO List Buttons */
 /* ICO Grid */
