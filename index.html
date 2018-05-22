@@ -205,13 +205,13 @@ title: Moonlanding Network
             {% assign regularEnded = regularEnded | concat: featuredEndedExpired | sort: 'date-added' | reverse %} {% assign totalEnded
             = featuredEnded | concat: regularEnded %} {% for coin in totalEnded limit: 15 %} {% assign featuredTill = coin.ico.featured-till
             | date: "%s" | plus: 0 %} {% if current_date > featuredTill %} {% assign featuredExpiredEnded = true %} {% endif
-            %} {% assign ico_end_date = coin.ico-detail.end-date | date: "%s" | plus: 0 %} {% assig
+            %} {% assign ico_end_date = coin.ico-detail.end-date | date: "%s" | plus: 0 %} {% assign secondsTo = current_date
+            | minus: ico_end_date %} {% assign hoursTo = secondsTo | divided_by:60 | divided_by: 60 %} {% assign daysTo =
+            hoursTo | divided_by: 24 %}
             <a href="{{coin.url}}">
                 <div class="ico-card {% unless featuredExpiredEnded %}{% if coin.ico.featured %}featured{% endif %}{% endunless %} ">
                     <div class="ico-card-sec">
-                        <div class="ico-card-image">n secondsTo = current_date
-            | minus: ico_end_date %} {% assign hoursTo = secondsTo | divided_by:60 | divided_by: 60 %} {% assign daysTo =
-            hoursTo | divided_by: 24 %}
+                        <div class="ico-card-image">
                             <img src="{{site.url}}{{coin.ico.logo}}" alt="">
                         </div>
                         <div class="ico-card-rating {% if coin.ico.featured == false or coin.ico.show-rating == true %}number{% endif %}">{% if coin.ico.featured == true and coin.ico.show-rating == false %}&#9733;{% endif %}{% if coin.ico.featured
@@ -226,7 +226,7 @@ title: Moonlanding Network
                         <h6 class="ico-card-percentage">{{percent}}%</h6>
                         <div class="ico-card-meta">
                             <h6 class="ico-card-type">Featured</h6>
-                            <h6 class="ico-etr">{% if daysTo == 0 %}Ended Today{% else %}{{daysTo}}d ago{% endif %}</h6>
+                            <h6 class="ico-etr">{% if daysTo == 0 %}Ended Today{% else %}in {{daysTo}}d{% endif %}</h6>
                         </div>
                     </div>
 
