@@ -2325,7 +2325,7 @@ footer{
 }
 .coin-status-card{
     text-transform: uppercase;
-    /* display: -webkit-box;
+    display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: vertical;
@@ -2340,7 +2340,7 @@ footer{
     align-items: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
-    align-items: center; */
+    align-items: center;
     background-image: url('../images/coin-progress-banner.png');
     background-size: contain;
     background-repeat: no-repeat;
@@ -2395,7 +2395,6 @@ footer{
 #coin-progress-hr{
     position: absolute;
     height: 20px;
-    left: 7.5%;
     width: 85%;
     background: linear-gradient(to right, #3EADB4, #45F4CE);
     border-radius: 15px;
