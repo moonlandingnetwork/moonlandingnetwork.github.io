@@ -2355,7 +2355,7 @@ footer{
     display: -ms-flexbox;
     display: flex;
     font-size: 2.5rem;
-    margin: 1rem 0;
+    margin: 1rem auto;
     z-index: 2;
 }
 .coin-status-card h2 span{
@@ -2396,6 +2396,7 @@ footer{
     position: absolute;
     height: 20px;
     left: 7.5%;
+    top: 43%;
     width: 85%;
     background: linear-gradient(to right, #3EADB4, #45F4CE);
     border-radius: 15px;
