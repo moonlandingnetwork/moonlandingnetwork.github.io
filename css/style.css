@@ -3077,7 +3077,7 @@ footer{
         margin: 0.5rem 0;
         box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 2px 6px rgba(0,0,0,0.23);
         background: #fff;
-        max-width: 16rem;
+        max-width: 17rem;
         
 
     }
@@ -3114,13 +3114,13 @@ footer{
     }
     .ico-table-title-image{
         margin: 0.7rem 1rem 0.7rem 0.7rem;
-        height: 44px;
+        height: 42px;
         width: 44px;
         padding: 0.35rem;
     }
     .ico-table-title-image img{
-        height: 32px;
-        width: 32px;
+        height: 28px;
+        width: 28px;
     }
     .ico-table-title li:nth-child(3), .tbody ul a:nth-child(3){
         -webkit-box-ordinal-group: 5 !important;
@@ -3128,7 +3128,7 @@ footer{
             order: 4 !important;
         flex: 0 1 40%;
         flex-shrink: 0;
-        margin-left: 1rem;
+        margin-left: 1.2rem;
     }
     .ico-whitelist-type-parent.minimal{
         flex: 0 1 30% !important;
@@ -3140,6 +3140,7 @@ footer{
         position: absolute;
         left: -7%;
         top: 55%;
+        margin-top: -0.5rem;
     }
     .ico-moonability .featured-text {
         display: none;
