@@ -2963,6 +2963,9 @@ footer{
     }
     
     /* Homepage */
+    .intro-section{
+        display: none;
+    }
     .home-ico-hr{
         display: none;
     }
@@ -3332,7 +3335,7 @@ footer{
         padding: 0.7rem;
     }
     .coincard-inneritem{
-        flex: 1 1 33.333%
+        flex: 1 1 50%
     }
     #coinmeter-center{
         top: 45%;
