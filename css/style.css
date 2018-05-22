@@ -1584,11 +1584,11 @@ footer{
 .ico-card-image{
     background-color: #fff;
     border-radius: 50%;
-    margin: 0.3rem 0;
+    /* margin: 0.3rem 0; */
 }
 .ico-card-image img{
-    width: 28px;
-    padding: .6rem 0.65rem;
+    width: 30px;
+    padding: .65rem 0.8rem;
 }
 .ico-card-rating{
     background: linear-gradient(to top, #00AEBB, #4DF6DA );
@@ -1634,8 +1634,8 @@ footer{
 }
 .ico-card-title{
     color: #E39300;
-    font-size: 1.3rem;
-    margin: 1.3rem 0 1.1rem 
+    font-size: 1.2rem;
+    margin: 1.3rem 0 .8rem 
 }
 .ico-card-title a{
     color: #E39300;
@@ -1671,7 +1671,7 @@ footer{
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    margin: 1.4rem 0 1rem;
+    margin: 1.4rem 0 0.5rem;
 }
 .ico-etr{
     margin-right: -1rem !important;
@@ -3002,6 +3002,9 @@ footer{
     .ico-col-content{
         margin-top: 0;
     }
+    .ico-card-title{
+        margin: 1.3rem 0 1rem;
+    }
     /* ICO Table */
     
     .ico-nav ul{
@@ -3094,7 +3097,7 @@ footer{
             order: 1;
         position: absolute;
         left: -17%;
-        top: 5%;
+        top: 6%;
     }
     .ico-project-name h5{
         font-size: 1.2rem;
@@ -3155,8 +3158,8 @@ footer{
             -ms-flex: none;
                 flex: none;
         border-radius: 50%;
-        height: 48px;
-        width: 48px;
+        height: 44px;
+        width: 44px;
         font-weight: 600;
         background-color: #072C59;
         color: #fff;
@@ -3169,6 +3172,7 @@ footer{
         -webkit-box-align: center;
             -ms-flex-align: center;
                 align-items: center;
+        margin-top: -0.5rem;
     }
     .ico-moonability.green{
         background: #0AA645;
@@ -3853,7 +3857,7 @@ footer{
     }
     .ico-card-image img{
         width: 26px;
-        padding: 0.5rem 0.7rem;
+        padding: 0.6rem 0.7rem;
     }
     .ico-card-rating.number {
         font-size: 0.95rem;
@@ -3874,18 +3878,21 @@ footer{
     .ico-table{
         margin: 1rem 2rem;
     }
+    .ico-table .tbody ul{
+        padding-top: 0;
+    }
     .pre-ico-title{
         font-size: 1.3rem;
     }
     .ico-project-name{
         left: -13%;
-        top: 10%;
+        top: 15%;
     }
     .ico-project-name h5{
         font-size: 1rem;
     }
     .ico-table-title-image{
-        margin: 0.7rem 1rem 0.7rem 0.7rem;
+        margin: 0rem 1rem 0rem 0.7rem;
         height: 38px;
         width: 38px;
         padding: 0.35rem;
