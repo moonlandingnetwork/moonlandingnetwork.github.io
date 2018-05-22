@@ -1538,7 +1538,7 @@ footer{
     text-transform: uppercase;
     color: #E39300;
    ;
-    font-size: 1.7rem;
+    font-size: 1.6rem;
     font-weight: 700;
     text-align: center;
     margin-bottom: 1rem;
@@ -1548,7 +1548,7 @@ footer{
     display: -ms-flexbox;
     display: flex;
     background-color: #fff;
-    margin: 0.5rem auto;
+    margin: 0.6rem auto;
     width: 17rem;
 }
 .ico-card.featured{
@@ -3776,6 +3776,7 @@ footer{
     }
     .ico-card{
         width: 18rem;
+        margin: 0.35rem auto;
     }
     .ico-card-meta{
         margin: 1rem -2rem 1rem;
