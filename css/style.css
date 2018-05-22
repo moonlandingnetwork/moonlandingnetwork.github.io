@@ -3871,6 +3871,9 @@ footer{
 }
 @media (max-width: 390px){
     /* Elements */
+    .logo{
+        font-size: 1.15rem;
+    }
     select{
         font-size: 70%;
     }
