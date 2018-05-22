@@ -3368,7 +3368,8 @@ footer{
         font-weight: 400;
     }
     #coin-progress-hr{
-        display: none;
+        display: block;
+        height: 7px;
     }
     .twitter-card{
         -webkit-box-ordinal-group: 2;
