@@ -1390,7 +1390,7 @@ footer{
 /*Intro Section */
 .intro-section{
     background: url('../images/banner.png');
-    /* background-size: contain; */
+    background-size: cover;
     background-repeat: no-repeat;
 }
 /* Banner */
