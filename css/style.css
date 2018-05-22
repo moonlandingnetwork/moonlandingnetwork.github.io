@@ -1629,8 +1629,12 @@ footer{
 .ico-card h6{
     color: #072C59;
     margin: 0;
-    font-size: 0.9rem;
+    font-size: 0.75rem;
     font-weight: 400;
+}
+.ico-card-main .ico-fund-progress{
+    height: 5px;
+    width: 11.5rem;
 }
 .ico-card-title{
     color: #E39300;
@@ -1663,6 +1667,7 @@ footer{
 }
 .ico-card-status{
     font-weight: 900 !important;
+    margin-top: 0.3rem !important;
 }
 .ico-card-meta{
     display: -webkit-box;
@@ -1673,9 +1678,9 @@ footer{
     justify-content: space-between;
     margin: 1.4rem 0 0.5rem;
 }
-.ico-etr{
+/* .ico-etr{
     margin-right: -1rem !important;
-}
+} */
 .ico-card-type{
     color: #fff !important;
     font-weight: 700 !important;
@@ -3783,9 +3788,9 @@ footer{
         width: 18rem;
         margin: 0.35rem auto;
     }
-    .ico-card-meta{
+    /* .ico-card-meta{
         margin: 1rem -2rem 1rem;
-    }
+    } */
     .ico-etr{
         margin-right: 0 !important;
     }

@@ -109,8 +109,9 @@ title: Moonlanding Network
                         <h6 class="ico-card-desc">{{coin.ico.category}}</h6>
                         {% assign collected = coin.progress.collected %} {% assign total = coin.progress.total %} {% if collected.size > 0 and collected != 0 %} {% assign percent = collected |
                             times: 100 | divided_by: total %} {% else %} {% assign percent = 0 %}{% endif %}
-                        <h6 class="ico-card-status">{% if collected.size != 0 %}$<span class="formatted-no">{{collected}}</span>{% else %} 0 {% endif %} / {% if total.size != 0 %} $<span class="formatted-no">{{total}}</span> {% else %} 0 {% endif %}</h6>
-                        <h6 class="ico-card-percentage">{{percent}}%</h6>
+                        <h6 class="ico-card-status">{% if collected.size != 0 %}$<span class="formatted-no">{{collected}}</span>{% else %} 0 {% endif %} / {% if total.size != 0 %} $<span class="formatted-no">{{total}}</span> {% else %} 0 {% endif %} ({{percent}}%)</h6>
+                        <progress class="ico-fund-progress" min="0" max="100" value="{{percent}}"></progress>
+                        <!-- <h6 class="ico-card-percentage">{{percent}}%</h6> -->
                         <div class="ico-card-meta">
                             <h6 class="ico-card-type">Featured</h6>
                             <h6 class="ico-etr">{% if daysTo == 0 %}Starts Today{% else %}in {{daysTo}}d{% endif %}</h6>
@@ -166,8 +167,9 @@ title: Moonlanding Network
                         <h6 class="ico-card-desc">{{coin.ico.category}}</h6>
                         {% assign collected = coin.progress.collected %} {% assign total = coin.progress.total %} {% if collected.size > 0 and collected != 0 %} {% assign percent = collected |
                             times: 100 | divided_by: total %} {% else %} {% assign percent = 0 %}{% endif %}
-                        <h6 class="ico-card-status">{% if collected.size != 0 %}$<span class="formatted-no">{{collected}}</span>{% else %} 0 {% endif %} / {% if total.size != 0 %} $<span class="formatted-no">{{total}}</span> {% else %} 0 {% endif %}</h6>
-                        <h6 class="ico-card-percentage">{{percent}}%</h6>
+                        <h6 class="ico-card-status">{% if collected.size != 0 %}$<span class="formatted-no">{{collected}}</span>{% else %} 0 {% endif %} / {% if total.size != 0 %} $<span class="formatted-no">{{total}}</span> {% else %} 0 {% endif %} ({{percent}}%)</h6>
+                        <progress class="ico-fund-progress" min="0" max="100" value="{{percent}}"></progress>
+                        <!-- <h6 class="ico-card-percentage">{{percent}}%</h6> -->
                         <div class="ico-card-meta">
                             <h6 class="ico-card-type">Featured</h6>
                             <h6 class="ico-etr">{% if daysTo == 0 %}Ends Today{% else %}{{daysTo}}d left{% endif %}</h6>
@@ -222,8 +224,9 @@ title: Moonlanding Network
                         <h6 class="ico-card-desc">{{coin.ico.category}}</h6>
                         {% assign collected = coin.progress.collected %} {% assign total = coin.progress.total %} {% if collected.size > 0 and collected != 0 %} {% assign percent = collected |
                             times: 100 | divided_by: total %} {% else %} {% assign percent = 0 %}{% endif %}
-                        <h6 class="ico-card-status">{% if collected.size != 0 %}$<span class="formatted-no">{{collected}}</span>{% else %} 0 {% endif %} / {% if total.size != 0 %} $<span class="formatted-no">{{total}}</span> {% else %} 0 {% endif %}</h6>
-                        <h6 class="ico-card-percentage">{{percent}}%</h6>
+                        <h6 class="ico-card-status">{% if collected.size != 0 %}$<span class="formatted-no">{{collected}}</span>{% else %} 0 {% endif %} / {% if total.size != 0 %} $<span class="formatted-no">{{total}}</span> {% else %} 0 {% endif %} ({{percent}}%)</h6>
+                        <progress class="ico-fund-progress" min="0" max="100" value="{{percent}}"></progress>
+                        <!-- <h6 class="ico-card-percentage">{{percent}}%</h6> -->
                         <div class="ico-card-meta">
                             <h6 class="ico-card-type">Featured</h6>
                             <h6 class="ico-etr">{% if daysTo == 0 %}Ended Today{% else %}{{daysTo}}d ago{% endif %}</h6>
