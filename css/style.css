@@ -3320,7 +3320,7 @@ footer{
         font-size: 0.9em;
     }
     .coin-status-card h2{
-        margin: 0.55rem 0 ;
+        margin: 0.55rem auto ;
     }
 
     #token-details-2{
