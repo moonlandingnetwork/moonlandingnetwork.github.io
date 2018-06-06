@@ -1591,7 +1591,7 @@ footer{
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    margin-left: -1.5rem;
+    margin-left: -1.8rem;
 }
 .ico-card-image{
     background-color: #fff;
@@ -1599,8 +1599,8 @@ footer{
     /* margin: 0.3rem 0; */
 }
 .ico-card-image img{
-    width: 30px;
-    padding: .65rem 0.8rem;
+    width: 36px;
+    padding: .7rem 0.85rem;
 }
 .ico-card-rating{
     background: linear-gradient(to top, #00AEBB, #4DF6DA );
