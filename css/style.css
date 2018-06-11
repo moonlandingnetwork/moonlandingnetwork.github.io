@@ -1601,6 +1601,7 @@ footer{
 .ico-card-image img{
     width: 36px;
     padding: .7rem 0.85rem;
+    padding: .85rem 0.9rem 0.63rem;
 }
 .ico-card-rating{
     background: linear-gradient(to top, #00AEBB, #4DF6DA );
